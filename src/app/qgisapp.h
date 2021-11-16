@@ -2226,8 +2226,8 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     void setupCanvasTools();
     void createMapTips();
     void createDecorations();
-    static void init3D();
-    static void initNativeProcessing();
+    void init3D();
+    void initNativeProcessing();
     void initLayouts();
 
     //! Creates a new 3D map dock without initializing its position or contents
