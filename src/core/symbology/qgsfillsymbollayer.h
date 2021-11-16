@@ -470,10 +470,10 @@ class CORE_EXPORT QgsGradientFillSymbolLayer : public QgsFillSymbolLayer
     void applyDataDefinedSymbology( QgsSymbolRenderContext &context, const QPolygonF &points );
 
     //! Applies the gradient to a brush
-    void applyGradient( const QgsSymbolRenderContext &context, QBrush &brush, const QColor &color, const QColor &color2,
-                        Qgis::GradientColorSource gradientColorType, QgsColorRamp *gradientRamp, Qgis::GradientType gradientType,
-                        Qgis::SymbolCoordinateReference coordinateMode, Qgis::GradientSpread gradientSpread,
-                        QPointF referencePoint1, QPointF referencePoint2, double angle );
+    static void applyGradient( const QgsSymbolRenderContext &context, QBrush &brush, const QColor &color, const QColor &color2,
+                               Qgis::GradientColorSource gradientColorType, QgsColorRamp *gradientRamp, Qgis::GradientType gradientType,
+                               Qgis::SymbolCoordinateReference coordinateMode, Qgis::GradientSpread gradientSpread,
+                               QPointF referencePoint1, QPointF referencePoint2, double angle );
 
     //! Rotates a reference point by a specified angle around the point (0.5, 0.5)
     static QPointF rotateReferencePoint( QPointF refPoint, double angle );
@@ -758,7 +758,7 @@ class CORE_EXPORT QgsShapeburstFillSymbolLayer : public QgsFillSymbolLayer
     /* distance transform of a 1d function using squared distance */
     static void distanceTransform1d( double *f, int n, int *v, double *z, double *d );
     /* distance transform of 2d function using squared distance */
-    void distanceTransform2d( double *im, int width, int height, QgsRenderContext &context );
+    static void distanceTransform2d( double *im, int width, int height, QgsRenderContext &context );
     /* distance transform of a binary QImage */
     double *distanceTransform( QImage *im, QgsRenderContext &context );
 

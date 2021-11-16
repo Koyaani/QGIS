@@ -189,8 +189,8 @@ class QgsDwgImporter : public DRW_Interface
     QString colorString( int color, int color24, int transparency, const QString &layer ) const;
     double lineWidth( int lWeight, const QString &layer ) const;
     QString linetypeString( const QString &linetype, const QString &layer ) const;
-    void setString( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, const std::string &value ) const;
-    void setString( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, const QString &value ) const;
+    static void setString( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, const std::string &value ) ;
+    static void setString( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, const QString &value ) ;
     static void setString( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, const char *value ) ;
     static void setDouble( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, double value ) ;
     static void setInteger( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, int value ) ;

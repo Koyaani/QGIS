@@ -182,7 +182,7 @@ class GUI_EXPORT QgsColorWidget : public QWidget
      * \param newValue new value of color component. Values are automatically clipped to a
      * valid range for the color component.
      */
-    void alterColor( QColor &color, QgsColorWidget::ColorComponent component, int newValue ) const;
+    static void alterColor( QColor &color, QgsColorWidget::ColorComponent component, int newValue ) ;
 
     /**
      * Generates a checkboard pattern pixmap for use as a background to transparent colors

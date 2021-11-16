@@ -56,14 +56,14 @@ class QgsPythonUtilsImpl : public QgsPythonUtils
     /**
      * Returns an object's type name as a string
      */
-    QString getTypeAsString( PyObject *obj );
+    static QString getTypeAsString( PyObject *obj );
 
     /* plugins related functions */
 
     /**
      * Returns the current path for Python plugins
      */
-    QString pluginsPath() const;
+    static QString pluginsPath() ;
 
     /**
      * Returns the current path for Python in home directory.
@@ -73,7 +73,7 @@ class QgsPythonUtilsImpl : public QgsPythonUtils
     /**
      * Returns the current path for home directory Python plugins.
      */
-    QString homePluginsPath() const;
+    static QString homePluginsPath() ;
 
     /**
      * Returns a list of extra plugins paths passed with QGIS_PLUGINPATH environment variable.

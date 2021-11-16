@@ -331,7 +331,7 @@ class CORE_EXPORT QgsSvgCache : public QgsAbstractContentCache< QgsSvgCacheEntry
     /**
      * Returns a rendered image for a cached picture \a entry.
      */
-    QImage imageFromCachedPicture( const QgsSvgCacheEntry &entry ) const;
+    static QImage imageFromCachedPicture( const QgsSvgCacheEntry &entry ) ;
 
     //! SVG content to be rendered if SVG file was not found.
     QByteArray mMissingSvg;

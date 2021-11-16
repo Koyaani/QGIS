@@ -51,7 +51,7 @@ class QgsWfs3AbstractItemsHandler: public QgsServerOgcApiHandler
      * \param subsetAttributes optional list of field names requested by the client, if empty all published attributes will be added to the request
      * \return QgsFeatureRequest with filters applied
      */
-    QgsFeatureRequest filteredRequest( const QgsVectorLayer *layer, const QgsServerApiContext &context, const QStringList &subsetAttributes = QStringList() ) const;
+    static QgsFeatureRequest filteredRequest( const QgsVectorLayer *layer, const QgsServerApiContext &context, const QStringList &subsetAttributes = QStringList() ) ;
 
     /**
      * Returns a filtered list of fields containing only fields published for WFS and plugin filters applied.
@@ -224,7 +224,7 @@ class QgsWfs3CollectionsItemsHandler: public QgsWfs3AbstractItemsHandler
   private:
 
     // Retrieve the fields filter parameters
-    const QList<QgsServerQueryStringParameter> fieldParameters( const QgsVectorLayer *mapLayer,  const QgsServerApiContext &context ) const;
+    static const QList<QgsServerQueryStringParameter> fieldParameters( const QgsVectorLayer *mapLayer,  const QgsServerApiContext &context ) ;
 };
 
 

@@ -843,7 +843,7 @@ QSize QgsSvgCache::sizeForImage( const QgsSvgCacheEntry &entry, QSizeF &viewBoxS
   return QSize( wImgSize, hImgSize );
 }
 
-QImage QgsSvgCache::imageFromCachedPicture( const QgsSvgCacheEntry &entry ) const
+QImage QgsSvgCache::imageFromCachedPicture( const QgsSvgCacheEntry &entry )
 {
   QSizeF viewBoxSize;
   QSizeF scaledSize;

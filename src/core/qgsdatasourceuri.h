@@ -328,7 +328,7 @@ class CORE_EXPORT QgsDataSourceUri
 
   private:
     static void skipBlanks( const QString &uri, int &i );
-    QString getValue( const QString &uri, int &i );
+    static QString getValue( const QString &uri, int &i );
     static QString escape( const QString &uri, QChar delim ) ;
 
     /* data */

@@ -554,7 +554,7 @@ QString QgsPythonUtilsImpl::pythonPath()
     return QgsApplication::pkgDataPath() + QStringLiteral( "/python" );
 }
 
-QString QgsPythonUtilsImpl::pluginsPath() const
+QString QgsPythonUtilsImpl::pluginsPath()
 {
   return pythonPath() + QStringLiteral( "/plugins" );
 }
@@ -572,7 +572,7 @@ QString QgsPythonUtilsImpl::homePythonPath()
   }
 }
 
-QString QgsPythonUtilsImpl::homePluginsPath() const
+QString QgsPythonUtilsImpl::homePluginsPath()
 {
   return homePythonPath() + QStringLiteral( " + \"/plugins\"" );
 }

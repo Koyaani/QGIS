@@ -108,7 +108,7 @@ exists at the index.
 Refresh item specified by path
 %End
 
-    void refresh( const QModelIndex &index = QModelIndex() );
+    static void refresh( const QModelIndex &index = QModelIndex() );
 %Docstring
 Refresh item children
 %End

@@ -303,7 +303,7 @@ class APP_EXPORT QgsIdentifyResultsDialog: public QDialog, private Ui::QgsIdenti
     QgsVectorTileLayer *vectorTileLayer( QTreeWidgetItem *item );
     QgsPointCloudLayer *pointCloudLayer( QTreeWidgetItem *item );
     static QTreeWidgetItem *featureItem( QTreeWidgetItem *item );
-    QTreeWidgetItem *layerItem( QTreeWidgetItem *item );
+    static QTreeWidgetItem *layerItem( QTreeWidgetItem *item );
     QTreeWidgetItem *layerItem( QObject *layer );
 
 
@@ -320,7 +320,7 @@ class APP_EXPORT QgsIdentifyResultsDialog: public QDialog, private Ui::QgsIdenti
 
     void doAction( QTreeWidgetItem *item, const QString &action );
 
-    void doMapLayerAction( QTreeWidgetItem *item, QgsMapLayerAction *action );
+    static void doMapLayerAction( QTreeWidgetItem *item, QgsMapLayerAction *action );
 
     QgsDockWidget *mDock = nullptr;
 

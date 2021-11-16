@@ -135,7 +135,7 @@ class ANALYSIS_EXPORT QgsRelief
     */
     static int frequencyClassForElevation( double elevation, double minElevation, double elevationClassRange );
     //! Do one iteration of class break optimisation (algorithm from Garcia and Rodriguez)
-    void optimiseClassBreaks( QList<int> &breaks, double *frequencies );
+    static void optimiseClassBreaks( QList<int> &breaks, double *frequencies );
 
     /**
      * Calculates coefficients a and b

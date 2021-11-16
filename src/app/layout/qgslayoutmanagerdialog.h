@@ -51,7 +51,7 @@ class QgsLayoutManagerDialog: public QDialog, private Ui::QgsLayoutManagerBase
      * \param fromUser whether to return user templates from [profile folder]/composer_templates
      */
     QMap<QString, QString> defaultTemplates( bool fromUser = false ) const;
-    QMap<QString, QString> otherTemplates() const;
+    static QMap<QString, QString> otherTemplates() ;
 
     static QMap<QString, QString> templatesFromPath( const QString &path ) ;
 

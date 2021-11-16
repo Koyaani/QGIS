@@ -27,7 +27,7 @@
 #include <QFontMetricsF>
 #include <QPainter>
 
-void QgsScaleBarRenderer::drawDefaultLabels( QgsRenderContext &context, const QgsScaleBarSettings &settings, const ScaleBarContext &scaleContext ) const
+void QgsScaleBarRenderer::drawDefaultLabels( QgsRenderContext &context, const QgsScaleBarSettings &settings, const ScaleBarContext &scaleContext )
 {
   if ( !context.painter() )
   {
@@ -308,7 +308,7 @@ QString QgsScaleBarRenderer::firstLabelString( const QgsScaleBarSettings &settin
   }
 }
 
-double QgsScaleBarRenderer::firstLabelXOffset( const QgsScaleBarSettings &settings ) const
+double QgsScaleBarRenderer::firstLabelXOffset( const QgsScaleBarSettings &settings )
 {
   const QString firstLabel = firstLabelString( settings );
   Q_NOWARN_DEPRECATED_PUSH
@@ -316,7 +316,7 @@ double QgsScaleBarRenderer::firstLabelXOffset( const QgsScaleBarSettings &settin
   Q_NOWARN_DEPRECATED_POP
 }
 
-double QgsScaleBarRenderer::firstLabelXOffset( const QgsScaleBarSettings &settings, const QgsRenderContext &context, const ScaleBarContext &scaleContext ) const
+double QgsScaleBarRenderer::firstLabelXOffset( const QgsScaleBarSettings &settings, const QgsRenderContext &context, const ScaleBarContext &scaleContext )
 {
   const QString firstLabel = firstLabelString( settings );
   double firstLabelWidth = QgsTextRenderer::textWidth( context, settings.textFormat(), QStringList() << firstLabel );

@@ -67,7 +67,7 @@ class GUI_EXPORT QgsPreviewEffect: public QGraphicsEffect
 
     PreviewMode mMode;
 
-    QRgb simulateColorBlindness( QRgb &originalColor, PreviewMode type );
+    static QRgb simulateColorBlindness( QRgb &originalColor, PreviewMode type );
     static void simulateGrayscale( int &r, int &g, int &b, int &red, int &green, int &blue );
     static void simulateProtanope( int &r, int &g, int &b, int &red, int &green, int &blue );
     static void simulateDeuteranope( int &r, int &g, int &b, int &red, int &green, int &blue );

@@ -142,7 +142,7 @@ void QgsLegendSettings::drawText( QPainter *p, const QRectF &rect, const QString
 }
 
 
-QFont QgsLegendSettings::scaledFontPixelSize( const QFont &font ) const
+QFont QgsLegendSettings::scaledFontPixelSize( const QFont &font )
 {
   QFont scaledFont = font;
   const double pixelSize = pixelFontSize( font.pointSizeF() ) * FONT_WORKAROUND_SCALE + 0.5;

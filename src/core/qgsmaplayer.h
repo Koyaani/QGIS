@@ -1004,7 +1004,7 @@ class CORE_EXPORT QgsMapLayer : public QObject
      * \returns TRUE if style was successfully loaded
      * \since QGIS 3.0
      */
-    bool loadNamedMetadataFromDatabase( const QString &db, const QString &uri, QString &qmd );
+    static bool loadNamedMetadataFromDatabase( const QString &db, const QString &uri, QString &qmd );
 
     /**
      * Import the metadata of this layer from a QDomDocument

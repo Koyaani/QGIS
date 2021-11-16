@@ -36,11 +36,11 @@ class QgsDistanceWithinAlgorithm : public QgsProcessingAlgorithm
   protected:
 
     void addDistanceParameter();
-    void process( const QgsProcessingContext &context, QgsFeatureSource *targetSource,
-                  QgsFeatureSource *referenceSource,
-                  double distance, const QgsProperty &distanceProperty,
-                  const std::function< void( const QgsFeature & )> &handleFeatureFunction, bool onlyRequireTargetIds, QgsProcessingFeedback *feedback,
-                  QgsExpressionContext &expressionContext );
+    static void process( const QgsProcessingContext &context, QgsFeatureSource *targetSource,
+                         QgsFeatureSource *referenceSource,
+                         double distance, const QgsProperty &distanceProperty,
+                         const std::function< void( const QgsFeature & )> &handleFeatureFunction, bool onlyRequireTargetIds, QgsProcessingFeedback *feedback,
+                         QgsExpressionContext &expressionContext );
 
   private:
 

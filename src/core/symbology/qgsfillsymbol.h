@@ -65,7 +65,7 @@ class CORE_EXPORT QgsFillSymbol : public QgsSymbol
 
   private:
 
-    void renderPolygonUsingLayer( QgsSymbolLayer *layer, const QPolygonF &points, const QVector<QPolygonF> *rings, QgsSymbolRenderContext &context );
+    static void renderPolygonUsingLayer( QgsSymbolLayer *layer, const QPolygonF &points, const QVector<QPolygonF> *rings, QgsSymbolRenderContext &context );
     //! Calculates the bounds of a polygon including rings
     static QRectF polygonBounds( const QPolygonF &points, const QVector<QPolygonF> *rings ) ;
     //! Translates the rings in a polygon by a set distance

@@ -110,7 +110,7 @@ class CORE_EXPORT QgsBrowserModel : public QAbstractItemModel
     void refresh( const QString &path );
 
     //! Refresh item children
-    void refresh( const QModelIndex &index = QModelIndex() );
+    static void refresh( const QModelIndex &index = QModelIndex() );
 
     /**
      * Returns index of item with given path. It only searches in currently fetched

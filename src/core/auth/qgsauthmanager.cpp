@@ -3196,7 +3196,7 @@ QString QgsAuthManager::passwordHelperName()
 }
 
 
-void QgsAuthManager::passwordHelperLog( const QString &msg ) const
+void QgsAuthManager::passwordHelperLog( const QString &msg )
 {
   if ( passwordHelperLoggingEnabled() )
   {

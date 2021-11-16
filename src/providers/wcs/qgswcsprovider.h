@@ -247,7 +247,7 @@ class QgsWcsProvider final: public QgsRasterDataProvider, QgsGdalProviderBase
     static QString htmlCell( const QString &text );
 
     //! Create html row with 2 cells (used by metadata)
-    QString htmlRow( const QString &text1, const QString &text2 );
+    static QString htmlRow( const QString &text1, const QString &text2 );
 
     //! Data source URI of the WCS for this layer
     QString mHttpUri;

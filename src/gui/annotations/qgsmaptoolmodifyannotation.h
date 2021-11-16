@@ -88,7 +88,7 @@ class GUI_EXPORT QgsMapToolModifyAnnotation : public QgsMapToolAdvancedDigitizin
     void createSelectedItemBand();
     const QgsRenderedAnnotationItemDetails *findClosestItemToPoint( const QgsPointXY &mapPoint, const QList<const QgsRenderedAnnotationItemDetails *> &items, QgsRectangle &bounds );
     static QgsAnnotationLayer *annotationLayerFromId( const QString &layerId );
-    QgsAnnotationItem *annotationItemFromId( const QString &layerId, const QString &itemId );
+    static QgsAnnotationItem *annotationItemFromId( const QString &layerId, const QString &itemId );
 
     void setHoveredItem( const QgsRenderedAnnotationItemDetails *item, const QgsRectangle &itemMapBounds );
 

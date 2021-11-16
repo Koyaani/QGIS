@@ -426,7 +426,7 @@ class CORE_EXPORT QgsSettings : public QObject
     //! Removes the setting key and any sub-settings of key in a section.
     void remove( const QString &key, QgsSettings::Section section = QgsSettings::NoSection );
     //! Returns the sanitized and prefixed key
-    QString prefixedKey( const QString &key, QgsSettings::Section section ) const;
+    static QString prefixedKey( const QString &key, QgsSettings::Section section ) ;
     //! Removes all entries in the user settings
     void clear();
 

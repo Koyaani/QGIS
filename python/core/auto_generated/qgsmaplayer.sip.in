@@ -862,7 +862,7 @@ record in the users metadata table in their personal qgis.db)
 .. versionadded:: 3.0
 %End
 
-    bool loadNamedMetadataFromDatabase( const QString &db, const QString &uri, QString &qmd );
+    static bool loadNamedMetadataFromDatabase( const QString &db, const QString &uri, QString &qmd );
 %Docstring
 Retrieve a named metadata for this layer from a sqlite database.
 

@@ -722,7 +722,7 @@ class QgsWmsSettings
      *
      * \since QGIS 3.14
      */
-    QgsWmstDimensionExtent parseTemporalExtent( const QString &extent );
+    static QgsWmstDimensionExtent parseTemporalExtent( const QString &extent );
 
     /**
      * Sets the dimension extent property
@@ -922,7 +922,7 @@ class QgsWmsCapabilities
     void parseService( const QDomElement &element, QgsWmsServiceProperty &serviceProperty );
     void parseOnlineResource( const QDomElement &element, QgsWmsOnlineResourceAttribute &onlineResourceAttribute );
     static void parseKeywordList( const QDomElement &element, QStringList &keywordListProperty );
-    void parseContactInformation( const QDomElement &element, QgsWmsContactInformationProperty &contactInformationProperty );
+    static void parseContactInformation( const QDomElement &element, QgsWmsContactInformationProperty &contactInformationProperty );
     static void parseContactPersonPrimary( const QDomElement &element, QgsWmsContactPersonPrimaryProperty &contactPersonPrimaryProperty );
     static void parseContactAddress( const QDomElement &element, QgsWmsContactAddressProperty &contactAddressProperty );
 

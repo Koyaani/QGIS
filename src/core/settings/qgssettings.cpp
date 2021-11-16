@@ -210,7 +210,7 @@ void QgsSettings::remove( const QString &key, const QgsSettings::Section section
   mUserSettings->remove( pKey );
 }
 
-QString QgsSettings::prefixedKey( const QString &key, const Section section ) const
+QString QgsSettings::prefixedKey( const QString &key, const Section section )
 {
   QString prefix;
   switch ( section )

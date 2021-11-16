@@ -99,7 +99,7 @@ class CORE_EXPORT QgsProjectBadLayerHandler
      *
      * \since QGIS 3.0
      */
-    ProviderType providerType( const QDomNode &layerNode );
+    static ProviderType providerType( const QDomNode &layerNode );
 
     /**
      * Set the datasource element to the new value

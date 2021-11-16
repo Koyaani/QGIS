@@ -136,7 +136,7 @@ class CORE_EXPORT QgsMapLayerStyleManager : public QObject
      *
      * \since QGIS 3.0
      */
-    bool isDefault( const QString &styleName ) const;
+    static bool isDefault( const QString &styleName ) ;
 
     /**
      * Copies all styles from \a other.

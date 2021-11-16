@@ -315,7 +315,7 @@ QFont QgsDetailedItemDelegate::categoryFont( const QStyleOptionViewItem &option 
   return myFont;
 }
 
-QFont QgsDetailedItemDelegate::titleFont( const QStyleOptionViewItem &option ) const
+QFont QgsDetailedItemDelegate::titleFont( const QStyleOptionViewItem &option )
 {
   QFont myTitleFont = detailFont( option );
   myTitleFont.setBold( true );

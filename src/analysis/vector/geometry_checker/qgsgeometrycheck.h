@@ -360,7 +360,7 @@ class ANALYSIS_EXPORT QgsGeometryCheck
      * \note Not available in Python bindings
      * \since QGIS 3.4
      */
-    void deleteFeatureGeometryRing( const QMap<QString, QgsFeaturePool *> &featurePools, const QString &layerId, QgsFeature &feature, int partIdx, int ringIdx, Changes &changes ) const SIP_SKIP;
+    static void deleteFeatureGeometryRing( const QMap<QString, QgsFeaturePool *> &featurePools, const QString &layerId, QgsFeature &feature, int partIdx, int ringIdx, Changes &changes ) SIP_SKIP;
 
     const QgsGeometryCheckContext *mContext;
     QVariantMap mConfiguration;

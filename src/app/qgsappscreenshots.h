@@ -66,7 +66,7 @@ class QgsAppScreenShots
 
   private:
     static QScreen *screen( QWidget *widget = nullptr );
-    void moveWidgetTo( QWidget *widget, Qt::Corner corner, Reference reference = Screen );
+    static void moveWidgetTo( QWidget *widget, Qt::Corner corner, Reference reference = Screen );
     //! take and directly save screenshot
     void takeScreenshot( const QString &name, const QString &folder, QWidget *widget = nullptr, GrabMode mode = GrabWidgetAndFrame );
     //! take screenshot and return pixmap

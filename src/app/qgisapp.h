@@ -1311,7 +1311,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     void validateCrs( QgsCoordinateReferenceSystem &crs );
 
     //! QGIS Sponsors
-    void sponsors();
+    static void sponsors();
     //! About QGIS
     void about();
 
@@ -1320,7 +1320,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     //! Add a vector layer defined by uri, layer name, data source uri
     void addSelectedVectorLayer( const QString &uri, const QString &layerName, const QString &provider );
     //! Replace the selected layer by a vector layer defined by uri, layer name, data source uri
-    void replaceSelectedVectorLayer( const QString &oldId, const QString &uri, const QString &layerName, const QString &provider );
+    static void replaceSelectedVectorLayer( const QString &oldId, const QString &uri, const QString &layerName, const QString &provider );
 
     //! toggles whether the current selected layer is in overview or not
     void isInOverview();
@@ -1613,13 +1613,13 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     //! Open the help contents in a browser
     static void helpContents();
     //! Open the API documentation in a browser
-    void apiDocumentation();
+    static void apiDocumentation();
     //! Open the Bugtracker page in a browser
-    void reportaBug();
+    static void reportaBug();
     //! Open the QGIS support page
-    void supportProviders();
+    static void supportProviders();
     //! Open the QGIS homepage in users browser
-    void helpQgisHomePage();
+    static void helpQgisHomePage();
     //! Open a url in the users configured browser
     static void openURL( QString url, bool useQgisDocDirectory = true );
     //! Check qgis version against the qgis version server

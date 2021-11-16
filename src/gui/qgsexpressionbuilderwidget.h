@@ -420,8 +420,8 @@ class GUI_EXPORT QgsExpressionBuilderWidget : public QWidget, private Ui::QgsExp
     void clearErrors();
     void runPythonCode( const QString &code );
     void fillFieldValues( const QString &fieldName, int countLimit, bool forceUsedValues = false );
-    QString getFunctionHelp( QgsExpressionFunction *function );
-    QString loadFunctionHelp( QgsExpressionItem *functionName );
+    static QString getFunctionHelp( QgsExpressionFunction *function );
+    static QString loadFunctionHelp( QgsExpressionItem *functionName );
     static QString helpStylesheet() ;
 
     // To be called whenever expression context has been updated

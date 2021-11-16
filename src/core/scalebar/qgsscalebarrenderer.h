@@ -171,9 +171,9 @@ class CORE_EXPORT QgsScaleBarRenderer
     /**
      * Draws default scalebar labels using the specified \a settings and \a scaleContext to a destination render \a context.
      */
-    void drawDefaultLabels( QgsRenderContext &context,
-                            const QgsScaleBarSettings &settings,
-                            const QgsScaleBarRenderer::ScaleBarContext &scaleContext ) const;
+    static void drawDefaultLabels( QgsRenderContext &context,
+                                   const QgsScaleBarSettings &settings,
+                                   const QgsScaleBarRenderer::ScaleBarContext &scaleContext ) ;
 
     /**
      * Returns the text used for the first label in the scalebar.
@@ -184,13 +184,13 @@ class CORE_EXPORT QgsScaleBarRenderer
      * Returns the x-offset (in millimeters) used for the first label in the scalebar.
      * \deprecated Use the version with QgsRenderContext instead.
      */
-    Q_DECL_DEPRECATED double firstLabelXOffset( const QgsScaleBarSettings &settings ) const SIP_DEPRECATED;
+    static Q_DECL_DEPRECATED double firstLabelXOffset( const QgsScaleBarSettings &settings ) SIP_DEPRECATED;
 
     /**
      * Returns the x-offset (in render context painter units) used for the first label in the scalebar.
      * \since QGIS 3.2
      */
-    double firstLabelXOffset( const QgsScaleBarSettings &settings, const QgsRenderContext &context, const ScaleBarContext &scaleContext ) const;
+    static double firstLabelXOffset( const QgsScaleBarSettings &settings, const QgsRenderContext &context, const ScaleBarContext &scaleContext ) ;
 
     /**
      * Returns a list of positions for each segment within the scalebar.

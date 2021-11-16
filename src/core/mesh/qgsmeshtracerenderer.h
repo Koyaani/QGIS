@@ -269,9 +269,9 @@ class QgsMeshStreamField
 
   private:
     QgsPointXY positionToMapCoordinates( const QPoint &pixelPosition, const QgsPointXY &positionInPixel );
-    bool addPixelToChunkTrace( QPoint &pixel,
-                               QgsMeshStreamField::FieldData &data,
-                               std::list<QPair<QPoint, QgsMeshStreamField::FieldData> > &chunkTrace );
+    static bool addPixelToChunkTrace( QPoint &pixel,
+                                      QgsMeshStreamField::FieldData &data,
+                                      std::list<QPair<QPoint, QgsMeshStreamField::FieldData> > &chunkTrace );
     void setChunkTrace( std::list<QPair<QPoint, FieldData>> &chunkTrace );
     virtual void drawChunkTrace( const std::list<QPair<QPoint, FieldData>> &chunkTrace ) = 0;
     static void clearChunkTrace( std::list<QPair<QPoint, FieldData>> &chunkTrace );

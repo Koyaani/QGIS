@@ -210,7 +210,7 @@ void QgsWfs3AbstractItemsHandler::checkLayerIsAccessible( QgsVectorLayer *mapLay
   }
 }
 
-QgsFeatureRequest QgsWfs3AbstractItemsHandler::filteredRequest( const QgsVectorLayer *vLayer, const QgsServerApiContext &context, const QStringList &subsetAttributes ) const
+QgsFeatureRequest QgsWfs3AbstractItemsHandler::filteredRequest( const QgsVectorLayer *vLayer, const QgsServerApiContext &context, const QStringList &subsetAttributes )
 {
   QgsFeatureRequest featureRequest;
   QgsExpressionContext expressionContext;
@@ -1071,7 +1071,7 @@ json QgsWfs3CollectionsItemsHandler::schema( const QgsServerApiContext &context 
   return data;
 }
 
-const QList<QgsServerQueryStringParameter> QgsWfs3CollectionsItemsHandler::fieldParameters( const QgsVectorLayer *mapLayer, const QgsServerApiContext &context ) const
+const QList<QgsServerQueryStringParameter> QgsWfs3CollectionsItemsHandler::fieldParameters( const QgsVectorLayer *mapLayer, const QgsServerApiContext &context )
 {
   QList<QgsServerQueryStringParameter> params;
   if ( mapLayer )

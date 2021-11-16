@@ -481,7 +481,7 @@ class CORE_EXPORT QgsLegendSettings
     void drawText( QPainter *p, const QRectF &rect, const QString &text, const QFont &font, Qt::AlignmentFlag halignment = Qt::AlignLeft, Qt::AlignmentFlag valignment = Qt::AlignTop, int flags = Qt::TextWordWrap ) const;
 
     //! Returns a font where size is in pixel and font size is upscaled with FONT_WORKAROUND_SCALE
-    QFont scaledFontPixelSize( const QFont &font ) const;
+    static QFont scaledFontPixelSize( const QFont &font ) ;
 
     //! Calculates font to from point size to pixel size
     static double pixelFontSize( double pointSize ) ;

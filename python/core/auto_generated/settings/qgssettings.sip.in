@@ -266,7 +266,7 @@ loop at regular intervals, so you normally don't need to call it yourself.
 %Docstring
 Removes the setting key and any sub-settings of key in a section.
 %End
-    QString prefixedKey( const QString &key, QgsSettings::Section section ) const;
+    static QString prefixedKey( const QString &key, QgsSettings::Section section );
 %Docstring
 Returns the sanitized and prefixed key
 %End

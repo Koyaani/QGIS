@@ -72,7 +72,7 @@ Essentially dumps datasource tag.
 .. versionadded:: 3.0
 %End
 
-    ProviderType providerType( const QDomNode &layerNode );
+    static ProviderType providerType( const QDomNode &layerNode );
 %Docstring
 Returns the physical storage type associated with the given layer
 

@@ -141,7 +141,7 @@ void QgsGeometryCheck::deleteFeatureGeometryPart( const QMap<QString, QgsFeature
 
 void QgsGeometryCheck::deleteFeatureGeometryRing( const QMap<QString, QgsFeaturePool *> &featurePools,
     const QString &layerId, QgsFeature &feature,
-    int partIdx, int ringIdx, Changes &changes ) const
+    int partIdx, int ringIdx, Changes &changes )
 {
   QgsFeaturePool *featurePool = featurePools[layerId];
   QgsGeometry featureGeom = feature.geometry();

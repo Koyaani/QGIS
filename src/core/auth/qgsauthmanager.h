@@ -806,7 +806,7 @@ class CORE_EXPORT QgsAuthManager : public QObject
     static QString passwordHelperName() ;
 
     //! Print a debug message in QGIS
-    void passwordHelperLog( const QString &msg ) const;
+    static void passwordHelperLog( const QString &msg ) ;
 
     //! Read Master password from the wallet
     QString passwordHelperRead();

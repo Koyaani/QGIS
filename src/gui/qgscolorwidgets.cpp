@@ -144,7 +144,7 @@ int QgsColorWidget::hue() const
   }
 }
 
-void QgsColorWidget::alterColor( QColor &color, const QgsColorWidget::ColorComponent component, const int newValue ) const
+void QgsColorWidget::alterColor( QColor &color, const QgsColorWidget::ColorComponent component, const int newValue )
 {
   int h, s, v, a;
   color.getHsv( &h, &s, &v, &a );

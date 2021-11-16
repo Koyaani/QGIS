@@ -311,7 +311,7 @@ virtual bool dropMimeData( const QMimeData * data, Qt.DropAction action, int row
 
     void refresh( const QString &path );
 
-    void refresh( const QModelIndex &index = QModelIndex() );
+    static void refresh( const QModelIndex &index = QModelIndex() );
 
     QModelIndex findPath( const QString &path );
 %Docstring

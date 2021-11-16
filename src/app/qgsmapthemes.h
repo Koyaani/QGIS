@@ -44,9 +44,9 @@ class APP_EXPORT QgsMapThemes : public QObject
     static QgsMapThemes *instance();
 
     //! Add a new preset using the current state of project's layer tree
-    void addPreset( const QString &name );
+    static void addPreset( const QString &name );
     //! Update existing preset using the current state of project's layer tree
-    void updatePreset( const QString &name );
+    static void updatePreset( const QString &name );
 
     //! Convenience menu that lists available presets and actions for management
     QMenu *menu();

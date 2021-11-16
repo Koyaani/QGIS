@@ -1190,12 +1190,12 @@ void QgsDwgImporter::setString( OGRFeatureDefnH dfn, OGRFeatureH f, const QStrin
   OGR_F_SetFieldString( f, idx, value );
 }
 
-void QgsDwgImporter::setString( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, const std::string &value ) const
+void QgsDwgImporter::setString( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, const std::string &value )
 {
   setString( dfn, f, field, value.c_str() );
 }
 
-void QgsDwgImporter::setString( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, const QString &value ) const
+void QgsDwgImporter::setString( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, const QString &value )
 {
   setString( dfn, f, field, value.toUtf8().constData() );
 }

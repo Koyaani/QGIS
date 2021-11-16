@@ -46,7 +46,7 @@ class APP_EXPORT QgsMapToolDeleteRing : public QgsMapToolEdit
     QgsVectorLayer *vlayer = nullptr;
 
     //! delete inner ring from the geometry
-    void deleteRing( QgsFeatureId fId, int beforeVertexNr, QgsVectorLayer *vlayer );
+    static void deleteRing( QgsFeatureId fId, int beforeVertexNr, QgsVectorLayer *vlayer );
 
     //! Returns the ring number in polygon
     static int ringNumInPolygon( const QgsGeometry &g, int vertexNr );

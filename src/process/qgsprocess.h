@@ -76,18 +76,18 @@ class QgsProcessingExec
 
     static void showUsage( const QString &appName );
     void loadPlugins();
-    void listAlgorithms( bool useJson );
+    static void listAlgorithms( bool useJson );
     void listPlugins( bool useJson, bool showLoaded );
     int enablePlugin( const QString &name, bool enabled );
-    int showAlgorithmHelp( const QString &id, bool useJson );
-    int execute( const QString &algId,
-                 const QVariantMap &parameters,
-                 const QString &ellipsoid,
-                 QgsUnitTypes::DistanceUnit distanceUnit,
-                 QgsUnitTypes::AreaUnit areaUnit,
-                 QgsProcessingContext::LogLevel logLevel,
-                 bool useJson,
-                 const QString &projectPath = QString() );
+    static int showAlgorithmHelp( const QString &id, bool useJson );
+    static int execute( const QString &algId,
+                        const QVariantMap &parameters,
+                        const QString &ellipsoid,
+                        QgsUnitTypes::DistanceUnit distanceUnit,
+                        QgsUnitTypes::AreaUnit areaUnit,
+                        QgsProcessingContext::LogLevel logLevel,
+                        bool useJson,
+                        const QString &projectPath = QString() );
 
     static void addVersionInformation( QVariantMap &json );
     static void addAlgorithmInformation( QVariantMap &json, const QgsProcessingAlgorithm *algorithm );

@@ -38,7 +38,7 @@ void QgsAbstractMaterialSettings::setDataDefinedProperties( const QgsPropertyCol
 
 QgsPropertyCollection QgsAbstractMaterialSettings::dataDefinedProperties() const {return mDataDefinedProperties;}
 
-const QgsPropertiesDefinition &QgsAbstractMaterialSettings::propertyDefinitions() const
+const QgsPropertiesDefinition &QgsAbstractMaterialSettings::propertyDefinitions()
 {
   if ( sPropertyDefinitions.isEmpty() )
     initPropertyDefinitions();
