@@ -227,29 +227,29 @@ class CORE_EXPORT QgsMeshCalcUtils
     //! Returns the data type of result dataset group
     QgsMeshDatasetGroupMetadata::DataType outputType() const;
 
-  private:
-    static double ffilter( double val1, double filter ) ;
-    static double fadd( double val1, double val2 ) ;
-    static double fsubtract( double val1, double val2 ) ;
-    static double fmultiply( double val1, double val2 ) ;
-    static double fdivide( double val1, double val2 ) ;
-    static double fpower( double val1, double val2 ) ;
-    static double fequal( double val1, double val2 ) ;
-    static double fnotEqual( double val1, double val2 ) ;
-    static double fgreaterThan( double val1, double val2 ) ;
-    static double flesserThan( double val1, double val2 ) ;
-    static double flesserEqual( double val1, double val2 ) ;
-    static double fgreaterEqual( double val1, double val2 ) ;
-    static double flogicalAnd( double val1, double val2 ) ;
-    static double flogicalOr( double val1, double val2 ) ;
-    static double flogicalNot( double val1 ) ;
-    static double fchangeSign( double val1 ) ;
-    static double fmin( double val1, double val2 ) ;
-    static double fmax( double val1, double val2 ) ;
-    static double fabs( double val1 ) ;
-    static double fsumAggregated( QVector<double> &vals ) ;
-    static double fminimumAggregated( QVector<double> &vals ) ;
-    static double fmaximumAggregated( QVector<double> &vals ) ;
+  private: //detected as static but not...
+    double ffilter( double val1, double filter ) const;
+    double fadd( double val1, double val2 ) const;
+    double fsubtract( double val1, double val2 ) const;
+    double fmultiply( double val1, double val2 ) const;
+    double fdivide( double val1, double val2 ) const;
+    double fpower( double val1, double val2 ) const;
+    double fequal( double val1, double val2 ) const;
+    double fnotEqual( double val1, double val2 ) const;
+    double fgreaterThan( double val1, double val2 ) const;
+    double flesserThan( double val1, double val2 ) const;
+    double flesserEqual( double val1, double val2 ) const;
+    double fgreaterEqual( double val1, double val2 ) const;
+    double flogicalAnd( double val1, double val2 ) const;
+    double flogicalOr( double val1, double val2 ) const;
+    double flogicalNot( double val1 ) const;
+    double fchangeSign( double val1 ) const;
+    double fmin( double val1, double val2 ) const;
+    double fmax( double val1, double val2 ) const;
+    double fabs( double val1 ) const;
+    double fsumAggregated( QVector<double> &vals ) const;
+    double fminimumAggregated( QVector<double> &vals ) const;
+    double fmaximumAggregated( QVector<double> &vals ) const;
     double faverageAggregated( QVector<double> &vals ) const;
 
     /**
