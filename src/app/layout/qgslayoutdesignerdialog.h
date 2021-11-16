@@ -380,7 +380,7 @@ class QgsLayoutDesignerDialog: public QMainWindow, public Ui::QgsLayoutDesignerB
     void saveAsTemplate();
     void addItemsFromTemplate();
     void duplicate();
-    void saveProject();
+    static void saveProject();
     void newLayout();
     void showManager();
     void renameLayout();
@@ -534,7 +534,7 @@ class QgsLayoutDesignerDialog: public QMainWindow, public Ui::QgsLayoutDesignerB
     void createAtlasWidget();
     void createReportWidget();
 
-    void initializeRegistry();
+    static void initializeRegistry();
 
     bool containsWmsLayers() const;
 
@@ -579,8 +579,8 @@ class QgsLayoutDesignerDialog: public QMainWindow, public Ui::QgsLayoutDesignerB
     QString reportTypeString();
     void updateActionNames( QgsMasterLayoutInterface::Type type );
 
-    QString defaultExportPath() const;
-    void setLastExportPath( const QString &path ) const;
+    static QString defaultExportPath() ;
+    static void setLastExportPath( const QString &path ) ;
 
     bool checkBeforeExport();
 

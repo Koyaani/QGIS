@@ -39,7 +39,7 @@ class APP_EXPORT QgsDecorationLayoutExtentDialog : public QDialog, private Ui::Q
     void apply();
     void buttonBox_accepted();
     void buttonBox_rejected();
-    void showHelp();
+    static void showHelp();
 
 
   private:

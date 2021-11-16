@@ -126,7 +126,7 @@ class CORE_EXPORT QgsNetworkContentFetcher : public QObject
      * \param array input html byte array
      * \returns QTextCodec for html content, if detected
      */
-    QTextCodec *codecForHtml( QByteArray &array ) const;
+    static QTextCodec *codecForHtml( QByteArray &array ) ;
 
   private slots:
 

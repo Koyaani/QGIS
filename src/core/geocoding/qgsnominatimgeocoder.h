@@ -61,7 +61,7 @@ class CORE_EXPORT QgsNominatimGeocoder : public QgsGeocoderInterface
     /**
      * Converts a JSON result returned from the Nominatim service to a geocoder result object.
      */
-    QgsGeocoderResult jsonToResult( const QVariantMap &json ) const;
+    static QgsGeocoderResult jsonToResult( const QVariantMap &json ) ;
 
     /**
      * Returns the API endpoint used for requests.

@@ -303,7 +303,7 @@ namespace QgsWmts
     return version;
   }
 
-  void QgsWmtsParameters::log( const QString &msg ) const
+  void QgsWmtsParameters::log( const QString &msg )
   {
     QgsMessageLog::logMessage( msg, "Server", Qgis::MessageLevel::Info );
   }

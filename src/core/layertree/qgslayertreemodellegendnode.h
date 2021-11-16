@@ -689,7 +689,7 @@ class CORE_EXPORT QgsWmsLegendNode : public QgsLayerTreeModelLegendNode
     // Lazily initializes mImage
     QImage getLegendGraphic() const;
 
-    QImage renderMessage( const QString &msg ) const;
+    static QImage renderMessage( const QString &msg ) ;
 
     QImage mImage;
 
@@ -768,7 +768,7 @@ class CORE_EXPORT QgsVectorLabelLegendNode : public QgsLayerTreeModelLegendNode
   private:
     QgsPalLayerSettings mLabelSettings;
     QSizeF drawSymbol( const QgsLegendSettings &settings, const QgsRenderContext &renderContext, double xOffset = 0.0, double yOffset = 0.0 ) const;
-    void textWidthHeight( double &width, double &height, QgsRenderContext &ctx, const QgsTextFormat &textFormat, const QStringList &textLines ) const;
+    static void textWidthHeight( double &width, double &height, QgsRenderContext &ctx, const QgsTextFormat &textFormat, const QStringList &textLines ) ;
 };
 
 

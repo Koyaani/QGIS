@@ -299,7 +299,7 @@ class QgsCptCityBrowserModel : QAbstractItemModel
 
 
 
-    QgsCptCityDataItem *dataItem( const QModelIndex &idx ) const;
+    static QgsCptCityDataItem *dataItem( const QModelIndex &idx );
 %Docstring
 virtual bool dropMimeData( const QMimeData * data, Qt.DropAction action, int row, int column, const QModelIndex & parent ); */
 %End

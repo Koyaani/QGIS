@@ -78,7 +78,7 @@ QFont QgsDiagram::scaledFont( const QgsDiagramSettings &s, const QgsRenderContex
   return f;
 }
 
-QSizeF QgsDiagram::sizeForValue( double value, const QgsDiagramSettings &s, const QgsDiagramInterpolationSettings &is ) const
+QSizeF QgsDiagram::sizeForValue( double value, const QgsDiagramSettings &s, const QgsDiagramInterpolationSettings &is )
 {
   double scaledValue = value;
   double scaledLowerValue = is.lowerValue;

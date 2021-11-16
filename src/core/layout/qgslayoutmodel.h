@@ -243,7 +243,7 @@ class CORE_EXPORT QgsLayoutModel: public QAbstractItemModel
      * Returns the QgsLayoutItem corresponding to a QModelIndex \a index, if possible.
      * \see indexForItem()
      */
-    QgsLayoutItem *itemFromIndex( const QModelIndex &index ) const;
+    static QgsLayoutItem *itemFromIndex( const QModelIndex &index ) ;
 
     /**
      * Returns the QModelIndex corresponding to a QgsLayoutItem \a item and \a column, if possible.

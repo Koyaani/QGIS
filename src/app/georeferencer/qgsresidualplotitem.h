@@ -58,7 +58,7 @@ class QgsResidualPlotItem: public QgsLayoutItem
     double maxMMToPixelRatioForGCP( const QgsGeorefDataPoint *p, double pixelXMM, double pixelYMM );
 
     //! Returns distance between two points
-    double dist( QPointF p1, QPointF p2 ) const;
+    static double dist( QPointF p1, QPointF p2 ) ;
 
     /**
      * Draws an arrow head on to a QPainter.

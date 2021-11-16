@@ -50,7 +50,7 @@ class QgsDb2NewConnection : public QDialog, private Ui::QgsDb2NewConnectionBase
     void updateOkButtonState();
   private:
     QString mOriginalConnName; //store initial name to delete entry in case of rename
-    void showHelp();
+    static void showHelp();
 };
 
 #endif //  QGSDB2NEWCONNECTION_H

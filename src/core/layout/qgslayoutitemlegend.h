@@ -69,7 +69,7 @@ class CORE_EXPORT QgsLegendModel : public QgsLayerTreeModel
      * Clears any previously cached data for the specified \a node.
      * \since QGIS 3.14
      */
-    void clearCachedData( QgsLayerTreeNode *node ) const;
+    static void clearCachedData( QgsLayerTreeNode *node ) ;
 
   signals:
 

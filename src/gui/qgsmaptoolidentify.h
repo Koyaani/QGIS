@@ -276,13 +276,13 @@ class GUI_EXPORT QgsMapToolIdentify : public QgsMapTool
      * Format a distance into a suitable string for display to the user
      * \see formatArea()
      */
-    QString formatDistance( double distance, QgsUnitTypes::DistanceUnit unit ) const;
+    static QString formatDistance( double distance, QgsUnitTypes::DistanceUnit unit ) ;
 
     /**
      * Format a distance into a suitable string for display to the user
      * \see formatDistance()
      */
-    QString formatArea( double area, QgsUnitTypes::AreaUnit unit ) const;
+    static QString formatArea( double area, QgsUnitTypes::AreaUnit unit ) ;
 
     QMap< QString, QString > featureDerivedAttributes( const QgsFeature &feature, QgsMapLayer *layer, const QgsPointXY &layerPoint = QgsPointXY() );
 

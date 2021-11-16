@@ -735,7 +735,7 @@ void QgsColorSwatchDelegate::paint( QPainter *painter, const QStyleOptionViewIte
   painter->drawRoundedRect( rect, cornerSize, cornerSize );
 }
 
-QPixmap QgsColorSwatchDelegate::transparentBackground() const
+QPixmap QgsColorSwatchDelegate::transparentBackground()
 {
   static QPixmap sTranspBkgrd;
 

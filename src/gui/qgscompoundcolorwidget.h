@@ -203,7 +203,7 @@ class GUI_EXPORT QgsCompoundColorWidget : public QgsPanelWidget, private Ui::Qgs
      * \param image image to sample
      * \returns average color from image
      */
-    QColor averageColor( const QImage &image ) const;
+    static QColor averageColor( const QImage &image ) ;
 
     /**
      * Samples a color from the desktop

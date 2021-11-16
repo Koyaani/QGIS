@@ -33,7 +33,7 @@ class APP_EXPORT QgsDecorationNorthArrowDialog : public QDialog, private Ui::Qgs
   private slots:
     void buttonBox_accepted();
     void buttonBox_rejected();
-    void showHelp();
+    static void showHelp();
     void spinAngle_valueChanged( int spinAngle );
     void sliderRotation_valueChanged( int rotationValue );
     void apply();

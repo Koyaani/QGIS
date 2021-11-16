@@ -1365,7 +1365,7 @@ class GUI_EXPORT QgsMapCanvas : public QGraphicsView, public QgsExpressionContex
 
     QgsPreviewEffect *mPreviewEffect = nullptr;
 
-    QgsRectangle imageRect( const QImage &img, const QgsMapSettings &mapSettings );
+    static QgsRectangle imageRect( const QImage &img, const QgsMapSettings &mapSettings );
 
     QgsSnappingUtils *mSnappingUtils = nullptr;
 

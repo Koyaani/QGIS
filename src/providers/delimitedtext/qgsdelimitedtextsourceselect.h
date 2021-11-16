@@ -56,7 +56,7 @@ class QgsDelimitedTextSourceSelect : public QgsAbstractDataSourceWidget, private
     QString mLastFileType;
     QButtonGroup *bgFileFormat = nullptr;
     QButtonGroup *bgGeomType = nullptr;
-    void showHelp();
+    static void showHelp();
     void showCrsWidget();
 
   public slots:

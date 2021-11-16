@@ -336,7 +336,7 @@ class ANALYSIS_EXPORT QgsGeometryCheck
      * \note Not available in Python bindings
      * \since QGIS 3.4
      */
-    QMap<QString, QgsFeatureIds> allLayerFeatureIds( const QMap<QString, QgsFeaturePool *> &featurePools ) const SIP_SKIP;
+    static QMap<QString, QgsFeatureIds> allLayerFeatureIds( const QMap<QString, QgsFeaturePool *> &featurePools ) SIP_SKIP;
 
     /**
      * Replaces a part in a feature geometry.
@@ -344,7 +344,7 @@ class ANALYSIS_EXPORT QgsGeometryCheck
      * \note Not available in Python bindings
      * \since QGIS 3.4
      */
-    void replaceFeatureGeometryPart( const QMap<QString, QgsFeaturePool *> &featurePools, const QString &layerId, QgsFeature &feature, int partIdx, QgsAbstractGeometry *newPartGeom, Changes &changes ) const SIP_SKIP;
+    static void replaceFeatureGeometryPart( const QMap<QString, QgsFeaturePool *> &featurePools, const QString &layerId, QgsFeature &feature, int partIdx, QgsAbstractGeometry *newPartGeom, Changes &changes ) SIP_SKIP;
 
     /**
      * Deletes a part of a feature geometry.
@@ -352,7 +352,7 @@ class ANALYSIS_EXPORT QgsGeometryCheck
      * \note Not available in Python bindings
      * \since QGIS 3.4
      */
-    void deleteFeatureGeometryPart( const QMap<QString, QgsFeaturePool *> &featurePools, const QString &layerId, QgsFeature &feature, int partIdx, Changes &changes ) const SIP_SKIP;
+    static void deleteFeatureGeometryPart( const QMap<QString, QgsFeaturePool *> &featurePools, const QString &layerId, QgsFeature &feature, int partIdx, Changes &changes ) SIP_SKIP;
 
     /**
      * Deletes a ring in a feature geometry.

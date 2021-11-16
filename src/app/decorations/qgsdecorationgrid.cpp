@@ -566,7 +566,7 @@ void QgsDecorationGrid::setDirty( bool dirty )
   }
 }
 
-bool QgsDecorationGrid::getIntervalFromExtent( double *values, bool useXAxis ) const
+bool QgsDecorationGrid::getIntervalFromExtent( double *values, bool useXAxis )
 {
   // get default interval from current extents
   // calculate a default interval that is approx (extent width)/5, adjusted so that it is a rounded number
@@ -595,7 +595,7 @@ bool QgsDecorationGrid::getIntervalFromExtent( double *values, bool useXAxis ) c
   return true;
 }
 
-bool QgsDecorationGrid::getIntervalFromCurrentLayer( double *values ) const
+bool QgsDecorationGrid::getIntervalFromCurrentLayer( double *values )
 {
   // get current layer and make sure it is a raster layer and CRSs match
   QgsMapLayer *layer = QgisApp::instance()->mapCanvas()->currentLayer();

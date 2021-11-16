@@ -62,7 +62,7 @@ class GUI_EXPORT QgsAttributeActionPropertiesDialog: public QDialog, private Ui:
     void insertExpressionOrField();
     void chooseIcon();
     void updateButtons();
-    void showHelp();
+    static void showHelp();
 
   private:
     void init( const QSet<QString> &actionScopes );

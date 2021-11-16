@@ -178,7 +178,7 @@ class CORE_EXPORT QgsScaleBarRenderer
     /**
      * Returns the text used for the first label in the scalebar.
      */
-    QString firstLabelString( const QgsScaleBarSettings &settings ) const;
+    static QString firstLabelString( const QgsScaleBarSettings &settings ) ;
 
     /**
      * Returns the x-offset (in millimeters) used for the first label in the scalebar.
@@ -196,18 +196,18 @@ class CORE_EXPORT QgsScaleBarRenderer
      * Returns a list of positions for each segment within the scalebar.
      * \deprecated use the version with a QgsRenderContext instead
      */
-    Q_DECL_DEPRECATED QList<double> segmentPositions( const QgsScaleBarRenderer::ScaleBarContext &scaleContext, const QgsScaleBarSettings &settings ) const SIP_DEPRECATED;
+    static Q_DECL_DEPRECATED QList<double> segmentPositions( const QgsScaleBarRenderer::ScaleBarContext &scaleContext, const QgsScaleBarSettings &settings ) SIP_DEPRECATED;
 
     /**
      * Returns a list of positions for each segment within the scalebar.
      * \since QGIS 3.14
      */
-    QList<double> segmentPositions( QgsRenderContext &context, const QgsScaleBarRenderer::ScaleBarContext &scaleContext, const QgsScaleBarSettings &settings ) const;
+    static QList<double> segmentPositions( QgsRenderContext &context, const QgsScaleBarRenderer::ScaleBarContext &scaleContext, const QgsScaleBarSettings &settings ) ;
 
     /**
      * Returns a list of widths of each segment of the scalebar.
      */
-    QList<double> segmentWidths( const QgsScaleBarRenderer::ScaleBarContext &scaleContext, const QgsScaleBarSettings &settings ) const;
+    static QList<double> segmentWidths( const QgsScaleBarRenderer::ScaleBarContext &scaleContext, const QgsScaleBarSettings &settings ) ;
 
 };
 

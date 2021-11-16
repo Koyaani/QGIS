@@ -316,7 +316,7 @@ void QgsRelationReferenceWidget::showIndeterminateState()
   updateAttributeEditorFrame( QgsFeature() );
 }
 
-QVariant QgsRelationReferenceWidget::foreignKey() const
+QVariant QgsRelationReferenceWidget::foreignKey()
 {
   QVariantList fkeys;
   if ( fkeys.isEmpty() )

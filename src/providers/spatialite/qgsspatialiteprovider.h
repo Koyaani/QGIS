@@ -101,7 +101,7 @@ class QgsSpatiaLiteProvider final: public QgsVectorDataProvider
      *
      * \note Should this be subLayerCount() instead?
      */
-    size_t layerCount() const;
+    static size_t layerCount() ;
 
     long long featureCount() const override;
     QgsRectangle extent() const override;
@@ -366,18 +366,18 @@ class QgsSpatiaLiteProvider final: public QgsVectorDataProvider
 
     void updatePrimaryKeyCapabilities();
 
-    int computeSizeFromMultiWKB2D( const unsigned char *p_in, int nDims,
-                                   int little_endian,
-                                   int endian_arch );
-    int computeSizeFromMultiWKB3D( const unsigned char *p_in, int nDims,
-                                   int little_endian,
-                                   int endian_arch );
-    void convertFromGeosWKB2D( const unsigned char *blob, int blob_size,
-                               unsigned char *wkb, int geom_size,
-                               int nDims, int little_endian, int endian_arch );
-    void convertFromGeosWKB3D( const unsigned char *blob, int blob_size,
-                               unsigned char *wkb, int geom_size,
-                               int nDims, int little_endian, int endian_arch );
+    static int computeSizeFromMultiWKB2D( const unsigned char *p_in, int nDims,
+                                          int little_endian,
+                                          int endian_arch );
+    static int computeSizeFromMultiWKB3D( const unsigned char *p_in, int nDims,
+                                          int little_endian,
+                                          int endian_arch );
+    static void convertFromGeosWKB2D( const unsigned char *blob, int blob_size,
+                                      unsigned char *wkb, int geom_size,
+                                      int nDims, int little_endian, int endian_arch );
+    static void convertFromGeosWKB3D( const unsigned char *blob, int blob_size,
+                                      unsigned char *wkb, int geom_size,
+                                      int nDims, int little_endian, int endian_arch );
     void convertFromGeosWKB( const unsigned char *blob, int blob_size,
                              unsigned char **wkb, int *geom_size,
                              int dims );

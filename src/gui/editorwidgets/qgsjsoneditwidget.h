@@ -93,7 +93,7 @@ class GUI_EXPORT QgsJsonEditWidget : public QWidget, private Ui::QgsJsonEditWidg
     void codeEditorJsonTextChanged();
     void codeEditorJsonIndicatorClicked( int line, int index, Qt::KeyboardModifiers state );
     void codeEditorJsonDwellStart( int position, int x, int y );
-    void codeEditorJsonDwellEnd( int position, int x, int y );
+    static void codeEditorJsonDwellEnd( int position, int x, int y );
 
   private:
 

@@ -34,7 +34,7 @@ void QgsSingleGeometryCheck::collectErrors( const QMap<QString, QgsFeaturePool *
   }
 }
 
-QgsGeometryCheckErrorSingle *QgsSingleGeometryCheck::convertToGeometryCheckError( QgsSingleGeometryCheckError *singleGeometryCheckError, const QgsGeometryCheckerUtils::LayerFeature &layerFeature ) const
+QgsGeometryCheckErrorSingle *QgsSingleGeometryCheck::convertToGeometryCheckError( QgsSingleGeometryCheckError *singleGeometryCheckError, const QgsGeometryCheckerUtils::LayerFeature &layerFeature )
 {
   return new QgsGeometryCheckErrorSingle( singleGeometryCheckError, layerFeature );
 }

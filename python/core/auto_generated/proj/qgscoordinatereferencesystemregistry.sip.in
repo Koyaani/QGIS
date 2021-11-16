@@ -58,7 +58,7 @@ Contains details of a custom (user defined) CRS.
         QgsCoordinateReferenceSystem crs;
     };
 
-    QList< QgsCoordinateReferenceSystemRegistry::UserCrsDetails > userCrsList() const;
+    static QList< QgsCoordinateReferenceSystemRegistry::UserCrsDetails > userCrsList();
 %Docstring
 Returns a list containing the details of all registered
 custom (user-defined) CRSes.
@@ -122,7 +122,7 @@ The map keys correspond to PROJ operation IDs.
 .. versionadded:: 3.20
 %End
 
-    QList< QgsCelestialBody > celestialBodies() const;
+    static QList< QgsCelestialBody > celestialBodies();
 %Docstring
 Returns a list of all known celestial bodies.
 

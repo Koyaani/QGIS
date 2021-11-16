@@ -594,12 +594,12 @@ class QgsWithVariableExpressionFunction : public QgsExpressionFunction
     /**
      * Append a scope with a single variable definition (``name``=``value``)
      */
-    void appendTemporaryVariable( const QgsExpressionContext *context, const QString &name, const QVariant &value ) const;
+    static void appendTemporaryVariable( const QgsExpressionContext *context, const QString &name, const QVariant &value ) ;
 
     /**
      * Pop the temporary scope again
      */
-    void popTemporaryVariable( const QgsExpressionContext *context ) const;
+    static void popTemporaryVariable( const QgsExpressionContext *context ) ;
 };
 
 #endif

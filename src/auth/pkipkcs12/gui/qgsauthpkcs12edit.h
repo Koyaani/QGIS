@@ -50,8 +50,8 @@ class QgsAuthPkcs12Edit : public QgsAuthMethodEdit, private Ui::QgsAuthPkcs12Edi
     void clearConfig() override;
 
   private slots:
-    void clearPkiMessage( QLineEdit *lineedit );
-    void writePkiMessage( QLineEdit *lineedit, const QString &msg, QgsAuthPkcs12Edit::Validity valid = Unknown );
+    static void clearPkiMessage( QLineEdit *lineedit );
+    static void writePkiMessage( QLineEdit *lineedit, const QString &msg, QgsAuthPkcs12Edit::Validity valid = Unknown );
 
     void clearPkcs12BundlePath();
     void clearPkcs12BundlePass();

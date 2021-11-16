@@ -233,18 +233,18 @@ class QgsWcsProvider final: public QgsRasterDataProvider, QgsGdalProviderBase
      * \param uri uri to prepare
      * \returns prepared uri
      */
-    QString prepareUri( QString uri ) const;
+    static QString prepareUri( QString uri ) ;
 
     QString coverageMetadata( const QgsWcsCoverageSummary &c );
 
     //! remove query item and replace it with a new value
-    void setQueryItem( QUrl &url, const QString &key, const QString &value ) const;
+    static void setQueryItem( QUrl &url, const QString &key, const QString &value ) ;
 
     //! Release cache resources
     void clearCache() const;
 
     //! Create html cell (used by metadata)
-    QString htmlCell( const QString &text );
+    static QString htmlCell( const QString &text );
 
     //! Create html row with 2 cells (used by metadata)
     QString htmlRow( const QString &text1, const QString &text2 );
@@ -422,7 +422,7 @@ class QgsWcsDownloadHandler : public QObject
 
   protected slots:
     void cacheReplyFinished();
-    void cacheReplyProgress( qint64, qint64 );
+    static void cacheReplyProgress( qint64, qint64 );
     void canceled();
 
   protected:

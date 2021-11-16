@@ -173,7 +173,7 @@ namespace QgsMapToolSelectUtils
 
       void startFeatureSearch();
 
-      void styleHighlight( QgsHighlight *highlight );
+      static void styleHighlight( QgsHighlight *highlight );
 
       QString textForChooseAll( qint64 featureCount = -1 ) const;
       QString textForChooseOneMenu() const;

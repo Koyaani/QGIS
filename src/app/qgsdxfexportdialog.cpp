@@ -83,7 +83,7 @@ void FieldSelectorDelegate::setModelData( QWidget *editor, QAbstractItemModel *m
   model->setData( index, vl->fields().lookupField( fcb->currentField() ) );
 }
 
-QgsVectorLayer *FieldSelectorDelegate::indexToLayer( const QAbstractItemModel *model, const QModelIndex &index ) const
+QgsVectorLayer *FieldSelectorDelegate::indexToLayer( const QAbstractItemModel *model, const QModelIndex &index )
 {
   const QgsLayerTreeProxyModel *proxy = qobject_cast< const QgsLayerTreeProxyModel *>( model );
   Q_ASSERT( proxy );
@@ -94,7 +94,7 @@ QgsVectorLayer *FieldSelectorDelegate::indexToLayer( const QAbstractItemModel *m
   return m->vectorLayer( proxy->mapToSource( index ) );
 }
 
-int FieldSelectorDelegate::attributeIndex( const QAbstractItemModel *model, const QgsVectorLayer *vl ) const
+int FieldSelectorDelegate::attributeIndex( const QAbstractItemModel *model, const QgsVectorLayer *vl )
 {
   const QgsLayerTreeProxyModel *proxy = qobject_cast< const QgsLayerTreeProxyModel *>( model );
   Q_ASSERT( proxy );

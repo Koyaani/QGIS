@@ -2250,7 +2250,7 @@ QgsMessageBar *QgisApp::visibleMessageBar()
   }
 }
 
-const QList<QgsVectorLayerRef> QgisApp::findBrokenLayerDependencies( QgsVectorLayer *vl, QgsMapLayer::StyleCategories categories ) const
+const QList<QgsVectorLayerRef> QgisApp::findBrokenLayerDependencies( QgsVectorLayer *vl, QgsMapLayer::StyleCategories categories )
 {
   QList<QgsVectorLayerRef> brokenDependencies;
 
@@ -6156,7 +6156,7 @@ bool QgisApp::askUserForZipItemLayers( const QString &path, const QList< QgsMapL
   return true;
 }
 
-QgisApp::SublayerHandling QgisApp::shouldAskUserForSublayers( const QList<QgsProviderSublayerDetails> &layers, bool hasNonLayerItems ) const
+QgisApp::SublayerHandling QgisApp::shouldAskUserForSublayers( const QList<QgsProviderSublayerDetails> &layers, bool hasNonLayerItems )
 {
   if ( hasNonLayerItems )
     return SublayerHandling::AskUser;
@@ -13401,7 +13401,7 @@ QgsMapLayer *QgisApp::activeLayer()
   return mLayerTreeView ? mLayerTreeView->currentLayer() : nullptr;
 }
 
-QSize QgisApp::iconSize( bool dockedToolbar ) const
+QSize QgisApp::iconSize( bool dockedToolbar )
 {
   return QgsGuiUtils::iconSize( dockedToolbar );
 }

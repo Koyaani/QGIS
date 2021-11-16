@@ -1961,12 +1961,12 @@ namespace QgsWms
     return mWmsParameters[ QgsWmsParameter::WMTVER ].toString();
   }
 
-  void QgsWmsParameters::log( const QString &msg ) const
+  void QgsWmsParameters::log( const QString &msg )
   {
     QgsMessageLog::logMessage( msg, QStringLiteral( "Server" ), Qgis::MessageLevel::Info );
   }
 
-  void QgsWmsParameters::raiseError( const QString &msg ) const
+  void QgsWmsParameters::raiseError( const QString &msg )
   {
     throw QgsBadRequestException( QgsServiceException::QGIS_InvalidParameterValue, msg );
   }

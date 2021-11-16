@@ -175,7 +175,7 @@ void QgsWFSSourceSelect::populateConnectionList()
   changeConnection();
 }
 
-QString QgsWFSSourceSelect::getPreferredCrs( const QSet<QString> &crsSet ) const
+QString QgsWFSSourceSelect::getPreferredCrs( const QSet<QString> &crsSet )
 {
   if ( crsSet.size() < 1 )
   {

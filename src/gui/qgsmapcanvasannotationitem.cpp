@@ -266,7 +266,7 @@ QgsMapCanvasAnnotationItem::MouseMoveAction QgsMapCanvasAnnotationItem::moveActi
   return NoAction;
 }
 
-Qt::CursorShape QgsMapCanvasAnnotationItem::cursorShapeForAction( MouseMoveAction moveAction ) const
+Qt::CursorShape QgsMapCanvasAnnotationItem::cursorShapeForAction( MouseMoveAction moveAction )
 {
   switch ( moveAction )
   {

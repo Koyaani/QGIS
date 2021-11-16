@@ -255,7 +255,7 @@ class CORE_EXPORT QgsAggregateCalculator
     static QVariant concatenateStrings( QgsFeatureIterator &fit, int attr, QgsExpression *expression,
                                         QgsExpressionContext *context, const QString &delimiter, bool unique = false );
 
-    QVariant defaultValue( Aggregate aggregate ) const;
+    static QVariant defaultValue( Aggregate aggregate ) ;
 };
 
 #endif //QGSAGGREGATECALCULATOR_H

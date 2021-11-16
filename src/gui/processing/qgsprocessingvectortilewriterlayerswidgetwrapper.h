@@ -67,7 +67,7 @@ class QgsProcessingVectorTileWriterLayersPanelWidget : public QgsProcessingMulti
 
   private:
     void setItemValue( QStandardItem *item, const QVariant &value );
-    QString titleForLayer( const QgsVectorTileWriter::Layer &layer );
+    static QString titleForLayer( const QgsVectorTileWriter::Layer &layer );
 
     QgsProject *mProject = nullptr;
     QgsProcessingContext mContext;

@@ -158,7 +158,7 @@ class CORE_EXPORT QgsActionManager: public QObject
     QgsVectorLayer *mLayer = nullptr;
     static void ( *smPythonExecute )( const QString & );
 
-    void runAction( const QgsAction &action );
+    static void runAction( const QgsAction &action );
 
     QMap<QString, QUuid> mDefaultActions;
 

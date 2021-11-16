@@ -38,7 +38,7 @@ class APP_EXPORT QgsDecorationGridDialog : public QDialog, private Ui::QgsDecora
     void apply();
     void buttonBox_accepted();
     void buttonBox_rejected();
-    void showHelp();
+    static void showHelp();
     void updateSymbolButtons();
     void mPbtnUpdateFromExtents_clicked();
     void mPbtnUpdateFromLayer_clicked();

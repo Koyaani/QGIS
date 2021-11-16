@@ -497,7 +497,7 @@ void QgsVariableEditorTree::drawRow( QPainter *painter, const QStyleOptionViewIt
   painter->drawLine( opt.rect.x(), opt.rect.bottom(), opt.rect.right(), opt.rect.bottom() );
 }
 
-QColor QgsVariableEditorTree::rowColor( int index ) const
+QColor QgsVariableEditorTree::rowColor( int index )
 {
   //return some nice (inspired by Qt Designer) background row colors
   const int colorIdx = index % 6;

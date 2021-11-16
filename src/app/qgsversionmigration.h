@@ -59,14 +59,14 @@ class Qgs2To3Migration : public QgsVersionMigration
     QgsError runMigration() override;
     bool requiresMigration() override;
   private:
-    QgsError migrateStyles();
+    static QgsError migrateStyles();
     QgsError migrateSettings();
-    QgsError migrateAuthDb();
+    static QgsError migrateAuthDb();
 
     QList<QPair<QString, QString>> walk( QString group, QString newkey );
-    QPair<QString, QString> transformKey( QString fullOldKey, QString newKeyPart );
+    static QPair<QString, QString> transformKey( QString fullOldKey, QString newKeyPart );
 
-    QString migrationFilePath();
+    static QString migrationFilePath();
 
     int mMigrationFileVersion = 0;
 

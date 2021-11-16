@@ -60,7 +60,7 @@ class CORE_EXPORT QgsRasterChecker
     void error( const QString &message, QString &report );
     // compare values and add table row in html report, set ok to false if not equal
     QString compareHead();
-    bool compare( double verifiedVal, double expectedVal, double tolerance );
+    static bool compare( double verifiedVal, double expectedVal, double tolerance );
     void compare( const QString &paramName, int verifiedVal, int expectedVal, QString &report, bool &ok );
 
 #ifndef SIP_RUN
@@ -75,7 +75,7 @@ class CORE_EXPORT QgsRasterChecker
 
     void compare( const QString &paramName, double verifiedVal, double expectedVal, QString &report, bool &ok, double tolerance = 0 );
     void compareRow( const QString &paramName, const QString &verifiedVal, const QString &expectedVal, QString &report, bool ok, const QString &difference = QString(), const QString &tolerance = QString() );
-    double tolerance( double val, int places = 6 );
+    static double tolerance( double val, int places = 6 );
 }; // class QgsRasterChecker
 
 // clazy:excludeall=qstring-allocations

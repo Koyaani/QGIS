@@ -8263,13 +8263,13 @@ bool QgsWithVariableExpressionFunction::prepare( const QgsExpressionNodeFunction
   return true;
 }
 
-void QgsWithVariableExpressionFunction::popTemporaryVariable( const QgsExpressionContext *context ) const
+void QgsWithVariableExpressionFunction::popTemporaryVariable( const QgsExpressionContext *context )
 {
   QgsExpressionContext *updatedContext = const_cast<QgsExpressionContext *>( context );
   delete updatedContext->popScope();
 }
 
-void QgsWithVariableExpressionFunction::appendTemporaryVariable( const QgsExpressionContext *context, const QString &name, const QVariant &value ) const
+void QgsWithVariableExpressionFunction::appendTemporaryVariable( const QgsExpressionContext *context, const QString &name, const QVariant &value )
 {
   QgsExpressionContextScope *scope = new QgsExpressionContextScope();
   scope->addVariable( QgsExpressionContextScope::StaticVariable( name, value, true ) );

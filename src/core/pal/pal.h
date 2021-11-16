@@ -147,7 +147,7 @@ namespace pal
        *
        * Ownership of the returned labels is not transferred - it resides with the pal object.
        */
-      QList<LabelPosition *> solveProblem( Problem *prob, bool displayAll, QList<pal::LabelPosition *> *unlabeled = nullptr );
+      static QList<LabelPosition *> solveProblem( Problem *prob, bool displayAll, QList<pal::LabelPosition *> *unlabeled = nullptr );
 
       /**
        * Sets whether partial labels show be allowed.

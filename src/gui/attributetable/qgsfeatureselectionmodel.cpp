@@ -188,7 +188,7 @@ void QgsFeatureSelectionModel::layerSelectionChanged( const QgsFeatureIds &selec
   }
 }
 
-QModelIndexList QgsFeatureSelectionModel::expandIndexToRow( const QModelIndex &index ) const
+QModelIndexList QgsFeatureSelectionModel::expandIndexToRow( const QModelIndex &index )
 {
   QModelIndexList indexes;
   const QAbstractItemModel *model = index.model();

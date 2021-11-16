@@ -159,7 +159,7 @@ class CORE_EXPORT QgsLayoutNodesItem: public QgsLayoutItem
     void rescaleToFitBoundingBox();
 
     //! Compute an euclidean distance between 2 nodes.
-    double computeDistance( QPointF pt1, QPointF pt2 ) const;
+    static double computeDistance( QPointF pt1, QPointF pt2 ) ;
 
     //! Update the current scene rectangle for this item.
     void updateSceneRect();

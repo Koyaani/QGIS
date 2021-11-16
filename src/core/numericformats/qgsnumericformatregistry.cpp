@@ -88,7 +88,7 @@ QgsNumericFormat *QgsNumericFormatRegistry::createFromXml( const QDomElement &el
   return new QgsFallbackNumericFormat();
 }
 
-QgsNumericFormat *QgsNumericFormatRegistry::fallbackFormat() const
+QgsNumericFormat *QgsNumericFormatRegistry::fallbackFormat()
 {
   return new QgsFallbackNumericFormat();
 }

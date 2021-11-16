@@ -56,7 +56,7 @@ class QgsPdalProvider: public QgsPointCloudDataProvider
     void onGenerateIndexFailed();
 
   private:
-    bool anyIndexingTaskExists();
+    static bool anyIndexingTaskExists();
     bool load( const QString &uri );
     QgsCoordinateReferenceSystem mCrs;
     QgsRectangle mExtent;

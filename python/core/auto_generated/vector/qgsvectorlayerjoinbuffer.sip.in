@@ -122,7 +122,7 @@ Returns joins where the field of a target layer is considered as an id.
 .. versionadded:: 3.0
 %End
 
-    QgsFeature joinedFeatureOf( const QgsVectorLayerJoinInfo *info, const QgsFeature &feature ) const;
+    static QgsFeature joinedFeatureOf( const QgsVectorLayerJoinInfo *info, const QgsFeature &feature );
 %Docstring
 Returns the joined feature corresponding to the feature.
 

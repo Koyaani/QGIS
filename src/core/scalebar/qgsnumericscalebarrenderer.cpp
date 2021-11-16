@@ -104,7 +104,7 @@ QSizeF QgsNumericScaleBarRenderer::calculateBoxSize( const QgsScaleBarSettings &
                  textHeight + 2 * settings.boxContentSpace() );
 }
 
-QString QgsNumericScaleBarRenderer::scaleText( double scale, const QgsScaleBarSettings &settings ) const
+QString QgsNumericScaleBarRenderer::scaleText( double scale, const QgsScaleBarSettings &settings )
 {
   return "1:" + settings.numericFormat()->formatDouble( scale, QgsNumericFormatContext() );
 }

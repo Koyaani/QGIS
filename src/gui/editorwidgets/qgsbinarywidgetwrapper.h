@@ -69,7 +69,7 @@ class GUI_EXPORT QgsBinaryWidgetWrapper : public QgsEditorWidgetWrapper
   private:
     void updateValues( const QVariant &value, const QVariantList & = QVariantList() ) override;
 
-    QString defaultPath();
+    static QString defaultPath();
 
     QByteArray mValue;
 

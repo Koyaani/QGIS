@@ -847,7 +847,7 @@ QVariant QgsMeshAvailableDatasetGroupTreeModel::headerData( int section, Qt::Ori
 
 int QgsMeshAvailableDatasetGroupTreeModel::columnCount( const QModelIndex &parent ) const {Q_UNUSED( parent ); return 3;}
 
-QString QgsMeshAvailableDatasetGroupTreeModel::textDisplayed( const QModelIndex &index ) const
+QString QgsMeshAvailableDatasetGroupTreeModel::textDisplayed( const QModelIndex &index )
 {
   QgsMeshDatasetGroupTreeItem *item = static_cast<QgsMeshDatasetGroupTreeItem *>( index.internalPointer() );
   if ( !item )
@@ -868,7 +868,7 @@ QString QgsMeshAvailableDatasetGroupTreeModel::textDisplayed( const QModelIndex 
   return QString();
 }
 
-QColor QgsMeshAvailableDatasetGroupTreeModel::backGroundColor( const QModelIndex &index ) const
+QColor QgsMeshAvailableDatasetGroupTreeModel::backGroundColor( const QModelIndex &index )
 {
   QgsMeshDatasetGroupTreeItem *item = static_cast<QgsMeshDatasetGroupTreeItem *>( index.internalPointer() );
   if ( !item )

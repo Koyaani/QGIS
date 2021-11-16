@@ -157,7 +157,7 @@ class GUI_EXPORT QgsColorWidget : public QWidget
      * Returns the range of valid values a color component
      * \returns maximum value allowed for color component
      */
-    int componentRange( ColorComponent component ) const;
+    static int componentRange( ColorComponent component ) ;
 
     /**
      * Returns the value of a component of the widget's current color. This method correctly
@@ -793,7 +793,7 @@ class GUI_EXPORT QgsColorPreviewWidget : public QgsColorWidget
      * \param rect rect to draw color in
      * \param painter destination painter
      */
-    void drawColor( const QColor &color, QRect rect, QPainter &painter );
+    static void drawColor( const QColor &color, QRect rect, QPainter &painter );
 };
 
 #endif // #ifndef QGSCOLORWIDGETS_H

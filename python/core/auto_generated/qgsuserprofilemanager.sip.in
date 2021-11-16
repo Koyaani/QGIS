@@ -190,7 +190,7 @@ Setting this again does nothing.
 :param profile: The name of the active profile
 %End
 
-    void loadUserProfile( const QString &name );
+    static void loadUserProfile( const QString &name );
 %Docstring
 Starts a new instance of QGIS for the given profile.
 

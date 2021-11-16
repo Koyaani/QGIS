@@ -50,7 +50,7 @@ class GUI_EXPORT QgsLabelEngineConfigWidget : public QgsPanelWidget, private Ui:
     //! Resets the settings to the defaults
     void setDefaults();
     //! Shows the help
-    void showHelp();
+    static void showHelp();
 
   private:
     QgsMapCanvas *mCanvas = nullptr;

@@ -75,7 +75,7 @@ class QgsMeshRendererVectorSettingsWidget : public QWidget, private Ui::QgsMeshR
      * Returns the value of the spin box, returns err_val if the
      * value is equal to the clear value.
      */
-    double filterValue( const QgsDoubleSpinBox *spinBox, double err_val ) const;
+    static double filterValue( const QgsDoubleSpinBox *spinBox, double err_val ) ;
 
     QgsMeshLayer *mMeshLayer = nullptr; //not owned
     int mActiveDatasetGroup = -1;

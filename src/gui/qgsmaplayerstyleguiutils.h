@@ -56,7 +56,7 @@ class GUI_EXPORT QgsMapLayerStyleGuiUtils : public QObject
      *
      * \since QGIS 3.14
      */
-    void removesExtraMenuSeparators( QMenu *m );
+    static void removesExtraMenuSeparators( QMenu *m );
 
   public slots:
 

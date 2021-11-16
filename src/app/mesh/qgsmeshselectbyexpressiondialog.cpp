@@ -87,7 +87,7 @@ QString QgsMeshSelectByExpressionDialog::expression() const
   return mExpressionBuilder->expressionText();
 }
 
-void QgsMeshSelectByExpressionDialog::showHelp() const
+void QgsMeshSelectByExpressionDialog::showHelp()
 {
   QgsHelp::openHelp( QStringLiteral( "introduction/general_tools.html" ) );
 }

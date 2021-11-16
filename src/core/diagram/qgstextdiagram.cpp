@@ -245,7 +245,7 @@ void QgsTextDiagram::renderDiagram( const QgsFeature &feature, QgsRenderContext 
   }
 }
 
-void QgsTextDiagram::lineEllipseIntersection( QPointF lineStart, QPointF lineEnd, QPointF ellipseMid, double r1, double r2, QList<QPointF> &result ) const
+void QgsTextDiagram::lineEllipseIntersection( QPointF lineStart, QPointF lineEnd, QPointF ellipseMid, double r1, double r2, QList<QPointF> &result )
 {
   result.clear();
 

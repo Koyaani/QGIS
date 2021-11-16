@@ -98,7 +98,7 @@ class ANALYSIS_EXPORT CloughTocherInterpolator : public TriangleInterpolator
     //! Finds out, in which triangle the point with the coordinates x and y is
     void init( double x, double y );
     //! Calculates the Bernsteinpolynomials to calculate the Beziertriangle. 'n' is three in the cubical case, 'i', 'j', 'k' are the indices of the controllpoint and 'u', 'v', 'w' are the barycentric coordinates of the point
-    double calcBernsteinPoly( int n, int i, int j, int k, double u, double v, double w );
+    static double calcBernsteinPoly( int n, int i, int j, int k, double u, double v, double w );
 
   public:
     //! Standard constructor

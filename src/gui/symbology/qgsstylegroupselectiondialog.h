@@ -36,7 +36,7 @@ class GUI_EXPORT QgsStyleGroupSelectionDialog : public QDialog, private Ui::Symb
   public:
     QgsStyleGroupSelectionDialog( QgsStyle *style, QWidget *parent = nullptr );
     //! Sets bold font for item
-    void setBold( QStandardItem *item );
+    static void setBold( QStandardItem *item );
 
   signals:
     //! tag with tagName has been selected

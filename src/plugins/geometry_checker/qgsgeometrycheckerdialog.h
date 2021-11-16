@@ -47,7 +47,7 @@ class QgsGeometryCheckerDialog : public QDialog
   private slots:
     void onCheckerStarted( QgsGeometryChecker *checker );
     void onCheckerFinished( bool successful );
-    void showHelp();
+    static void showHelp();
 };
 
 #endif // QGS_GEOMETRY_CHECKER_DIALOG_H

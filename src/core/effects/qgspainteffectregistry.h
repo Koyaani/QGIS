@@ -214,7 +214,7 @@ class CORE_EXPORT QgsPaintEffectRegistry
      * \returns new paint effect, or NULLPTR if matching
      * paint effect could not be created
      */
-    QgsPaintEffect *createEffect( const QDomElement &element ) const SIP_FACTORY;
+    static QgsPaintEffect *createEffect( const QDomElement &element ) SIP_FACTORY;
 
     /**
      * Returns a list of known paint effects.

@@ -460,7 +460,7 @@ bool QgsLayoutItemMapGrid::usesAdvancedEffects() const
   return mBlendMode != QPainter::CompositionMode_SourceOver;
 }
 
-QPolygonF QgsLayoutItemMapGrid::scalePolygon( const QPolygonF &polygon, const double scale ) const
+QPolygonF QgsLayoutItemMapGrid::scalePolygon( const QPolygonF &polygon, const double scale )
 {
   const QTransform t = QTransform::fromScale( scale, scale );
   return t.map( polygon );
@@ -1921,7 +1921,7 @@ bool QgsLayoutItemMapGrid::shouldShowAnnotationForSide( QgsLayoutItemMapGrid::An
   return false; // no warnings
 }
 
-bool QgsLayoutItemMapGrid::shouldShowForDisplayMode( QgsLayoutItemMapGrid::AnnotationCoordinate coordinate, QgsLayoutItemMapGrid::DisplayMode mode ) const
+bool QgsLayoutItemMapGrid::shouldShowForDisplayMode( QgsLayoutItemMapGrid::AnnotationCoordinate coordinate, QgsLayoutItemMapGrid::DisplayMode mode )
 {
   return mode == QgsLayoutItemMapGrid::ShowAll
          || ( mode == QgsLayoutItemMapGrid::LatitudeOnly && coordinate == QgsLayoutItemMapGrid::Latitude )

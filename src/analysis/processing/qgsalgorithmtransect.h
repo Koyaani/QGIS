@@ -67,7 +67,7 @@ class QgsTransectAlgorithm : public QgsProcessingAlgorithm
      * \param orientation Orientation of the transect
      * \param angle Angle of the transect relative to the segment [\a p1 - \a p2] (degrees clockwise)
      */
-    QgsGeometry calcTransect( const QgsPoint &point, double angleAtVertex, double length, Side orientation, double angle );
+    static QgsGeometry calcTransect( const QgsPoint &point, double angleAtVertex, double length, Side orientation, double angle );
 };
 
 ///@endcond PRIVATE

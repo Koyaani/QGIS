@@ -1340,8 +1340,8 @@ namespace QgsWms
 
       QgsWmsParameter idParameter( QgsWmsParameter::Name name, int id ) const;
 
-      void raiseError( const QString &msg ) const;
-      void log( const QString &msg ) const;
+      static void raiseError( const QString &msg ) ;
+      static void log( const QString &msg ) ;
 
       QgsWmsParametersExternalLayer externalLayerParameter( const QString &name ) const;
 

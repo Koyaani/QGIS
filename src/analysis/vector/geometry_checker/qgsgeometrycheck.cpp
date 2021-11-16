@@ -79,7 +79,7 @@ QStringList QgsGeometryCheck::resolutionMethods() const
   return QStringList();
 }
 
-QMap<QString, QgsFeatureIds> QgsGeometryCheck::allLayerFeatureIds( const QMap<QString, QgsFeaturePool *> &featurePools ) const
+QMap<QString, QgsFeatureIds> QgsGeometryCheck::allLayerFeatureIds( const QMap<QString, QgsFeaturePool *> &featurePools )
 {
   QMap<QString, QgsFeatureIds> featureIds;
   for ( QgsFeaturePool *pool : featurePools )
@@ -91,7 +91,7 @@ QMap<QString, QgsFeatureIds> QgsGeometryCheck::allLayerFeatureIds( const QMap<QS
 
 void QgsGeometryCheck::replaceFeatureGeometryPart( const QMap<QString, QgsFeaturePool *> &featurePools,
     const QString &layerId, QgsFeature &feature,
-    int partIdx, QgsAbstractGeometry *newPartGeom, Changes &changes ) const
+    int partIdx, QgsAbstractGeometry *newPartGeom, Changes &changes )
 {
   QgsFeaturePool *featurePool = featurePools[layerId];
   QgsGeometry featureGeom = feature.geometry();
@@ -112,7 +112,7 @@ void QgsGeometryCheck::replaceFeatureGeometryPart( const QMap<QString, QgsFeatur
   featurePool->updateFeature( feature );
 }
 
-void QgsGeometryCheck::deleteFeatureGeometryPart( const QMap<QString, QgsFeaturePool *> &featurePools, const QString &layerId, QgsFeature &feature, int partIdx, Changes &changes ) const
+void QgsGeometryCheck::deleteFeatureGeometryPart( const QMap<QString, QgsFeaturePool *> &featurePools, const QString &layerId, QgsFeature &feature, int partIdx, Changes &changes )
 {
   QgsFeaturePool *featurePool = featurePools[layerId];
   QgsGeometry featureGeom = feature.geometry();

@@ -51,7 +51,7 @@ class QgsPythonUtilsImpl : public QgsPythonUtils
     /**
      * Returns the path where QGIS Python related files are located.
      */
-    QString pythonPath() const;
+    static QString pythonPath() ;
 
     /**
      * Returns an object's type name as a string
@@ -68,7 +68,7 @@ class QgsPythonUtilsImpl : public QgsPythonUtils
     /**
      * Returns the current path for Python in home directory.
      */
-    QString homePythonPath() const;
+    static QString homePythonPath() ;
 
     /**
      * Returns the current path for home directory Python plugins.
@@ -78,7 +78,7 @@ class QgsPythonUtilsImpl : public QgsPythonUtils
     /**
      * Returns a list of extra plugins paths passed with QGIS_PLUGINPATH environment variable.
      */
-    QStringList extraPluginsPaths() const;
+    static QStringList extraPluginsPaths() ;
 
     QStringList pluginList() override;
     bool isPluginLoaded( const QString &packageName ) override;
@@ -110,16 +110,16 @@ class QgsPythonUtilsImpl : public QgsPythonUtils
     void doCustomImports();
 
     //! cleanup Python context
-    void finish();
+    static void finish();
 
     void installErrorHook();
 
     void uninstallErrorHook();
 
-    QString getTraceback();
+    static QString getTraceback();
 
     //! convert Python object to QString. If the object isn't unicode/str, it will be converted
-    QString PyObjectToQString( PyObject *obj );
+    static QString PyObjectToQString( PyObject *obj );
 
     //! reference to module __main__
     PyObject *mMainModule = nullptr;

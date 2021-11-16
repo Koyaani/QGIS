@@ -183,7 +183,7 @@ class GUI_EXPORT QgsSQLComposerDialog : public QgsSubsetStringEditorInterface, p
     void mAddJoinButton_clicked();
     void mRemoveJoinButton_clicked();
     void mTableJoins_itemSelectionChanged();
-    void showHelp();
+    static void showHelp();
     void reset();
     void buildSQLFromFields();
     void splitSQLIntoFields();
@@ -208,10 +208,10 @@ class GUI_EXPORT QgsSQLComposerDialog : public QgsSubsetStringEditorInterface, p
     void loadTableColumns( const QString &table );
     void functionCurrentIndexChanged( QComboBox *combo,
                                       const QMap<QString, QString> &mapEntryTextToName );
-    void getFunctionList( const QList<Function> &list,
-                          QStringList &listApi,
-                          QStringList &listCombo,
-                          QMap<QString, QString> &mapEntryTextToName );
+    static void getFunctionList( const QList<Function> &list,
+                                 QStringList &listApi,
+                                 QStringList &listCombo,
+                                 QMap<QString, QString> &mapEntryTextToName );
 };
 
 #endif

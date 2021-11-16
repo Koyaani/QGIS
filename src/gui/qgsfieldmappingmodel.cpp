@@ -241,7 +241,7 @@ bool QgsFieldMappingModel::setData( const QModelIndex &index, const QVariant &va
   }
 }
 
-QgsFieldConstraints::Constraints QgsFieldMappingModel::fieldConstraints( const QgsField &field ) const
+QgsFieldConstraints::Constraints QgsFieldMappingModel::fieldConstraints( const QgsField &field )
 {
   QgsFieldConstraints::Constraints constraints;
 

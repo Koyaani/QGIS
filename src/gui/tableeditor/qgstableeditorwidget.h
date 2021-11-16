@@ -477,10 +477,10 @@ class GUI_EXPORT QgsTableEditorWidget : public QTableWidget
 
     void updateHeaders();
 
-    bool collectConsecutiveRowRange( const QModelIndexList &list, int &minRow, int &maxRow ) const;
-    bool collectConsecutiveColumnRange( const QModelIndexList &list, int &minColumn, int &maxColumn ) const;
-    QList< int > collectUniqueRows( const QModelIndexList &list ) const;
-    QList< int > collectUniqueColumns( const QModelIndexList &list ) const;
+    static bool collectConsecutiveRowRange( const QModelIndexList &list, int &minRow, int &maxRow ) ;
+    static bool collectConsecutiveColumnRange( const QModelIndexList &list, int &minColumn, int &maxColumn ) ;
+    static QList< int > collectUniqueRows( const QModelIndexList &list ) ;
+    static QList< int > collectUniqueColumns( const QModelIndexList &list ) ;
 
     int mBlockSignals = 0;
     QHash< QTableWidgetItem *, QgsNumericFormat * > mNumericFormats;

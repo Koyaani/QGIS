@@ -822,7 +822,7 @@ bool QgsNetworkAccessManager::removeRequestPreprocessor( const QString &id )
   return prevCount != sCustomPreprocessors.size();
 }
 
-void QgsNetworkAccessManager::preprocessRequest( QNetworkRequest *req ) const
+void QgsNetworkAccessManager::preprocessRequest( QNetworkRequest *req )
 {
   for ( const auto &preprocessor :  sCustomPreprocessors )
   {

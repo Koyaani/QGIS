@@ -155,7 +155,7 @@ void QgsMeshVariableStrokeWidthButton::updateText()
                 QLocale().toString( mVariableStrokeWidth.maximumWidth(), 'g', 3 ) ) );
 }
 
-double QgsMeshVariableStrokeWidthWidget::lineEditValue( const QgsDoubleSpinBox *lineEdit ) const
+double QgsMeshVariableStrokeWidthWidget::lineEditValue( const QgsDoubleSpinBox *lineEdit )
 {
   if ( lineEdit->value() == lineEdit->clearValue() )
   {

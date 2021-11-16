@@ -166,7 +166,7 @@ Rescale the current shape according to the item's bounding box. Useful when
 the shape is resized thanks to the rubber band.
 %End
 
-    double computeDistance( QPointF pt1, QPointF pt2 ) const;
+    static double computeDistance( QPointF pt1, QPointF pt2 );
 %Docstring
 Compute an euclidean distance between 2 nodes.
 %End

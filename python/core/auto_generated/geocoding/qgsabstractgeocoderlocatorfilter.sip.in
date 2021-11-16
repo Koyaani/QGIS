@@ -77,7 +77,7 @@ Returns the geocoder attached to the filter.
 Returns the WGS84 bounding box attached to the filter.
 %End
 
-    QgsGeocoderResult locatorResultToGeocoderResult( const QgsLocatorResult &result ) const;
+    static QgsGeocoderResult locatorResultToGeocoderResult( const QgsLocatorResult &result );
 %Docstring
 Converts a locator ``result`` to a geocoder result.
 

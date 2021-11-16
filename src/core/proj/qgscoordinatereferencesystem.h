@@ -1023,7 +1023,7 @@ class CORE_EXPORT QgsCoordinateReferenceSystem
      * \note only handles queries that return a single record.
      * \note it will first try the system srs.db then the users qgis.db!
      */
-    RecordMap getRecord( const QString &sql );
+    static RecordMap getRecord( const QString &sql );
 
     /**
      * Open SQLite db and show message if cannot be opened

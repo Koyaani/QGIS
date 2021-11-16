@@ -175,7 +175,7 @@ void QgsSpatiaLiteTableModel::setGeometryTypesForTable( const QString &table, co
   }
 }
 
-QIcon QgsSpatiaLiteTableModel::iconForType( QgsWkbTypes::Type type ) const
+QIcon QgsSpatiaLiteTableModel::iconForType( QgsWkbTypes::Type type )
 {
   if ( type == QgsWkbTypes::Point || type == QgsWkbTypes::Point25D || type == QgsWkbTypes::MultiPoint || type == QgsWkbTypes::MultiPoint25D )
   {
@@ -195,7 +195,7 @@ QIcon QgsSpatiaLiteTableModel::iconForType( QgsWkbTypes::Type type ) const
     return QIcon();
 }
 
-QString QgsSpatiaLiteTableModel::displayStringForType( QgsWkbTypes::Type type ) const
+QString QgsSpatiaLiteTableModel::displayStringForType( QgsWkbTypes::Type type )
 {
   if ( type == QgsWkbTypes::Point || type == QgsWkbTypes::Point25D )
   {
@@ -224,7 +224,7 @@ QString QgsSpatiaLiteTableModel::displayStringForType( QgsWkbTypes::Type type ) 
   return QStringLiteral( "Unknown" );
 }
 
-QgsWkbTypes::Type QgsSpatiaLiteTableModel::qgisTypeFromDbType( const QString &dbType ) const
+QgsWkbTypes::Type QgsSpatiaLiteTableModel::qgisTypeFromDbType( const QString &dbType )
 {
   if ( dbType == QLatin1String( "POINT" ) )
   {

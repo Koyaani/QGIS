@@ -36,7 +36,7 @@ QgsLayoutModel::QgsLayoutModel( QgsLayout *layout, QObject *parent )
 
 }
 
-QgsLayoutItem *QgsLayoutModel::itemFromIndex( const QModelIndex &index ) const
+QgsLayoutItem *QgsLayoutModel::itemFromIndex( const QModelIndex &index )
 {
   //try to return the QgsLayoutItem corresponding to a QModelIndex
   if ( !index.isValid() || index.row() == 0 )

@@ -197,7 +197,7 @@ void QgsClipboard::setSystemClipboard()
   QgsDebugMsgLevel( QStringLiteral( "replaced system clipboard with: %1." ).arg( textCopy ), 4 );
 }
 
-QgsFeatureList QgsClipboard::stringToFeatureList( const QString &string, const QgsFields &fields ) const
+QgsFeatureList QgsClipboard::stringToFeatureList( const QString &string, const QgsFields &fields )
 {
   //first try using OGR to read string
   QgsFeatureList features = QgsOgrUtils::stringToFeatureList( string, fields, QTextCodec::codecForName( "System" ) );
@@ -298,7 +298,7 @@ QgsFeatureList QgsClipboard::stringToFeatureList( const QString &string, const Q
   return features;
 }
 
-QgsFields QgsClipboard::retrieveFields() const
+QgsFields QgsClipboard::retrieveFields()
 {
   QClipboard *cb = QApplication::clipboard();
 
@@ -444,12 +444,12 @@ void QgsClipboard::setText( const QString &text )
   QApplication::clipboard()->setText( text, QClipboard::Clipboard );
 }
 
-bool QgsClipboard::hasFormat( const QString &mimeType ) const
+bool QgsClipboard::hasFormat( const QString &mimeType )
 {
   return QApplication::clipboard()->mimeData()->hasFormat( mimeType );
 }
 
-QByteArray QgsClipboard::data( const QString &mimeType ) const
+QByteArray QgsClipboard::data( const QString &mimeType )
 {
   return QApplication::clipboard()->mimeData()->data( mimeType );
 }

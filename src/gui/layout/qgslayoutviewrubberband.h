@@ -139,7 +139,7 @@ class GUI_EXPORT QgsLayoutViewRubberBand : public QObject
      * forced to a square shape. If \a fromCenter is TRUE then the original \a start
      * position will form the center point of the returned rectangle.
      */
-    QRectF updateRect( QPointF start, QPointF position, bool constrainSquare, bool fromCenter );
+    static QRectF updateRect( QPointF start, QPointF position, bool constrainSquare, bool fromCenter );
 
   private:
 

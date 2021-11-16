@@ -40,7 +40,7 @@ class APP_EXPORT QgsAbout : public QgsOptionsDialogBase, private Ui::QgsAbout
   private slots:
     void btnQgisUser_clicked();
     void btnQgisHome_clicked();
-    void openUrl( const QUrl &url );
+    static void openUrl( const QUrl &url );
 };
 
 #endif

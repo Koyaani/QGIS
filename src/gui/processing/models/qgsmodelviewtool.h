@@ -197,7 +197,7 @@ class GUI_EXPORT QgsModelViewTool : public QObject
      * a "click and drag". If FALSE is returned, the operation should be
      * instead treated as just a click on \a startViewPoint.
      */
-    bool isClickAndDrag( QPoint startViewPoint, QPoint endViewPoint ) const;
+    static bool isClickAndDrag( QPoint startViewPoint, QPoint endViewPoint ) ;
 
   private:
 

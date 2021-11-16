@@ -198,8 +198,8 @@ class QgsVariableEditorTree : public QTreeWidget
     void keyPressEvent( QKeyEvent *event ) override;
     void mousePressEvent( QMouseEvent *event ) override;
     void drawRow( QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index ) const override;
-    QColor rowColor( int index ) const;
-    void toggleContextExpanded( QTreeWidgetItem *item );
+    static QColor rowColor( int index ) ;
+    static void toggleContextExpanded( QTreeWidgetItem *item );
     void editNext( const QModelIndex &index );
 
     QModelIndex moveCursor( CursorAction cursorAction, Qt::KeyboardModifiers modifiers ) override;

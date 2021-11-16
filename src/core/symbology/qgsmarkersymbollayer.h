@@ -126,7 +126,7 @@ class CORE_EXPORT QgsSimpleMarkerSymbolLayerBase : public QgsMarkerSymbolLayer
      * \param polygon destination polygon for shape
      * \returns TRUE if shape was successfully stored in polygon
      */
-    bool shapeToPolygon( Qgis::MarkerShape shape, QPolygonF &polygon ) const;
+    static bool shapeToPolygon( Qgis::MarkerShape shape, QPolygonF &polygon ) ;
 
     /**
      * Calculates the desired size of the marker, considering data defined size overrides.

@@ -480,7 +480,7 @@ output.
 hashtable for faster access to symbols
 %End
 
- QgsSymbol *skipRender() /Deprecated/;
+    static QgsSymbol *skipRender() /Deprecated/;
 %Docstring
 
 .. deprecated::

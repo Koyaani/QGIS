@@ -43,7 +43,7 @@ class QgsPgNewConnection : public QDialog, private Ui::QgsPgNewConnectionBase
     void updateOkButtonState();
   private:
     QString mOriginalConnName; //store initial name to delete entry in case of rename
-    void showHelp();
+    static void showHelp();
 
 };
 

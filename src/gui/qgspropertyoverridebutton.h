@@ -337,7 +337,7 @@ class GUI_EXPORT QgsPropertyOverrideButton: public QToolButton
 
   private slots:
 
-    void showHelp();
+    static void showHelp();
     void updateSiblingWidgets( bool state );
 };
 

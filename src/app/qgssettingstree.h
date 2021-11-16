@@ -74,7 +74,7 @@ class QgsSettingsTree : public QTreeWidget
     QSize sizeHint() const override;
 
     void setSettingsMap( QMap< QString, QStringList > &map ) { mSettingsMap = map; }
-    QString itemKey( QTreeWidgetItem *item );
+    static QString itemKey( QTreeWidgetItem *item );
 
   public slots:
     void setAutoRefresh( bool mAutoRefresh );

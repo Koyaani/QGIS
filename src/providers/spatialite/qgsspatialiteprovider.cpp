@@ -3745,7 +3745,7 @@ void QgsSpatiaLiteProvider::updateExtents()
   getTableSummary();
 }
 
-size_t QgsSpatiaLiteProvider::layerCount() const
+size_t QgsSpatiaLiteProvider::layerCount()
 {
   return 1;
 }

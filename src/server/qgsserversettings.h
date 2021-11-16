@@ -126,7 +126,7 @@ class SERVER_EXPORT QgsServerSettings
      * Returns the ini file loaded by QSetting.
      * \returns the path of the ini file or an empty string if none is loaded.
      */
-    QString iniFile() const;
+    static QString iniFile() ;
 
     /**
      * Returns parallel rendering setting.
@@ -303,8 +303,8 @@ class SERVER_EXPORT QgsServerSettings
   private:
     void initSettings();
     QVariant value( QgsServerSettingsEnv::EnvVar envVar, bool actual = false ) const;
-    QMap<QgsServerSettingsEnv::EnvVar, QString> getEnv() const;
-    void loadQSettings( const QString &envOptPath ) const;
+    static QMap<QgsServerSettingsEnv::EnvVar, QString> getEnv() ;
+    static void loadQSettings( const QString &envOptPath ) ;
     void prioritize( const QMap<QgsServerSettingsEnv::EnvVar, QString> &env );
 
     QMap< QgsServerSettingsEnv::EnvVar, Setting > mSettings;

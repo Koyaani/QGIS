@@ -192,7 +192,7 @@ class GUI_EXPORT QgsOptionsDialogBase : public QDialog
     //! Remove tab and unregister widgets on page remove
     virtual void optionsStackedWidget_WidgetRemoved( int index );
 
-    void warnAboutMissingObjects();
+    static void warnAboutMissingObjects();
 
   protected:
     void showEvent( QShowEvent *e ) override;
@@ -212,7 +212,7 @@ class GUI_EXPORT QgsOptionsDialogBase : public QDialog
      *
      * \since QGIS 3.22
      */
-    QStandardItem *createItem( const QString &name, const QString &tooltip, const QString &icon ) SIP_SKIP;
+    static QStandardItem *createItem( const QString &name, const QString &tooltip, const QString &icon ) SIP_SKIP;
 
     QList< QPair< QgsOptionsDialogHighlightWidget *, int > > mRegisteredSearchWidgets;
 

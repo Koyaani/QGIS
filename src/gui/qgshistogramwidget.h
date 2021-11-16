@@ -213,7 +213,7 @@ class GUI_EXPORT QgsHistogramWidget : public QWidget, private Ui::QgsHistogramWi
 
     void clearHistogram();
 
-    QwtPlotHistogram *createPlotHistogram( const QString &title, const QBrush &brush, const QPen &pen = Qt::NoPen ) const;
+    static QwtPlotHistogram *createPlotHistogram( const QString &title, const QBrush &brush, const QPen &pen = Qt::NoPen ) ;
 
 };
 

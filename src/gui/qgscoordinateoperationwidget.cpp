@@ -439,12 +439,12 @@ void QgsCoordinateOperationWidget::setShowFallbackOption( bool visible )
   mAllowFallbackCheckBox->setVisible( visible );
 }
 
-bool QgsCoordinateOperationWidget::gridShiftTransformation( const QString &itemText ) const
+bool QgsCoordinateOperationWidget::gridShiftTransformation( const QString &itemText )
 {
   return !itemText.isEmpty() && !itemText.contains( QLatin1String( "towgs84" ), Qt::CaseInsensitive );
 }
 
-bool QgsCoordinateOperationWidget::testGridShiftFileAvailability( QTableWidgetItem *item ) const
+bool QgsCoordinateOperationWidget::testGridShiftFileAvailability( QTableWidgetItem *item )
 {
   if ( !item )
   {

@@ -751,7 +751,7 @@ bool QgsMapToolLabel::dataDefinedShowHide( QgsVectorLayer *vlayer, QgsFeatureId 
   return true;
 }
 
-bool QgsMapToolLabel::diagramMoveable( QgsVectorLayer *vlayer, int &xCol, int &yCol ) const
+bool QgsMapToolLabel::diagramMoveable( QgsVectorLayer *vlayer, int &xCol, int &yCol )
 {
   if ( vlayer && vlayer->diagramsEnabled() )
   {
@@ -857,7 +857,7 @@ bool QgsMapToolLabel::isPinned()
   return rc;
 }
 
-bool QgsMapToolLabel::diagramCanShowHide( QgsVectorLayer *vlayer, int &showCol ) const
+bool QgsMapToolLabel::diagramCanShowHide( QgsVectorLayer *vlayer, int &showCol )
 {
   showCol = -1;
 

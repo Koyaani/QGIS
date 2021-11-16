@@ -44,11 +44,11 @@ class QgsDistanceWithinAlgorithm : public QgsProcessingAlgorithm
 
   private:
 
-    void processByIteratingOverTargetSource( const QgsProcessingContext &context, QgsFeatureSource *targetSource, QgsFeatureSource *referenceSource,
+    static void processByIteratingOverTargetSource( const QgsProcessingContext &context, QgsFeatureSource *targetSource, QgsFeatureSource *referenceSource,
         double distance, const QgsProperty &distanceProperty,
         const std::function< void( const QgsFeature & )> &handleFeatureFunction, bool onlyRequireTargetIds,
         QgsProcessingFeedback *feedback, QgsExpressionContext &expressionContext );
-    void processByIteratingOverReferenceSource( const QgsProcessingContext &context, QgsFeatureSource *targetSource, QgsFeatureSource *referenceSource,
+    static void processByIteratingOverReferenceSource( const QgsProcessingContext &context, QgsFeatureSource *targetSource, QgsFeatureSource *referenceSource,
         double distance,
         const std::function< void( const QgsFeature & )> &handleFeatureFunction, bool onlyRequireTargetIds, QgsProcessingFeedback *feedback );
 };

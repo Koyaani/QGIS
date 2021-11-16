@@ -55,7 +55,7 @@ class CORE_EXPORT QgsNumericScaleBarRenderer: public QgsScaleBarRenderer
   private:
 
     //! Returns the text for the scale bar or an empty string in case of error
-    QString scaleText( double scale, const QgsScaleBarSettings &settings ) const;
+    static QString scaleText( double scale, const QgsScaleBarSettings &settings ) ;
 
 };
 

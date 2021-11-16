@@ -331,7 +331,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     void namSetup();
 
     //! update proxy settings
-    void namUpdate();
+    static void namUpdate();
 
     //! Sets up master password
     void masterPasswordSetup();
@@ -380,13 +380,13 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
      * Add window to Window menu. The action title is the window title
      * and the action should raise, unminimize and activate the window.
     */
-    void addWindow( QAction *action );
+    static void addWindow( QAction *action );
 
     /**
      * Remove window from Window menu. Calling this is necessary only for
      * windows which are hidden rather than deleted when closed.
     */
-    void removeWindow( QAction *action );
+    static void removeWindow( QAction *action );
 
     /**
      * Returns the active layout designers.
@@ -833,7 +833,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
      * Returns the toolbar icon size. If \a dockedToolbar is TRUE, the icon size
      * for toolbars contained within docks is returned.
      */
-    QSize iconSize( bool dockedToolbar = false ) const;
+    static QSize iconSize( bool dockedToolbar = false ) ;
 
     /**
       * Checks available datum transforms and ask user if several are available and none
@@ -856,7 +856,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
      * @param saveDirectory path were the screenshots will be saved
      * @param categories an int as a flag value of QgsAppScreenShots::Categories
      */
-    void takeAppScreenShots( const QString &saveDirectory, const int categories = 0 );
+    static void takeAppScreenShots( const QString &saveDirectory, const int categories = 0 );
 
     QgsLayerTreeRegistryBridge::InsertionPoint layerTreeInsertionPoint() const;
 
@@ -914,7 +914,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     void fieldCalculator();
 
     //! mark project dirty
-    void markDirty();
+    static void markDirty();
 
     /**
      * \brief layersWereAdded is triggered when layers were added
@@ -1043,7 +1043,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     void setAppStyleSheet( const QString &stylesheet );
 
     //! request credentials for network manager
-    void namProxyAuthenticationRequired( const QNetworkProxy &proxy, QAuthenticator *auth );
+    static void namProxyAuthenticationRequired( const QNetworkProxy &proxy, QAuthenticator *auth );
     void namRequestTimedOut( const QgsNetworkRequestParameters &request );
 
     //! Schedule and erase of the authentication database upon confirmation
@@ -1190,7 +1190,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     bool addRasterLayers( const QStringList &files, bool guiWarning = true );
 
     //! Open a plugin layer using its provider
-    QgsPluginLayer *addPluginLayer( const QString &uri, const QString &baseName, const QString &providerKey );
+    static QgsPluginLayer *addPluginLayer( const QString &uri, const QString &baseName, const QString &providerKey );
 
     void versionReplyFinished();
 
@@ -1208,7 +1208,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     //! Gets map of project property pages
     QMap< QString, QString > projectPropertiesPagesMap();
     //! Gets map of setting pages
-    QMap< QString, QString > settingPagesMap();
+    static QMap< QString, QString > settingPagesMap();
 
     void showProjectProperties( const QString  &page = QString() );
     void showSettings( const QString &page );
@@ -1244,7 +1244,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
      * Shows the layout manager dialog.
      * \since QGIS 3.0
      */
-    void showLayoutManager();
+    static void showLayoutManager();
 
     //! shows the snapping Options
     void snappingOptions();
@@ -1519,7 +1519,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     //! Export project in dxf format
     void dxfExport();
     //! Import layers in dwg format
-    void dwgImport();
+    static void dwgImport();
 
     /**
      * Open the project file corresponding to the
@@ -1549,7 +1549,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     //! What type of project to open after launch
     void fileOpenAfterLaunch();
     //! After project read, set any auto-opened project as successful
-    void fileOpenedOKAfterLaunch();
+    static void fileOpenedOKAfterLaunch();
     void fileNewFromTemplateAction( QAction *qAction );
     void fileNewFromDefaultTemplate();
     //! Calculate new rasters from existing ones
@@ -1611,7 +1611,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     void showSelectedLayers();
 
     //! Open the help contents in a browser
-    void helpContents();
+    static void helpContents();
     //! Open the API documentation in a browser
     void apiDocumentation();
     //! Open the Bugtracker page in a browser
@@ -1621,7 +1621,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     //! Open the QGIS homepage in users browser
     void helpQgisHomePage();
     //! Open a url in the users configured browser
-    void openURL( QString url, bool useQgisDocDirectory = true );
+    static void openURL( QString url, bool useQgisDocDirectory = true );
     //! Check qgis version against the qgis version server
     void checkQgisVersion();
     //!Invoke the custom projection dialog
@@ -1694,7 +1694,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     void selectByRadius();
 
     //! deselect features from all layers
-    void deselectAll();
+    static void deselectAll();
 
     //! deselect features from the current active layer
     void deselectActiveLayer();
@@ -1720,7 +1720,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     void canvasRefreshFinished();
 
     //! Dialog for verification of action on many edits
-    bool verifyEditsActionDialog( const QString &act, const QString &upon );
+    static bool verifyEditsActionDialog( const QString &act, const QString &upon );
 
     //! Update gui actions/menus when layers are modified
     void updateLayerModifiedActions();
@@ -1822,7 +1822,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     void diagramProperties();
 
     //! Creates a new annotation layer
-    void createAnnotationLayer();
+    static void createAnnotationLayer();
 
     //! Sets the CAD dock widget visible
     void setCadDockVisible( bool visible );
@@ -1831,7 +1831,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     void showPythonDialog();
 
     //! add Python cnosole at start up
-    void initPythonConsoleOptions();
+    static void initPythonConsoleOptions();
 
     //! Shows a warning when an old project file is read.
     void oldProjectVersionWarning( const QString & );
@@ -1855,21 +1855,21 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     void toggleReducedView( bool viewMapOnly );
 
     //! Sets minimized mode of active window
-    void showActiveWindowMinimized();
+    static void showActiveWindowMinimized();
 
     //! Toggle maximized mode of active window
-    void toggleActiveWindowMaximized();
+    static void toggleActiveWindowMaximized();
 
     //! Raise, unminimize and activate this window
     void activate();
 
     //! Bring forward all open windows
-    void bringAllToFront();
+    static void bringAllToFront();
 
     //! Stops rendering of the main map
     void stopRendering();
 
-    void showStyleManager();
+    static void showStyleManager();
 
     //! Toggles whether to show pinned labels
     void showPinnedLabels( bool show );
@@ -1955,7 +1955,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     void projectCrsChanged();
 
     //! Updates the temporal range in layers that are using project temporal range.
-    void projectTemporalRangeChanged();
+    static void projectTemporalRangeChanged();
 
     void onActiveLayerChanged( QgsMapLayer *layer );
 
@@ -2073,9 +2073,9 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
 
   private:
     void createPreviewImage( const QString &path, const QIcon &overlayIcon = QIcon() );
-    void startProfile( const QString &name );
-    void endProfile();
-    void functionProfile( void ( QgisApp::*fnc )(), QgisApp *instance, const QString &name );
+    static void startProfile( const QString &name );
+    static void endProfile();
+    static void functionProfile( void ( QgisApp::*fnc )(), QgisApp *instance, const QString &name );
 
     void showProgress( int progress, int totalSteps );
 
@@ -2091,7 +2091,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
       LoadAll,
       AbortLoading
     };
-    SublayerHandling shouldAskUserForSublayers( const QList< QgsProviderSublayerDetails > &layers, bool hasNonLayerItems = false ) const;
+    static SublayerHandling shouldAskUserForSublayers( const QList< QgsProviderSublayerDetails > &layers, bool hasNonLayerItems = false ) ;
 
     QList< QgsMapLayer * > addSublayers( const QList< QgsProviderSublayerDetails> &layers, const QString &baseName, const QString &groupName );
 
@@ -2226,8 +2226,8 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     void setupCanvasTools();
     void createMapTips();
     void createDecorations();
-    void init3D();
-    void initNativeProcessing();
+    static void init3D();
+    static void initNativeProcessing();
     void initLayouts();
 
     //! Creates a new 3D map dock without initializing its position or contents
@@ -2254,7 +2254,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     void adjustGamma( double delta );
 
     //! Copy a vector style from a layer to another one, if they have the same geometry type
-    void duplicateVectorStyle( QgsVectorLayer *srcLayer, QgsVectorLayer *destLayer );
+    static void duplicateVectorStyle( QgsVectorLayer *srcLayer, QgsVectorLayer *destLayer );
 
     //! Loads the list of recent projects from settings
     void readRecentProjects();
@@ -2262,12 +2262,12 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
     /**
      * Applies project map canvas settings to the specified canvas
      */
-    void applyProjectSettingsToCanvas( QgsMapCanvas *canvas );
+    static void applyProjectSettingsToCanvas( QgsMapCanvas *canvas );
 
     /**
      * Applies global qgis settings to the specified canvas
      */
-    void applyDefaultSettingsToCanvas( QgsMapCanvas *canvas );
+    static void applyDefaultSettingsToCanvas( QgsMapCanvas *canvas );
 
     /**
      * Configures positioning of a newly created dock widget.
@@ -2313,8 +2313,8 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
      * categories ("Forms" for the form widgets and "Relations" for layer weak relations).
      * \return a list of weak references to broken layer dependencies
      */
-    const QList< QgsVectorLayerRef > findBrokenLayerDependencies( QgsVectorLayer *vectorLayer,
-        QgsMapLayer::StyleCategories categories = QgsMapLayer::StyleCategory::AllStyleCategories ) const;
+    static const QList< QgsVectorLayerRef > findBrokenLayerDependencies( QgsVectorLayer *vectorLayer,
+        QgsMapLayer::StyleCategories categories = QgsMapLayer::StyleCategory::AllStyleCategories ) ;
 
     /**
      * Scans the \a vectorLayer for broken dependencies and automatically
@@ -2330,7 +2330,7 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
      * Scans the \a vectorLayer for weak relations and automatically
      * try to resolve and create the broken relations.
      */
-    void resolveVectorLayerWeakRelations( QgsVectorLayer *vectorLayer );
+    static void resolveVectorLayerWeakRelations( QgsVectorLayer *vectorLayer );
 
     /**
      * Pastes the \a features to the \a pasteVectorLayer and gives feedback to the user
@@ -2643,8 +2643,8 @@ class APP_EXPORT QgisApp : public QMainWindow, private Ui::MainWindow
 
     int mProjOpen = 0;
 
-    bool gestureEvent( QGestureEvent *event );
-    void tapAndHoldTriggered( QTapAndHoldGesture *gesture );
+    static bool gestureEvent( QGestureEvent *event );
+    static void tapAndHoldTriggered( QTapAndHoldGesture *gesture );
 
     QgsLocatorWidget *mLocatorWidget = nullptr;
     std::unique_ptr<QgsNominatimGeocoder> mNominatimGeocoder;

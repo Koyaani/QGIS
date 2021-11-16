@@ -104,7 +104,7 @@ class GUI_EXPORT QgsGradientColorRampDialog : public QDialog, private Ui::QgsGra
     void plotMousePress( QPointF point );
     void plotMouseRelease( QPointF point );
     void plotMouseMove( QPointF point );
-    void showHelp();
+    static void showHelp();
 
   private:
 

@@ -199,7 +199,7 @@ void QgsModelArrowItem::updatePath()
   setPath( path );
 }
 
-QPointF QgsModelArrowItem::bezierPointForCurve( const QPointF &point, Qt::Edge edge, bool incoming ) const
+QPointF QgsModelArrowItem::bezierPointForCurve( const QPointF &point, Qt::Edge edge, bool incoming )
 {
   switch ( edge )
   {

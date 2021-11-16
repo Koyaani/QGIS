@@ -290,7 +290,7 @@ class APP_EXPORT QgsVertexTool : public QgsMapToolAdvancedDigitizing
     void updateVertexBand( const QgsPointLocator::Match &m );
 
     //! Handles mouse press event when in range selection method
-    void rangeMethodPressEvent( QgsMapMouseEvent *e );
+    static void rangeMethodPressEvent( QgsMapMouseEvent *e );
     //! Handles mouse release event when in range selection method
     void rangeMethodReleaseEvent( QgsMapMouseEvent *e );
     //! Handles mouse move event when in range selection method

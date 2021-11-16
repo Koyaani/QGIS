@@ -130,7 +130,7 @@ Creates a new paint effect given the effect name and properties map.
          paint effect could not be created
 %End
 
-    QgsPaintEffect *createEffect( const QDomElement &element ) const /Factory/;
+    static QgsPaintEffect *createEffect( const QDomElement &element ) /Factory/;
 %Docstring
 Creates a new paint effect given a DOM element storing paint effect
 properties.

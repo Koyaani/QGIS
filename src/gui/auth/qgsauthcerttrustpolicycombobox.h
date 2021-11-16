@@ -60,7 +60,7 @@ class GUI_EXPORT QgsAuthCertTrustPolicyComboBox : public QComboBox
     void highlightCurrentIndex( int indx );
 
   private:
-    const QString defaultTrustText(
+    static const QString defaultTrustText(
       QgsAuthCertUtils::CertTrustPolicy defaultpolicy = QgsAuthCertUtils::DefaultTrust );
 };
 

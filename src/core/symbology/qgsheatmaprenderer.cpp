@@ -189,29 +189,29 @@ bool QgsHeatmapRenderer::renderFeature( const QgsFeature &feature, QgsRenderCont
 }
 
 
-double QgsHeatmapRenderer::uniformKernel( const double distance, const int bandwidth ) const
+double QgsHeatmapRenderer::uniformKernel( const double distance, const int bandwidth )
 {
   Q_UNUSED( distance )
   Q_UNUSED( bandwidth )
   return 1.0;
 }
 
-double QgsHeatmapRenderer::quarticKernel( const double distance, const int bandwidth ) const
+double QgsHeatmapRenderer::quarticKernel( const double distance, const int bandwidth )
 {
   return std::pow( 1. - std::pow( distance / static_cast< double >( bandwidth ), 2 ), 2 );
 }
 
-double QgsHeatmapRenderer::triweightKernel( const double distance, const int bandwidth ) const
+double QgsHeatmapRenderer::triweightKernel( const double distance, const int bandwidth )
 {
   return std::pow( 1. - std::pow( distance / static_cast< double >( bandwidth ), 2 ), 3 );
 }
 
-double QgsHeatmapRenderer::epanechnikovKernel( const double distance, const int bandwidth ) const
+double QgsHeatmapRenderer::epanechnikovKernel( const double distance, const int bandwidth )
 {
   return ( 1. - std::pow( distance / static_cast< double >( bandwidth ), 2 ) );
 }
 
-double QgsHeatmapRenderer::triangularKernel( const double distance, const int bandwidth ) const
+double QgsHeatmapRenderer::triangularKernel( const double distance, const int bandwidth )
 {
   return ( 1. - ( distance / static_cast< double >( bandwidth ) ) );
 }

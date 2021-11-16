@@ -556,7 +556,7 @@ void QgsProjectionSelectionWidget::updateTooltip()
   updateWarning();
 }
 
-QgsMapLayer *QgsProjectionSelectionWidget::mapLayerFromMimeData( const QMimeData *data ) const
+QgsMapLayer *QgsProjectionSelectionWidget::mapLayerFromMimeData( const QMimeData *data )
 {
   const QgsMimeDataUtils::UriList uriList = QgsMimeDataUtils::decodeUriList( data );
   for ( const QgsMimeDataUtils::Uri &u : uriList )

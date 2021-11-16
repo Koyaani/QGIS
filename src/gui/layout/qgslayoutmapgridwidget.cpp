@@ -463,7 +463,7 @@ void QgsLayoutMapGridWidget::initAnnotationDirectionBox( QComboBox *c, QgsLayout
   c->setCurrentIndex( c->findData( dir ) );
 }
 
-bool QgsLayoutMapGridWidget::hasPredefinedScales() const
+bool QgsLayoutMapGridWidget::hasPredefinedScales()
 {
   // first look at project's scales
   const QVector< double > scales = QgsProject::instance()->viewSettings()->mapScales();

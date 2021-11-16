@@ -953,7 +953,7 @@ void QgsMeshCalcUtils::activate(
   }
 }
 
-double QgsMeshCalcUtils::ffilter( double val1, double filter ) const
+double QgsMeshCalcUtils::ffilter( double val1, double filter )
 {
   Q_ASSERT( !std::isnan( val1 ) );
 
@@ -963,7 +963,7 @@ double QgsMeshCalcUtils::ffilter( double val1, double filter ) const
     return D_NODATA;
 }
 
-double QgsMeshCalcUtils::fadd( double val1, double val2 ) const
+double QgsMeshCalcUtils::fadd( double val1, double val2 )
 {
   Q_ASSERT( !std::isnan( val1 ) );
   Q_ASSERT( !std::isnan( val2 ) );
@@ -971,7 +971,7 @@ double QgsMeshCalcUtils::fadd( double val1, double val2 ) const
 
 }
 
-double QgsMeshCalcUtils::fsubtract( double val1, double val2 ) const
+double QgsMeshCalcUtils::fsubtract( double val1, double val2 )
 {
   Q_ASSERT( !std::isnan( val1 ) );
   Q_ASSERT( !std::isnan( val2 ) );
@@ -979,7 +979,7 @@ double QgsMeshCalcUtils::fsubtract( double val1, double val2 ) const
 
 }
 
-double QgsMeshCalcUtils::fmultiply( double val1, double val2 ) const
+double QgsMeshCalcUtils::fmultiply( double val1, double val2 )
 {
   Q_ASSERT( !std::isnan( val1 ) );
   Q_ASSERT( !std::isnan( val2 ) );
@@ -987,7 +987,7 @@ double QgsMeshCalcUtils::fmultiply( double val1, double val2 ) const
 
 }
 
-double QgsMeshCalcUtils::fdivide( double val1, double val2 ) const
+double QgsMeshCalcUtils::fdivide( double val1, double val2 )
 {
   Q_ASSERT( !std::isnan( val1 ) );
   Q_ASSERT( !std::isnan( val2 ) );
@@ -998,7 +998,7 @@ double QgsMeshCalcUtils::fdivide( double val1, double val2 ) const
 
 }
 
-double QgsMeshCalcUtils::fpower( double val1, double val2 ) const
+double QgsMeshCalcUtils::fpower( double val1, double val2 )
 {
   Q_ASSERT( !std::isnan( val1 ) );
   Q_ASSERT( !std::isnan( val2 ) );
@@ -1006,7 +1006,7 @@ double QgsMeshCalcUtils::fpower( double val1, double val2 ) const
 
 }
 
-double QgsMeshCalcUtils::fequal( double val1, double val2 ) const
+double QgsMeshCalcUtils::fequal( double val1, double val2 )
 {
   Q_ASSERT( !std::isnan( val1 ) );
   Q_ASSERT( !std::isnan( val2 ) );
@@ -1021,7 +1021,7 @@ double QgsMeshCalcUtils::fequal( double val1, double val2 ) const
 
 }
 
-double QgsMeshCalcUtils::fnotEqual( double val1, double val2 ) const
+double QgsMeshCalcUtils::fnotEqual( double val1, double val2 )
 {
   Q_ASSERT( !std::isnan( val1 ) );
   Q_ASSERT( !std::isnan( val2 ) );
@@ -1036,7 +1036,7 @@ double QgsMeshCalcUtils::fnotEqual( double val1, double val2 ) const
 
 }
 
-double QgsMeshCalcUtils::fgreaterThan( double val1, double val2 ) const
+double QgsMeshCalcUtils::fgreaterThan( double val1, double val2 )
 {
   Q_ASSERT( !std::isnan( val1 ) );
   Q_ASSERT( !std::isnan( val2 ) );
@@ -1051,7 +1051,7 @@ double QgsMeshCalcUtils::fgreaterThan( double val1, double val2 ) const
 
 }
 
-double QgsMeshCalcUtils::flesserThan( double val1, double val2 ) const
+double QgsMeshCalcUtils::flesserThan( double val1, double val2 )
 {
   Q_ASSERT( !std::isnan( val1 ) );
   Q_ASSERT( !std::isnan( val2 ) );
@@ -1066,7 +1066,7 @@ double QgsMeshCalcUtils::flesserThan( double val1, double val2 ) const
 
 }
 
-double QgsMeshCalcUtils::flesserEqual( double val1, double val2 ) const
+double QgsMeshCalcUtils::flesserEqual( double val1, double val2 )
 {
   Q_ASSERT( !std::isnan( val1 ) );
   Q_ASSERT( !std::isnan( val2 ) );
@@ -1081,7 +1081,7 @@ double QgsMeshCalcUtils::flesserEqual( double val1, double val2 ) const
 
 }
 
-double QgsMeshCalcUtils::fgreaterEqual( double val1, double val2 ) const
+double QgsMeshCalcUtils::fgreaterEqual( double val1, double val2 )
 {
   Q_ASSERT( !std::isnan( val1 ) );
   Q_ASSERT( !std::isnan( val2 ) );
@@ -1097,7 +1097,7 @@ double QgsMeshCalcUtils::fgreaterEqual( double val1, double val2 ) const
 }
 
 
-double QgsMeshCalcUtils::flogicalAnd( double val1, double val2 ) const
+double QgsMeshCalcUtils::flogicalAnd( double val1, double val2 )
 {
   Q_ASSERT( !std::isnan( val1 ) );
   Q_ASSERT( !std::isnan( val2 ) );
@@ -1110,7 +1110,7 @@ double QgsMeshCalcUtils::flogicalAnd( double val1, double val2 ) const
 
 }
 
-double QgsMeshCalcUtils::flogicalOr( double val1, double val2 ) const
+double QgsMeshCalcUtils::flogicalOr( double val1, double val2 )
 {
   Q_ASSERT( !std::isnan( val1 ) );
   Q_ASSERT( !std::isnan( val2 ) );
@@ -1123,7 +1123,7 @@ double QgsMeshCalcUtils::flogicalOr( double val1, double val2 ) const
 
 }
 
-double QgsMeshCalcUtils::flogicalNot( double val1 ) const
+double QgsMeshCalcUtils::flogicalNot( double val1 )
 {
   Q_ASSERT( !std::isnan( val1 ) );
   const bool bval1 = qgsDoubleNear( val1, D_TRUE );
@@ -1134,13 +1134,13 @@ double QgsMeshCalcUtils::flogicalNot( double val1 ) const
 
 }
 
-double QgsMeshCalcUtils::fchangeSign( double val1 ) const
+double QgsMeshCalcUtils::fchangeSign( double val1 )
 {
   Q_ASSERT( !std::isnan( val1 ) );
   return -val1;
 }
 
-double QgsMeshCalcUtils::fmin( double val1, double val2 ) const
+double QgsMeshCalcUtils::fmin( double val1, double val2 )
 {
   Q_ASSERT( !std::isnan( val1 ) );
   if ( val1 > val2 )
@@ -1154,7 +1154,7 @@ double QgsMeshCalcUtils::fmin( double val1, double val2 ) const
 }
 
 
-double QgsMeshCalcUtils::fmax( double val1, double val2 ) const
+double QgsMeshCalcUtils::fmax( double val1, double val2 )
 {
   Q_ASSERT( !std::isnan( val1 ) );
   Q_ASSERT( !std::isnan( val2 ) );
@@ -1169,7 +1169,7 @@ double QgsMeshCalcUtils::fmax( double val1, double val2 ) const
 
 }
 
-double QgsMeshCalcUtils::fabs( double val1 ) const
+double QgsMeshCalcUtils::fabs( double val1 )
 {
   Q_ASSERT( !std::isnan( val1 ) );
   if ( val1 > 0 )
@@ -1183,21 +1183,21 @@ double QgsMeshCalcUtils::fabs( double val1 ) const
 
 }
 
-double QgsMeshCalcUtils::fsumAggregated( QVector<double> &vals ) const
+double QgsMeshCalcUtils::fsumAggregated( QVector<double> &vals )
 {
   Q_ASSERT( !vals.contains( D_NODATA ) );
   Q_ASSERT( !vals.isEmpty() );
   return std::accumulate( vals.begin(), vals.end(), 0.0 );
 }
 
-double QgsMeshCalcUtils::fminimumAggregated( QVector<double> &vals ) const
+double QgsMeshCalcUtils::fminimumAggregated( QVector<double> &vals )
 {
   Q_ASSERT( !vals.contains( D_NODATA ) );
   Q_ASSERT( !vals.isEmpty() );
   return *std::min_element( vals.begin(), vals.end() );
 }
 
-double QgsMeshCalcUtils::fmaximumAggregated( QVector<double> &vals ) const
+double QgsMeshCalcUtils::fmaximumAggregated( QVector<double> &vals )
 {
   Q_ASSERT( !vals.contains( D_NODATA ) );
   Q_ASSERT( !vals.isEmpty() );

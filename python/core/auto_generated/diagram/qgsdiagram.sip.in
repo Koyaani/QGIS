@@ -91,7 +91,7 @@ Constructor for QgsDiagram.
 %End
     QgsDiagram( const QgsDiagram &other );
 
-    void setPenWidth( QPen &pen, const QgsDiagramSettings &s, const QgsRenderContext &c );
+    static void setPenWidth( QPen &pen, const QgsDiagramSettings &s, const QgsRenderContext &c );
 %Docstring
 Changes the pen width to match the current settings and rendering context
 
@@ -100,7 +100,7 @@ Changes the pen width to match the current settings and rendering context
 :param c: The rendering specifying the proper scale units for pixel conversion
 %End
 
-    QSizeF sizePainterUnits( QSizeF size, const QgsDiagramSettings &s, const QgsRenderContext &c );
+    static QSizeF sizePainterUnits( QSizeF size, const QgsDiagramSettings &s, const QgsRenderContext &c );
 %Docstring
 Calculates a size to match the current settings and rendering context
 
@@ -111,7 +111,7 @@ Calculates a size to match the current settings and rendering context
 :return: The converted size for rendering
 %End
 
-    double sizePainterUnits( double l, const QgsDiagramSettings &s, const QgsRenderContext &c );
+    static double sizePainterUnits( double l, const QgsDiagramSettings &s, const QgsRenderContext &c );
 %Docstring
 Calculates a length to match the current settings and rendering context
 
@@ -122,7 +122,7 @@ Calculates a length to match the current settings and rendering context
 :return: The converted length for rendering
 %End
 
-    QFont scaledFont( const QgsDiagramSettings &s, const QgsRenderContext &c );
+    static QFont scaledFont( const QgsDiagramSettings &s, const QgsRenderContext &c );
 %Docstring
 Calculates a size to match the current settings and rendering context
 
@@ -132,7 +132,7 @@ Calculates a size to match the current settings and rendering context
 :return: The properly scaled font for rendering
 %End
 
-    QSizeF sizeForValue( double value, const QgsDiagramSettings &s, const QgsDiagramInterpolationSettings &is ) const;
+    static QSizeF sizeForValue( double value, const QgsDiagramSettings &s, const QgsDiagramInterpolationSettings &is );
 %Docstring
 Returns the scaled size of a diagram for a value, respecting the specified diagram interpolation settings.
 

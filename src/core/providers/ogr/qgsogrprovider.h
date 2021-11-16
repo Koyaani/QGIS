@@ -183,7 +183,7 @@ class QgsOgrProvider final: public QgsVectorDataProvider
     bool _enterUpdateMode( bool implicit = false );
 
   private:
-    unsigned char *getGeometryPointer( OGRFeatureH fet );
+    static unsigned char *getGeometryPointer( OGRFeatureH fet );
 
     static QString createIndexName( QString tableName, QString field );
 
@@ -281,7 +281,7 @@ class QgsOgrProvider final: public QgsVectorDataProvider
     mutable QList<QgsProviderSublayerDetails> mSubLayerList;
 
     //! Converts \a value from json QVariant to QString
-    QString jsonStringValue( const QVariant &value ) const;
+    static QString jsonStringValue( const QVariant &value ) ;
 
     //! The \a incrementalFeatureId will generally be -1, except for a few OGR drivers where QGIS will pass on a value when OGR doesn't set it
     bool addFeaturePrivate( QgsFeature &f, QgsFeatureSink::Flags flags, QgsFeatureId incrementalFeatureId = -1 );

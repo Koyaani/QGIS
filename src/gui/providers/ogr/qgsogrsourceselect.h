@@ -109,7 +109,7 @@ class QgsOgrSourceSelect : public QgsAbstractDataSourceWidget, private Ui::QgsOg
     void cmbDatabaseTypes_currentIndexChanged( const QString &text );
     void cmbConnections_currentIndexChanged( const QString &text );
     void cmbProtocolTypes_currentIndexChanged( const QString &text );
-    void showHelp();
+    static void showHelp();
 
   private:
 

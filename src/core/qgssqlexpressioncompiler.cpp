@@ -471,7 +471,7 @@ QgsSqlExpressionCompiler::Result QgsSqlExpressionCompiler::replaceNodeByStaticCa
   return Fail;
 }
 
-bool QgsSqlExpressionCompiler::nodeIsNullLiteral( const QgsExpressionNode *node ) const
+bool QgsSqlExpressionCompiler::nodeIsNullLiteral( const QgsExpressionNode *node )
 {
   if ( node->nodeType() != QgsExpressionNode::ntLiteral )
     return false;

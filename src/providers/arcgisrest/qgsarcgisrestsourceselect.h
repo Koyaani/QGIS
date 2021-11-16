@@ -98,7 +98,7 @@ class QgsArcGisRestSourceSelect : public QgsAbstractDataSourceWidget, protected 
     void disconnectFromServer();
     void filterChanged( const QString &text );
     void cmbConnections_activated( int index );
-    void showHelp();
+    static void showHelp();
     void treeWidgetCurrentRowChanged( const QModelIndex &current, const QModelIndex &previous );
     void btnSave_clicked();
     void btnLoad_clicked();

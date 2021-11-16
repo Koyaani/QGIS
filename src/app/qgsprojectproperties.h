@@ -160,9 +160,9 @@ class APP_EXPORT QgsProjectProperties : public QgsOptionsDialogBase, private Ui:
     /**
      * Slot to link WMTS checkboxes in tree widget
      */
-    void twWmtsItemChanged( QTreeWidgetItem *item, int column );
-    void twWmtsGridItemDoubleClicked( QTreeWidgetItem *item, int column );
-    void twWmtsGridItemChanged( QTreeWidgetItem *item, int column );
+    static void twWmtsItemChanged( QTreeWidgetItem *item, int column );
+    static void twWmtsGridItemDoubleClicked( QTreeWidgetItem *item, int column );
+    static void twWmtsGridItemChanged( QTreeWidgetItem *item, int column );
 
     /**
      * Slot to link WFS checkboxes

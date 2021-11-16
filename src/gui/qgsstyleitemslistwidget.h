@@ -166,7 +166,7 @@ class GUI_EXPORT QgsStyleItemsListWidget : public QWidget, private Ui::QgsStyleI
     void saveEntity();
 
   private slots:
-    void groupsCombo_currentIndexChanged( int index );
+    static void groupsCombo_currentIndexChanged( int index );
     void updateModelFilters();
     void onSelectionChanged( const QModelIndex &index );
     void populateGroups();

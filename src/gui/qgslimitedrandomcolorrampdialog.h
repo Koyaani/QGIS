@@ -140,7 +140,7 @@ class GUI_EXPORT QgsLimitedRandomColorRampDialog : public QDialog
 
   private slots:
 
-    void showHelp();
+    static void showHelp();
 
 };
 

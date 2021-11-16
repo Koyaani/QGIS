@@ -97,7 +97,7 @@ of ``parent`` are searched. If no ``parent`` is specified, then all items within
 the model are searched.
 %End
 
-    QgsDataItem *dataItem( const QModelIndex &idx ) const;
+    static QgsDataItem *dataItem( const QModelIndex &idx );
 %Docstring
 Returns the data item at the specified index, or ``None`` if no item
 exists at the index.

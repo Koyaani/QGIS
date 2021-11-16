@@ -198,7 +198,7 @@ class QgsWMSSourceSelect : public QgsAbstractDataSourceWidget, private Ui::QgsWM
     void mLayerUpButton_clicked();
     void mLayerDownButton_clicked();
     void updateButtons();
-    void showHelp();
+    static void showHelp();
 };
 
 

@@ -106,7 +106,7 @@ class GUI_EXPORT QgsColorDialog : public QDialog, private Ui::QgsColorDialogBase
     void mButtonBox_rejected();
     void mButtonBox_clicked( QAbstractButton *button );
     void discardColor();
-    void showHelp();
+    static void showHelp();
 
   private:
 

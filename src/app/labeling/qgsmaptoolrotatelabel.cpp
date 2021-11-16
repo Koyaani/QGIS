@@ -328,7 +328,7 @@ void QgsMapToolRotateLabel::setRotationPreviewBox( double rotation )
   mRotationPreviewBox->show();
 }
 
-QgsPointXY QgsMapToolRotateLabel::rotatePointClockwise( const QgsPointXY &input, const QgsPointXY &centerPoint, double degrees ) const
+QgsPointXY QgsMapToolRotateLabel::rotatePointClockwise( const QgsPointXY &input, const QgsPointXY &centerPoint, double degrees )
 {
   const double rad = -degrees / 180 * M_PI;
   const double v1x = input.x() - centerPoint.x();

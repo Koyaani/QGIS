@@ -91,7 +91,7 @@ Returns the current layer or a None.
    use :py:func:`~QgsExpressionBuilderWidget.expressionTree`->:py:func:`~QgsExpressionBuilderWidget.loadFieldNames` instead
 %End
 
- void loadFieldsAndValues( const QMap<QString, QStringList> &fieldValues ) /Deprecated/;
+    static void loadFieldsAndValues( const QMap<QString, QStringList> &fieldValues ) /Deprecated/;
 %Docstring
 Loads field names and values from the specified map.
 

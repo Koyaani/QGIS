@@ -249,7 +249,7 @@ Verify if provided authentication id is unique
 :param id: Id to check
 %End
 
-    bool hasConfigId( const QString &txt ) const;
+    static bool hasConfigId( const QString &txt );
 %Docstring
 Returns whether a string includes an authcfg ID token
 
@@ -595,7 +595,7 @@ Check if a certificate authority exists
 Remove a certificate authority
 %End
 
-    const QList<QSslCertificate> systemRootCAs();
+    static const QList<QSslCertificate> systemRootCAs();
 %Docstring
 systemRootCAs get root system certificate authorities
 
@@ -744,7 +744,7 @@ trustedCaCertsPemText get concatenated string of all trusted CA certificates
 
 
 
-    bool passwordHelperEnabled() const;
+    static bool passwordHelperEnabled();
 %Docstring
 Password helper enabled getter
 

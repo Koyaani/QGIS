@@ -915,7 +915,7 @@ class CORE_EXPORT QgsVectorFileWriter : public QgsFeatureSink
 
   protected:
     //! \note not available in Python bindings
-    OGRGeometryH createEmptyGeometry( QgsWkbTypes::Type wkbType ) SIP_SKIP;
+    static OGRGeometryH createEmptyGeometry( QgsWkbTypes::Type wkbType ) SIP_SKIP;
 
     gdal::ogr_datasource_unique_ptr mDS;
     OGRLayerH mLayer = nullptr;
@@ -1045,8 +1045,8 @@ class CORE_EXPORT QgsVectorFileWriter : public QgsFeatureSink
 
     //! Writes features considering symbol level order
     QgsVectorFileWriter::WriterError exportFeaturesSymbolLevels( const PreparedWriterDetails &details, QgsFeatureIterator &fit, const QgsCoordinateTransform &ct, QString *errorMessage = nullptr );
-    double mmScaleFactor( double scale, QgsUnitTypes::RenderUnit symbolUnits, QgsUnitTypes::DistanceUnit mapUnits );
-    double mapUnitScaleFactor( double scale, QgsUnitTypes::RenderUnit symbolUnits, QgsUnitTypes::DistanceUnit mapUnits );
+    static double mmScaleFactor( double scale, QgsUnitTypes::RenderUnit symbolUnits, QgsUnitTypes::DistanceUnit mapUnits );
+    static double mapUnitScaleFactor( double scale, QgsUnitTypes::RenderUnit symbolUnits, QgsUnitTypes::DistanceUnit mapUnits );
 
     void startRender( QgsFeatureRenderer *sourceRenderer, const QgsFields &fields );
     void stopRender();

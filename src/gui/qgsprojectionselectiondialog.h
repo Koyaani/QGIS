@@ -139,7 +139,7 @@ class GUI_EXPORT QgsProjectionSelectionDialog : public QDialog, private Ui::QgsG
 
   private slots:
 
-    void showHelp();
+    static void showHelp();
 };
 
 #endif // #ifndef QGSLAYERCRSSELECTOR_H

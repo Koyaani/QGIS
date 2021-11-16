@@ -813,7 +813,7 @@ void QgsVectorLayerEditBuffer::handleAttributeDeleted( int index )
 
 
 
-void QgsVectorLayerEditBuffer::updateAttributeMapIndex( QgsAttributeMap &map, int index, int offset ) const
+void QgsVectorLayerEditBuffer::updateAttributeMapIndex( QgsAttributeMap &map, int index, int offset )
 {
   QgsAttributeMap updatedMap;
   for ( QgsAttributeMap::const_iterator it = map.constBegin(); it != map.constEnd(); ++it )

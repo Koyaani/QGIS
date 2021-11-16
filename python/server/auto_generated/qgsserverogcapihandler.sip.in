@@ -175,7 +175,7 @@ the parameters map.
 :raises QgsServerApiBadRequestError: if validation fails
 %End
 
-    QString contentTypeForAccept( const QString &accept ) const;
+    static QString contentTypeForAccept( const QString &accept );
 %Docstring
 Looks for the first ContentType match in the accept header and returns its mime type,
 returns an empty string if there are not matches.

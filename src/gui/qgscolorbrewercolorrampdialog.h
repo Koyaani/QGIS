@@ -128,7 +128,7 @@ class GUI_EXPORT QgsColorBrewerColorRampDialog : public QDialog
 
   private slots:
 
-    void showHelp();
+    static void showHelp();
 
 };
 

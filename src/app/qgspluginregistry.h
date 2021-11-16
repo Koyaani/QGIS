@@ -100,7 +100,7 @@ class APP_EXPORT QgsPluginRegistry
     QgsPluginRegistry() = default;
 
     //! Try to load and get metadata from c++ plugin, return true on success
-    bool checkCppPlugin( const QString &pluginFullPath );
+    static bool checkCppPlugin( const QString &pluginFullPath );
     //! Try to load and get metadata from Python plugin, return true on success
     bool checkPythonPlugin( const QString &packageName );
 
@@ -108,7 +108,7 @@ class APP_EXPORT QgsPluginRegistry
      * Check current QGIS version against requested minimal and optionally maximal QGIS version
      * if maxVersion not specified, the default value is assumed: std::floor(minVersion) + 0.99.99
      */
-    bool checkQgisVersion( const QString &minVersion, const QString &maxVersion = QString() ) const;
+    static bool checkQgisVersion( const QString &minVersion, const QString &maxVersion = QString() ) ;
 
   private:
     static QgsPluginRegistry *sInstance;

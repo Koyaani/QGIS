@@ -115,7 +115,7 @@ Prepares the layer for drawing the specified shape (QPolygonF version)
 Prepares the layer for drawing the specified shape (QPainterPath version)
 %End
 
-    bool shapeToPolygon( Qgis::MarkerShape shape, QPolygonF &polygon ) const;
+    static bool shapeToPolygon( Qgis::MarkerShape shape, QPolygonF &polygon );
 %Docstring
 Creates a polygon representing the specified shape.
 

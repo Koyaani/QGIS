@@ -70,7 +70,7 @@ class QgsPluginManager : public QgsOptionsDialogBase, private Ui::QgsPluginManag
     void getCppPluginsMetadata();
 
     //! Create new spacer item for sorting by status in the plugin list view
-    QStandardItem *createSpacerItem( const QString &text, const QString &value );
+    static QStandardItem *createSpacerItem( const QString &text, const QString &value );
 
     //! Repopulate the plugin list model
     void reloadModelData();
@@ -122,7 +122,7 @@ class QgsPluginManager : public QgsOptionsDialogBase, private Ui::QgsPluginManag
     void leFilter_textChanged( QString text );
 
     //! Upgrade all upgradeable plugins
-    void buttonUpgradeAll_clicked();
+    static void buttonUpgradeAll_clicked();
 
     //! Install selected plugin
     void buttonInstall_clicked();
@@ -152,7 +152,7 @@ class QgsPluginManager : public QgsOptionsDialogBase, private Ui::QgsPluginManag
     void treeRepositories_doubleClicked( const QModelIndex & );
 
     //! Define new repository connection
-    void buttonAddRep_clicked();
+    static void buttonAddRep_clicked();
 
     //! Edit selected repository connection
     void buttonEditRep_clicked();
@@ -161,16 +161,16 @@ class QgsPluginManager : public QgsOptionsDialogBase, private Ui::QgsPluginManag
     void buttonDeleteRep_clicked();
 
     //! Reload all repositories
-    void buttonRefreshRepos_clicked();
+    static void buttonRefreshRepos_clicked();
 
     //! Reload plugin metadata registry after allowing/disallowing experimental plugins
-    void ckbExperimental_toggled( bool state );
+    static void ckbExperimental_toggled( bool state );
 
     //! Reload plugin metadata registry after allowing/disallowing deprecated plugins
-    void ckbDeprecated_toggled( bool state );
+    static void ckbDeprecated_toggled( bool state );
 
     //! Open help browser
-    void showHelp();
+    static void showHelp();
 
     //! Reimplement QgsOptionsDialogBase method to prevent modifying the tab list by signals from the stacked widget
     void optionsStackedWidget_CurrentChanged( int index ) override { Q_UNUSED( index ) };
@@ -179,7 +179,7 @@ class QgsPluginManager : public QgsOptionsDialogBase, private Ui::QgsPluginManag
     void setRepositoryFilter();
 
     //! Enable all repositories disabled by "Enable selected repository only"
-    void clearRepositoryFilter();
+    static void clearRepositoryFilter();
 
     //! show the given message in the Plugin Manager internal message bar
     void pushMessage( const QString &text, Qgis::MessageLevel level, int duration = -1 );

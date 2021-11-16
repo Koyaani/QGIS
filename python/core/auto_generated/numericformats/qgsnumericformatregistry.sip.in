@@ -74,7 +74,7 @@ a default :py:class:`QgsFallbackNumericFormat` will be returned instead.
 The caller takes ownership of the returned object.
 %End
 
-    QgsNumericFormat *fallbackFormat() const /Factory/;
+    static QgsNumericFormat *fallbackFormat() /Factory/;
 %Docstring
 Returns a basic numeric formatter which can be used
 to represent any number in an default manner.

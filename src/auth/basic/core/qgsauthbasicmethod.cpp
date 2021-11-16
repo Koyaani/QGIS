@@ -379,7 +379,7 @@ void QgsAuthBasicMethod::removeMethodConfig( const QString &authcfg )
   }
 }
 
-QString QgsAuthBasicMethod::escapeUserPass( const QString &val, QChar delim ) const
+QString QgsAuthBasicMethod::escapeUserPass( const QString &val, QChar delim )
 {
   QString escaped = val;
 

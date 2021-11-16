@@ -80,7 +80,7 @@ class QgsMeshVectorValueInterpolator
     mutable QgsMeshFace mFaceCache;
     mutable int mCacheFaceIndex = -1;
     bool mUseScalarActiveFaceFlagValues = false;
-    bool isVectorValid( const QgsVector &v ) const;
+    static bool isVectorValid( const QgsVector &v ) ;
 
   private:
 
@@ -274,10 +274,10 @@ class QgsMeshStreamField
                                std::list<QPair<QPoint, QgsMeshStreamField::FieldData> > &chunkTrace );
     void setChunkTrace( std::list<QPair<QPoint, FieldData>> &chunkTrace );
     virtual void drawChunkTrace( const std::list<QPair<QPoint, FieldData>> &chunkTrace ) = 0;
-    void clearChunkTrace( std::list<QPair<QPoint, FieldData>> &chunkTrace );
+    static void clearChunkTrace( std::list<QPair<QPoint, FieldData>> &chunkTrace );
     virtual void storeInField( const QPair<QPoint, FieldData> pixelData ) = 0;
     virtual void initField() = 0;
-    void simplifyChunkTrace( std::list<QPair<QPoint, FieldData>> &shunkTrace );
+    static void simplifyChunkTrace( std::list<QPair<QPoint, FieldData>> &shunkTrace );
 
     virtual bool isTraceExists( const QPoint &pixel ) const = 0;
     bool isTraceOutside( const QPoint &pixel ) const;

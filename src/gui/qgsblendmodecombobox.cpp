@@ -30,7 +30,7 @@ QgsBlendModeComboBox::QgsBlendModeComboBox( QWidget *parent ) : QComboBox( paren
   updateModes();
 }
 
-QStringList QgsBlendModeComboBox::blendModesList() const
+QStringList QgsBlendModeComboBox::blendModesList()
 {
   return QStringList() << tr( "Normal" )
          << QStringLiteral( "-" )

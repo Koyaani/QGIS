@@ -428,7 +428,7 @@ bool QgsRasterMatrix::twoArgumentOperation( TwoArgOperator op, const QgsRasterMa
   }
 }
 
-bool QgsRasterMatrix::testPowerValidity( double base, double power ) const
+bool QgsRasterMatrix::testPowerValidity( double base, double power )
 {
   return !( ( base == 0 && power < 0 ) || ( base < 0 && ( power - std::floor( power ) ) > 0 ) );
 }

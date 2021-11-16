@@ -81,7 +81,7 @@ class APP_EXPORT QgsOptions : public QgsOptionsDialogBase, private Ui::QgsOption
 
   public slots:
     void cbxProjectDefaultNew_toggled( bool checked );
-    void setCurrentProjectDefault();
+    static void setCurrentProjectDefault();
     void resetProjectDefault();
     void browseTemplateFolder();
     void resetTemplateFolder();
@@ -99,9 +99,9 @@ class APP_EXPORT QgsOptions : public QgsOptionsDialogBase, private Ui::QgsOption
     void rejectOptions();
 
     //! Slot to change the theme this is handled when the user
-    void iconSizeChanged( const QString &iconSize );
+    static void iconSizeChanged( const QString &iconSize );
 
-    void uiThemeChanged( const QString &theme );
+    static void uiThemeChanged( const QString &theme );
 
     /**
      * Slot to handle when type of project to open after launch is changed
@@ -274,7 +274,7 @@ class APP_EXPORT QgsOptions : public QgsOptionsDialogBase, private Ui::QgsOption
 
   private:
     QgsSettings *mSettings = nullptr;
-    QStringList i18nList();
+    static QStringList i18nList();
 
     void initContrastEnhancement( QComboBox *cbox, const QString &name, const QString &defaultVal );
     void saveContrastEnhancement( QComboBox *cbox, const QString &name );

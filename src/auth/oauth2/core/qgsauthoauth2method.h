@@ -75,10 +75,10 @@ class QgsAuthOAuth2Method : public QgsAuthMethod
   public slots:
 
     //! Triggered when linked condition has changed
-    void onLinkedChanged();
+    static void onLinkedChanged();
 
     //! Triggered when linking operation failed
-    void onLinkingFailed();
+    static void onLinkingFailed();
 
     //! Triggered when linking operation succeeded
     void onLinkingSucceeded();
@@ -109,9 +109,9 @@ class QgsAuthOAuth2Method : public QgsAuthMethod
 
     QgsO2 *getOAuth2Bundle( const QString &authcfg, bool fullconfig = true );
 
-    void putOAuth2Bundle( const QString &authcfg, QgsO2 *bundle );
+    static void putOAuth2Bundle( const QString &authcfg, QgsO2 *bundle );
 
-    void removeOAuth2Bundle( const QString &authcfg );
+    static void removeOAuth2Bundle( const QString &authcfg );
 
     static QMap<QString, QgsO2 *> sOAuth2ConfigCache;
 

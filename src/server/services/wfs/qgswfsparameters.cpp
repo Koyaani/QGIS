@@ -364,7 +364,7 @@ namespace QgsWfs
     return version;
   }
 
-  void QgsWfsParameters::log( const QString &msg ) const
+  void QgsWfsParameters::log( const QString &msg )
   {
     QgsMessageLog::logMessage( msg, "Server", Qgis::MessageLevel::Info );
   }

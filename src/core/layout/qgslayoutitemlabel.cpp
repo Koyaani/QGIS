@@ -288,7 +288,7 @@ QString QgsLayoutItemLabel::currentText() const
   return QgsExpression::replaceExpressionText( displayText, &context, mDistanceArea.get() );
 }
 
-void QgsLayoutItemLabel::replaceDateText( QString &text ) const
+void QgsLayoutItemLabel::replaceDateText( QString &text )
 {
   const QString constant = QStringLiteral( "$CURRENT_DATE" );
   const int currentDatePos = text.indexOf( constant );

@@ -184,15 +184,15 @@ class GUI_EXPORT QgsCoordinateOperationWidget : public QWidget, private Ui::QgsC
       MissingGridUrlsRole
     };
 
-    bool gridShiftTransformation( const QString &itemText ) const;
+    static bool gridShiftTransformation( const QString &itemText ) ;
     //! Returns FALSE if the location of the grid shift files is known (PROJ_LIB) and the shift file is not there
-    bool testGridShiftFileAvailability( QTableWidgetItem *item ) const;
+    static bool testGridShiftFileAvailability( QTableWidgetItem *item ) ;
     void loadAvailableOperations();
 
     /**
      * Cleans up a PROJ scope string, adding friendly acronym descriptions.
      */
-    QString formatScope( const QString &scope );
+    static QString formatScope( const QString &scope );
 
     QList< QgsDatumTransform::TransformDetails > mDatumTransforms;
 

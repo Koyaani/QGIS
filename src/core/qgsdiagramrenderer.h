@@ -787,7 +787,7 @@ class CORE_EXPORT QgsDiagramRenderer
     virtual QSizeF diagramSize( const QgsFeature &features, const QgsRenderContext &c ) const = 0;
 
     //! Converts size from mm to map units
-    void convertSizeToMapUnits( QSizeF &size, const QgsRenderContext &context ) const;
+    static void convertSizeToMapUnits( QSizeF &size, const QgsRenderContext &context ) ;
 
     //! Returns the paint device dpi (or -1 in case of error
     static int dpiPaintDevice( const QPainter * );

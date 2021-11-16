@@ -72,7 +72,7 @@ class APP_EXPORT QgsMapThemes : public QObject
     void menuAboutToShow();
 
   private slots:
-    void showHelp();
+    static void showHelp();
 
   protected:
     QgsMapThemes(); // singleton
@@ -85,10 +85,10 @@ class APP_EXPORT QgsMapThemes : public QObject
     void addPerLayerCurrentStyle( QgsMapThemeCollection::MapThemeRecord &rec );
 
     //! Returns the current state of the map canvas as a preset record
-    QgsMapThemeCollection::MapThemeRecord currentState();
+    static QgsMapThemeCollection::MapThemeRecord currentState();
 
     //! Applies a preset for the project's collection to the canvas
-    void applyState( const QString &presetName );
+    static void applyState( const QString &presetName );
 
     static QgsMapThemes *sInstance;
 

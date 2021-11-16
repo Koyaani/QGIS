@@ -77,13 +77,13 @@ class QgsSpatiaLiteFeatureIterator final: public QgsAbstractFeatureIteratorFromS
     QString whereClauseRect();
     QString whereClauseFid();
     QString whereClauseFids();
-    QString mbr( const QgsRectangle &rect );
+    static QString mbr( const QgsRectangle &rect );
     bool prepareStatement( const QString &whereClause, long limit = -1, const QString &orderBy = QString() );
     QString quotedPrimaryKey();
     bool getFeature( sqlite3_stmt *stmt, QgsFeature &feature );
-    QString fieldName( const QgsField &fld );
-    QVariant getFeatureAttribute( sqlite3_stmt *stmt, int ic, QVariant::Type type, QVariant::Type subType );
-    void getFeatureGeometry( sqlite3_stmt *stmt, int ic, QgsFeature &feature );
+    static QString fieldName( const QgsField &fld );
+    static QVariant getFeatureAttribute( sqlite3_stmt *stmt, int ic, QVariant::Type type, QVariant::Type subType );
+    static void getFeatureGeometry( sqlite3_stmt *stmt, int ic, QgsFeature &feature );
 
     //! QGIS wrapper of the SQLite database connection
     QgsSqliteHandle *mHandle = nullptr;

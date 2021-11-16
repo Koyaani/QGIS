@@ -216,7 +216,7 @@ class CORE_EXPORT QgsTextMaskSettings
      * Returns all field names referenced by the configuration (e.g. from data defined properties).
      * \since QGIS 3.14
      */
-    QSet<QString> referencedFields( const QgsRenderContext &context ) const;
+    static QSet<QString> referencedFields( const QgsRenderContext &context ) ;
 
   private:
 

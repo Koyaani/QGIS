@@ -83,7 +83,7 @@ void QgsServerOgcApiHandler::handleRequest( const QgsServerApiContext &context )
   throw QgsServerApiNotImplementedException( QStringLiteral( "Subclasses must implement handleRequest" ) );
 }
 
-QString QgsServerOgcApiHandler::contentTypeForAccept( const QString &accept ) const
+QString QgsServerOgcApiHandler::contentTypeForAccept( const QString &accept )
 {
   const auto constContentTypes( QgsServerOgcApi::contentTypeMimes() );
   for ( auto it = constContentTypes.constBegin();
@@ -179,7 +179,7 @@ std::string QgsServerOgcApiHandler::href( const QgsServerApiContext &context, co
 
 }
 
-void QgsServerOgcApiHandler::jsonDump( json &data, const QgsServerApiContext &context, const QString &contentType ) const
+void QgsServerOgcApiHandler::jsonDump( json &data, const QgsServerApiContext &context, const QString &contentType )
 {
   // Do not append timestamp to openapi
   if ( ! QgsServerOgcApi::contentTypeMimes().value( QgsServerOgcApi::ContentType::OPENAPI3 ).contains( contentType, Qt::CaseSensitivity::CaseInsensitive ) )

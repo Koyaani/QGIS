@@ -231,17 +231,17 @@ class CORE_EXPORT QgsRegularPolygon
     /**
      * Convenient method to convert an apothem to a radius.
      */
-    double apothemToRadius( double apothem, unsigned int numberSides ) const;
+    static double apothemToRadius( double apothem, unsigned int numberSides ) ;
 
     /**
      * Convenient method for interiorAngle used by constructors.
      */
-    double interiorAngle( unsigned int nbSides ) const;
+    static double interiorAngle( unsigned int nbSides ) ;
 
     /**
      * Convenient method for centralAngle used by constructors.
      */
-    double centralAngle( unsigned int nbSides ) const;
+    static double centralAngle( unsigned int nbSides ) ;
 
 };
 

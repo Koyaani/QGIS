@@ -102,7 +102,7 @@ class GUI_EXPORT QgsRelationReferenceWidget : public QWidget
      * returns the related feature foreign key
      * \deprecated since QGIS 3.10
      */
-    Q_DECL_DEPRECATED QVariant foreignKey() const SIP_DEPRECATED;
+    static Q_DECL_DEPRECATED QVariant foreignKey() SIP_DEPRECATED;
 
     //! returns the related feature foreign key
 

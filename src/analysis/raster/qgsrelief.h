@@ -133,7 +133,7 @@ class ANALYSIS_EXPORT QgsRelief
      * Returns class (0-255) for an elevation value
      * \returns elevation class or -1 in case of error
     */
-    int frequencyClassForElevation( double elevation, double minElevation, double elevationClassRange );
+    static int frequencyClassForElevation( double elevation, double minElevation, double elevationClassRange );
     //! Do one iteration of class break optimisation (algorithm from Garcia and Rodriguez)
     void optimiseClassBreaks( QList<int> &breaks, double *frequencies );
 
@@ -143,7 +143,7 @@ class ANALYSIS_EXPORT QgsRelief
      * \param a slope
      * \param b y value for x=0
      */
-    bool calculateRegression( const QList< QPair < int, double > > &input, double &a, double &b );
+    static bool calculateRegression( const QList< QPair < int, double > > &input, double &a, double &b );
 
 };
 

@@ -101,7 +101,7 @@ This will be appended to :py:func:`~QgsRenderChecker.controlImagePath`.
 
     void setControlPathSuffix( const QString &name );
 
-    QString imageToHash( const QString &imageFile );
+    static QString imageToHash( const QString &imageFile );
 %Docstring
 Gets an md5 hash that uniquely identifies an image
 %End

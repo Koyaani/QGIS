@@ -232,7 +232,7 @@ class CORE_EXPORT QgsGeoNodeRequest : public QObject
     /**
      * Returns the updated ServiceLayerDetail struct with WMS/WFS/XYZ url.
      */
-    QgsGeoNodeRequest::ServiceLayerDetail parseOwsUrl( QgsGeoNodeRequest::ServiceLayerDetail &layerStruct, const QVariantList &layerLinks );
+    static QgsGeoNodeRequest::ServiceLayerDetail parseOwsUrl( QgsGeoNodeRequest::ServiceLayerDetail &layerStruct, const QVariantList &layerLinks );
 
   public slots:
 

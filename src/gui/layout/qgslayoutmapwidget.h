@@ -169,7 +169,7 @@ class GUI_EXPORT QgsLayoutMapWidget: public QgsLayoutItemBaseWidget, private Ui:
     void updateMapForAtlas();
 
     //! Is there some predefined scales, globally or as project's options ?
-    bool hasPredefinedScales() const;
+    static bool hasPredefinedScales() ;
 
     QListWidgetItem *addGridListItem( const QString &id, const QString &name );
 
@@ -185,7 +185,7 @@ class GUI_EXPORT QgsLayoutMapWidget: public QgsLayoutItemBaseWidget, private Ui:
      * Returns list of layer IDs that should be visible for particular preset.
      * The order will match the layer order from the map canvas
      */
-    QList<QgsMapLayer *> orderedPresetVisibleLayers( const QString &name ) const;
+    static QList<QgsMapLayer *> orderedPresetVisibleLayers( const QString &name ) ;
 
 };
 

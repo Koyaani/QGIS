@@ -1551,7 +1551,7 @@ void QgsLayoutTable::recalculateTableSize()
   recalculateFrameRects();
 }
 
-bool QgsLayoutTable::contentsContainsRow( const QgsLayoutTableContents &contents, const QgsLayoutTableRow &row ) const
+bool QgsLayoutTable::contentsContainsRow( const QgsLayoutTableContents &contents, const QgsLayoutTableRow &row )
 {
   return ( contents.indexOf( row ) >= 0 );
 }

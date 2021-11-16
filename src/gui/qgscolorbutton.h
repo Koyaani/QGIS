@@ -534,7 +534,7 @@ class GUI_EXPORT QgsColorButton : public QToolButton
      * Adds a color to the recent colors list
      * \param color to add to recent colors list
      */
-    void addRecentColor( const QColor &color );
+    static void addRecentColor( const QColor &color );
 
     /**
      * Creates the drop-down menu entries

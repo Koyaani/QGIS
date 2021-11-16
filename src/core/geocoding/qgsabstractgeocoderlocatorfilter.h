@@ -87,7 +87,7 @@ class CORE_EXPORT QgsAbstractGeocoderLocatorFilter : public QgsLocatorFilter SIP
      *
      * \see geocoderResultToLocatorResult()
      */
-    QgsGeocoderResult locatorResultToGeocoderResult( const QgsLocatorResult &result ) const;
+    static QgsGeocoderResult locatorResultToGeocoderResult( const QgsLocatorResult &result ) ;
 
     /**
      * Converts a geocoder \a result to a locator result.

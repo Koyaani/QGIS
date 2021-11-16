@@ -916,7 +916,7 @@ bool QgsAuthManager::configIdUnique( const QString &id ) const
   return !configids.contains( id );
 }
 
-bool QgsAuthManager::hasConfigId( const QString &txt ) const
+bool QgsAuthManager::hasConfigId( const QString &txt )
 {
   const thread_local QRegularExpression authCfgRegExp( AUTH_CFG_REGEX );
   return txt.indexOf( authCfgRegExp ) != -1;
@@ -3190,7 +3190,7 @@ QgsAuthManager::~QgsAuthManager()
 }
 
 
-QString QgsAuthManager::passwordHelperName() const
+QString QgsAuthManager::passwordHelperName()
 {
   return tr( "Password Helper" );
 }
@@ -3311,7 +3311,7 @@ bool QgsAuthManager::passwordHelperWrite( const QString &password )
   return result;
 }
 
-bool QgsAuthManager::passwordHelperEnabled() const
+bool QgsAuthManager::passwordHelperEnabled()
 {
   // Does the user want to store the password in the wallet?
   QgsSettings settings;
@@ -3328,7 +3328,7 @@ void QgsAuthManager::setPasswordHelperEnabled( const bool enabled )
                    .arg( AUTH_PASSWORD_HELPER_DISPLAY_NAME ) );
 }
 
-bool QgsAuthManager::passwordHelperLoggingEnabled() const
+bool QgsAuthManager::passwordHelperLoggingEnabled()
 {
   // Does the user want to store the password in the wallet?
   QgsSettings settings;

@@ -260,7 +260,7 @@ A list of pasted items is returned.
 .. seealso:: :py:func:`hasItemsInClipboard`
 %End
 
-    bool hasItemsInClipboard() const;
+    static bool hasItemsInClipboard();
 %Docstring
 Returns ``True`` if the current clipboard contains layout items.
 

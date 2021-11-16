@@ -163,7 +163,7 @@ void QgsMeshVectorValueInterpolator::updateCacheFaceIndex( const QgsPointXY &poi
   }
 }
 
-bool QgsMeshVectorValueInterpolator::isVectorValid( const QgsVector &v ) const
+bool QgsMeshVectorValueInterpolator::isVectorValid( const QgsVector &v )
 {
   return !( std::isnan( v.x() ) || std::isnan( v.y() ) );
 

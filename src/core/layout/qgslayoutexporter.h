@@ -716,7 +716,7 @@ class CORE_EXPORT QgsLayoutExporter
     std::unique_ptr<double[]> computeGeoTransform( const QgsLayoutItemMap *referenceMap = nullptr, const QRectF &exportRegion = QRectF(), double dpi = -1 ) const;
 
     //! Write a world file
-    void writeWorldFile( const QString &fileName, double a, double b, double c, double d, double e, double f ) const;
+    static void writeWorldFile( const QString &fileName, double a, double b, double c, double d, double e, double f ) ;
 
     /**
      * Prepare a \a printer for printing a layout as a PDF, to the destination \a filePath.

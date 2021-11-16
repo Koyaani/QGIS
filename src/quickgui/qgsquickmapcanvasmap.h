@@ -180,7 +180,7 @@ class QUICK_EXPORT QgsQuickMapCanvasMap : public QQuickItem
     /**
      * Should only be called by stopRendering()!
      */
-    void destroyJob( QgsMapRendererJob *job );
+    static void destroyJob( QgsMapRendererJob *job );
     QgsMapSettings prepareMapSettings() const;
     void updateTransform();
     void zoomToFullExtent();

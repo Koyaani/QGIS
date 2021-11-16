@@ -367,7 +367,7 @@ bool QgsServerSettings::load( const QString &envVarName )
   return rc;
 }
 
-QMap<QgsServerSettingsEnv::EnvVar, QString> QgsServerSettings::getEnv() const
+QMap<QgsServerSettingsEnv::EnvVar, QString> QgsServerSettings::getEnv()
 {
   QMap<QgsServerSettingsEnv::EnvVar, QString> env;
 
@@ -400,7 +400,7 @@ QVariant QgsServerSettings::value( QgsServerSettingsEnv::EnvVar envVar, bool act
   }
 }
 
-void QgsServerSettings::loadQSettings( const QString &envOptPath ) const
+void QgsServerSettings::loadQSettings( const QString &envOptPath )
 {
   if ( ! envOptPath.isEmpty() )
   {
@@ -478,7 +478,7 @@ void QgsServerSettings::logSummary() const
 }
 
 // getter
-QString QgsServerSettings::iniFile() const
+QString QgsServerSettings::iniFile()
 {
   return QSettings().fileName();
 }

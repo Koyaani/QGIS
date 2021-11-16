@@ -162,7 +162,7 @@ class GUI_EXPORT QgsQueryBuilder : public QgsSubsetStringEditorInterface, privat
      */
     void populateFields();
 
-    void showHelp();
+    static void showHelp();
 
     /**
      * Setup models for listviews

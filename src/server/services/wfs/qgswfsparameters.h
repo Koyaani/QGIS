@@ -294,7 +294,7 @@ namespace QgsWfs
       bool loadParameter( const QString &key, const QString &value ) override;
       void save( const QgsWfsParameter &parameter );
 
-      void log( const QString &msg ) const;
+      static void log( const QString &msg ) ;
 
       QList<QgsProjectVersion> mVersions;
       QMap<QgsWfsParameter::Name, QgsWfsParameter> mWfsParameters;

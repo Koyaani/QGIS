@@ -66,7 +66,7 @@ class GUI_EXPORT QgsVectorLayerSaveStyleDialog : public QDialog, private Ui::Qgs
 
   private slots:
     void updateSaveButtonState();
-    void showHelp();
+    static void showHelp();
     void readUiFileContent( const QString &filePath );
 
   private:

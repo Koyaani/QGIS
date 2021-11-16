@@ -387,7 +387,7 @@ void QgsPointDisplacementRenderer::calculateSymbolAndLabelPositions( QgsSymbolRe
   }
 }
 
-void QgsPointDisplacementRenderer::centralizeGrid( QList<QPointF> &pointSymbolPositions, double radius, int size ) const
+void QgsPointDisplacementRenderer::centralizeGrid( QList<QPointF> &pointSymbolPositions, double radius, int size )
 {
   const double shiftAmount = -radius * ( size - 1.0 ) / 2.0;
   const QPointF centralShift( shiftAmount, shiftAmount );

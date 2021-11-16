@@ -4845,7 +4845,7 @@ void QgsLayoutDesignerDialog::updateActionNames( QgsMasterLayoutInterface::Type 
   }
 }
 
-QString QgsLayoutDesignerDialog::defaultExportPath() const
+QString QgsLayoutDesignerDialog::defaultExportPath()
 {
   // first priority - last export folder saved in project
   const QString projectLastExportPath = QgsFileUtils::findClosestExistingPath( QgsProject::instance()->readEntry( QStringLiteral( "Layouts" ), QStringLiteral( "/lastLayoutExportDir" ), QString() ) );
@@ -4862,7 +4862,7 @@ QString QgsLayoutDesignerDialog::defaultExportPath() const
   return QgsFileUtils::findClosestExistingPath( s.value( QStringLiteral( "lastLayoutExportDir" ), QDir::homePath(), QgsSettings::App ).toString() );
 }
 
-void QgsLayoutDesignerDialog::setLastExportPath( const QString &path ) const
+void QgsLayoutDesignerDialog::setLastExportPath( const QString &path )
 {
   QFileInfo fi( path );
   QString savePath;

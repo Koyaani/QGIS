@@ -156,7 +156,7 @@ Select relevant tab on current page change
 Remove tab and unregister widgets on page remove
 %End
 
-    void warnAboutMissingObjects();
+    static void warnAboutMissingObjects();
 
   protected:
     virtual void showEvent( QShowEvent *e );

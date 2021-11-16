@@ -1179,7 +1179,7 @@ void QgsDwgImporter::addLayer( const DRW_Layer &data )
   }
 }
 
-void QgsDwgImporter::setString( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, const char *value ) const
+void QgsDwgImporter::setString( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, const char *value )
 {
   const int idx = OGR_FD_GetFieldIndex( dfn, field.toLower().toUtf8().constData() );
   if ( idx < 0 )
@@ -1200,7 +1200,7 @@ void QgsDwgImporter::setString( OGRFeatureDefnH dfn, OGRFeatureH f, const QStrin
   setString( dfn, f, field, value.toUtf8().constData() );
 }
 
-void QgsDwgImporter::setDouble( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, double value ) const
+void QgsDwgImporter::setDouble( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, double value )
 {
   const int idx = OGR_FD_GetFieldIndex( dfn, field.toLower().toUtf8().constData() );
   if ( idx < 0 )
@@ -1211,7 +1211,7 @@ void QgsDwgImporter::setDouble( OGRFeatureDefnH dfn, OGRFeatureH f, const QStrin
   OGR_F_SetFieldDouble( f, idx, value );
 }
 
-void QgsDwgImporter::setInteger( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, int value ) const
+void QgsDwgImporter::setInteger( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, int value )
 {
   const int idx = OGR_FD_GetFieldIndex( dfn, field.toLower().toUtf8().constData() );
   if ( idx < 0 )
@@ -1222,7 +1222,7 @@ void QgsDwgImporter::setInteger( OGRFeatureDefnH dfn, OGRFeatureH f, const QStri
   OGR_F_SetFieldInteger( f, idx, value );
 }
 
-void QgsDwgImporter::setPoint( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, const DRW_Coord &p ) const
+void QgsDwgImporter::setPoint( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, const DRW_Coord &p )
 {
   QVector<double> ext( 3 );
   ext[0] = p.x;

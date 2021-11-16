@@ -97,7 +97,7 @@ class CORE_EXPORT QgsCoordinateTransformContext
      *
      * \deprecated Has no effect on builds based on Proj 6.0 or later, use coordinateOperations() instead.
      */
-    Q_DECL_DEPRECATED QMap< QPair< QString, QString>, QgsDatumTransform::TransformPair > sourceDestinationDatumTransforms() const SIP_DEPRECATED;
+    static Q_DECL_DEPRECATED QMap< QPair< QString, QString>, QgsDatumTransform::TransformPair > sourceDestinationDatumTransforms() SIP_DEPRECATED;
 
     /**
      * Returns the stored mapping for source to destination CRS pairs to associated coordinate operation to use
@@ -130,7 +130,7 @@ class CORE_EXPORT QgsCoordinateTransformContext
      *
      * \deprecated Has no effect on builds based on Proj 6.0 or later, use addCoordinateOperation() instead.
      */
-    Q_DECL_DEPRECATED bool addSourceDestinationDatumTransform( const QgsCoordinateReferenceSystem &sourceCrs, const QgsCoordinateReferenceSystem &destinationCrs, int sourceTransformId, int destinationTransformId ) SIP_DEPRECATED;
+    static Q_DECL_DEPRECATED bool addSourceDestinationDatumTransform( const QgsCoordinateReferenceSystem &sourceCrs, const QgsCoordinateReferenceSystem &destinationCrs, int sourceTransformId, int destinationTransformId ) SIP_DEPRECATED;
 
     /**
      * Adds a new \a coordinateOperationProjString to use when projecting coordinates
@@ -199,7 +199,7 @@ class CORE_EXPORT QgsCoordinateTransformContext
      * \note source and destination are reversible.
      * \deprecated Has no effect on builds based on Proj 6.0 or later. Use calculateCoordinateOperation() instead.
      */
-    Q_DECL_DEPRECATED QgsDatumTransform::TransformPair calculateDatumTransforms( const QgsCoordinateReferenceSystem &source, const QgsCoordinateReferenceSystem &destination ) const SIP_DEPRECATED;
+    static Q_DECL_DEPRECATED QgsDatumTransform::TransformPair calculateDatumTransforms( const QgsCoordinateReferenceSystem &source, const QgsCoordinateReferenceSystem &destination ) SIP_DEPRECATED;
 
     /**
      * Returns the Proj coordinate operation string to use when transforming

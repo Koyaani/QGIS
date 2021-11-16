@@ -140,7 +140,7 @@ class GUI_EXPORT QgsLayoutImageExportOptionsDialog: public QDialog, private Ui::
     void mHeightSpinBox_valueChanged( int value );
     void mResolutionSpinBox_valueChanged( int value );
     void clipToContentsToggled( bool state );
-    void showHelp();
+    static void showHelp();
 
   private:
 

@@ -41,7 +41,7 @@ Alternative constructor.
 
 
 
-    void clearCachedData( QgsLayerTreeNode *node ) const;
+    static void clearCachedData( QgsLayerTreeNode *node );
 %Docstring
 Clears any previously cached data for the specified ``node``.
 

@@ -111,9 +111,9 @@ class QgsMeshLayerRenderer : public QgsMapLayerRenderer
     void copyScalarDatasetValues( QgsMeshLayer *layer );
     void copyVectorDatasetValues( QgsMeshLayer *layer );
     void calculateOutputSize();
-    QgsPointXY fractionPoint( const QgsPointXY &p1, const QgsPointXY &p2, double fraction ) const;
+    static QgsPointXY fractionPoint( const QgsPointXY &p1, const QgsPointXY &p2, double fraction ) ;
     bool mIsMeshSimplificationActive = false;
-    QColor colorAt( QgsColorRampShader *shader, double val ) const;
+    static QColor colorAt( QgsColorRampShader *shader, double val ) ;
     bool mIsEditable = false;
 
   protected:

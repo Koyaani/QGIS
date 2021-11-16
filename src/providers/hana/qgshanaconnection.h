@@ -71,7 +71,7 @@ class QgsHanaConnection : public QObject
     void commit();
     void rollback();
 
-    QList<QgsVectorDataProvider::NativeType> getNativeTypes();
+    static QList<QgsVectorDataProvider::NativeType> getNativeTypes();
     const QString &getDatabaseVersion();
     const QString &getUserName();
     QgsCoordinateReferenceSystem getCrs( int srid );

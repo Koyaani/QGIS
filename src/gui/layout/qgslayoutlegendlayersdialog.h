@@ -50,7 +50,7 @@ class GUI_EXPORT QgsLayoutLegendLayersDialog: public QDialog, private Ui::QgsLay
   private slots:
 
     void filterVisible( bool enabled );
-    void showHelp();
+    static void showHelp();
 
   private:
 

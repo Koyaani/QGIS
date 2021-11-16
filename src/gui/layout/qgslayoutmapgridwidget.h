@@ -139,20 +139,20 @@ class GUI_EXPORT QgsLayoutMapGridWidget: public QgsLayoutItemBaseWidget, private
     void handleChangedAnnotationPosition( QgsLayoutItemMapGrid::BorderSide border, QgsLayoutItemMapGrid::AnnotationPosition position );
     void handleChangedAnnotationDirection( QgsLayoutItemMapGrid::BorderSide border, QgsLayoutItemMapGrid::AnnotationDirection direction );
 
-    void insertFrameDisplayEntries( QComboBox *c );
-    void insertAnnotationDisplayEntries( QComboBox *c );
-    void insertAnnotationPositionEntries( QComboBox *c );
-    void insertAnnotationDirectionEntries( QComboBox *c );
+    static void insertFrameDisplayEntries( QComboBox *c );
+    static void insertAnnotationDisplayEntries( QComboBox *c );
+    static void insertAnnotationPositionEntries( QComboBox *c );
+    static void insertAnnotationDirectionEntries( QComboBox *c );
 
-    void initFrameDisplayBox( QComboBox *c, QgsLayoutItemMapGrid::DisplayMode display );
-    void initAnnotationPositionBox( QComboBox *c, QgsLayoutItemMapGrid::AnnotationPosition pos );
-    void initAnnotationDirectionBox( QComboBox *c, QgsLayoutItemMapGrid::AnnotationDirection dir );
+    static void initFrameDisplayBox( QComboBox *c, QgsLayoutItemMapGrid::DisplayMode display );
+    static void initAnnotationPositionBox( QComboBox *c, QgsLayoutItemMapGrid::AnnotationPosition pos );
+    static void initAnnotationDirectionBox( QComboBox *c, QgsLayoutItemMapGrid::AnnotationDirection dir );
 
     //! Enables/disables grid frame related controls
     void toggleFrameControls( bool frameEnabled, bool frameFillEnabled, bool frameSizeEnabled, bool ticksRotationEnabled );
 
     //! Is there some predefined scales, globally or as project's options ?
-    bool hasPredefinedScales() const;
+    static bool hasPredefinedScales() ;
 
 };
 

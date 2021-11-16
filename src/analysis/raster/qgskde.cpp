@@ -291,7 +291,7 @@ double QgsKernelDensityEstimation::calculateKernelValue( const double distance, 
  * k is calculated by polar double integration of the kernel function
  * between a radius of 0 to the specified bandwidth and equating the area to 1. */
 
-double QgsKernelDensityEstimation::uniformKernel( const double distance, const double bandwidth, const QgsKernelDensityEstimation::OutputValues outputType ) const
+double QgsKernelDensityEstimation::uniformKernel( const double distance, const double bandwidth, const QgsKernelDensityEstimation::OutputValues outputType )
 {
   Q_UNUSED( distance )
   switch ( outputType )
@@ -310,7 +310,7 @@ double QgsKernelDensityEstimation::uniformKernel( const double distance, const d
   return 0.0; // NO warnings!!!!!
 }
 
-double QgsKernelDensityEstimation::quarticKernel( const double distance, const double bandwidth, const QgsKernelDensityEstimation::OutputValues outputType ) const
+double QgsKernelDensityEstimation::quarticKernel( const double distance, const double bandwidth, const QgsKernelDensityEstimation::OutputValues outputType )
 {
   switch ( outputType )
   {
@@ -328,7 +328,7 @@ double QgsKernelDensityEstimation::quarticKernel( const double distance, const d
   return 0.0; //no, seriously, I told you NO WARNINGS!
 }
 
-double QgsKernelDensityEstimation::triweightKernel( const double distance, const double bandwidth, const QgsKernelDensityEstimation::OutputValues outputType ) const
+double QgsKernelDensityEstimation::triweightKernel( const double distance, const double bandwidth, const QgsKernelDensityEstimation::OutputValues outputType )
 {
   switch ( outputType )
   {
@@ -346,7 +346,7 @@ double QgsKernelDensityEstimation::triweightKernel( const double distance, const
   return 0.0; // this is getting ridiculous... don't you ever listen to a word I say?
 }
 
-double QgsKernelDensityEstimation::epanechnikovKernel( const double distance, const double bandwidth, const QgsKernelDensityEstimation::OutputValues outputType ) const
+double QgsKernelDensityEstimation::epanechnikovKernel( const double distance, const double bandwidth, const QgsKernelDensityEstimation::OutputValues outputType )
 {
   switch ( outputType )
   {

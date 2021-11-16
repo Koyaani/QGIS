@@ -37,7 +37,7 @@ void QgsLocationBasedAlgorithm::addPredicateParameter()
   addParameter( predicateParam.release() );
 }
 
-QgsLocationBasedAlgorithm::Predicate QgsLocationBasedAlgorithm::reversePredicate( QgsLocationBasedAlgorithm::Predicate predicate ) const
+QgsLocationBasedAlgorithm::Predicate QgsLocationBasedAlgorithm::reversePredicate( QgsLocationBasedAlgorithm::Predicate predicate )
 {
   switch ( predicate )
   {
@@ -62,7 +62,7 @@ QgsLocationBasedAlgorithm::Predicate QgsLocationBasedAlgorithm::reversePredicate
   return Intersects;
 }
 
-QStringList QgsLocationBasedAlgorithm::predicateOptionsList() const
+QStringList QgsLocationBasedAlgorithm::predicateOptionsList()
 {
   return QStringList() << QObject::tr( "intersect" )
          << QObject::tr( "contain" )

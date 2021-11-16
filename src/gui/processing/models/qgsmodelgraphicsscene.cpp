@@ -79,7 +79,7 @@ QgsModelComponentGraphicItem *QgsModelGraphicsScene::createCommentGraphicItem( Q
   return new QgsModelCommentGraphicItem( comment, parentItem, model, nullptr );
 }
 
-QgsModelComponentGraphicItem *QgsModelGraphicsScene::createGroupBoxGraphicItem( QgsProcessingModelAlgorithm *model, QgsProcessingModelGroupBox *box ) const
+QgsModelComponentGraphicItem *QgsModelGraphicsScene::createGroupBoxGraphicItem( QgsProcessingModelAlgorithm *model, QgsProcessingModelGroupBox *box )
 {
   return new QgsModelGroupBoxGraphicItem( box, model, nullptr );
 }

@@ -274,7 +274,7 @@ class GUI_EXPORT QgsLayoutView: public QGraphicsView
      * Returns TRUE if the current clipboard contains layout items.
      * \see pasteItems()
      */
-    bool hasItemsInClipboard() const;
+    static bool hasItemsInClipboard() ;
 
     /**
      * Returns the delta (in layout coordinates) by which to move items
@@ -586,7 +586,7 @@ class GUI_EXPORT QgsLayoutView: public QGraphicsView
     friend class TestQgsLayoutView;
     friend class QgsLayoutMouseHandles;
 
-    QGraphicsLineItem *createSnapLine() const;
+    static QGraphicsLineItem *createSnapLine() ;
 };
 
 

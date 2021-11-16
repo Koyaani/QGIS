@@ -134,7 +134,7 @@ class APP_EXPORT QgsMeasureDialog : public QDialog, private Ui::QgsMeasureBase
 
     QgsPointXY mLastMousePoint;
 
-    void showHelp();
+    static void showHelp();
 
     friend class TestQgsMeasureTool;
 };

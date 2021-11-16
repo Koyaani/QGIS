@@ -128,7 +128,7 @@ class GUI_EXPORT QgsPresetColorRampDialog : public QDialog
 
   private slots:
 
-    void showHelp();
+    static void showHelp();
 
 };
 

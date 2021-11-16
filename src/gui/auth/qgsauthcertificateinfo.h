@@ -96,7 +96,7 @@ class GUI_EXPORT QgsAuthCertInfo : public QWidget, private Ui::QgsAuthCertInfo
 
     void populateCertInfo();
 
-    QTreeWidgetItem *addGroupItem( QTreeWidgetItem *parent, const QString &group );
+    static QTreeWidgetItem *addGroupItem( QTreeWidgetItem *parent, const QString &group );
 
     void addFieldItem( QTreeWidgetItem *parent, const QString &field, const QString &value, FieldWidget wdgt = NoWidget,
                        const QColor &color = QColor() );

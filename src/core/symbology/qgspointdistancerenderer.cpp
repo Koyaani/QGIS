@@ -365,7 +365,7 @@ QgsLegendSymbolList QgsPointDistanceRenderer::legendSymbolItems() const
   return QgsLegendSymbolList();
 }
 
-QgsRectangle QgsPointDistanceRenderer::searchRect( const QgsPointXY &p, double distance ) const
+QgsRectangle QgsPointDistanceRenderer::searchRect( const QgsPointXY &p, double distance )
 {
   return QgsRectangle( p.x() - distance, p.y() - distance, p.x() + distance, p.y() + distance );
 }
@@ -443,7 +443,7 @@ void QgsPointDistanceRenderer::drawLabels( QPointF centerPoint, QgsSymbolRenderC
   }
 }
 
-QgsExpressionContextScope *QgsPointDistanceRenderer::createGroupScope( const ClusteredGroup &group ) const
+QgsExpressionContextScope *QgsPointDistanceRenderer::createGroupScope( const ClusteredGroup &group )
 {
   QgsExpressionContextScope *clusterScope = new QgsExpressionContextScope();
   if ( group.size() > 1 )

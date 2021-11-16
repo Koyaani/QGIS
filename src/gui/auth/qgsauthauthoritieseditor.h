@@ -120,7 +120,7 @@ class GUI_EXPORT QgsAuthAuthoritiesEditor : public QWidget, private Ui::QgsAuthA
     void populateUtilitiesMenu();
 
     QgsMessageBar *messageBar();
-    int messageTimeout();
+    static int messageTimeout();
 
     QVBoxLayout *mAuthNotifyLayout = nullptr;
     QLabel *mAuthNotify = nullptr;

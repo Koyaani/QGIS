@@ -56,7 +56,7 @@ class APP_EXPORT QgsLabelPropertyDialog: public QDialog, private Ui::QgsLabelPro
 
   private slots:
     void buttonBox_clicked( QAbstractButton *button );
-    void showHelp();
+    static void showHelp();
     void mShowLabelChkbx_toggled( bool chkd );
     void mAlwaysShowChkbx_toggled( bool chkd );
     void labelAllPartsToggled( bool checked );

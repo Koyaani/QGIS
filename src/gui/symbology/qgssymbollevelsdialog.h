@@ -133,7 +133,7 @@ class GUI_EXPORT QgsSymbolLevelsDialog : public QDialog
 
   private slots:
 
-    void showHelp();
+    static void showHelp();
 };
 
 #ifndef SIP_RUN

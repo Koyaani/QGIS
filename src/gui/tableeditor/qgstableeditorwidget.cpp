@@ -205,7 +205,7 @@ void QgsTableEditorWidget::updateHeaders()
   setVerticalHeaderLabels( headers );
 }
 
-bool QgsTableEditorWidget::collectConsecutiveRowRange( const QModelIndexList &list, int &minRow, int &maxRow ) const
+bool QgsTableEditorWidget::collectConsecutiveRowRange( const QModelIndexList &list, int &minRow, int &maxRow )
 {
   QSet< int > includedRows;
   minRow = std::numeric_limits< int >::max();
@@ -226,7 +226,7 @@ bool QgsTableEditorWidget::collectConsecutiveRowRange( const QModelIndexList &li
   return true;
 }
 
-bool QgsTableEditorWidget::collectConsecutiveColumnRange( const QModelIndexList &list, int &minColumn, int &maxColumn ) const
+bool QgsTableEditorWidget::collectConsecutiveColumnRange( const QModelIndexList &list, int &minColumn, int &maxColumn )
 {
   QSet< int > includedColumns;
   minColumn = std::numeric_limits< int >::max();
@@ -247,7 +247,7 @@ bool QgsTableEditorWidget::collectConsecutiveColumnRange( const QModelIndexList 
   return true;
 }
 
-QList<int> QgsTableEditorWidget::collectUniqueRows( const QModelIndexList &list ) const
+QList<int> QgsTableEditorWidget::collectUniqueRows( const QModelIndexList &list )
 {
   QList<int > res;
   for ( const QModelIndex &index : list )
@@ -259,7 +259,7 @@ QList<int> QgsTableEditorWidget::collectUniqueRows( const QModelIndexList &list 
   return res;
 }
 
-QList<int> QgsTableEditorWidget::collectUniqueColumns( const QModelIndexList &list ) const
+QList<int> QgsTableEditorWidget::collectUniqueColumns( const QModelIndexList &list )
 {
   QList<int > res;
   for ( const QModelIndex &index : list )

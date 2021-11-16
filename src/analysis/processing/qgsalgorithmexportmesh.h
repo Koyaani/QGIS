@@ -149,7 +149,7 @@ class QgsExportMeshOnGridAlgorithm : public QgsProcessingAlgorithm
 
   private:
 
-    QSet<int> supportedDataType();
+    static QSet<int> supportedDataType();
 
     QgsTriangularMesh mTriangularMesh;
 
@@ -178,7 +178,7 @@ class QgsMeshRasterizeAlgorithm : public QgsProcessingAlgorithm
 
   private:
 
-    QSet<int> supportedDataType();
+    static QSet<int> supportedDataType();
 
     QgsTriangularMesh mTriangularMesh;
 

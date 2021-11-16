@@ -484,7 +484,7 @@ class CORE_EXPORT QgsLegendSettings
     QFont scaledFontPixelSize( const QFont &font ) const;
 
     //! Calculates font to from point size to pixel size
-    double pixelFontSize( double pointSize ) const;
+    static double pixelFontSize( double pointSize ) ;
 
     //! Returns the font width in millimeters (considers upscaling and downscaling with FONT_WORKAROUND_SCALE
     double textWidthMillimeters( const QFont &font, const QString &text ) const;

@@ -93,7 +93,7 @@ class GUI_EXPORT QgsAuthServersEditor : public QWidget, private Ui::QgsAuthServe
                                  QTreeWidgetItem *parent = nullptr );
 
     QgsMessageBar *messageBar();
-    int messageTimeout();
+    static int messageTimeout();
 
     bool mDisabled = false;
     QVBoxLayout *mAuthNotifyLayout = nullptr;

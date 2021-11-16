@@ -209,7 +209,7 @@ class GUI_EXPORT QgsProjectionSelectionTreeWidget : public QWidget, private Ui::
      *  LIKE phrase of a select statement, should be escaped.
      * \returns The string made safe for SQL statements.
      */
-    QString sqlSafeString( const QString &string ) const;
+    static QString sqlSafeString( const QString &string ) ;
 
     /**
      * \brief converts the CRS group to a SQL expression fragment
@@ -222,7 +222,7 @@ class GUI_EXPORT QgsProjectionSelectionTreeWidget : public QWidget, private Ui::
      *                  where you just want to offer what the WMS server can support.
      *
      */
-    QString ogcWmsCrsFilterAsSqlExpression( QSet<QString> *crsFilter );
+    static QString ogcWmsCrsFilterAsSqlExpression( QSet<QString> *crsFilter );
 
     /**
      * \brief does the legwork of applying CRS Selection

@@ -167,7 +167,7 @@ QUrl QgsNominatimGeocoder::requestUrl( const QString &address, const QgsRectangl
   return res;
 }
 
-QgsGeocoderResult QgsNominatimGeocoder::jsonToResult( const QVariantMap &json ) const
+QgsGeocoderResult QgsNominatimGeocoder::jsonToResult( const QVariantMap &json )
 {
   const double latitude = json.value( QStringLiteral( "lat" ) ).toDouble();
   const double longitude = json.value( QStringLiteral( "lon" ) ).toDouble();

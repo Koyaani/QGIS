@@ -143,7 +143,7 @@ class APP_EXPORT QgsLayerStylingWidget : public QWidget, private Ui::QgsLayerSty
   private slots:
 
     void layerAboutToBeRemoved( QgsMapLayer *layer );
-    void liveApplyToggled( bool value );
+    static void liveApplyToggled( bool value );
 
   private:
     void pushUndoItem( const QString &name, bool triggerRepaint = true );

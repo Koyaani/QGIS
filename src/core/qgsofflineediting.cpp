@@ -146,7 +146,7 @@ bool QgsOfflineEditing::convertToOfflineProject( const QString &offlineDataPath,
   return false;
 }
 
-bool QgsOfflineEditing::isOfflineProject() const
+bool QgsOfflineEditing::isOfflineProject()
 {
   return !QgsProject::instance()->readEntry( PROJECT_ENTRY_SCOPE_OFFLINE, PROJECT_ENTRY_KEY_OFFLINE_DB_PATH ).isEmpty();
 }
@@ -1699,7 +1699,7 @@ void QgsOfflineEditing::setupLayer( QgsMapLayer *layer )
   }
 }
 
-int QgsOfflineEditing::getLayerPkIdx( const QgsVectorLayer *layer ) const
+int QgsOfflineEditing::getLayerPkIdx( const QgsVectorLayer *layer )
 {
   const QList<int> pkAttrs = layer->primaryKeyAttributes();
   if ( pkAttrs.length() == 1 )
@@ -1716,7 +1716,7 @@ int QgsOfflineEditing::getLayerPkIdx( const QgsVectorLayer *layer ) const
   return -1;
 }
 
-QString QgsOfflineEditing::sqlEscape( QString value ) const
+QString QgsOfflineEditing::sqlEscape( QString value )
 {
   if ( value.isNull() )
     return QStringLiteral( "NULL" );

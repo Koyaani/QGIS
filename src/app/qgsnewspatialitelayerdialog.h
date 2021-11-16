@@ -42,7 +42,7 @@ class APP_EXPORT QgsNewSpatialiteLayerDialog: public QDialog, private Ui::QgsNew
     void mAddAttributeButton_clicked();
     void mRemoveAttributeButton_clicked();
     void mGeometryTypeBox_currentIndexChanged( int index );
-    void mTypeBox_currentIndexChanged( int index );
+    static void mTypeBox_currentIndexChanged( int index );
     void pbnFindSRID_clicked();
     void nameChanged( const QString & );
     void selectionChanged();
@@ -62,7 +62,7 @@ class APP_EXPORT QgsNewSpatialiteLayerDialog: public QDialog, private Ui::QgsNew
 
     bool apply();
 
-    void showHelp();
+    static void showHelp();
 
     static QString quotedIdentifier( QString id );
 

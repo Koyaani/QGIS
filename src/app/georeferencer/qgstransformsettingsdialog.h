@@ -43,12 +43,12 @@ class QgsTransformSettingsDialog : public QDialog, private Ui::QgsTransformSetti
   private slots:
     void cmbTransformType_currentIndexChanged( const QString &text );
     void mWorldFileCheckBox_stateChanged( int state );
-    QIcon getThemeIcon( const QString &name );
-    void showHelp();
+    static QIcon getThemeIcon( const QString &name );
+    static void showHelp();
 
   private:
     bool checkGCPpoints( int count, int &minGCPpoints );
-    QString generateModifiedRasterFileName( const QString &raster );
+    static QString generateModifiedRasterFileName( const QString &raster );
 
     QString mSourceRasterFile;
 

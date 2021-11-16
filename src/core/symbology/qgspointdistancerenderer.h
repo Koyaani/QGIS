@@ -287,7 +287,7 @@ class CORE_EXPORT QgsPointDistanceRenderer: public QgsFeatureRenderer
     virtual void drawGroup( QPointF centerPoint, QgsRenderContext &context, const ClusteredGroup &group ) = 0 SIP_FORCE;
 
     //! Creates a search rectangle with specified distance tolerance.
-    QgsRectangle searchRect( const QgsPointXY &p, double distance ) const;
+    static QgsRectangle searchRect( const QgsPointXY &p, double distance ) ;
 
     //! Debugging function to check the entries in the clustered groups
     void printGroupInfo() const;
@@ -310,7 +310,7 @@ class CORE_EXPORT QgsPointDistanceRenderer: public QgsFeatureRenderer
      * \param group clustered group
      * \returns new expression context scope
      */
-    QgsExpressionContextScope *createGroupScope( const ClusteredGroup &group ) const;
+    static QgsExpressionContextScope *createGroupScope( const ClusteredGroup &group ) ;
 
 };
 

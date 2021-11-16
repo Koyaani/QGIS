@@ -76,7 +76,7 @@ class QgsMapCoordsDialog : public QDialog, private Ui::QgsMapCoordsDialogBase
     void pointAdded( const QgsPointXY &a, const QgsPointXY &b, const QgsCoordinateReferenceSystem &crs );
 
   private:
-    double dmsToDD( const QString &dms );
+    static double dmsToDD( const QString &dms );
 
     QPushButton *mPointFromCanvasPushButton = nullptr;
 

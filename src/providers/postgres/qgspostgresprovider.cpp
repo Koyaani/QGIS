@@ -77,7 +77,7 @@ static bool columnExists( QgsPostgresConn &conn, const QString &table, const QSt
 }
 
 QgsPostgresPrimaryKeyType
-QgsPostgresProvider::pkType( const QgsField &f ) const
+QgsPostgresProvider::pkType( const QgsField &f )
 {
   switch ( f.type() )
   {
@@ -4739,7 +4739,7 @@ QString QgsPostgresProvider::getTableName()
   return mTableName;
 }
 
-size_t QgsPostgresProvider::layerCount() const
+size_t QgsPostgresProvider::layerCount()
 {
   return 1;                   // XXX need to return actual number of layers
 } // QgsPostgresProvider::layerCount()

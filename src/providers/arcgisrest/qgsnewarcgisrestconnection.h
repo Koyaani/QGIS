@@ -81,7 +81,7 @@ class QgsNewArcGisRestConnectionDialog : public QDialog, private Ui::QgsNewArcGi
     QString mBaseKey;
     QString mCredentialsBaseKey;
     QString mOriginalConnName; //store initial name to delete entry in case of rename
-    void showHelp();
+    static void showHelp();
 
 };
 

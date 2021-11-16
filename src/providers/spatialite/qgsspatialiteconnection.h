@@ -115,19 +115,19 @@ class QgsSpatiaLiteConnection : public QObject
     bool getTableInfoAbstractInterface( sqlite3 *handle, bool loadGeometrylessTables );
 
     //! Checks if geometry_columns_auth table exists
-    bool checkGeometryColumnsAuth( sqlite3 *handle );
+    static bool checkGeometryColumnsAuth( sqlite3 *handle );
 
     //! Checks if views_geometry_columns table exists
-    bool checkViewsGeometryColumns( sqlite3 *handle );
+    static bool checkViewsGeometryColumns( sqlite3 *handle );
 
     //! Checks if virts_geometry_columns table exists
-    bool checkVirtsGeometryColumns( sqlite3 *handle );
+    static bool checkVirtsGeometryColumns( sqlite3 *handle );
 
     //! Checks if this layer has been declared HIDDEN
     bool isDeclaredHidden( sqlite3 *handle, const QString &table, const QString &geom );
 
     //! Checks if this layer is a RasterLite-1 datasource
-    bool isRasterlite1Datasource( sqlite3 *handle, const char *table );
+    static bool isRasterlite1Datasource( sqlite3 *handle, const char *table );
 
     QString mErrorMsg;
     QString mPath; // full path to the database

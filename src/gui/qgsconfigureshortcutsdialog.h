@@ -62,7 +62,7 @@ class GUI_EXPORT QgsConfigureShortcutsDialog : public QDialog, private Ui::QgsCo
     void actionChanged( QTreeWidgetItem *current, QTreeWidgetItem *previous );
 
     //! Open the associated help
-    void showHelp();
+    static void showHelp();
 
   private:
 

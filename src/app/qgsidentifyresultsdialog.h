@@ -247,7 +247,7 @@ class APP_EXPORT QgsIdentifyResultsDialog: public QDialog, private Ui::QgsIdenti
      * Called when an item is expanded so that we can ensure that the
      * column width if expanded to show it.
      */
-    void itemExpanded( QTreeWidgetItem * );
+    static void itemExpanded( QTreeWidgetItem * );
 
     //! sends signal if current feature id has changed
     void handleCurrentItemChanged( QTreeWidgetItem *current, QTreeWidgetItem *previous );
@@ -260,11 +260,11 @@ class APP_EXPORT QgsIdentifyResultsDialog: public QDialog, private Ui::QgsIdenti
 
     void cmbViewMode_currentIndexChanged( int index );
 
-    void mExpandNewAction_triggered( bool checked );
+    static void mExpandNewAction_triggered( bool checked );
 
-    void mActionAutoFeatureForm_toggled( bool checked );
+    static void mActionAutoFeatureForm_toggled( bool checked );
 
-    void mActionHideDerivedAttributes_toggled( bool checked );
+    static void mActionHideDerivedAttributes_toggled( bool checked );
 
     void mExpandAction_triggered( bool checked ) { Q_UNUSED( checked ) expandAll(); }
     void mCollapseAction_triggered( bool checked ) { Q_UNUSED( checked ) collapseAll(); }
@@ -277,7 +277,7 @@ class APP_EXPORT QgsIdentifyResultsDialog: public QDialog, private Ui::QgsIdenti
 
     void mapLayerActionDestroyed();
 
-    void showHelp();
+    static void showHelp();
 
   private:
     QString representValue( QgsVectorLayer *vlayer, const QgsEditorWidgetSetup &setup, const QString &fieldName, const QVariant &value );
@@ -297,12 +297,12 @@ class APP_EXPORT QgsIdentifyResultsDialog: public QDialog, private Ui::QgsIdenti
     QToolButton *mSelectModeButton = nullptr;
 
     QgsMapLayer *layer( QTreeWidgetItem *item );
-    QgsVectorLayer *vectorLayer( QTreeWidgetItem *item );
+    static QgsVectorLayer *vectorLayer( QTreeWidgetItem *item );
     QgsRasterLayer *rasterLayer( QTreeWidgetItem *item );
     QgsMeshLayer *meshLayer( QTreeWidgetItem *item );
     QgsVectorTileLayer *vectorTileLayer( QTreeWidgetItem *item );
     QgsPointCloudLayer *pointCloudLayer( QTreeWidgetItem *item );
-    QTreeWidgetItem *featureItem( QTreeWidgetItem *item );
+    static QTreeWidgetItem *featureItem( QTreeWidgetItem *item );
     QTreeWidgetItem *layerItem( QTreeWidgetItem *item );
     QTreeWidgetItem *layerItem( QObject *layer );
 

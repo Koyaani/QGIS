@@ -59,16 +59,16 @@ class GUI_EXPORT QgsDetailedItemDelegate : public QAbstractItemDelegate
     int horizontalSpacing() const;
 
   private:
-    QFont detailFont( const QStyleOptionViewItem &option ) const;
-    QFont categoryFont( const QStyleOptionViewItem &option ) const;
+    static QFont detailFont( const QStyleOptionViewItem &option ) ;
+    static QFont categoryFont( const QStyleOptionViewItem &option ) ;
     QFont titleFont( const QStyleOptionViewItem &option ) const;
-    void drawHighlight( const QStyleOptionViewItem &option,
-                        QPainter *thepPainter,
-                        int height ) const;
+    static void drawHighlight( const QStyleOptionViewItem &option,
+                               QPainter *thepPainter,
+                               int height ) ;
 
-    QStringList wordWrap( const QString &string,
-                          const QFontMetrics &metrics,
-                          int width ) const;
+    static QStringList wordWrap( const QString &string,
+                                 const QFontMetrics &metrics,
+                                 int width ) ;
     void paintManually( QPainter *painter,
                         const QStyleOptionViewItem &option,
                         const QgsDetailedItemData &data ) const;

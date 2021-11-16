@@ -55,7 +55,7 @@ class GUI_EXPORT QgsLayoutTableBackgroundColorsDialog: public QDialog, private U
 
     void buttonBox_accepted();
     void buttonBox_rejected();
-    void showHelp();
+    static void showHelp();
 
   private:
 

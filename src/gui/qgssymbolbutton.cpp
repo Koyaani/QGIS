@@ -582,7 +582,7 @@ bool QgsSymbolButton::colorFromMimeData( const QMimeData *mimeData, QColor &resu
   return false;
 }
 
-QPixmap QgsSymbolButton::createColorIcon( const QColor &color ) const
+QPixmap QgsSymbolButton::createColorIcon( const QColor &color )
 {
   //create an icon pixmap
   const int iconSize = QgsGuiUtils::scaleIconSize( 16 );

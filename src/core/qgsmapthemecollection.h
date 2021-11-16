@@ -410,7 +410,7 @@ class CORE_EXPORT QgsMapThemeCollection : public QObject
     /**
      * Apply check states of legend nodes of a given layer as defined in the map theme.
      */
-    void applyMapThemeCheckedLegendNodesToLayer( const MapThemeLayerRecord &layerRec, QgsMapLayer *layer );
+    static void applyMapThemeCheckedLegendNodesToLayer( const MapThemeLayerRecord &layerRec, QgsMapLayer *layer );
 
     /**
      * Reconnects all map theme layers to handle style renames

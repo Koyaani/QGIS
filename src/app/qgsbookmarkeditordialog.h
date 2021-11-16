@@ -54,7 +54,7 @@ class APP_EXPORT QgsBookmarkEditorDialog: public QDialog, private Ui::QgsBookmar
 
     void crsChanged( const QgsCoordinateReferenceSystem &crs );
     void onAccepted();
-    void showHelp();
+    static void showHelp();
 
   private:
 

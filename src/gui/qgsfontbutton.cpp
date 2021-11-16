@@ -421,7 +421,7 @@ void QgsFontButton::wheelEvent( QWheelEvent *event )
   event->accept();
 }
 
-QPixmap QgsFontButton::createColorIcon( const QColor &color ) const
+QPixmap QgsFontButton::createColorIcon( const QColor &color )
 {
   //create an icon pixmap
   const int iconSize = QgsGuiUtils::scaleIconSize( 16 );
@@ -782,14 +782,14 @@ void QgsFontButton::setMode( Mode mode )
   updatePreview();
 }
 
-bool QgsFontButton::formatFromMimeData( const QMimeData *mimeData, QgsTextFormat &resultFormat ) const
+bool QgsFontButton::formatFromMimeData( const QMimeData *mimeData, QgsTextFormat &resultFormat )
 {
   bool ok = false;
   resultFormat = QgsTextFormat::fromMimeData( mimeData, &ok );
   return ok;
 }
 
-bool QgsFontButton::fontFromMimeData( const QMimeData *mimeData, QFont &resultFont ) const
+bool QgsFontButton::fontFromMimeData( const QMimeData *mimeData, QFont &resultFont )
 {
   bool ok = false;
   resultFont = QgsFontUtils::fromMimeData( mimeData, &ok );

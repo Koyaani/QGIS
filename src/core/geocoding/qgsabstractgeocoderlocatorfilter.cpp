@@ -70,7 +70,7 @@ QgsGeocoderInterface *QgsAbstractGeocoderLocatorFilter::geocoder() const
   return mGeocoder;
 }
 
-QgsGeocoderResult QgsAbstractGeocoderLocatorFilter::locatorResultToGeocoderResult( const QgsLocatorResult &result ) const
+QgsGeocoderResult QgsAbstractGeocoderLocatorFilter::locatorResultToGeocoderResult( const QgsLocatorResult &result )
 {
   const QVariantMap attrs = result.userData.toMap();
   QgsGeocoderResult geocodeResult( attrs.value( QStringLiteral( "identifier" ) ).toString(),

@@ -125,8 +125,8 @@ class QgsMeshAvailableDatasetGroupTreeModel: public QgsMeshDatasetGroupTreeModel
     int columnCount( const QModelIndex &parent = QModelIndex() ) const override;
 
   private:
-    QString textDisplayed( const QModelIndex &index ) const;
-    QColor backGroundColor( const QModelIndex &index ) const;
+    static QString textDisplayed( const QModelIndex &index ) ;
+    static QColor backGroundColor( const QModelIndex &index ) ;
 };
 
 class  QgsMeshDatasetGroupProxyModel: public QSortFilterProxyModel

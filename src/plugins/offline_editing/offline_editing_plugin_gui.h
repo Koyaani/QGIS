@@ -67,7 +67,7 @@ class QgsOfflineEditingPluginGui : public QDialog, private Ui::QgsOfflineEditing
     void mBrowseButton_clicked();
     void buttonBox_accepted();
     void buttonBox_rejected();
-    void showHelp();
+    static void showHelp();
 };
 
 #endif // QGS_OFFLINE_EDITING_PLUGIN_GUI_H

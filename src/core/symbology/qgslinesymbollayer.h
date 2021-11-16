@@ -861,7 +861,7 @@ class CORE_EXPORT QgsTemplatedLineSymbolLayerBase : public QgsLineSymbolLayer
     void renderPolylineInterval( const QPolygonF &points, QgsSymbolRenderContext &context, double averageAngleOver );
     void renderPolylineVertex( const QPolygonF &points, QgsSymbolRenderContext &context, Qgis::MarkerLinePlacement placement = Qgis::MarkerLinePlacement::Vertex );
     void renderPolylineCentral( const QPolygonF &points, QgsSymbolRenderContext &context, double averageAngleOver );
-    double markerAngle( const QPolygonF &points, bool isRing, int vertex );
+    static double markerAngle( const QPolygonF &points, bool isRing, int vertex );
 
     /**
      * Renders a symbol by offsetting a vertex along the line by a specified distance.

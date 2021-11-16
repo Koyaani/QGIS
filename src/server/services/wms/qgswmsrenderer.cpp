@@ -237,7 +237,7 @@ namespace QgsWms
     }
   }
 
-  void QgsRenderer::runHitTestLayer( QgsVectorLayer *vl, SymbolSet &usedSymbols, QgsRenderContext &context ) const
+  void QgsRenderer::runHitTestLayer( QgsVectorLayer *vl, SymbolSet &usedSymbols, QgsRenderContext &context )
   {
     std::unique_ptr< QgsFeatureRenderer > r( vl->renderer()->clone() );
     bool moreSymbolsPerFeature = r->capabilities() & QgsFeatureRenderer::MoreSymbolsPerFeature;
@@ -1881,7 +1881,7 @@ namespace QgsWms
     writeAttributesTabGroup( editorContainer, layer, fields, featureAttributes, doc, featureElem, renderContext, attributes );
   }
 
-  void QgsRenderer::writeVectorLayerAttribute( int attributeIndex,  QgsVectorLayer *layer, const QgsFields &fields, QgsAttributes &featureAttributes, QDomDocument &doc, QDomElement &featureElem, QgsRenderContext &renderContext, QStringList *attributes ) const
+  void QgsRenderer::writeVectorLayerAttribute( int attributeIndex,  QgsVectorLayer *layer, const QgsFields &fields, QgsAttributes &featureAttributes, QDomDocument &doc, QDomElement &featureElem, QgsRenderContext &renderContext, QStringList *attributes )
   {
 #ifndef HAVE_SERVER_PYTHON_PLUGINS
     Q_UNUSED( attributes );
@@ -2087,7 +2087,7 @@ namespace QgsWms
     return true;
   }
 
-  bool QgsRenderer::testFilterStringSafety( const QString &filter ) const
+  bool QgsRenderer::testFilterStringSafety( const QString &filter )
   {
     //; too dangerous for sql injections
     if ( filter.contains( QLatin1String( ";" ) ) )
@@ -2334,7 +2334,7 @@ namespace QgsWms
     doc = SIAInfoDoc;
   }
 
-  QByteArray QgsRenderer::convertFeatureInfoToHtml( const QDomDocument &doc ) const
+  QByteArray QgsRenderer::convertFeatureInfoToHtml( const QDomDocument &doc )
   {
     QString featureInfoString;
 
@@ -2408,7 +2408,7 @@ namespace QgsWms
     return featureInfoString.toUtf8();
   }
 
-  QByteArray QgsRenderer::convertFeatureInfoToText( const QDomDocument &doc ) const
+  QByteArray QgsRenderer::convertFeatureInfoToText( const QDomDocument &doc )
   {
     QString featureInfoString;
 
@@ -3022,7 +3022,7 @@ namespace QgsWms
     return painter;
   }
 
-  void QgsRenderer::setLayerOpacity( QgsMapLayer *layer, int opacity ) const
+  void QgsRenderer::setLayerOpacity( QgsMapLayer *layer, int opacity )
   {
     if ( opacity >= 0 && opacity <= 255 )
     {
@@ -3320,7 +3320,7 @@ namespace QgsWms
     return expList;
   }
 
-  void QgsRenderer::setLayerSelection( QgsMapLayer *layer, const QStringList &fids ) const
+  void QgsRenderer::setLayerSelection( QgsMapLayer *layer, const QStringList &fids )
   {
     if ( !fids.empty() && layer->type() == QgsMapLayerType::VectorLayer )
     {
@@ -3350,7 +3350,7 @@ namespace QgsWms
 #endif
   }
 
-  void QgsRenderer::updateExtent( const QgsMapLayer *layer, QgsMapSettings &mapSettings ) const
+  void QgsRenderer::updateExtent( const QgsMapLayer *layer, QgsMapSettings &mapSettings )
   {
     QgsRectangle layerExtent = mapSettings.layerToMapCoordinates( layer, layer->extent() );
     QgsRectangle mapExtent = mapSettings.extent();
@@ -3425,7 +3425,7 @@ namespace QgsWms
     return scaledImage;
   }
 
-  void QgsRenderer::handlePrintErrors( const QgsLayout *layout ) const
+  void QgsRenderer::handlePrintErrors( const QgsLayout *layout )
   {
     if ( !layout )
     {
@@ -3508,7 +3508,7 @@ namespace QgsWms
     }
   }
 
-  void QgsRenderer::setLayerStyle( QgsMapLayer *layer, const QString &style ) const
+  void QgsRenderer::setLayerStyle( QgsMapLayer *layer, const QString &style )
   {
     if ( style.isEmpty() )
     {
@@ -3523,7 +3523,7 @@ namespace QgsWms
     }
   }
 
-  void QgsRenderer::setLayerSld( QgsMapLayer *layer, const QDomElement &sld ) const
+  void QgsRenderer::setLayerSld( QgsMapLayer *layer, const QDomElement &sld )
   {
     QString err;
     // Defined sld style name

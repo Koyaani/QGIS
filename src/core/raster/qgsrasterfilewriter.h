@@ -289,7 +289,7 @@ class CORE_EXPORT QgsRasterFileWriter
                                        const QList<bool> &destHasNoDataValueList = QList<bool>(), const QList<double> &destNoDataValueList = QList<double>() );
 
     //! Calculate nRows, geotransform and pixel size for output
-    void globalOutputParameters( const QgsRectangle &extent, int nCols, int &nRows, double *geoTransform, double &pixelSize );
+    static void globalOutputParameters( const QgsRectangle &extent, int nCols, int &nRows, double *geoTransform, double &pixelSize );
 
     QString partFileName( int fileIndex );
     QString vrtFileName();

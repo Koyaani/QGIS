@@ -358,7 +358,7 @@ class CORE_EXPORT QgsCptCityBrowserModel : public QAbstractItemModel
     //! Handles the data supplied by a drag and drop operation that ended with the given action
     /* virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent ); */
 
-    QgsCptCityDataItem *dataItem( const QModelIndex &idx ) const;
+    static QgsCptCityDataItem *dataItem( const QModelIndex &idx ) ;
 
     bool hasChildren( const QModelIndex &parent = QModelIndex() ) const override;
 

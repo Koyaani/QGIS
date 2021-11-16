@@ -108,7 +108,7 @@ class CORE_EXPORT QgsDiagram SIP_NODEFAULTCTORS
      *  \param s   The settings that specify the pen width
      *  \param c   The rendering specifying the proper scale units for pixel conversion
      */
-    void setPenWidth( QPen &pen, const QgsDiagramSettings &s, const QgsRenderContext &c );
+    static void setPenWidth( QPen &pen, const QgsDiagramSettings &s, const QgsRenderContext &c );
 
     /**
      * Calculates a size to match the current settings and rendering context
@@ -118,7 +118,7 @@ class CORE_EXPORT QgsDiagram SIP_NODEFAULTCTORS
      *
      *  \returns The converted size for rendering
      */
-    QSizeF sizePainterUnits( QSizeF size, const QgsDiagramSettings &s, const QgsRenderContext &c );
+    static QSizeF sizePainterUnits( QSizeF size, const QgsDiagramSettings &s, const QgsRenderContext &c );
 
     /**
      * Calculates a length to match the current settings and rendering context
@@ -128,7 +128,7 @@ class CORE_EXPORT QgsDiagram SIP_NODEFAULTCTORS
      *
      *  \returns The converted length for rendering
      */
-    double sizePainterUnits( double l, const QgsDiagramSettings &s, const QgsRenderContext &c );
+    static double sizePainterUnits( double l, const QgsDiagramSettings &s, const QgsRenderContext &c );
 
     /**
      * Calculates a size to match the current settings and rendering context
@@ -137,7 +137,7 @@ class CORE_EXPORT QgsDiagram SIP_NODEFAULTCTORS
      *
      *  \returns The properly scaled font for rendering
      */
-    QFont scaledFont( const QgsDiagramSettings &s, const QgsRenderContext &c );
+    static QFont scaledFont( const QgsDiagramSettings &s, const QgsRenderContext &c );
 
     /**
      * Returns the scaled size of a diagram for a value, respecting the specified diagram interpolation settings.
@@ -146,7 +146,7 @@ class CORE_EXPORT QgsDiagram SIP_NODEFAULTCTORS
      * \param is interpolation settings
      * \since QGIS 2.16
      */
-    QSizeF sizeForValue( double value, const QgsDiagramSettings &s, const QgsDiagramInterpolationSettings &is ) const;
+    static QSizeF sizeForValue( double value, const QgsDiagramSettings &s, const QgsDiagramInterpolationSettings &is ) ;
 
   private:
     QMap<QString, QgsExpression *> mExpressions;

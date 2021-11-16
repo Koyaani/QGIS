@@ -244,7 +244,7 @@ class GUI_EXPORT QgsCurveEditorWidget : public QWidget
 
     int findNearestControlPoint( QPointF point ) const;
 
-    QwtPlotHistogram *createPlotHistogram( const QBrush &brush, const QPen &pen = Qt::NoPen ) const;
+    static QwtPlotHistogram *createPlotHistogram( const QBrush &brush, const QPen &pen = Qt::NoPen ) ;
 
 };
 

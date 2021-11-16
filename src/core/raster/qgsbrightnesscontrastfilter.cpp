@@ -178,7 +178,7 @@ void QgsBrightnessContrastFilter::setGamma( double gamma )
   mGamma = std::clamp( gamma, 0.1, 10.0 );
 }
 
-int QgsBrightnessContrastFilter::adjustColorComponent( int colorComponent, int alpha, int brightness, double contrastFactor, double gammaCorrection ) const
+int QgsBrightnessContrastFilter::adjustColorComponent( int colorComponent, int alpha, int brightness, double contrastFactor, double gammaCorrection )
 {
   if ( alpha == 255 )
   {

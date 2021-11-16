@@ -91,7 +91,7 @@ class GUI_EXPORT QgsExpressionSelectionDialog : public QDialog, private Ui::QgsE
     void mActionSelectIntersect_triggered();
     void mButtonZoomToFeatures_clicked();
     void mPbnClose_clicked();
-    void showHelp();
+    static void showHelp();
 
   protected:
 

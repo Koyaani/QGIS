@@ -640,8 +640,8 @@ class CORE_EXPORT QgsDxfExport : public QgsLabelSink
     QgsDxfExport::Flags mFlags = QgsDxfExport::Flags();
 
     void appendCurve( const QgsCurve &c, QVector<QgsPoint> &points, QVector<double> &bulges );
-    void appendLineString( const QgsLineString &ls, QVector<QgsPoint> &points, QVector<double> &bulges );
-    void appendCircularString( const QgsCircularString &cs, QVector<QgsPoint> &points, QVector<double> &bulges );
+    static void appendLineString( const QgsLineString &ls, QVector<QgsPoint> &points, QVector<double> &bulges );
+    static void appendCircularString( const QgsCircularString &cs, QVector<QgsPoint> &points, QVector<double> &bulges );
     void appendCompoundCurve( const QgsCompoundCurve &cc, QVector<QgsPoint> &points, QVector<double> &bulges );
 
     QgsRenderContext mRenderContext;

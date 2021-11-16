@@ -1289,7 +1289,7 @@ QJsonObject QgsWmsLegendNode::exportSymbolToJson( const QgsLegendSettings &, con
   return json;
 }
 
-QImage QgsWmsLegendNode::renderMessage( const QString &msg ) const
+QImage QgsWmsLegendNode::renderMessage( const QString &msg )
 {
   const int fontHeight = 10;
   const int margin = fontHeight / 2;
@@ -1540,7 +1540,7 @@ QJsonObject QgsVectorLabelLegendNode::exportSymbolToJson( const QgsLegendSetting
   return json;
 }
 
-void QgsVectorLabelLegendNode::textWidthHeight( double &width, double &height, QgsRenderContext &ctx, const QgsTextFormat &textFormat, const QStringList &textLines ) const
+void QgsVectorLabelLegendNode::textWidthHeight( double &width, double &height, QgsRenderContext &ctx, const QgsTextFormat &textFormat, const QStringList &textLines )
 {
   QFontMetricsF fm = QgsTextRenderer::fontMetrics( ctx, textFormat );
   height = QgsTextRenderer::textHeight( ctx, textFormat, 'A', true );

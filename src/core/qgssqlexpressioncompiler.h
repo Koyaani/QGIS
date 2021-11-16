@@ -98,7 +98,7 @@ class CORE_EXPORT QgsSqlExpressionCompiler
      *
      * \since QGIS 3.2
      */
-    bool opIsStringComparison( QgsExpressionNodeBinaryOperator::BinaryOperator op );
+    static bool opIsStringComparison( QgsExpressionNodeBinaryOperator::BinaryOperator op );
 
   protected:
 
@@ -192,7 +192,7 @@ class CORE_EXPORT QgsSqlExpressionCompiler
 
     bool mIgnoreStaticNodes = false;
 
-    bool nodeIsNullLiteral( const QgsExpressionNode *node ) const;
+    static bool nodeIsNullLiteral( const QgsExpressionNode *node ) ;
 
 };
 

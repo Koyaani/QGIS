@@ -53,7 +53,7 @@ class SERVER_EXPORT QgsOWSServerFilterRestorer
     //! QgsOWSServerFilterRestorer cannot be copied
     QgsOWSServerFilterRestorer &operator=( const QgsOWSServerFilterRestorer &rh ) = delete;
 
-    void restoreLayerFilters( const QHash<QgsMapLayer *, QString> &filterMap );
+    static void restoreLayerFilters( const QHash<QgsMapLayer *, QString> &filterMap );
 
     /**
      * Returns a reference to the object's hash of layers to original subsetString filters.

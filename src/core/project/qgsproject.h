@@ -1370,7 +1370,7 @@ class CORE_EXPORT QgsProject : public QObject, public QgsExpressionContextGenera
      * \return An identifier for the attached file
      * \since QGIS 3.22
      */
-    QString attachmentIdentifier( const QString &attachedFile ) const;
+    static QString attachmentIdentifier( const QString &attachedFile ) ;
 
     /**
      * Resolves an attachment identifier to a attachment file path

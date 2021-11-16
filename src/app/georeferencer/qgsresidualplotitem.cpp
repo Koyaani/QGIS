@@ -236,7 +236,7 @@ double QgsResidualPlotItem::maxMMToPixelRatioForGCP( const QgsGeorefDataPoint *p
   }
 }
 
-double QgsResidualPlotItem::dist( QPointF p1, QPointF p2 ) const
+double QgsResidualPlotItem::dist( QPointF p1, QPointF p2 )
 {
   const double dx = p2.x() - p1.x();
   const double dy = p2.y() - p1.y();

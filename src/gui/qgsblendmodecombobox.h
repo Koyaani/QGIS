@@ -47,7 +47,7 @@ class GUI_EXPORT QgsBlendModeComboBox : public QComboBox
     * This list is designed to emulate GIMP's layer modes, where
     * blending modes are grouped by their effect (lightening, darkening, etc)
     */
-    QStringList blendModesList() const;
+    static QStringList blendModesList() ;
 
     //! Used to map blend modes across to their corresponding
     //  index within the combo box

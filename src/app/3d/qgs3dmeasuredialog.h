@@ -99,7 +99,7 @@ class Qgs3DMeasureDialog : public QDialog, private Ui::QgsMeasureBase
     QString formatDistance( double distance ) const;
 
     //! Show the help page of the 3D measurement tool
-    void showHelp();
+    static void showHelp();
 
     //! Open configuration tab
     void openConfigTab();

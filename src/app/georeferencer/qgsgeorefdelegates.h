@@ -52,7 +52,7 @@ class QgsDmsAndDdDelegate : public QStyledItemDelegate
                                const QModelIndex &index ) const override;
 
   private:
-    double dmsToDD( const QString &dms ) const;
+    static double dmsToDD( const QString &dms ) ;
 };
 
 class QgsCoordDelegate : public QStyledItemDelegate

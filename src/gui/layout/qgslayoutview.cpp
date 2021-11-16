@@ -458,7 +458,7 @@ QList<QgsLayoutItem *> QgsLayoutView::pasteItems( QPointF layoutPoint )
   return pastedItems;
 }
 
-bool QgsLayoutView::hasItemsInClipboard() const
+bool QgsLayoutView::hasItemsInClipboard()
 {
   QDomDocument doc;
   QClipboard *clipboard = QApplication::clipboard();
@@ -1274,7 +1274,7 @@ void QgsLayoutView::wheelZoom( QWheelEvent *event )
   }
 }
 
-QGraphicsLineItem *QgsLayoutView::createSnapLine() const
+QGraphicsLineItem *QgsLayoutView::createSnapLine()
 {
   std::unique_ptr< QGraphicsLineItem>  item( new QGraphicsLineItem( nullptr ) );
   QPen pen = QPen( QColor( Qt::blue ) );

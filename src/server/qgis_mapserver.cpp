@@ -358,7 +358,7 @@ class TcpServerWorker: public QObject
   public slots:
 
     // Outgoing connection handler
-    void responseReady( RequestContext *requestContext )  //#spellok
+    static void responseReady( RequestContext *requestContext )  //#spellok
     {
       std::unique_ptr<RequestContext> request { requestContext };
       const auto elapsedTime { std::chrono::steady_clock::now() - request->startTime };

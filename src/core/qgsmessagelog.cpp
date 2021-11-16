@@ -54,7 +54,7 @@ void QgsMessageLogConsole::logMessage( const QString &message, const QString &ta
   cerr << formattedMessage;
 }
 
-QString QgsMessageLogConsole::formatLogMessage( const QString &message, const QString &tag, Qgis::MessageLevel level ) const
+QString QgsMessageLogConsole::formatLogMessage( const QString &message, const QString &tag, Qgis::MessageLevel level )
 {
   const QString time = QTime::currentTime().toString();
   const QString levelStr = level == Qgis::MessageLevel::Info ? QStringLiteral( "INFO" ) :

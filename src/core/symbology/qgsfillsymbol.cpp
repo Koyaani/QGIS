@@ -114,7 +114,7 @@ void QgsFillSymbol::renderPolygonUsingLayer( QgsSymbolLayer *layer, const QPolyg
   }
 }
 
-QRectF QgsFillSymbol::polygonBounds( const QPolygonF &points, const QVector<QPolygonF> *rings ) const
+QRectF QgsFillSymbol::polygonBounds( const QPolygonF &points, const QVector<QPolygonF> *rings )
 {
   QRectF bounds = points.boundingRect();
   if ( rings )
@@ -127,7 +127,7 @@ QRectF QgsFillSymbol::polygonBounds( const QPolygonF &points, const QVector<QPol
   return bounds;
 }
 
-QVector<QPolygonF> *QgsFillSymbol::translateRings( const QVector<QPolygonF> *rings, double dx, double dy ) const
+QVector<QPolygonF> *QgsFillSymbol::translateRings( const QVector<QPolygonF> *rings, double dx, double dy )
 {
   if ( !rings )
     return nullptr;

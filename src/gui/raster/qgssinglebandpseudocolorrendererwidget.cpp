@@ -240,7 +240,7 @@ void QgsSingleBandPseudoColorRendererWidget::setLineEditValue( QLineEdit *lineEd
   lineEdit->setText( s );
 }
 
-double QgsSingleBandPseudoColorRendererWidget::lineEditValue( const QLineEdit *lineEdit ) const
+double QgsSingleBandPseudoColorRendererWidget::lineEditValue( const QLineEdit *lineEdit )
 {
   if ( lineEdit->text().isEmpty() )
   {

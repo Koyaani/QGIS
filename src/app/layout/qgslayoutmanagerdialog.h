@@ -53,7 +53,7 @@ class QgsLayoutManagerDialog: public QDialog, private Ui::QgsLayoutManagerBase
     QMap<QString, QString> defaultTemplates( bool fromUser = false ) const;
     QMap<QString, QString> otherTemplates() const;
 
-    QMap<QString, QString> templatesFromPath( const QString &path ) const;
+    static QMap<QString, QString> templatesFromPath( const QString &path ) ;
 
     /**
      * Opens local directory with user's system and tries to create it if not present
@@ -86,7 +86,7 @@ class QgsLayoutManagerDialog: public QDialog, private Ui::QgsLayoutManagerBase
     //! Slot to open user templates dir with user's system
     void mTemplatesUserDirBtn_pressed();
     //! Slot to open help file
-    void showHelp();
+    static void showHelp();
 
     void createReport();
     void removeClicked();

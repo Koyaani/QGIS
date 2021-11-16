@@ -85,15 +85,15 @@ class GUI_EXPORT QgsMapTip : public QWidget
     void applyFontSettings();
 
   private slots:
-    void onLinkClicked( const QUrl &url );
+    static void onLinkClicked( const QUrl &url );
     void resizeContent();
 
   private:
     // Fetch the feature to use for the maptip text.
     // Only the first feature in the search radius is used
-    QString fetchFeature( QgsMapLayer *thepLayer,
-                          QgsPointXY &mapPosition,
-                          QgsMapCanvas *mapCanvas );
+    static QString fetchFeature( QgsMapLayer *thepLayer,
+                                 QgsPointXY &mapPosition,
+                                 QgsMapCanvas *mapCanvas );
 
     QString replaceText(
       QString displayText, QgsVectorLayer *layer, QgsFeature &feat );

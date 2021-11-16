@@ -80,7 +80,7 @@ class CORE_EXPORT QgsCoordinateReferenceSystemRegistry : public QObject
      * Returns a list containing the details of all registered
      * custom (user-defined) CRSes.
      */
-    QList< QgsCoordinateReferenceSystemRegistry::UserCrsDetails > userCrsList() const;
+    static QList< QgsCoordinateReferenceSystemRegistry::UserCrsDetails > userCrsList() ;
 
     /**
      * Adds a new \a crs definition as a custom ("USER") CRS.
@@ -143,7 +143,7 @@ class CORE_EXPORT QgsCoordinateReferenceSystemRegistry : public QObject
      *
      * \since QGIS 3.20
      */
-    QList< QgsCelestialBody > celestialBodies() const;
+    static QList< QgsCelestialBody > celestialBodies() ;
 
   signals:
 
@@ -187,7 +187,7 @@ class CORE_EXPORT QgsCoordinateReferenceSystemRegistry : public QObject
 
   private:
 
-    bool insertProjection( const QString &projectionAcronym );
+    static bool insertProjection( const QString &projectionAcronym );
 
     mutable QList< QgsCelestialBody > mCelestialBodies;
     mutable QMap< QString, QgsProjOperation > mProjOperations;

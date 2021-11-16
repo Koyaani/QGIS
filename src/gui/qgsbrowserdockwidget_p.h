@@ -125,7 +125,7 @@ class QgsBrowserLayerProperties : public QgsBrowserPropertiesWidget, private Ui:
 
   private slots:
 
-    void urlClicked( const QUrl &url );
+    static void urlClicked( const QUrl &url );
 
   private:
 
@@ -208,7 +208,7 @@ class QgsDockBrowserTreeView : public QgsBrowserTreeView
     void dropEvent( QDropEvent *e ) override;
 
   private:
-    void setAction( QDropEvent *e );
+    static void setAction( QDropEvent *e );
 };
 
 /// @endcond

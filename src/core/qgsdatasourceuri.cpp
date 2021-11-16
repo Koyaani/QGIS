@@ -379,7 +379,7 @@ void QgsDataSourceUri::setSchema( const QString &schema )
   mSchema = schema;
 }
 
-QString QgsDataSourceUri::escape( const QString &val, QChar delim = '\'' ) const
+QString QgsDataSourceUri::escape( const QString &val, QChar delim = '\'' )
 {
   QString escaped = val;
 

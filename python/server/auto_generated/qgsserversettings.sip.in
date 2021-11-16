@@ -97,7 +97,7 @@ Load setting for a specific environment variable name.
 Log a summary of settings currently loaded.
 %End
 
-    QString iniFile() const;
+    static QString iniFile();
 %Docstring
 Returns the ini file loaded by QSetting.
 

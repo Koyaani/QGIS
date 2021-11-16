@@ -304,7 +304,7 @@ class GUI_EXPORT QgsFontButton : public QToolButton
      */
     void prepareMenu();
 
-    void addRecentColor( const QColor &color );
+    static void addRecentColor( const QColor &color );
 
   private:
 
@@ -341,7 +341,7 @@ class GUI_EXPORT QgsFontButton : public QToolButton
      * \param resultFormat destination for text format
      * \see colorFromMimeData
      */
-    bool formatFromMimeData( const QMimeData *mimeData, QgsTextFormat &resultFormat ) const;
+    static bool formatFromMimeData( const QMimeData *mimeData, QgsTextFormat &resultFormat ) ;
 
 
     /**
@@ -351,7 +351,7 @@ class GUI_EXPORT QgsFontButton : public QToolButton
      * \param resultFont destination for font
      * \see formatFromMimeData
      */
-    bool fontFromMimeData( const QMimeData *mimeData, QFont &resultFont ) const;
+    static bool fontFromMimeData( const QMimeData *mimeData, QFont &resultFont ) ;
 
     /**
      * Attempts to parse mimeData as a color, either via the mime data's color data or by
@@ -362,12 +362,12 @@ class GUI_EXPORT QgsFontButton : public QToolButton
      * \param hasAlpha will be set to TRUE if mime data also included an alpha component
      * \see formatFromMimeData
      */
-    bool colorFromMimeData( const QMimeData *mimeData, QColor &resultColor, bool &hasAlpha );
+    static bool colorFromMimeData( const QMimeData *mimeData, QColor &resultColor, bool &hasAlpha );
 
     /**
      * Create a \a color icon for display in the drop-down menu.
      */
-    QPixmap createColorIcon( const QColor &color ) const;
+    static QPixmap createColorIcon( const QColor &color ) ;
 
     /**
      * Creates a drag icon showing the current font style.

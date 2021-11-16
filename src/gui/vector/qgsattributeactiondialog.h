@@ -85,7 +85,7 @@ class GUI_EXPORT QgsAttributeActionDialog: public QWidget, private Ui::QgsAttrib
     void swapRows( int row1, int row2 );
     QgsAction rowToAction( int row ) const;
 
-    QString textForType( QgsAction::ActionType type );
+    static QString textForType( QgsAction::ActionType type );
 
     void rowSelected( int row );
 

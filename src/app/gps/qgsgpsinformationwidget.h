@@ -120,7 +120,7 @@ class APP_EXPORT QgsGpsInformationWidget: public QgsPanelWidget, public QgsMapCa
     void disconnectGps();
     void populateDevices();
     void setStatusIndicator( FixStatus statusValue );
-    void showStatusBarMessage( const QString &msg );
+    static void showStatusBarMessage( const QString &msg );
     void setAcquisitionInterval( uint );
     void setDistanceThreshold( uint );
     void updateTimeZones();

@@ -291,7 +291,7 @@ class CORE_EXPORT QgsPaintEffect SIP_NODEFAULTCTORS
      * to rendering results onto a painter.
      * \param painter destination painter
      */
-    void fixQPictureDpi( QPainter *painter ) const;
+    static void fixQPictureDpi( QPainter *painter ) ;
 
   private:
 

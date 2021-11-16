@@ -68,10 +68,10 @@ class GUI_EXPORT QgsPreviewEffect: public QGraphicsEffect
     PreviewMode mMode;
 
     QRgb simulateColorBlindness( QRgb &originalColor, PreviewMode type );
-    void simulateGrayscale( int &r, int &g, int &b, int &red, int &green, int &blue );
-    void simulateProtanope( int &r, int &g, int &b, int &red, int &green, int &blue );
-    void simulateDeuteranope( int &r, int &g, int &b, int &red, int &green, int &blue );
-    void simulateTritanope( int &r, int &g, int &b, int &red, int &green, int &blue );
+    static void simulateGrayscale( int &r, int &g, int &b, int &red, int &green, int &blue );
+    static void simulateProtanope( int &r, int &g, int &b, int &red, int &green, int &blue );
+    static void simulateDeuteranope( int &r, int &g, int &b, int &red, int &green, int &blue );
+    static void simulateTritanope( int &r, int &g, int &b, int &red, int &green, int &blue );
 };
 
 #endif // QGSPREVIEWEFFECT_H

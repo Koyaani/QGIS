@@ -149,7 +149,7 @@ Called when the dialog is going to be closed.
 Closes the dialog
 %End
 
-    void showHelp();
+    static void showHelp();
 %Docstring
 Opens the associated help
 %End
@@ -305,14 +305,14 @@ add a new symbol to style
     bool editSymbol();
     bool editColorRamp();
 
- bool removeSymbol() /Deprecated/;
+    static bool removeSymbol() /Deprecated/;
 %Docstring
 
 .. deprecated:: QGIS 3.6
    - has no effect and will be removed in QGIS 4.0
 %End
 
- bool removeColorRamp() /Deprecated/;
+    static bool removeColorRamp() /Deprecated/;
 %Docstring
 
 .. deprecated:: QGIS 3.6
@@ -332,7 +332,7 @@ Enables or disables the groupTree specific inputs
 Enables or disables the groupTree items for grouping mode
 %End
 
-    void setBold( QStandardItem * );
+    static void setBold( QStandardItem * );
 %Docstring
 sets the text of the item with bold font
 %End

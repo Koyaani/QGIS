@@ -81,24 +81,24 @@ class QgsImageWarper
      * \sa destroyGeoToPixelTransform
      * \returns Argument to use with the static GDAL callback \ref GeoToPixelTransform
      */
-    void *addGeoToPixelTransform( GDALTransformerFunc GDALTransformer, void *GDALTransformerArg, double *padfGeotransform ) const;
-    void destroyGeoToPixelTransform( void *GeoToPixelTransformArg ) const;
+    static void *addGeoToPixelTransform( GDALTransformerFunc GDALTransformer, void *GDALTransformerArg, double *padfGeotransform ) ;
+    static void destroyGeoToPixelTransform( void *GeoToPixelTransformArg ) ;
 
     bool openSrcDSAndGetWarpOpt( const QString &input, ResamplingMethod resampling,
                                  const GDALTransformerFunc &pfnTransform, gdal::dataset_unique_ptr &hSrcDS,
                                  gdal::warp_options_unique_ptr &psWarpOptions );
 
-    bool createDestinationDataset( const QString &outputName, GDALDatasetH hSrcDS, gdal::dataset_unique_ptr &hDstDS, uint resX, uint resY,
-                                   double *adfGeoTransform, bool useZeroAsTrans, const QString &compression, const QgsCoordinateReferenceSystem &crs );
+    static bool createDestinationDataset( const QString &outputName, GDALDatasetH hSrcDS, gdal::dataset_unique_ptr &hDstDS, uint resX, uint resY,
+                                          double *adfGeoTransform, bool useZeroAsTrans, const QString &compression, const QgsCoordinateReferenceSystem &crs );
 
     QWidget *mParent = nullptr;
-    void      *createWarpProgressArg( QProgressDialog *progressDialog ) const;
+    static void      *createWarpProgressArg( QProgressDialog *progressDialog ) ;
     //! \brief GDAL progress callback, used to display warping progress via a QProgressDialog
     static int CPL_STDCALL updateWarpProgress( double dfComplete, const char *pszMessage, void *pProgressArg );
 
     static bool sWarpCanceled;
 
-    GDALResampleAlg toGDALResampleAlg( ResamplingMethod method ) const;
+    static GDALResampleAlg toGDALResampleAlg( ResamplingMethod method ) ;
 };
 
 

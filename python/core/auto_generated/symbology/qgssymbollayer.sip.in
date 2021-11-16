@@ -1247,7 +1247,7 @@ The ``rings`` argument optionally specifies a list of polygon rings to render as
 
   protected:
     QgsFillSymbolLayer( bool locked = false );
-    void _renderPolygon( QPainter *p, const QPolygonF &points, const QVector<QPolygonF> *rings, QgsSymbolRenderContext &context );
+    static void _renderPolygon( QPainter *p, const QPolygonF &points, const QVector<QPolygonF> *rings, QgsSymbolRenderContext &context );
 %Docstring
 Default method to render polygon
 %End

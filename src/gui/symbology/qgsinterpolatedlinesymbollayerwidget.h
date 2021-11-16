@@ -68,8 +68,8 @@ class GUI_EXPORT QgsInterpolatedLineSymbolLayerWidget: public QgsSymbolLayerWidg
 
     QgsInterpolatedLineWidth interpolatedLineWidth();
     QgsInterpolatedLineColor interpolatedLineColor();
-    double lineEditValue( QLineEdit *lineEdit );
-    void setLineEditValue( QLineEdit *lineEdit, double value );
+    static double lineEditValue( QLineEdit *lineEdit );
+    static void setLineEditValue( QLineEdit *lineEdit, double value );
 };
 
 #endif // QGSINTERPOLATEDLINESYMBOLLAYERWIDGET_H

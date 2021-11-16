@@ -52,7 +52,7 @@ log.
     };
 
 
-    DataType dataType( const QDomNode &layerNode );
+    static DataType dataType( const QDomNode &layerNode );
 %Docstring
 Returns data type associated with the given :py:class:`QgsProject` file Dom node
 
@@ -61,7 +61,7 @@ The Dom node should represent the state associated with a specific layer.
 .. versionadded:: 3.0
 %End
 
-    QString dataSource( const QDomNode &layerNode );
+    static QString dataSource( const QDomNode &layerNode );
 %Docstring
 Returns the data source for the given layer
 
@@ -90,7 +90,7 @@ URL based and if it has "dbname=">, then the layer data is in a database.
 .. versionadded:: 3.0
 %End
 
-    void setDataSource( QDomNode &layerNode, const QString &dataSource );
+    static void setDataSource( QDomNode &layerNode, const QString &dataSource );
 %Docstring
 Set the datasource element to the new value
 

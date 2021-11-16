@@ -197,7 +197,7 @@ void QgsGeometryMissingVertexCheck::processPolygon( const QgsCurvePolygon *polyg
   }
 }
 
-QgsRectangle QgsGeometryMissingVertexCheck::contextBoundingBox( const QgsCurvePolygon *polygon, const QgsVertexId &vertexId, const QgsPoint &point ) const
+QgsRectangle QgsGeometryMissingVertexCheck::contextBoundingBox( const QgsCurvePolygon *polygon, const QgsVertexId &vertexId, const QgsPoint &point )
 {
   QgsVertexId vertexBefore;
   QgsVertexId vertexAfter;

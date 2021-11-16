@@ -485,7 +485,7 @@ class GUI_EXPORT QgsAttributeForm : public QWidget
 
     void updateIcon( QgsEditorWidgetWrapper *eww );
 
-    void reloadIcon( const QString &file, const QString &tooltip, QSvgWidget *sw );
+    static void reloadIcon( const QString &file, const QString &tooltip, QSvgWidget *sw );
 
     // Contains information about tabs and groupboxes, their visibility state visibility conditions
     QVector<ContainerInformation *> mContainerVisibilityInformation;

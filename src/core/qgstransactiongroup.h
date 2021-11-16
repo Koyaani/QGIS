@@ -91,7 +91,7 @@ class CORE_EXPORT QgsTransactionGroup : public QObject
 
     void disableTransaction();
 
-    void restartTransaction( const QgsVectorLayer *layer );
+    static void restartTransaction( const QgsVectorLayer *layer );
 
     QSet<QgsVectorLayer *> mLayers;
     //! Only set while a transaction is active

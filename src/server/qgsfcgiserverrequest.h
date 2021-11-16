@@ -54,11 +54,11 @@ class SERVER_EXPORT QgsFcgiServerRequest: public QgsServerRequest
 
     // Log request info: print debug infos
     // about the request
-    void printRequestInfos( const QUrl &url );
+    static void printRequestInfos( const QUrl &url );
 
     // Fill the url given in argument with
     // the server name, the server port and the schema (calculated from HTTPS)
-    void fillUrl( QUrl &url ) const;
+    static void fillUrl( QUrl &url ) ;
 
     QByteArray mData;
     bool       mHasError = false;

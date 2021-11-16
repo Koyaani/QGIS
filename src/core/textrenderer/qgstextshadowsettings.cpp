@@ -468,7 +468,7 @@ void QgsTextShadowSettings::updateDataDefinedProperties( QgsRenderContext &conte
   }
 }
 
-QSet<QString> QgsTextShadowSettings::referencedFields( const QgsRenderContext & ) const
+QSet<QString> QgsTextShadowSettings::referencedFields( const QgsRenderContext & )
 {
   return QSet< QString >(); // nothing for now
 }

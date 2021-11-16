@@ -364,7 +364,7 @@ class GUI_EXPORT QgsSymbolSelectorDialog : public QDialog
 
   private slots:
 
-    void showHelp();
+    static void showHelp();
 
   signals:
 

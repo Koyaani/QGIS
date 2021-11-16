@@ -41,7 +41,7 @@ class APP_EXPORT QgsSettingsLocatorFilter : public QgsLocatorFilter
 
   private:
 
-    QMap<QString, QString> settingsPage( const QString &type,  const QString &page );
+    static QMap<QString, QString> settingsPage( const QString &type,  const QString &page );
 };
 
 #endif // QGSSETTINGSLOCATORFILTERS_H

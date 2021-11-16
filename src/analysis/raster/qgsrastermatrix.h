@@ -157,7 +157,7 @@ class ANALYSIS_EXPORT QgsRasterMatrix
 
     /*sqrt, std::sin, std::cos, tan, asin, acos, atan*/
     bool oneArgumentOperation( OneArgOperator op );
-    bool testPowerValidity( double base, double power ) const;
+    static bool testPowerValidity( double base, double power ) ;
 };
 
 #endif // QGSRASTERMATRIX_H

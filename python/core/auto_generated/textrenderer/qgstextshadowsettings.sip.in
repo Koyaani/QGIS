@@ -357,7 +357,7 @@ Updates the format by evaluating current values of data defined properties.
 .. versionadded:: 3.10
 %End
 
-    QSet<QString> referencedFields( const QgsRenderContext &context ) const;
+    static QSet<QString> referencedFields( const QgsRenderContext &context );
 %Docstring
 Returns all field names referenced by the configuration (e.g. from data defined properties).
 

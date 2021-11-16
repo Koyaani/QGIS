@@ -196,7 +196,7 @@ class GUI_EXPORT QgsCodeEditor : public QsciScintilla
 
   protected:
 
-    bool isFixedPitch( const QFont &font );
+    static bool isFixedPitch( const QFont &font );
 
     void focusOutEvent( QFocusEvent *event ) override;
     void keyPressEvent( QKeyEvent *event ) override;

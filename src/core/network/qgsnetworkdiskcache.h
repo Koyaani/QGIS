@@ -52,16 +52,16 @@ class QgsNetworkDiskCache : public QNetworkDiskCache
   public:
 
     //! \see QNetworkDiskCache::cacheDirectory
-    QString cacheDirectory() const;
+    static QString cacheDirectory() ;
 
     //! \see QNetworkDiskCache::setCacheDirectory
-    void setCacheDirectory( const QString &cacheDir );
+    static void setCacheDirectory( const QString &cacheDir );
 
     //! \see QNetworkDiskCache::maximumCacheSize()
-    qint64 maximumCacheSize() const;
+    static qint64 maximumCacheSize() ;
 
     //! \see QNetworkDiskCache::setMaximumCacheSize()
-    void setMaximumCacheSize( qint64 size );
+    static void setMaximumCacheSize( qint64 size );
 
     //! \see QNetworkDiskCache::metaData()
     QNetworkCacheMetaData metaData( const QUrl &url ) override;
@@ -85,7 +85,7 @@ class QgsNetworkDiskCache : public QNetworkDiskCache
     void insert( QIODevice *device ) override;
 
     //! \see QNetworkDiskCache::fileMetaData()
-    QNetworkCacheMetaData fileMetaData( const QString &fileName ) const;
+    static QNetworkCacheMetaData fileMetaData( const QString &fileName ) ;
 
   public slots:
     //! \see QNetworkDiskCache::clear()

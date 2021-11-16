@@ -113,7 +113,7 @@ class APP_EXPORT QgsMapSaveDialog: public QDialog, private Ui::QgsMapSaveDialog
 
   private slots:
 
-    void showHelp();
+    static void showHelp();
 };
 
 #endif // QGSMAPSAVEDIALOG_H

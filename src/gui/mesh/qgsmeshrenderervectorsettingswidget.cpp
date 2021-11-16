@@ -332,7 +332,7 @@ void QgsMeshRendererVectorSettingsWidget::loadColorRampShader()
   whileBlocking( mColorRampShaderMaximumSpinBox )->setValue( max );
 }
 
-double QgsMeshRendererVectorSettingsWidget::filterValue( const QgsDoubleSpinBox *spinBox, double errVal ) const
+double QgsMeshRendererVectorSettingsWidget::filterValue( const QgsDoubleSpinBox *spinBox, double errVal )
 {
   if ( spinBox->value() == spinBox->clearValue() )
     return errVal;

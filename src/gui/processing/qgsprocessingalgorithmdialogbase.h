@@ -392,7 +392,7 @@ class GUI_EXPORT QgsProcessingAlgorithmDialogBase : public QDialog, public QgsPr
 
     void splitterChanged( int pos, int index );
     void mTabWidget_currentChanged( int index );
-    void linkClicked( const QUrl &url );
+    static void linkClicked( const QUrl &url );
     void algExecuted( bool successful, const QVariantMap &results );
     void taskTriggered( QgsTask *task );
     void closeClicked();
@@ -419,7 +419,7 @@ class GUI_EXPORT QgsProcessingAlgorithmDialogBase : public QDialog, public QgsPr
 
     QgsProcessingContext::LogLevel mLogLevel = QgsProcessingContext::DefaultLevel;
 
-    QString formatHelp( QgsProcessingAlgorithm *algorithm );
+    static QString formatHelp( QgsProcessingAlgorithm *algorithm );
     void scrollToBottomOfLog();
     void processEvents();
 

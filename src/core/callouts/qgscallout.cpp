@@ -296,7 +296,7 @@ QgsCallout::LabelAnchorPoint QgsCallout::decodeLabelAnchorPoint( const QString &
   return LabelPointOnExterior;
 }
 
-QgsGeometry QgsCallout::labelAnchorGeometry( const QRectF &rect, const double angle, LabelAnchorPoint anchor ) const
+QgsGeometry QgsCallout::labelAnchorGeometry( const QRectF &rect, const double angle, LabelAnchorPoint anchor )
 {
   QgsGeometry label;
   switch ( anchor )

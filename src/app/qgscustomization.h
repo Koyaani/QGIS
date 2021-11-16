@@ -78,7 +78,7 @@ class APP_EXPORT QgsCustomizationDialog : public QMainWindow, private Ui::QgsCus
 
     void cancel();
 
-    void showHelp();
+    static void showHelp();
 
     // Reset values from settings
     void reset();
@@ -100,7 +100,7 @@ class APP_EXPORT QgsCustomizationDialog : public QMainWindow, private Ui::QgsCus
     void init();
     QTreeWidgetItem *createTreeItemWidgets();
     QTreeWidgetItem *readWidgetsXmlNode( const QDomNode &node );
-    QAction *findAction( QToolButton *toolbutton );
+    static QAction *findAction( QToolButton *toolbutton );
 
     QString mLastDirSettingsName;
     QSettings *mSettings = nullptr;

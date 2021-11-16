@@ -58,7 +58,7 @@ QgsGmlSchema::QgsGmlSchema()
                  << QStringLiteral( "Polygon" ) << QStringLiteral( "MultiPolygon" );
 }
 
-QString QgsGmlSchema::readAttribute( const QString &attributeName, const XML_Char **attr ) const
+QString QgsGmlSchema::readAttribute( const QString &attributeName, const XML_Char **attr )
 {
   int i = 0;
   while ( attr[i] )

@@ -198,7 +198,7 @@ class GUI_EXPORT QgsEffectStackPropertiesDialog: public QgsDialog
 
   private slots:
 
-    void showHelp();
+    static void showHelp();
 
 };
 

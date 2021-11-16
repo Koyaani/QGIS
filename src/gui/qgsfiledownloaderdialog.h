@@ -61,7 +61,7 @@ class GUI_EXPORT QgsFileDownloaderDialog : public QProgressDialog
 
   private slots:
 
-    void onError( const QStringList &errors );
+    static void onError( const QStringList &errors );
     void onDownloadProgress( qint64 bytesReceived, qint64 bytesTotal );
 
   private:

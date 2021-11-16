@@ -113,13 +113,13 @@ class GUI_EXPORT QgsAbstractRelationEditorWidget : public QWidget
      * Defines if a title label should be shown for this widget.
      * \deprecated since QGIS 3.20 label is handled directly in QgsAttributeForm.
      */
-    Q_DECL_DEPRECATED bool showLabel() const SIP_DEPRECATED;
+    static Q_DECL_DEPRECATED bool showLabel() SIP_DEPRECATED;
 
     /**
      * Defines if a title label should be shown for this widget.
      * \deprecated since QGIS 3.20 label is handled directly in QgsAttributeForm.
      */
-    Q_DECL_DEPRECATED void setShowLabel( bool showLabel ) SIP_DEPRECATED;
+    static Q_DECL_DEPRECATED void setShowLabel( bool showLabel ) SIP_DEPRECATED;
 
     /**
     * Determines the relation id of the second relation involved in an N:M relation.
@@ -136,13 +136,13 @@ class GUI_EXPORT QgsAbstractRelationEditorWidget : public QWidget
      * Determines the label of this element
      * \deprecated since QGIS 3.20 label is handled directly in QgsAttributeForm.
      */
-    Q_DECL_DEPRECATED QString label() const SIP_DEPRECATED;
+    static Q_DECL_DEPRECATED QString label() SIP_DEPRECATED;
 
     /**
      * Sets \a label for this element
      * If it's empty it takes the relation id as label
      */
-    void setLabel( const QString &label = QString() );
+    static void setLabel( const QString &label = QString() );
 
     /**
      * Returns the widget's current feature

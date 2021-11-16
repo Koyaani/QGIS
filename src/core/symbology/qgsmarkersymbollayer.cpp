@@ -451,7 +451,7 @@ bool QgsSimpleMarkerSymbolLayerBase::prepareMarkerShape( Qgis::MarkerShape shape
   return shapeToPolygon( shape, mPolygon );
 }
 
-bool QgsSimpleMarkerSymbolLayerBase::shapeToPolygon( Qgis::MarkerShape shape, QPolygonF &polygon ) const
+bool QgsSimpleMarkerSymbolLayerBase::shapeToPolygon( Qgis::MarkerShape shape, QPolygonF &polygon )
 {
   polygon.clear();
 

@@ -64,7 +64,7 @@ class GUI_EXPORT QgsOrderByDialog : public QDialog, private Ui::OrderByDialogBas
 
   private slots:
     void onExpressionChanged( const QString &expression );
-    void showHelp();
+    static void showHelp();
 
   private:
 

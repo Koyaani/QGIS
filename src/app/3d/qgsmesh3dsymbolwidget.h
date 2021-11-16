@@ -56,7 +56,7 @@ class QgsMesh3dSymbolWidget : public QWidget, private Ui::QgsMesh3dPropsWidget
     void onTextureSettingsCollapseStateChanged( bool collapsed );
 
   private:
-    double lineEditValue( const QLineEdit *lineEdit ) const;
+    static double lineEditValue( const QLineEdit *lineEdit ) ;
     void setColorRampMinMax( double min, double max );
     QgsMeshLayer *mLayer = nullptr;
     QgsMeshDatasetGroupListModel *mDatasetGroupListModel = nullptr;

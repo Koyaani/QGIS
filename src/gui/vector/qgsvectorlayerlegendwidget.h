@@ -59,7 +59,7 @@ class GUI_EXPORT QgsVectorLayerLegendWidget : public QWidget
 
   private slots:
     void labelsFromExpression();
-    void labelLegendTreeWidgetItemDoubleClicked( QTreeWidgetItem *item, int column );
+    static void labelLegendTreeWidgetItemDoubleClicked( QTreeWidgetItem *item, int column );
 
   private:
     void populateLegendTreeView( const QHash<QString, QString> &content );

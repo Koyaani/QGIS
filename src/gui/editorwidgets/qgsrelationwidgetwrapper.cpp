@@ -136,7 +136,7 @@ void QgsRelationWidgetWrapper::setShowSaveChildEditsButton( bool showSaveChildEd
   Q_NOWARN_DEPRECATED_POP
 }
 
-bool QgsRelationWidgetWrapper::showLabel() const
+bool QgsRelationWidgetWrapper::showLabel()
 {
   return false;
 }
@@ -295,7 +295,7 @@ void QgsRelationWidgetWrapper::setLabel( const QString &label )
   Q_UNUSED( label )
 }
 
-QString QgsRelationWidgetWrapper::label() const
+QString QgsRelationWidgetWrapper::label()
 {
   return QString();
 }

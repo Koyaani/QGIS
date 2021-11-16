@@ -149,7 +149,7 @@ Returns ``True`` if settings were applied.
 Draws default scalebar labels using the specified ``settings`` and ``scaleContext`` to a destination render ``context``.
 %End
 
-    QString firstLabelString( const QgsScaleBarSettings &settings ) const;
+    static QString firstLabelString( const QgsScaleBarSettings &settings );
 %Docstring
 Returns the text used for the first label in the scalebar.
 %End
@@ -169,7 +169,7 @@ Returns the x-offset (in render context painter units) used for the first label 
 .. versionadded:: 3.2
 %End
 
- QList<double> segmentPositions( const QgsScaleBarRenderer::ScaleBarContext &scaleContext, const QgsScaleBarSettings &settings ) const /Deprecated/;
+    static QList<double> segmentPositions( const QgsScaleBarRenderer::ScaleBarContext &scaleContext, const QgsScaleBarSettings &settings ) /Deprecated/;
 %Docstring
 Returns a list of positions for each segment within the scalebar.
 
@@ -177,14 +177,14 @@ Returns a list of positions for each segment within the scalebar.
    use the version with a :py:class:`QgsRenderContext` instead
 %End
 
-    QList<double> segmentPositions( QgsRenderContext &context, const QgsScaleBarRenderer::ScaleBarContext &scaleContext, const QgsScaleBarSettings &settings ) const;
+    static QList<double> segmentPositions( QgsRenderContext &context, const QgsScaleBarRenderer::ScaleBarContext &scaleContext, const QgsScaleBarSettings &settings );
 %Docstring
 Returns a list of positions for each segment within the scalebar.
 
 .. versionadded:: 3.14
 %End
 
-    QList<double> segmentWidths( const QgsScaleBarRenderer::ScaleBarContext &scaleContext, const QgsScaleBarSettings &settings ) const;
+    static QList<double> segmentWidths( const QgsScaleBarRenderer::ScaleBarContext &scaleContext, const QgsScaleBarSettings &settings );
 %Docstring
 Returns a list of widths of each segment of the scalebar.
 %End

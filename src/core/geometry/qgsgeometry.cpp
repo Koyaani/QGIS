@@ -3641,14 +3641,14 @@ std::unique_ptr< QgsLineString > smoothCurve( const QgsLineString &line, const u
   return result;
 }
 
-std::unique_ptr<QgsLineString> QgsGeometry::smoothLine( const QgsLineString &line, const unsigned int iterations, const double offset, double minimumDistance, double maxAngle ) const
+std::unique_ptr<QgsLineString> QgsGeometry::smoothLine( const QgsLineString &line, const unsigned int iterations, const double offset, double minimumDistance, double maxAngle )
 {
   double maxAngleRads = maxAngle * M_PI / 180.0;
   double squareDistThreshold = minimumDistance > 0 ? minimumDistance * minimumDistance : -1;
   return smoothCurve( line, iterations, offset, squareDistThreshold, maxAngleRads, false );
 }
 
-std::unique_ptr<QgsPolygon> QgsGeometry::smoothPolygon( const QgsPolygon &polygon, const unsigned int iterations, const double offset, double minimumDistance, double maxAngle ) const
+std::unique_ptr<QgsPolygon> QgsGeometry::smoothPolygon( const QgsPolygon &polygon, const unsigned int iterations, const double offset, double minimumDistance, double maxAngle )
 {
   double maxAngleRads = maxAngle * M_PI / 180.0;
   double squareDistThreshold = minimumDistance > 0 ? minimumDistance * minimumDistance : -1;

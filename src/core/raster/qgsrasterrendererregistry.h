@@ -89,7 +89,7 @@ class CORE_EXPORT QgsRasterRendererRegistry
     QStringList mSortedEntries;
 
     //read min/max values from
-    bool minMaxValuesForBand( int band, QgsRasterDataProvider *provider, double &minValue, double &maxValue ) const;
+    static bool minMaxValuesForBand( int band, QgsRasterDataProvider *provider, double &minValue, double &maxValue ) ;
 };
 
 #endif // QGSRASTERRENDERERREGISTRY_H

@@ -165,7 +165,7 @@ void QgsMesh3dSymbolWidget::setLayer( QgsMeshLayer *meshLayer, bool updateSymbol
 
 QgsMeshLayer *QgsMesh3dSymbolWidget::meshLayer() const {return mLayer;}
 
-double QgsMesh3dSymbolWidget::lineEditValue( const QLineEdit *lineEdit ) const
+double QgsMesh3dSymbolWidget::lineEditValue( const QLineEdit *lineEdit )
 {
   if ( lineEdit->text().isEmpty() )
   {

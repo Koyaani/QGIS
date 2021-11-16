@@ -460,7 +460,7 @@ bool QgsWcsProvider::parseUri( const QString &uriString )
   return true;
 }
 
-QString QgsWcsProvider::prepareUri( QString uri ) const
+QString QgsWcsProvider::prepareUri( QString uri )
 {
   if ( !uri.contains( '?' ) )
   {
@@ -525,7 +525,7 @@ void QgsWcsProvider::setCoverageCrs( QString const &crs )
   }
 }
 
-void QgsWcsProvider::setQueryItem( QUrl &url, const QString &item, const QString &value ) const
+void QgsWcsProvider::setQueryItem( QUrl &url, const QString &item, const QString &value )
 {
   QUrlQuery query( url );
   query.removeQueryItem( item );

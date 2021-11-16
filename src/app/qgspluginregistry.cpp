@@ -199,7 +199,7 @@ void QgsPluginRegistry::unloadAll()
 }
 
 
-bool QgsPluginRegistry::checkQgisVersion( const QString &minVersion, const QString &maxVersion ) const
+bool QgsPluginRegistry::checkQgisVersion( const QString &minVersion, const QString &maxVersion )
 {
   // Parse qgisMinVersion. Must be in form x.y.z or just x.y
   const QStringList minVersionParts = minVersion.split( '.' );

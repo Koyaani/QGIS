@@ -142,7 +142,7 @@ class GUI_EXPORT QgsGraduatedSymbolRendererWidget : public QgsRendererWidget, pr
     void mSizeUnitWidget_changed();
     void methodComboBox_currentIndexChanged( int );
     void updateMethodParameters();
-    void cleanUpSymbolSelector( QgsPanelWidget *container );
+    static void cleanUpSymbolSelector( QgsPanelWidget *container );
     void updateSymbolsFromWidget();
     void dataDefinedSizeLegend();
     void changeGraduatedSymbol();

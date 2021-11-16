@@ -76,7 +76,7 @@ Sets the minimum feature ``size`` (in millimeters) for a feature to be labelled.
 .. seealso:: :py:func:`minimumFeatureSize`
 %End
 
-    void updateDataDefinedProperties( const QgsPropertyCollection &properties, QgsExpressionContext &context );
+    static void updateDataDefinedProperties( const QgsPropertyCollection &properties, QgsExpressionContext &context );
 %Docstring
 Updates the thinning settings to respect any data defined properties
 set within the specified ``properties`` collection.

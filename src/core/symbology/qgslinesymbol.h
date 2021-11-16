@@ -118,7 +118,7 @@ class CORE_EXPORT QgsLineSymbol : public QgsSymbol
 
   private:
 
-    void renderPolylineUsingLayer( QgsLineSymbolLayer *layer, const QPolygonF &points, QgsSymbolRenderContext &context );
+    static void renderPolylineUsingLayer( QgsLineSymbolLayer *layer, const QPolygonF &points, QgsSymbolRenderContext &context );
 
 };
 

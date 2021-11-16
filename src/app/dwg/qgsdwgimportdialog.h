@@ -40,7 +40,7 @@ class QgsDwgImportDialog : public QDialog, private Ui::QgsDwgImportBase
     void pbDeselectAll_clicked();
     void mDatabaseFileWidget_textChanged( const QString &filename );
     void leLayerGroup_textChanged( const QString &text );
-    void showHelp();
+    static void showHelp();
 
   private:
     QgsVectorLayer *layer( QgsLayerTreeGroup *layerGroup, const QString &layer, const QString &table );

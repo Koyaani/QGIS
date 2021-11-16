@@ -67,7 +67,7 @@ class CORE_EXPORT QgsGoogleMapsGeocoder : public QgsGeocoderInterface
     /**
      * Converts a JSON result returned from the Google Maps service to a geocoder result object.
      */
-    QgsGeocoderResult jsonToResult( const QVariantMap &json ) const;
+    static QgsGeocoderResult jsonToResult( const QVariantMap &json ) ;
 
     /**
      * Sets a specific API \a endpoint to use for requests. This is for internal testing purposes only.

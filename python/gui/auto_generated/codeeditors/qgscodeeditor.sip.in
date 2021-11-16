@@ -183,7 +183,7 @@ Clears all warning messages from the editor.
 
   protected:
 
-    bool isFixedPitch( const QFont &font );
+    static bool isFixedPitch( const QFont &font );
 
     virtual void focusOutEvent( QFocusEvent *event );
 

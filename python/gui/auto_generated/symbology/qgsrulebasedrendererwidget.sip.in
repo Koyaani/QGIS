@@ -125,7 +125,7 @@ class QgsRuleBasedRendererWidget : QgsRendererWidget
     void currentRuleChanged( const QModelIndex &current = QModelIndex(), const QModelIndex &previous = QModelIndex() );
     void selectedRulesChanged();
 
-    void saveSectionWidth( int section, int oldSize, int newSize );
+    static void saveSectionWidth( int section, int oldSize, int newSize );
     void restoreSectionWidths();
 
   protected:

@@ -43,15 +43,15 @@ class QgsAppDirectoryItemGuiProvider : public QObject, public QgsDataItemGuiProv
 
   private:
 
-    void addFavorite( QgsDirectoryItem *item );
-    void removeFavorite( QgsFavoriteItem *favorite );
-    void renameFavorite( QgsFavoriteItem *favorite );
-    void changeDirectoryColor( QgsDirectoryItem *item );
-    void clearDirectoryColor( QgsDirectoryItem *item );
-    void hideDirectory( QgsDirectoryItem *item );
-    void toggleFastScan( QgsDirectoryItem *item );
-    void toggleMonitor( QgsDirectoryItem *item );
-    void showProperties( QgsDirectoryItem *item, QgsDataItemGuiContext context );
+    static void addFavorite( QgsDirectoryItem *item );
+    static void removeFavorite( QgsFavoriteItem *favorite );
+    static void renameFavorite( QgsFavoriteItem *favorite );
+    static void changeDirectoryColor( QgsDirectoryItem *item );
+    static void clearDirectoryColor( QgsDirectoryItem *item );
+    static void hideDirectory( QgsDirectoryItem *item );
+    static void toggleFastScan( QgsDirectoryItem *item );
+    static void toggleMonitor( QgsDirectoryItem *item );
+    static void showProperties( QgsDirectoryItem *item, QgsDataItemGuiContext context );
 };
 
 class QgsAppFileItemGuiProvider : public QObject, public QgsDataItemGuiProvider
@@ -71,7 +71,7 @@ class QgsAppFileItemGuiProvider : public QObject, public QgsDataItemGuiProvider
 
   private:
 
-    bool rename( const QString &oldPath, const QString &newName, QgsDataItemGuiContext context, const QList< QPointer< QgsDataItem > > &parentItems );
+    static bool rename( const QString &oldPath, const QString &newName, QgsDataItemGuiContext context, const QList< QPointer< QgsDataItem > > &parentItems );
 };
 
 
@@ -124,9 +124,9 @@ class QgsLayerItemGuiProvider : public QObject, public QgsDataItemGuiProvider
 
   private:
 
-    void addLayersFromItems( const QList<QgsDataItem *> &items );
-    void showPropertiesForItem( QgsLayerItem *item, QgsDataItemGuiContext context );
-    void deleteLayers( const QStringList &itemPath, QgsDataItemGuiContext context );
+    static void addLayersFromItems( const QList<QgsDataItem *> &items );
+    static void showPropertiesForItem( QgsLayerItem *item, QgsDataItemGuiContext context );
+    static void deleteLayers( const QStringList &itemPath, QgsDataItemGuiContext context );
 
 };
 

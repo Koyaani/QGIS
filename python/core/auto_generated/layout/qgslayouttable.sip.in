@@ -734,7 +734,7 @@ Draws the horizontal grid lines for the table.
 Recalculates and updates the size of the table and all table frames.
 %End
 
-    bool contentsContainsRow( const QgsLayoutTableContents &contents, const QgsLayoutTableRow &row ) const;
+    static bool contentsContainsRow( const QgsLayoutTableContents &contents, const QgsLayoutTableRow &row );
 %Docstring
 Checks whether a table contents contains a given row
 

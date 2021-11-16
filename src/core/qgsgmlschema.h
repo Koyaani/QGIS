@@ -151,7 +151,7 @@ class CORE_EXPORT QgsGmlSchema : public QObject
      * Reads attribute as string
      * \returns attribute value or an empty string if no such attribute
     */
-    QString readAttribute( const QString &attributeName, const XML_Char **attr ) const;
+    static QString readAttribute( const QString &attributeName, const XML_Char **attr ) ;
 
     //! Returns pointer to main window or 0 if it does not exist
     QWidget *findMainWindow() const;
@@ -163,13 +163,13 @@ class CORE_EXPORT QgsGmlSchema : public QObject
     QDomElement domElement( const QDomElement &element, const QString &path );
 
     //! Filter list of elements by attribute value
-    QList<QDomElement> domElements( QList<QDomElement> &elements, const QString &attr, const QString &attrVal );
+    static QList<QDomElement> domElements( QList<QDomElement> &elements, const QString &attr, const QString &attrVal );
 
     //! Gets dom element by path and attribute value
     QDomElement domElement( const QDomElement &element, const QString &path, const QString &attr, const QString &attrVal );
 
     //! Strip namespace from element name
-    QString stripNS( const QString &name );
+    static QString stripNS( const QString &name );
 
     /**
      * Find GML base type for complex type of given name

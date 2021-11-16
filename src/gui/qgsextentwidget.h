@@ -287,7 +287,7 @@ class GUI_EXPORT QgsExtentWidget : public QWidget, private Ui::QgsExtentGroupBox
 
     void setExtentToLayerExtent( const QString &layerId );
 
-    QgsMapLayer *mapLayerFromMimeData( const QMimeData *data ) const;
+    static QgsMapLayer *mapLayerFromMimeData( const QMimeData *data ) ;
 
 
 };

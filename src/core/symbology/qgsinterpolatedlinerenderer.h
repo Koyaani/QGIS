@@ -106,7 +106,7 @@ class CORE_EXPORT QgsInterpolatedLineColor
 
     QgsInterpolatedLineColor::ColoringMethod mColoringMethod = SingleColor;
 
-    QLinearGradient makeSimpleLinearGradient( const QColor &color1, const QColor &color2 ) const;
+    static QLinearGradient makeSimpleLinearGradient( const QColor &color1, const QColor &color2 ) ;
 
     //! Returns the index of the color ramp shader with value inferior to value
     int itemColorIndexInf( double value ) const;

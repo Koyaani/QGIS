@@ -299,7 +299,7 @@ void QgsHistogramWidget::drawHistogram()
   mpPlot->replot();
 }
 
-QwtPlotHistogram *QgsHistogramWidget::createPlotHistogram( const QString &title, const QBrush &brush, const QPen &pen ) const
+QwtPlotHistogram *QgsHistogramWidget::createPlotHistogram( const QString &title, const QBrush &brush, const QPen &pen )
 {
   QwtPlotHistogram *histogram = new QwtPlotHistogram( title );
   histogram->setBrush( brush );

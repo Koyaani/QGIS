@@ -123,7 +123,7 @@ class GUI_EXPORT QgsNewVectorLayerDialog: public QDialog, private Ui::QgsNewVect
     void checkOk();
 
     //! Open the associated help
-    void showHelp();
+    static void showHelp();
     void nameChanged( const QString & );
     void selectionChanged();
 

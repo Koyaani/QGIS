@@ -263,7 +263,7 @@ class CORE_EXPORT QgsVectorLayerEditUtils
      * Little helper function that gives bounding box from a list of points.
      * \returns TRUE in case of success
      */
-    bool boundingBoxFromPointList( const QgsPointSequence &list, double &xmin, double &ymin, double &xmax, double &ymax ) const;
+    static bool boundingBoxFromPointList( const QgsPointSequence &list, double &xmin, double &ymin, double &xmax, double &ymax ) ;
 
     QgsVectorLayer *mLayer = nullptr;
 };

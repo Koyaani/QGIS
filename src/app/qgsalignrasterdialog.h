@@ -50,7 +50,7 @@ class QgsAlignRasterDialog : public QDialog, private Ui::QgsAlignRasterDialog
     void updateCustomGridOffset();
 
     void updateParametersFromReferenceLayer();
-    void showHelp();
+    static void showHelp();
 
   protected:
     void populateLayersView();

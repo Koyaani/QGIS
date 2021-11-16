@@ -81,7 +81,7 @@ class CORE_EXPORT QgsLabelThinningSettings
      * Updates the thinning settings to respect any data defined properties
      * set within the specified \a properties collection.
      */
-    void updateDataDefinedProperties( const QgsPropertyCollection &properties, QgsExpressionContext &context );
+    static void updateDataDefinedProperties( const QgsPropertyCollection &properties, QgsExpressionContext &context );
 
   private:
 

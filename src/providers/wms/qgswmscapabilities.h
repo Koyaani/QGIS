@@ -745,14 +745,14 @@ class QgsWmsSettings
      *
      * \since QGIS 3.14
      */
-    QgsTimeDuration parseWmstResolution( const QString &item );
+    static QgsTimeDuration parseWmstResolution( const QString &item );
 
     /**
      * Parse the given string item into QDateTime instant.
      *
      * \since QGIS 3.14
      */
-    QDateTime parseWmstDateTimes( const QString &item );
+    static QDateTime parseWmstDateTimes( const QString &item );
 
     /**
      * Finds the least closest datetime from list of available dimension temporal ranges
@@ -921,15 +921,15 @@ class QgsWmsCapabilities
 
     void parseService( const QDomElement &element, QgsWmsServiceProperty &serviceProperty );
     void parseOnlineResource( const QDomElement &element, QgsWmsOnlineResourceAttribute &onlineResourceAttribute );
-    void parseKeywordList( const QDomElement &element, QStringList &keywordListProperty );
+    static void parseKeywordList( const QDomElement &element, QStringList &keywordListProperty );
     void parseContactInformation( const QDomElement &element, QgsWmsContactInformationProperty &contactInformationProperty );
-    void parseContactPersonPrimary( const QDomElement &element, QgsWmsContactPersonPrimaryProperty &contactPersonPrimaryProperty );
-    void parseContactAddress( const QDomElement &element, QgsWmsContactAddressProperty &contactAddressProperty );
+    static void parseContactPersonPrimary( const QDomElement &element, QgsWmsContactPersonPrimaryProperty &contactPersonPrimaryProperty );
+    static void parseContactAddress( const QDomElement &element, QgsWmsContactAddressProperty &contactAddressProperty );
 
     void parseCapability( const QDomElement &element, QgsWmsCapabilityProperty &capabilityProperty );
     void parseRequest( const QDomElement &element, QgsWmsRequestProperty &requestProperty );
-    void parseDimension( const QDomElement &element, QgsWmsDimensionProperty &dimensionProperty );
-    void parseExtent( const QDomElement &element, QVector<QgsWmsDimensionProperty> &dimensionProperties );
+    static void parseDimension( const QDomElement &element, QgsWmsDimensionProperty &dimensionProperty );
+    static void parseExtent( const QDomElement &element, QVector<QgsWmsDimensionProperty> &dimensionProperties );
     void parseLegendUrl( const QDomElement &element, QgsWmsLegendUrlProperty &legendUrlProperty );
     void parseMetadataUrl( const QDomElement &element, QgsWmsMetadataUrlProperty &metadataUrlProperty );
     void parseLayer( const QDomElement &element, QgsWmsLayerProperty &layerProperty, QgsWmsLayerProperty *parentProperty = nullptr );
@@ -943,10 +943,10 @@ class QgsWmsCapabilities
 
     void parseTileSetProfile( const QDomElement &element );
     void parseWMTSContents( const QDomElement &element );
-    void parseKeywords( const QDomNode &e, QStringList &keywords );
+    static void parseKeywords( const QDomNode &e, QStringList &keywords );
     void parseTheme( const QDomElement &e, QgsWmtsTheme &t );
 
-    QString nodeAttribute( const QDomElement &element, const QString &name, const QString &defValue = QString() );
+    static QString nodeAttribute( const QDomElement &element, const QString &name, const QString &defValue = QString() );
 
     /**
      * In case no bounding box is present in WMTS capabilities, try to estimate it from tile matrix sets.

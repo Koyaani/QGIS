@@ -432,7 +432,7 @@ class CORE_EXPORT QgsSettings : public QObject
 
   private:
     void init();
-    QString sanitizeKey( const QString &key ) const;
+    static QString sanitizeKey( const QString &key ) ;
     QSettings *mUserSettings = nullptr;
     QSettings *mGlobalSettings = nullptr;
     bool mUsingGlobalArray = false;

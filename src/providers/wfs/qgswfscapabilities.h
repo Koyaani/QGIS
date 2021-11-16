@@ -145,10 +145,10 @@ class QgsWfsCapabilities : public QgsWfsRequest
     ApplicationLevelError mAppLevelError = ApplicationLevelError::NoError;
 
     //! Takes <Operations> element and updates the capabilities
-    void parseSupportedOperations( const QDomElement &operationsElem,
-                                   bool &insertCap,
-                                   bool &updateCap,
-                                   bool &deleteCap );
+    static void parseSupportedOperations( const QDomElement &operationsElem,
+                                          bool &insertCap,
+                                          bool &updateCap,
+                                          bool &deleteCap );
 
     void parseFilterCapabilities( const QDomElement &filterCapabilitiesElem );
 

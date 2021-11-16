@@ -190,7 +190,7 @@ class GUI_EXPORT QgsCategorizedSymbolRendererWidget : public QgsRendererWidget, 
 
   private slots:
 
-    void cleanUpSymbolSelector( QgsPanelWidget *container );
+    static void cleanUpSymbolSelector( QgsPanelWidget *container );
     void updateSymbolsFromWidget();
     void updateSymbolsFromButton();
     void dataDefinedSizeLegend();

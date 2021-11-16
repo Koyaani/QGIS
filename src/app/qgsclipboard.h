@@ -114,19 +114,19 @@ class APP_EXPORT QgsClipboard : public QObject
     /**
      * Stores a text into the system clipboard
      */
-    void setText( const QString &text );
+    static void setText( const QString &text );
 
     /**
      * Proxy to QMimeData::hasFormat
      * Tests whether the system clipboard contains data of a given MIME type
      */
-    bool hasFormat( const QString &mimeType ) const;
+    static bool hasFormat( const QString &mimeType ) ;
 
     /**
      * Retrieve data from the system clipboard.
      * No copy is involved, since the return QByteArray is implicitly shared
      */
-    QByteArray data( const QString &mimeType ) const;
+    static QByteArray data( const QString &mimeType ) ;
 
     /**
      * Source fields
@@ -160,14 +160,14 @@ class APP_EXPORT QgsClipboard : public QObject
      * \param fields fields for resultant features
      * \returns list of features if conversion was successful
      */
-    QgsFeatureList stringToFeatureList( const QString &string, const QgsFields &fields ) const;
+    static QgsFeatureList stringToFeatureList( const QString &string, const QgsFields &fields ) ;
 
     /**
      * Attempts to parse the clipboard contents and return a QgsFields object representing the fields
      * present in the clipboard.
      * \note Only valid for text based clipboard contents
      */
-    QgsFields retrieveFields() const;
+    static QgsFields retrieveFields() ;
 
     /**
      * QGIS-internal vector feature clipboard.

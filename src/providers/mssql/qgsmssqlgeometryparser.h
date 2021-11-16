@@ -81,7 +81,7 @@ class QgsMssqlGeometryParser
     QgsMssqlGeometryParser();
     std::unique_ptr<QgsAbstractGeometry> parseSqlGeometry( unsigned char *pszInput, int nLen );
     int GetSRSId() { return mSRSId; }
-    void DumpMemoryToLog( const char *pszMsg, unsigned char *pszInput, int nLen );
+    static void DumpMemoryToLog( const char *pszMsg, unsigned char *pszInput, int nLen );
     /* sql geo type */
     bool mIsGeography = false;
 };

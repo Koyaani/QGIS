@@ -415,7 +415,7 @@ Abort any outstanding external browser login request.
 
 
 
-    void preprocessRequest( QNetworkRequest *req ) const;
+    static void preprocessRequest( QNetworkRequest *req );
 %Docstring
 Preprocesses request
 

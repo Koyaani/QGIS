@@ -192,7 +192,7 @@ class SERVER_EXPORT QgsServerOgcApiHandler
      * Looks for the first ContentType match in the accept header and returns its mime type,
      * returns an empty string if there are not matches.
      */
-    QString contentTypeForAccept( const QString &accept ) const;
+    static QString contentTypeForAccept( const QString &accept ) ;
 
     // /////////////////////////////////////////////////////
     // Utility methods: override should not be required
@@ -230,7 +230,7 @@ class SERVER_EXPORT QgsServerOgcApiHandler
      *
      * \note not available in Python bindings
      */
-    void jsonDump( json &data, const QgsServerApiContext &context, const QString &contentType = QStringLiteral( "application/json" ) ) const;
+    static void jsonDump( json &data, const QgsServerApiContext &context, const QString &contentType = QStringLiteral( "application/json" ) ) ;
 
     /**
      * Writes \a data as HTML to the response stream in \a context using a template.

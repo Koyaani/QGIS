@@ -29,7 +29,7 @@ QgsModelViewTool::QgsModelViewTool( QgsModelGraphicsView *view, const QString &n
   } );
 }
 
-bool QgsModelViewTool::isClickAndDrag( QPoint startViewPoint, QPoint endViewPoint ) const
+bool QgsModelViewTool::isClickAndDrag( QPoint startViewPoint, QPoint endViewPoint )
 {
   const int diffX = endViewPoint.x() - startViewPoint.x();
   const int diffY = endViewPoint.y() - startViewPoint.y();

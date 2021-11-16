@@ -74,7 +74,7 @@ Returns the item's annotation.
 Returns the mouse move behavior for a given position in scene coordinates
 %End
 
-    Qt::CursorShape cursorShapeForAction( MouseMoveAction moveAction ) const;
+    static Qt::CursorShape cursorShapeForAction( MouseMoveAction moveAction );
 %Docstring
 Returns matching cursor shape for a mouse move action.
 %End

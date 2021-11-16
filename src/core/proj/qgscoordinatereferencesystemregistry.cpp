@@ -40,7 +40,7 @@ QgsCoordinateReferenceSystemRegistry::QgsCoordinateReferenceSystemRegistry( QObj
 
 QgsCoordinateReferenceSystemRegistry::~QgsCoordinateReferenceSystemRegistry() = default;
 
-QList<QgsCoordinateReferenceSystemRegistry::UserCrsDetails> QgsCoordinateReferenceSystemRegistry::userCrsList() const
+QList<QgsCoordinateReferenceSystemRegistry::UserCrsDetails> QgsCoordinateReferenceSystemRegistry::userCrsList()
 {
   QList<QgsCoordinateReferenceSystemRegistry::UserCrsDetails> res;
 
@@ -374,7 +374,7 @@ QMap<QString, QgsProjOperation> QgsCoordinateReferenceSystemRegistry::projOperat
   return mProjOperations;
 }
 
-QList< QgsCelestialBody> QgsCoordinateReferenceSystemRegistry::celestialBodies() const
+QList< QgsCelestialBody> QgsCoordinateReferenceSystemRegistry::celestialBodies()
 {
 #if PROJ_VERSION_MAJOR>8 || (PROJ_VERSION_MAJOR==8 && PROJ_VERSION_MINOR>=1)
 

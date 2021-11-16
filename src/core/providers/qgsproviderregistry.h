@@ -215,7 +215,7 @@ class CORE_EXPORT QgsProviderRegistry
      * responsible for deleting the returned widget.
      * \deprecated QGIS 3.10 - use QgsGui::sourceSelectProviderRegistry()->createDataSourceWidget() instead
      */
-    Q_DECL_DEPRECATED QWidget *createSelectionWidget( const QString &providerKey, QWidget *parent = nullptr, Qt::WindowFlags fl = Qt::WindowFlags(), QgsProviderRegistry::WidgetMode widgetMode = QgsProviderRegistry::WidgetMode::None ) SIP_DEPRECATED;
+    static Q_DECL_DEPRECATED QWidget *createSelectionWidget( const QString &providerKey, QWidget *parent = nullptr, Qt::WindowFlags fl = Qt::WindowFlags(), QgsProviderRegistry::WidgetMode widgetMode = QgsProviderRegistry::WidgetMode::None ) SIP_DEPRECATED;
 
     /**
      * Returns list of data item providers of the provider
@@ -635,7 +635,7 @@ class CORE_EXPORT QgsProviderRegistry
     /**
      * \deprecated since QGIS 3.10 - does nothing - use QgsGui::providerGuiRegistry()
      */
-    Q_DECL_DEPRECATED void registerGuis( QWidget *widget ) SIP_DEPRECATED;
+    static Q_DECL_DEPRECATED void registerGuis( QWidget *widget ) SIP_DEPRECATED;
 
     /**
      * \brief register a new vector data provider from its \a providerMetadata

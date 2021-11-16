@@ -125,7 +125,7 @@ QVariant QgsAbstractRelationEditorWidget::nmRelationId() const
   return mNmRelation.id();
 }
 
-QString QgsAbstractRelationEditorWidget::label() const
+QString QgsAbstractRelationEditorWidget::label()
 {
   return QString();
 }
@@ -135,7 +135,7 @@ void QgsAbstractRelationEditorWidget::setLabel( const QString &label )
   Q_UNUSED( label )
 }
 
-bool QgsAbstractRelationEditorWidget::showLabel() const
+bool QgsAbstractRelationEditorWidget::showLabel()
 {
   return false;
 }

@@ -66,9 +66,9 @@ class QgsGPXFeatureIterator final: public QgsAbstractFeatureIteratorFromSource<Q
     bool readRoute( const QgsRoute &rte, QgsFeature &feature );
     bool readTrack( const QgsTrack &trk, QgsFeature &feature );
 
-    QgsGeometry *readWaypointGeometry( const QgsWaypoint &wpt );
-    QgsGeometry *readRouteGeometry( const QgsRoute &rte );
-    QgsGeometry *readTrackGeometry( const QgsTrack &trk );
+    static QgsGeometry *readWaypointGeometry( const QgsWaypoint &wpt );
+    static QgsGeometry *readRouteGeometry( const QgsRoute &rte );
+    static QgsGeometry *readTrackGeometry( const QgsTrack &trk );
 
     void readAttributes( QgsFeature &feature, const QgsWaypoint &wpt );
     void readAttributes( QgsFeature &feature, const QgsRoute &rte );

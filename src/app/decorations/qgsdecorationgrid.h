@@ -133,9 +133,9 @@ class APP_EXPORT QgsDecorationGrid: public QgsDecorationItem
     bool isDirty();
 
     //! Computes interval that is approx. 1/5 of canvas extent
-    bool getIntervalFromExtent( double *values, bool useXAxis = true ) const;
+    static bool getIntervalFromExtent( double *values, bool useXAxis = true ) ;
     //! Computes interval from current raster layer
-    bool getIntervalFromCurrentLayer( double *values ) const;
+    static bool getIntervalFromCurrentLayer( double *values ) ;
 
   public slots:
     //! Sets values on the gui when a project is read or the gui first loaded

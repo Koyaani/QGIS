@@ -159,7 +159,7 @@ class GUI_EXPORT QgsAuthSslConfigWidget : public QWidget, private Ui::QgsAuthSsl
       ConfigItem = 1001,
     };
 
-    bool validateHostPort( const QString &txt );
+    static bool validateHostPort( const QString &txt );
 
     void setUpSslConfigTree();
     QTreeWidgetItem *addRootItem( const QString &label );

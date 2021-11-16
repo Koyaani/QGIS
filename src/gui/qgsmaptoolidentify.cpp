@@ -1184,7 +1184,7 @@ QString QgsMapToolIdentify::formatArea( double area ) const
   return formatArea( area, displayAreaUnits() );
 }
 
-QString QgsMapToolIdentify::formatDistance( double distance, QgsUnitTypes::DistanceUnit unit ) const
+QString QgsMapToolIdentify::formatDistance( double distance, QgsUnitTypes::DistanceUnit unit )
 {
   QgsSettings settings;
   bool baseUnit = settings.value( QStringLiteral( "qgis/measure/keepbaseunit" ), true ).toBool();
@@ -1192,7 +1192,7 @@ QString QgsMapToolIdentify::formatDistance( double distance, QgsUnitTypes::Dista
   return QgsDistanceArea::formatDistance( distance, 3, unit, baseUnit );
 }
 
-QString QgsMapToolIdentify::formatArea( double area, QgsUnitTypes::AreaUnit unit ) const
+QString QgsMapToolIdentify::formatArea( double area, QgsUnitTypes::AreaUnit unit )
 {
   QgsSettings settings;
   bool baseUnit = settings.value( QStringLiteral( "qgis/measure/keepbaseunit" ), true ).toBool();

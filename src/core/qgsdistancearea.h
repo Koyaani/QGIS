@@ -372,7 +372,7 @@ class CORE_EXPORT QgsDistanceArea
      */
     double computePolygonArea( const QVector<QgsPointXY> &points ) const;
 
-    double computePolygonFlatArea( const QVector<QgsPointXY> &points ) const;
+    static double computePolygonFlatArea( const QVector<QgsPointXY> &points ) ;
 
     /**
      * Precalculates some values

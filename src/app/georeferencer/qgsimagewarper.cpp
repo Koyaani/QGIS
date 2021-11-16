@@ -248,7 +248,7 @@ int QgsImageWarper::warpFile( const QString &input,
 }
 
 
-void *QgsImageWarper::addGeoToPixelTransform( GDALTransformerFunc GDALTransformer, void *GDALTransformerArg, double *padfGeotransform ) const
+void *QgsImageWarper::addGeoToPixelTransform( GDALTransformerFunc GDALTransformer, void *GDALTransformerArg, double *padfGeotransform )
 {
   TransformChain *chain = new TransformChain;
   chain->GDALTransformer = GDALTransformer;
@@ -265,7 +265,7 @@ void *QgsImageWarper::addGeoToPixelTransform( GDALTransformerFunc GDALTransforme
   return ( void * )chain;
 }
 
-void QgsImageWarper::destroyGeoToPixelTransform( void *GeoToPixelTransformArg ) const
+void QgsImageWarper::destroyGeoToPixelTransform( void *GeoToPixelTransformArg )
 {
   delete static_cast<TransformChain *>( GeoToPixelTransformArg );
 }
@@ -316,7 +316,7 @@ int QgsImageWarper::GeoToPixelTransform( void *pTransformerArg, int bDstToSrc, i
   return true;
 }
 
-void *QgsImageWarper::createWarpProgressArg( QProgressDialog *progressDialog ) const
+void *QgsImageWarper::createWarpProgressArg( QProgressDialog *progressDialog )
 {
   return ( void * )progressDialog;
 }
@@ -338,7 +338,7 @@ int CPL_STDCALL QgsImageWarper::updateWarpProgress( double dfComplete, const cha
   return true;
 }
 
-GDALResampleAlg QgsImageWarper::toGDALResampleAlg( const QgsImageWarper::ResamplingMethod method ) const
+GDALResampleAlg QgsImageWarper::toGDALResampleAlg( const QgsImageWarper::ResamplingMethod method )
 {
   switch ( method )
   {

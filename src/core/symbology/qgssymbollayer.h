@@ -1182,7 +1182,7 @@ class CORE_EXPORT QgsFillSymbolLayer : public QgsSymbolLayer
   protected:
     QgsFillSymbolLayer( bool locked = false );
     //! Default method to render polygon
-    void _renderPolygon( QPainter *p, const QPolygonF &points, const QVector<QPolygonF> *rings, QgsSymbolRenderContext &context );
+    static void _renderPolygon( QPainter *p, const QPolygonF &points, const QVector<QPolygonF> *rings, QgsSymbolRenderContext &context );
 
     double mAngle = 0.0;
 

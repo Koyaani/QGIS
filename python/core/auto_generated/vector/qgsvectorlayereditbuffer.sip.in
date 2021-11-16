@@ -297,7 +297,7 @@ Update added and changed features after addition of an attribute
 Update added and changed features after removal of an attribute
 %End
 
-    void updateAttributeMapIndex( QgsAttributeMap &attrs, int index, int offset ) const;
+    static void updateAttributeMapIndex( QgsAttributeMap &attrs, int index, int offset );
 %Docstring
 Updates an index in an attribute map to a new value (for updates of changed attributes)
 %End

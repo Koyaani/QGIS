@@ -136,7 +136,7 @@ class GUI_EXPORT QgsStyleExportImportDialog : public QDialog, private Ui::QgsSty
 
   private slots:
     void selectionChanged( const QItemSelection &selected, const QItemSelection &deselected );
-    void showHelp();
+    static void showHelp();
 
     void fetch();
     void importFileChanged( const QString &path );

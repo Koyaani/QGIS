@@ -60,7 +60,7 @@ class SERVER_EXPORT QgsServer
      * \param val value
      * \since QGIS 2.14
      */
-    void putenv( const QString &var, const QString &val );
+    static void putenv( const QString &var, const QString &val );
 
     /**
      * Handles the request.
@@ -86,7 +86,7 @@ class SERVER_EXPORT QgsServer
      * Initialize Python
      * \note not available in Python bindings
      */
-    void initPython();
+    static void initPython();
 #endif
 
   private:

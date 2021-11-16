@@ -75,7 +75,7 @@ class QgsWCSSourceSelect : public QgsOWSSourceSelect
   private slots:
 
     //! Open help browser
-    void showHelp();
+    static void showHelp();
 };
 #endif // QGSWCSSOURCESELECT_H
 

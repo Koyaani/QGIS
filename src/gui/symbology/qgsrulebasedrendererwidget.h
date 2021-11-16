@@ -146,7 +146,7 @@ class GUI_EXPORT QgsRuleBasedRendererWidget : public QgsRendererWidget, private 
     void currentRuleChanged( const QModelIndex &current = QModelIndex(), const QModelIndex &previous = QModelIndex() );
     void selectedRulesChanged();
 
-    void saveSectionWidth( int section, int oldSize, int newSize );
+    static void saveSectionWidth( int section, int oldSize, int newSize );
     void restoreSectionWidths();
 
   protected:
@@ -286,7 +286,7 @@ class GUI_EXPORT QgsRendererRulePropsDialog : public QDialog
     void accept() override;
 
   private slots:
-    void showHelp();
+    static void showHelp();
 
   private:
     QgsRendererRulePropsWidget *mPropsWidget = nullptr;

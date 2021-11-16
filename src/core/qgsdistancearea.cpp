@@ -944,7 +944,7 @@ double QgsDistanceArea::computePolygonArea( const QVector<QgsPointXY> &points ) 
   return std::fabs( area );
 }
 
-double QgsDistanceArea::computePolygonFlatArea( const QVector<QgsPointXY> &points ) const
+double QgsDistanceArea::computePolygonFlatArea( const QVector<QgsPointXY> &points )
 {
   // Normal plane area calculations.
   double area = 0.0;

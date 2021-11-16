@@ -70,7 +70,7 @@ class QgsAuthBasicMethod : public QgsAuthMethod
 
     void removeMethodConfig( const QString &authcfg );
 
-    QString escapeUserPass( const QString &val, QChar delim = '\'' ) const;
+    static QString escapeUserPass( const QString &val, QChar delim = '\'' ) ;
 
     static QMap<QString, QgsAuthMethodConfig> sAuthConfigCache;
 };

@@ -108,7 +108,7 @@ class CORE_EXPORT QgsBrightnessContrastFilter : public QgsRasterInterface
 
   private:
     //! Adjusts a color component by the specified brightness, contrast factor and gamma correction
-    int  adjustColorComponent( int colorComponent, int alpha, int brightness, double contrastFactor, double gammaCorrection ) const;
+    static int  adjustColorComponent( int colorComponent, int alpha, int brightness, double contrastFactor, double gammaCorrection ) ;
 
     //! Current brightness coefficient value. Default: 0. Range: -255...255
     int mBrightness = 0;

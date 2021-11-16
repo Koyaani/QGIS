@@ -69,7 +69,7 @@ void QgsLUDialog::setUpperValue( const QString &val )
   }
 }
 
-void QgsLUDialog::setDecimalPlaces( QgsDoubleSpinBox *widget, double value ) const
+void QgsLUDialog::setDecimalPlaces( QgsDoubleSpinBox *widget, double value )
 {
   const QString strVal { QVariant( value ).toString() };
   const int dotPosition( strVal.indexOf( '.' ) );

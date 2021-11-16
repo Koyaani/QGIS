@@ -504,7 +504,7 @@ class CORE_EXPORT QgsMapRendererJob : public QObject SIP_ABSTRACT
     static void composeSecondPass( std::vector< LayerRenderJob > &secondPassJobs, LabelRenderJob &labelJob ) SIP_SKIP;
 
     //! \note not available in Python bindings
-    void logRenderingTime( const std::vector< LayerRenderJob > &jobs, const std::vector< LayerRenderJob > &secondPassJobs, const LabelRenderJob &labelJob ) SIP_SKIP;
+    static void logRenderingTime( const std::vector< LayerRenderJob > &jobs, const std::vector< LayerRenderJob > &secondPassJobs, const LabelRenderJob &labelJob ) SIP_SKIP;
 
     //! \note not available in Python bindings
     void cleanupJobs( std::vector< LayerRenderJob > &jobs ) SIP_SKIP;

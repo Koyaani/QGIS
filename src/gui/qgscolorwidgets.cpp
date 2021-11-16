@@ -112,7 +112,7 @@ int QgsColorWidget::componentRange() const
   return componentRange( mComponent );
 }
 
-int QgsColorWidget::componentRange( const QgsColorWidget::ColorComponent component ) const
+int QgsColorWidget::componentRange( const QgsColorWidget::ColorComponent component )
 {
   if ( component == QgsColorWidget::Multiple )
   {

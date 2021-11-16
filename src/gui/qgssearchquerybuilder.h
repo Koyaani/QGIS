@@ -122,7 +122,7 @@ class GUI_EXPORT QgsSearchQueryBuilder : public QDialog, private Ui::QgsQueryBui
     /**
      * Open the help in a browser
      */
-    void showHelp();
+    static void showHelp();
 
   private:
 

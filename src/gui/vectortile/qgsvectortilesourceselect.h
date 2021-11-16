@@ -63,7 +63,7 @@ class QgsVectorTileSourceSelect : public QgsAbstractDataSourceWidget, private Ui
   private:
     void populateConnectionList();
     void setConnectionListPosition();
-    void showHelp();
+    static void showHelp();
 };
 
 ///@endcond

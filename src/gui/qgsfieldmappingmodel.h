@@ -176,7 +176,7 @@ class GUI_EXPORT QgsFieldMappingModel: public QAbstractTableModel
     };
 
 
-    QgsFieldConstraints::Constraints fieldConstraints( const QgsField &field ) const;
+    static QgsFieldConstraints::Constraints fieldConstraints( const QgsField &field ) ;
 
     bool moveUpOrDown( const QModelIndex &index, bool up = true );
 

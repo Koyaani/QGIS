@@ -78,7 +78,7 @@ class APP_EXPORT QgsMeshTransformCoordinatesDockWidget: public QgsDockWidget, pu
     QList<QgsExpressionLineEdit *> mExpressionLineEdits;
     QList<QCheckBox *> mCheckBoxes;
 
-    QString displayCoordinateText( const QgsCoordinateReferenceSystem &crs, double value );
+    static QString displayCoordinateText( const QgsCoordinateReferenceSystem &crs, double value );
     void importVertexCoordinates();
 
 };

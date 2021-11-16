@@ -292,7 +292,7 @@ QPointF QgsMapToolOffsetPointSymbol::calculateOffset( const QgsPointXY &startPoi
   return rotatedOffset( QPointF( dx * factor, dy * factor ), mSymbolRotation );
 }
 
-QPointF QgsMapToolOffsetPointSymbol::rotatedOffset( QPointF offset, double angle ) const
+QPointF QgsMapToolOffsetPointSymbol::rotatedOffset( QPointF offset, double angle )
 {
   angle = DEG2RAD( 360 - angle );
   double c = std::cos( angle ), s = std::sin( angle );

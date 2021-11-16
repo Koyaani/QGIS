@@ -54,7 +54,7 @@ class GUI_EXPORT QgsColorSwatchDelegate : public QAbstractItemDelegate
      * Generates a checkboard pattern for transparent color backgrounds
      * \returns checkboard pixmap
      */
-    QPixmap transparentBackground() const;
+    static QPixmap transparentBackground() ;
 };
 
 

@@ -3706,7 +3706,7 @@ bool QgsProject::removeAttachedFile( const QString &path )
   return mArchive->removeFile( path );
 }
 
-QString QgsProject::attachmentIdentifier( const QString &attachedFile ) const
+QString QgsProject::attachmentIdentifier( const QString &attachedFile )
 {
   return QStringLiteral( "attachment:///%1" ).arg( QFileInfo( attachedFile ).fileName() );
 }

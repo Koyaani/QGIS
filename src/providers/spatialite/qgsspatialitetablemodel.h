@@ -67,10 +67,10 @@ class QgsSpatiaLiteTableModel: public QgsAbstractDbTableModel
     QString mSqliteDb;
     QStringList mColumns;
 
-    QIcon iconForType( QgsWkbTypes::Type type ) const;
-    QString displayStringForType( QgsWkbTypes::Type type ) const;
+    static QIcon iconForType( QgsWkbTypes::Type type ) ;
+    static QString displayStringForType( QgsWkbTypes::Type type ) ;
     //! Returns qgis wkbtype from database typename
-    QgsWkbTypes::Type qgisTypeFromDbType( const QString &dbType ) const;
+    static QgsWkbTypes::Type qgisTypeFromDbType( const QString &dbType ) ;
 };
 
 #endif // QGSSPATIALITETABLEMODEL_H

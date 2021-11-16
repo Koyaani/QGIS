@@ -552,7 +552,7 @@ void QgsInterpolatedLineColor::setColoringMethod( QgsInterpolatedLineColor::Colo
   mColoringMethod = coloringMethod;
 }
 
-QLinearGradient QgsInterpolatedLineColor::makeSimpleLinearGradient( const QColor &color1, const QColor &color2 ) const
+QLinearGradient QgsInterpolatedLineColor::makeSimpleLinearGradient( const QColor &color1, const QColor &color2 )
 {
   QLinearGradient gradient;
   gradient.setColorAt( 0, color1 );

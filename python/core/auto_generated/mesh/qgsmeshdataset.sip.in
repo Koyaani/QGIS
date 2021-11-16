@@ -845,7 +845,7 @@ Appends a child ``item``.
    takes ownership of item
 %End
 
-    void removeChild( QgsMeshDatasetGroupTreeItem *item /Transfer/ );
+    static void removeChild( QgsMeshDatasetGroupTreeItem *item /Transfer/ );
 %Docstring
 Removes a item child if exists
 

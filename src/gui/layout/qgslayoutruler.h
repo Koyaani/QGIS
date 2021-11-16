@@ -140,7 +140,7 @@ class GUI_EXPORT QgsLayoutRuler: public QWidget
     int optimumNumberDivisions( double rulerScale, int scaleMultiple );
 
     //! Draws vertical text on a painter
-    void drawRotatedText( QPainter *painter, QPointF pos, const QString &text );
+    static void drawRotatedText( QPainter *painter, QPointF pos, const QString &text );
 
     /**
      * Draws small ruler divisions.

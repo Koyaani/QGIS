@@ -1310,7 +1310,7 @@ class CORE_EXPORT QgsLayoutItem : public QgsLayoutObject, public QGraphicsRectIt
 
     double applyDataDefinedRotation( double rotation );
     void updateStoredItemPosition();
-    QPointF itemPositionAtReferencePoint( ReferencePoint reference, QSizeF size ) const;
+    static QPointF itemPositionAtReferencePoint( ReferencePoint reference, QSizeF size ) ;
     void setScenePos( QPointF destinationPos );
     bool shouldBlockUndoCommands() const;
 

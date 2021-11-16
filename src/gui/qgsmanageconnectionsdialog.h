@@ -70,17 +70,17 @@ class GUI_EXPORT QgsManageConnectionsDialog : public QDialog, private Ui::QgsMan
   private:
     bool populateConnections();
 
-    QDomDocument saveOWSConnections( const QStringList &connections, const QString &service );
-    QDomDocument saveWfsConnections( const QStringList &connections );
-    QDomDocument savePgConnections( const QStringList &connections );
-    QDomDocument saveMssqlConnections( const QStringList &connections );
-    QDomDocument saveOracleConnections( const QStringList &connections );
-    QDomDocument saveDb2Connections( const QStringList &connections );
-    QDomDocument saveHanaConnections( const QStringList &connections );
-    QDomDocument saveGeonodeConnections( const QStringList &connections );
-    QDomDocument saveXyzTilesConnections( const QStringList &connections );
-    QDomDocument saveArcgisConnections( const QStringList &connections, const QString &service );
-    QDomDocument saveVectorTileConnections( const QStringList &connections );
+    static QDomDocument saveOWSConnections( const QStringList &connections, const QString &service );
+    static QDomDocument saveWfsConnections( const QStringList &connections );
+    static QDomDocument savePgConnections( const QStringList &connections );
+    static QDomDocument saveMssqlConnections( const QStringList &connections );
+    static QDomDocument saveOracleConnections( const QStringList &connections );
+    static QDomDocument saveDb2Connections( const QStringList &connections );
+    static QDomDocument saveHanaConnections( const QStringList &connections );
+    static QDomDocument saveGeonodeConnections( const QStringList &connections );
+    static QDomDocument saveXyzTilesConnections( const QStringList &connections );
+    static QDomDocument saveArcgisConnections( const QStringList &connections, const QString &service );
+    static QDomDocument saveVectorTileConnections( const QStringList &connections );
 
     void loadOWSConnections( const QDomDocument &doc, const QStringList &items, const QString &service );
     void loadWfsConnections( const QDomDocument &doc, const QStringList &items );

@@ -474,7 +474,7 @@ class CORE_EXPORT QgsCategorizedSymbolRenderer : public QgsFeatureRenderer
     /**
      * \deprecated No longer used, will be removed in QGIS 4.0
      */
-    Q_DECL_DEPRECATED QgsSymbol *skipRender() SIP_DEPRECATED;
+    static Q_DECL_DEPRECATED QgsSymbol *skipRender() SIP_DEPRECATED;
 
     /**
      * Returns the matching symbol corresponding to an attribute \a value.

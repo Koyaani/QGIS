@@ -78,7 +78,7 @@ class CORE_EXPORT QgsScaleCalculator
      * data.
      * \param mapExtent QgsRectangle containing the current map extent
      */
-    double calculateGeographicDistance( const QgsRectangle &mapExtent ) const;
+    static double calculateGeographicDistance( const QgsRectangle &mapExtent ) ;
 
   private:
 

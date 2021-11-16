@@ -64,7 +64,7 @@ class GUI_EXPORT QgsLabelingGui : public QgsTextFormatWidget
 
   protected:
     void blockInitSignals( bool block );
-    void syncDefinedCheckboxFrame( QgsPropertyOverrideButton *ddBtn, QCheckBox *chkBx, QFrame *f );
+    static void syncDefinedCheckboxFrame( QgsPropertyOverrideButton *ddBtn, QCheckBox *chkBx, QFrame *f );
     bool eventFilter( QObject *object, QEvent *event ) override;
 
   private slots:
@@ -98,7 +98,7 @@ class GUI_EXPORT QgsLabelingGui : public QgsTextFormatWidget
 
   private slots:
 
-    void initCalloutWidgets();
+    static void initCalloutWidgets();
     void updateCalloutWidget( QgsCallout *callout );
     void showObstacleSettings();
     void showLineAnchorSettings();
@@ -127,7 +127,7 @@ class GUI_EXPORT QgsLabelSettingsDialog : public QDialog
     QDialogButtonBox *mButtonBox = nullptr;
 
   private slots:
-    void showHelp();
+    static void showHelp();
 
 };
 

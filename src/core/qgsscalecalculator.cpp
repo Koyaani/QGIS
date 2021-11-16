@@ -88,7 +88,7 @@ double QgsScaleCalculator::calculate( const QgsRectangle &mapExtent, double canv
 }
 
 
-double QgsScaleCalculator::calculateGeographicDistance( const QgsRectangle &mapExtent ) const
+double QgsScaleCalculator::calculateGeographicDistance( const QgsRectangle &mapExtent )
 {
   // need to calculate the x distance in meters
   // We'll use the middle latitude for the calculation

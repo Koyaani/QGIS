@@ -159,7 +159,7 @@ class GUI_EXPORT QgsVectorLayerProperties : public QgsOptionsDialogBase, private
 
     void onAuxiliaryLayerAddField();
 
-    void urlClicked( const QUrl &url );
+    static void urlClicked( const QUrl &url );
 
   private:
 
@@ -253,7 +253,7 @@ class GUI_EXPORT QgsVectorLayerProperties : public QgsOptionsDialogBase, private
     QgsProviderSourceWidget *mSourceWidget = nullptr;
 
   private slots:
-    void openPanel( QgsPanelWidget *panel );
+    static void openPanel( QgsPanelWidget *panel );
 
     friend class QgsAppScreenShots;
 };

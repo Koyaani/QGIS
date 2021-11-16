@@ -48,7 +48,7 @@ Convert current project for offline editing
 :param layerNameSuffix: Suffix string added to the offline layer name
 %End
 
-    bool isOfflineProject() const;
+    static bool isOfflineProject();
 %Docstring
 Returns ``True`` if current project is offline
 %End

@@ -73,7 +73,7 @@ void QgsDmsAndDdDelegate::updateEditorGeometry( QWidget *editor, const QStyleOpt
   editor->setGeometry( option.rect );
 }
 
-double QgsDmsAndDdDelegate::dmsToDD( const QString &dms ) const
+double QgsDmsAndDdDelegate::dmsToDD( const QString &dms )
 {
   const QStringList list = dms.split( ' ' );
   QString tmpStr = list.at( 0 );

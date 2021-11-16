@@ -108,7 +108,7 @@ class QgsO2: public O2
 
     void setVerificationResponseContent();
 
-    bool isLocalHost( const QUrl redirectUrl ) const;
+    static bool isLocalHost( const QUrl redirectUrl ) ;
 
     QString mTokenCacheFile;
     QString mAuthcfg;

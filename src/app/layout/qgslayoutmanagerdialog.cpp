@@ -185,7 +185,7 @@ QMap<QString, QString> QgsLayoutManagerDialog::otherTemplates() const
   return templateMap;
 }
 
-QMap<QString, QString> QgsLayoutManagerDialog::templatesFromPath( const QString &path ) const
+QMap<QString, QString> QgsLayoutManagerDialog::templatesFromPath( const QString &path )
 {
   QMap<QString, QString> templateMap;
 

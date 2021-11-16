@@ -1007,7 +1007,7 @@ displays.
 .. versionadded:: 3.16
 %End
 
-    int maxConcurrentConnectionsPerPool() const;
+    static int maxConcurrentConnectionsPerPool();
 %Docstring
 The maximum number of concurrent connections per connections pool.
 
@@ -1026,7 +1026,7 @@ Set translation locale code
 .. versionadded:: 3.4
 %End
 
-    QString translation() const;
+    static QString translation();
 %Docstring
 Returns the current application translation locale code
 

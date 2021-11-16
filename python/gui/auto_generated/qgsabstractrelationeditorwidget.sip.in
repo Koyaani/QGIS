@@ -91,7 +91,7 @@ Sets the editor ``context``
 Returns the attribute editor context.
 %End
 
- bool showLabel() const /Deprecated/;
+    static bool showLabel() /Deprecated/;
 %Docstring
 Defines if a title label should be shown for this widget.
 
@@ -99,7 +99,7 @@ Defines if a title label should be shown for this widget.
    label is handled directly in :py:class:`QgsAttributeForm`.
 %End
 
- void setShowLabel( bool showLabel ) /Deprecated/;
+    static void setShowLabel( bool showLabel ) /Deprecated/;
 %Docstring
 Defines if a title label should be shown for this widget.
 
@@ -118,7 +118,7 @@ Sets ``nmRelationId`` for the relation id of the second relation involved in an 
 If it's empty, then it's considered as a 1:M relationship.
 %End
 
- QString label() const /Deprecated/;
+    static QString label() /Deprecated/;
 %Docstring
 Determines the label of this element
 
@@ -126,7 +126,7 @@ Determines the label of this element
    label is handled directly in :py:class:`QgsAttributeForm`.
 %End
 
-    void setLabel( const QString &label = QString() );
+    static void setLabel( const QString &label = QString() );
 %Docstring
 Sets ``label`` for this element
 If it's empty it takes the relation id as label

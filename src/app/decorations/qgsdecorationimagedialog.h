@@ -37,7 +37,7 @@ class APP_EXPORT QgsDecorationImageDialog : public QDialog, private Ui::QgsDecor
   private slots:
     void buttonBox_accepted();
     void buttonBox_rejected();
-    void showHelp();
+    static void showHelp();
     void apply();
 
   protected:

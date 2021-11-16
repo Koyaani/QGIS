@@ -238,14 +238,14 @@ class GUI_EXPORT QgsSymbolButton : public QToolButton
 
     void showSettingsDialog();
     void updateSymbolFromWidget();
-    void cleanUpSymbolSelector( QgsPanelWidget *container );
+    static void cleanUpSymbolSelector( QgsPanelWidget *container );
 
     /**
      * Creates the drop-down menu entries
      */
     void prepareMenu();
 
-    void addRecentColor( const QColor &color );
+    static void addRecentColor( const QColor &color );
 
     /**
      * Activates the color picker tool, which allows for sampling a color from anywhere on the screen
@@ -292,12 +292,12 @@ class GUI_EXPORT QgsSymbolButton : public QToolButton
      * \param hasAlpha will be set to TRUE if mime data also included an alpha component
      * \see formatFromMimeData
      */
-    bool colorFromMimeData( const QMimeData *mimeData, QColor &resultColor, bool &hasAlpha );
+    static bool colorFromMimeData( const QMimeData *mimeData, QColor &resultColor, bool &hasAlpha );
 
     /**
      * Create a \a color icon for display in the drop-down menu.
      */
-    QPixmap createColorIcon( const QColor &color ) const;
+    static QPixmap createColorIcon( const QColor &color ) ;
 
     /**
      * Ends a color picking operation

@@ -2887,8 +2887,8 @@ class CORE_EXPORT QgsGeometry
      * \param minimumDistance minimum segment length to apply smoothing to
      * \param maxAngle maximum angle at node (0-180) at which smoothing will be applied
     */
-    std::unique_ptr< QgsLineString > smoothLine( const QgsLineString &line, unsigned int iterations = 1, double offset = 0.25,
-        double minimumDistance = -1, double maxAngle = 180.0 ) const;
+    static std::unique_ptr< QgsLineString > smoothLine( const QgsLineString &line, unsigned int iterations = 1, double offset = 0.25,
+        double minimumDistance = -1, double maxAngle = 180.0 ) ;
 
     /**
      * Smooths a polygon using the Chaikin algorithm
@@ -2901,8 +2901,8 @@ class CORE_EXPORT QgsGeometry
      * \param minimumDistance minimum segment length to apply smoothing to
      * \param maxAngle maximum angle at node (0-180) at which smoothing will be applied
     */
-    std::unique_ptr< QgsPolygon > smoothPolygon( const QgsPolygon &polygon, unsigned int iterations = 1, double offset = 0.25,
-        double minimumDistance = -1, double maxAngle = 180.0 ) const;
+    static std::unique_ptr< QgsPolygon > smoothPolygon( const QgsPolygon &polygon, unsigned int iterations = 1, double offset = 0.25,
+        double minimumDistance = -1, double maxAngle = 180.0 ) ;
 
 
     friend class QgsInternalGeometryEngine;

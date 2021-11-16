@@ -527,7 +527,7 @@ void QgsMeshLayerRenderer::renderScalarDatasetOnEdges( const QgsMeshRendererScal
   }
 }
 
-QColor QgsMeshLayerRenderer::colorAt( QgsColorRampShader *shader, double val ) const
+QColor QgsMeshLayerRenderer::colorAt( QgsColorRampShader *shader, double val )
 {
   int r, g, b, a;
   if ( shader->shade( val, &r, &g, &b, &a ) )
@@ -537,7 +537,7 @@ QColor QgsMeshLayerRenderer::colorAt( QgsColorRampShader *shader, double val ) c
   return QColor();
 }
 
-QgsPointXY QgsMeshLayerRenderer::fractionPoint( const QgsPointXY &p1, const QgsPointXY &p2, double fraction ) const
+QgsPointXY QgsMeshLayerRenderer::fractionPoint( const QgsPointXY &p1, const QgsPointXY &p2, double fraction )
 {
   const QgsPointXY pt( p1.x() + fraction * ( p2.x() - p1.x() ),
                        p1.y() + fraction * ( p2.y() - p1.y() ) );

@@ -53,7 +53,7 @@ class CORE_EXPORT QgsGeoPackageProjectStorage : public QgsProjectStorage
     virtual QString filePath( const QString &uri ) override;
 
   private:
-    QString _executeSql( const QString &uri, const QString &sql );
+    static QString _executeSql( const QString &uri, const QString &sql );
 };
 
 ///@endcond

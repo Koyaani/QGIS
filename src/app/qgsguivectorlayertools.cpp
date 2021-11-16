@@ -155,7 +155,7 @@ bool QgsGuiVectorLayerTools::stopEditing( QgsVectorLayer *layer, bool allowCance
   return res;
 }
 
-void QgsGuiVectorLayerTools::commitError( QgsVectorLayer *vlayer ) const
+void QgsGuiVectorLayerTools::commitError( QgsVectorLayer *vlayer )
 {
   QgsMessageViewer *mv = new QgsMessageViewer();
   mv->setWindowTitle( tr( "Commit Errors" ) );

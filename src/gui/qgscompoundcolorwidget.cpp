@@ -753,7 +753,7 @@ void QgsCompoundColorWidget::mousePressEvent( QMouseEvent *e )
   QWidget::mousePressEvent( e );
 }
 
-QColor QgsCompoundColorWidget::averageColor( const QImage &image ) const
+QColor QgsCompoundColorWidget::averageColor( const QImage &image )
 {
   QRgb tmpRgb;
   int colorCount = 0;

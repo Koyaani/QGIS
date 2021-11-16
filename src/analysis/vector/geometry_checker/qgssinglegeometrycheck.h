@@ -181,7 +181,7 @@ class ANALYSIS_EXPORT QgsSingleGeometryCheck : public QgsGeometryCheck
      *
      * \since QGIS 3.4
      */
-    QgsGeometryCheckErrorSingle *convertToGeometryCheckError( QgsSingleGeometryCheckError *singleGeometryCheckError, const QgsGeometryCheckerUtils::LayerFeature &layerFeature ) const;
+    static QgsGeometryCheckErrorSingle *convertToGeometryCheckError( QgsSingleGeometryCheckError *singleGeometryCheckError, const QgsGeometryCheckerUtils::LayerFeature &layerFeature ) ;
 
 };
 

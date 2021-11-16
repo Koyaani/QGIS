@@ -195,7 +195,7 @@ class GUI_EXPORT QgsRasterLayerProperties : public QgsOptionsDialogBase, private
     //! Make GUI reflect the layer's state
     void syncToLayer();
 
-    void urlClicked( const QUrl &url );
+    static void urlClicked( const QUrl &url );
 
   private:
     QPushButton *mBtnStyle = nullptr;

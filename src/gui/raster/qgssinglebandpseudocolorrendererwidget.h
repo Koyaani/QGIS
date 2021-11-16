@@ -76,7 +76,7 @@ class GUI_EXPORT QgsSingleBandPseudoColorRendererWidget: public QgsRasterRendere
 
   private:
     void setLineEditValue( QLineEdit *lineEdit, double value );
-    double lineEditValue( const QLineEdit *lineEdit ) const;
+    static double lineEditValue( const QLineEdit *lineEdit ) ;
 
     QgsRasterMinMaxWidget *mMinMaxWidget = nullptr;
     int mMinMaxOrigin;

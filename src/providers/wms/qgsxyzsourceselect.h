@@ -59,7 +59,7 @@ class QgsXyzSourceSelect : public QgsAbstractDataSourceWidget, private Ui::QgsTi
   private:
     void populateConnectionList();
     void setConnectionListPosition();
-    void showHelp();
+    static void showHelp();
 };
 
 #endif // QGSXYZSOURCESELECT_H

@@ -89,7 +89,7 @@ class QgsAnnotationItemNodesSpatialIndex : public RTree<int, float, 2, float>
     }
 
   private:
-    std::array<float, 4> scaleBounds( const QgsRectangle &bounds ) const
+    static std::array<float, 4> scaleBounds( const QgsRectangle &bounds )
     {
       return
       {

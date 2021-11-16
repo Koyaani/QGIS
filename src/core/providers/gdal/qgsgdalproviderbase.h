@@ -56,13 +56,13 @@ class QgsGdalProviderBase
 
   protected:
 
-    Qgis::DataType dataTypeFromGdal( GDALDataType gdalDataType ) const;
+    static Qgis::DataType dataTypeFromGdal( GDALDataType gdalDataType ) ;
 
-    int colorInterpretationFromGdal( GDALColorInterp gdalColorInterpretation ) const;
+    static int colorInterpretationFromGdal( GDALColorInterp gdalColorInterpretation ) ;
 
-    QList<QgsColorRampShader::ColorRampItem> colorTable( GDALDatasetH gdalDataset, int bandNo )const;
+    static QList<QgsColorRampShader::ColorRampItem> colorTable( GDALDatasetH gdalDataset, int bandNo );
 
-    QgsRectangle extent( GDALDatasetH gdalDataset ) const;
+    static QgsRectangle extent( GDALDatasetH gdalDataset ) ;
 };
 
 ///@endcond

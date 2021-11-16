@@ -122,7 +122,7 @@ void QgsPdalEptGenerationTask::setUntwineExecutableBinary( const QString &untwin
   mUntwineExecutableBinary = untwineExecutableBinary;
 }
 
-QString QgsPdalEptGenerationTask::guessUntwineExecutableBinary() const
+QString QgsPdalEptGenerationTask::guessUntwineExecutableBinary()
 {
   QString untwineExecutable = QProcessEnvironment::systemEnvironment().value( QStringLiteral( "QGIS_UNTWINE_EXECUTABLE" ) );
   if ( untwineExecutable.isEmpty() )

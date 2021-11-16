@@ -226,7 +226,7 @@ class CORE_EXPORT QgsMarkerSymbol : public QgsSymbol
 
   private:
 
-    void renderPointUsingLayer( QgsMarkerSymbolLayer *layer, QPointF point, QgsSymbolRenderContext &context );
+    static void renderPointUsingLayer( QgsMarkerSymbolLayer *layer, QPointF point, QgsSymbolRenderContext &context );
 
 };
 

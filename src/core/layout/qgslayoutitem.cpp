@@ -1276,7 +1276,7 @@ void QgsLayoutItem::refreshItemPosition()
   attemptMove( mItemPosition );
 }
 
-QPointF QgsLayoutItem::itemPositionAtReferencePoint( const ReferencePoint reference, const QSizeF size ) const
+QPointF QgsLayoutItem::itemPositionAtReferencePoint( const ReferencePoint reference, const QSizeF size )
 {
   switch ( reference )
   {

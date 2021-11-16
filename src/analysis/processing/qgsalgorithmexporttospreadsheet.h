@@ -55,9 +55,9 @@ class QgsExportToSpreadsheetAlgorithm : public QgsProcessingAlgorithm
 
   private:
 
-    bool exportVectorLayer( QgsVectorLayer *layer, const QString &path, QgsProcessingContext &context,
-                            QgsProcessingFeedback *feedback, const QString &driverName, bool createNew, bool preferAlias,
-                            QgsVectorFileWriter::FieldValueConverter *converter );
+    static bool exportVectorLayer( QgsVectorLayer *layer, const QString &path, QgsProcessingContext &context,
+                                   QgsProcessingFeedback *feedback, const QString &driverName, bool createNew, bool preferAlias,
+                                   QgsVectorFileWriter::FieldValueConverter *converter );
 
     std::vector< std::unique_ptr< QgsMapLayer> > mLayers;
 

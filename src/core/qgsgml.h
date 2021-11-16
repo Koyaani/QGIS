@@ -209,7 +209,7 @@ class CORE_EXPORT QgsGmlStreamingParser
      * \param attr
      * \returns attribute value or an empty string if no such attribute
       */
-    QString readAttribute( const QString &attributeName, const XML_Char **attr ) const;
+    static QString readAttribute( const QString &attributeName, const XML_Char **attr ) ;
     //! Creates a rectangle from a coordinate string.
     bool createBBoxFromCoordinateString( QgsRectangle &bb, const QString &coordString ) const;
 
@@ -233,7 +233,7 @@ class CORE_EXPORT QgsGmlStreamingParser
     int pointsFromString( QList<QgsPointXY> &points, const QString &coordString ) const;
     int getPointWKB( QgsWkbPtr &wkbPtr, const QgsPointXY & ) const;
     int getLineWKB( QgsWkbPtr &wkbPtr, const QList<QgsPointXY> &lineCoordinates ) const;
-    int getRingWKB( QgsWkbPtr &wkbPtr, const QList<QgsPointXY> &ringCoordinates ) const;
+    static int getRingWKB( QgsWkbPtr &wkbPtr, const QList<QgsPointXY> &ringCoordinates ) ;
 
     /**
      * Creates a multiline from the information in mCurrentWKBFragments and

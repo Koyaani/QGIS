@@ -59,7 +59,7 @@ class QgsGCPCanvasItem : public QgsMapCanvasItem
     //! Calculates scale factor for residual display
     double residualToScreenFactor() const;
     //! Calculates pixel size for a font point size
-    double fontSizePainterUnits( double points, const QgsRenderContext &c );
+    static double fontSizePainterUnits( double points, const QgsRenderContext &c );
 };
 
 #endif // QGSGCPCANVASITEM_H

@@ -320,13 +320,13 @@ class CORE_EXPORT QgsSvgCache : public QgsAbstractContentCache< QgsSvgCacheEntry
                              bool &hasStrokeOpacityParam, bool &hasDefaultStrokeOpacity, double &defaultStrokeOpacity ) const SIP_PYNAME( containsParamsV3 );
 
     //! Calculates scaling for rendered image sizes to SVG logical sizes
-    double calcSizeScaleFactor( QgsSvgCacheEntry *entry, const QDomElement &docElem, QSizeF &viewboxSize ) const;
+    static double calcSizeScaleFactor( QgsSvgCacheEntry *entry, const QDomElement &docElem, QSizeF &viewboxSize ) ;
 
     /**
      * Returns the target size (in pixels) and calculates the \a viewBoxSize
      * for a cache \a entry.
      */
-    QSize sizeForImage( const QgsSvgCacheEntry &entry, QSizeF &viewBoxSize, QSizeF &scaledSize ) const;
+    static QSize sizeForImage( const QgsSvgCacheEntry &entry, QSizeF &viewBoxSize, QSizeF &scaledSize ) ;
 
     /**
      * Returns a rendered image for a cached picture \a entry.

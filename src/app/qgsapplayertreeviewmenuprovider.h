@@ -65,7 +65,7 @@ class QgsAppLayerTreeViewMenuProvider : public QObject, public QgsLayerTreeViewM
   private slots:
 
     void editVectorSymbol( const QString &layerId );
-    void copyVectorSymbol( const QString &layerId );
+    static void copyVectorSymbol( const QString &layerId );
     void pasteVectorSymbol( const QString &layerId );
     void setVectorSymbolColor( const QColor &color );
     void editSymbolLegendNodeSymbol( const QString &layerId, const QString &ruleKey );

@@ -50,8 +50,8 @@ class QgsAuthPkiPathsEdit : public QgsAuthMethodEdit, private Ui::QgsAuthPkiPath
     void clearConfig() override;
 
   private slots:
-    void clearPkiMessage( QLineEdit *lineedit );
-    void writePkiMessage( QLineEdit *lineedit, const QString &msg, QgsAuthPkiPathsEdit::Validity valid = Unknown );
+    static void clearPkiMessage( QLineEdit *lineedit );
+    static void writePkiMessage( QLineEdit *lineedit, const QString &msg, QgsAuthPkiPathsEdit::Validity valid = Unknown );
 
     void clearPkiPathsCertPath();
     void clearPkiPathsKeyPath();

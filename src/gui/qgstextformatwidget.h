@@ -362,7 +362,7 @@ class GUI_EXPORT QgsTextFormatDialog : public QDialog
     QDialogButtonBox *mButtonBox = nullptr;
 
   private slots:
-    void showHelp();
+    static void showHelp();
 
 };
 

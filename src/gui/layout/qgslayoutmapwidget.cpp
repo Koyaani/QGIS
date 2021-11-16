@@ -1137,7 +1137,7 @@ void QgsLayoutMapWidget::atlasLayerChanged( QgsVectorLayer *layer )
     toggleAtlasScalingOptionsByLayerType();
 }
 
-bool QgsLayoutMapWidget::hasPredefinedScales() const
+bool QgsLayoutMapWidget::hasPredefinedScales()
 {
   // first look at project's scales
   const QVector< double > scales( QgsProject::instance()->viewSettings()->mapScales() );
@@ -1541,7 +1541,7 @@ void QgsLayoutMapWidget::storeCurrentLayerSet()
   }
 }
 
-QList<QgsMapLayer *> QgsLayoutMapWidget::orderedPresetVisibleLayers( const QString &name ) const
+QList<QgsMapLayer *> QgsLayoutMapWidget::orderedPresetVisibleLayers( const QString &name )
 {
   const QStringList visibleIds = QgsProject::instance()->mapThemeCollection()->mapThemeVisibleLayerIds( name );
 

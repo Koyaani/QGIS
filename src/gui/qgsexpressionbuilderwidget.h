@@ -105,7 +105,7 @@ class GUI_EXPORT QgsExpressionBuilderWidget : public QWidget, private Ui::QgsExp
      *  \since QGIS 2.12
      * \deprecated since QGIS 3.14 this will not do anything, use setLayer() instead
      */
-    Q_DECL_DEPRECATED void loadFieldsAndValues( const QMap<QString, QStringList> &fieldValues ) SIP_DEPRECATED;
+    static Q_DECL_DEPRECATED void loadFieldsAndValues( const QMap<QString, QStringList> &fieldValues ) SIP_DEPRECATED;
 
     //! Sets geometry calculator used in distance/area calculations.
     void setGeomCalculator( const QgsDistanceArea &da );
@@ -422,7 +422,7 @@ class GUI_EXPORT QgsExpressionBuilderWidget : public QWidget, private Ui::QgsExp
     void fillFieldValues( const QString &fieldName, int countLimit, bool forceUsedValues = false );
     QString getFunctionHelp( QgsExpressionFunction *function );
     QString loadFunctionHelp( QgsExpressionItem *functionName );
-    QString helpStylesheet() const;
+    static QString helpStylesheet() ;
 
     // To be called whenever expression context has been updated
     void expressionContextUpdated();

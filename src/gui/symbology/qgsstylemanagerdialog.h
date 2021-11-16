@@ -193,7 +193,7 @@ class GUI_EXPORT QgsStyleManagerDialog : public QDialog, private Ui::QgsStyleMan
     void onClose();
 
     //! Opens the associated help
-    void showHelp();
+    static void showHelp();
 
     /**
      * \deprecated since QGIS 3.6 - has no effect and will be removed in QGIS 4.0
@@ -320,12 +320,12 @@ class GUI_EXPORT QgsStyleManagerDialog : public QDialog, private Ui::QgsStyleMan
     /**
      * \deprecated since QGIS 3.6 - has no effect and will be removed in QGIS 4.0
      */
-    Q_DECL_DEPRECATED bool removeSymbol() SIP_DEPRECATED;
+    static Q_DECL_DEPRECATED bool removeSymbol() SIP_DEPRECATED;
 
     /**
      * \deprecated since QGIS 3.6 - has no effect and will be removed in QGIS 4.0
      */
-    Q_DECL_DEPRECATED bool removeColorRamp() SIP_DEPRECATED;
+    static Q_DECL_DEPRECATED bool removeColorRamp() SIP_DEPRECATED;
 
     //! Enables or disbables the symbol specific inputs
     void enableSymbolInputs( bool );
@@ -335,7 +335,7 @@ class GUI_EXPORT QgsStyleManagerDialog : public QDialog, private Ui::QgsStyleMan
     void enableItemsForGroupingMode( bool );
 
     //! sets the text of the item with bold font
-    void setBold( QStandardItem * );
+    static void setBold( QStandardItem * );
 
   private slots:
 

@@ -70,7 +70,7 @@ class APP_EXPORT QgsRasterCalcDialog: public QDialog, private Ui::QgsRasterCalcD
     void setAcceptButtonState();
     //! Disables some options that are not required if using Virtual Provider
     void setOutputToVirtual();
-    void showHelp();
+    static void showHelp();
 
     //calculator buttons
     void mPlusPushButton_clicked();

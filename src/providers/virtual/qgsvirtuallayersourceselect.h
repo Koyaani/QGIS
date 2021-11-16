@@ -54,7 +54,7 @@ class QgsVirtualLayerSourceSelect : public QgsAbstractDataSourceWidget, private 
     void importLayer();
     void tableRowChanged( const QModelIndex &current, const QModelIndex &previous );
     void updateLayersList();
-    void showHelp();
+    static void showHelp();
 
 
   private:

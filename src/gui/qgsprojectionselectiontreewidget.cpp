@@ -1034,7 +1034,7 @@ QStringList QgsProjectionSelectionTreeWidget::authorities()
   return authorities;
 }
 
-QString QgsProjectionSelectionTreeWidget::sqlSafeString( const QString &theSQL ) const
+QString QgsProjectionSelectionTreeWidget::sqlSafeString( const QString &theSQL )
 {
   QString retval = theSQL;
   retval.replace( '\\', QLatin1String( "\\\\" ) );

@@ -1432,7 +1432,7 @@ void QgsPalLayerSettings::setUnplacedVisibility( Qgis::UnplacedLabelVisibility v
   mUnplacedVisibility = visibility;
 }
 
-bool QgsPalLayerSettings::checkMinimumSizeMM( const QgsRenderContext &ct, const QgsGeometry &geom, double minSize ) const
+bool QgsPalLayerSettings::checkMinimumSizeMM( const QgsRenderContext &ct, const QgsGeometry &geom, double minSize )
 {
   return QgsPalLabeling::checkMinimumSizeMM( ct, geom, minSize );
 }

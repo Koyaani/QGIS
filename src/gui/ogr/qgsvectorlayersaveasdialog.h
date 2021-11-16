@@ -227,7 +227,7 @@ class GUI_EXPORT QgsVectorLayerSaveAsDialog : public QDialog, private Ui::QgsVec
 
     void mFormatComboBox_currentIndexChanged( int idx );
     void mCrsSelector_crsChanged( const QgsCoordinateReferenceSystem &crs );
-    void showHelp();
+    static void showHelp();
     void mSymbologyExportComboBox_currentIndexChanged( const QString &text );
     void mGeometryTypeComboBox_currentIndexChanged( int index );
     void accept() override;
@@ -238,7 +238,7 @@ class GUI_EXPORT QgsVectorLayerSaveAsDialog : public QDialog, private Ui::QgsVec
 
   private:
     void setup();
-    QList< QPair< QLabel *, QWidget * > > createControls( const QMap<QString, QgsVectorFileWriter::Option *> &options );
+    static QList< QPair< QLabel *, QWidget * > > createControls( const QMap<QString, QgsVectorFileWriter::Option *> &options );
 
     QgsCoordinateReferenceSystem mSelectedCrs;
 

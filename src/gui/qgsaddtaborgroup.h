@@ -66,7 +66,7 @@ class GUI_EXPORT QgsAddTabOrGroup : public QDialog, private Ui::QgsAddTabOrGroup
   private slots:
     void mGroupButton_toggled( bool checked );
     void mTabButton_toggled( bool checked );
-    void showHelp();
+    static void showHelp();
 
   protected:
     QgsVectorLayer *mLayer = nullptr;

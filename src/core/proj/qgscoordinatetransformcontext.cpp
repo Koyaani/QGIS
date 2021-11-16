@@ -75,7 +75,7 @@ void QgsCoordinateTransformContext::clear()
   d->mLock.unlock();
 }
 
-QMap<QPair<QString, QString>, QgsDatumTransform::TransformPair> QgsCoordinateTransformContext::sourceDestinationDatumTransforms() const
+QMap<QPair<QString, QString>, QgsDatumTransform::TransformPair> QgsCoordinateTransformContext::sourceDestinationDatumTransforms()
 {
   return QMap<QPair<QString, QString>, QgsDatumTransform::TransformPair>();
 }
@@ -132,7 +132,7 @@ bool QgsCoordinateTransformContext::hasTransform( const QgsCoordinateReferenceSy
   return !t.isEmpty();
 }
 
-QgsDatumTransform::TransformPair QgsCoordinateTransformContext::calculateDatumTransforms( const QgsCoordinateReferenceSystem &source, const QgsCoordinateReferenceSystem &destination ) const
+QgsDatumTransform::TransformPair QgsCoordinateTransformContext::calculateDatumTransforms( const QgsCoordinateReferenceSystem &source, const QgsCoordinateReferenceSystem &destination )
 {
   Q_UNUSED( source )
   Q_UNUSED( destination )

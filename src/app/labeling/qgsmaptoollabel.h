@@ -60,7 +60,7 @@ class APP_EXPORT QgsMapToolLabel: public QgsMapToolAdvancedDigitizing
      * \param yCol out: index of the attribute for data defined y coordinate
      * \returns TRUE if labels of layer can be moved
     */
-    bool diagramMoveable( QgsVectorLayer *vlayer, int &xCol, int &yCol ) const;
+    static bool diagramMoveable( QgsVectorLayer *vlayer, int &xCol, int &yCol ) ;
 
     /**
      * Returns TRUE if layer has attribute fields set up
@@ -75,7 +75,7 @@ class APP_EXPORT QgsMapToolLabel: public QgsMapToolAdvancedDigitizing
      * \param showCol out: attribute column for data defined diagram showing
      * \since QGIS 2.16
     */
-    bool diagramCanShowHide( QgsVectorLayer *vlayer, int &showCol ) const;
+    static bool diagramCanShowHide( QgsVectorLayer *vlayer, int &showCol ) ;
 
     /**
      * Returns TRUE if layer has attribute field set up

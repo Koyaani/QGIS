@@ -83,7 +83,7 @@ QgsPaintEffect *QgsPaintEffectRegistry::createEffect( const QString &name, const
   return effect;
 }
 
-QgsPaintEffect *QgsPaintEffectRegistry::createEffect( const QDomElement &element ) const
+QgsPaintEffect *QgsPaintEffectRegistry::createEffect( const QDomElement &element )
 {
   if ( element.isNull() )
   {

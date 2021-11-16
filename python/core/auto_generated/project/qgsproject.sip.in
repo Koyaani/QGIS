@@ -1298,7 +1298,7 @@ Removes the attached file
 .. versionadded:: 3.22
 %End
 
-    QString attachmentIdentifier( const QString &attachedFile ) const;
+    static QString attachmentIdentifier( const QString &attachedFile );
 %Docstring
 Returns an identifier for an attachment file path
 An attachment identifier is a string which does not depend on the project archive

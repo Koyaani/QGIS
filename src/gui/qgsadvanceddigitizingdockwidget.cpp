@@ -601,7 +601,7 @@ QgsAdvancedDigitizingDockWidget::CadConstraint *QgsAdvancedDigitizingDockWidget:
   return constraint;
 }
 
-double QgsAdvancedDigitizingDockWidget::parseUserInput( const QString &inputValue, bool &ok ) const
+double QgsAdvancedDigitizingDockWidget::parseUserInput( const QString &inputValue, bool &ok )
 {
   ok = false;
   double value = qgsPermissiveToDouble( inputValue, ok );

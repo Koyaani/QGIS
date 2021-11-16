@@ -51,7 +51,7 @@ class GUI_EXPORT QgsLUDialog: public QDialog, private Ui::QgsLUDialogBase
 
   private:
 
-    void setDecimalPlaces( QgsDoubleSpinBox *widget, double value ) const;
+    static void setDecimalPlaces( QgsDoubleSpinBox *widget, double value ) ;
 };
 
 #endif

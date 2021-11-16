@@ -29,7 +29,7 @@ class APP_EXPORT QgsDecorationScaleBarDialog : public QDialog, private Ui::QgsDe
   private slots:
     void buttonBox_accepted();
     void buttonBox_rejected();
-    void showHelp();
+    static void showHelp();
     void apply();
 
   protected:

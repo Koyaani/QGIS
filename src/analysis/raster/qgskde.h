@@ -139,13 +139,13 @@ class ANALYSIS_EXPORT QgsKernelDensityEstimation
     //! Calculate the value given to a point width a given distance for a specified kernel shape
     double calculateKernelValue( double distance, double bandwidth, KernelShape shape, OutputValues outputType ) const;
     //! Uniform kernel function
-    double uniformKernel( double distance, double bandwidth, OutputValues outputType ) const;
+    static double uniformKernel( double distance, double bandwidth, OutputValues outputType ) ;
     //! Quartic kernel function
-    double quarticKernel( double distance, double bandwidth, OutputValues outputType ) const;
+    static double quarticKernel( double distance, double bandwidth, OutputValues outputType ) ;
     //! Triweight kernel function
-    double triweightKernel( double distance, double bandwidth, OutputValues outputType ) const;
+    static double triweightKernel( double distance, double bandwidth, OutputValues outputType ) ;
     //! Epanechnikov kernel function
-    double epanechnikovKernel( double distance, double bandwidth, OutputValues outputType ) const;
+    static double epanechnikovKernel( double distance, double bandwidth, OutputValues outputType ) ;
     //! Triangular kernel function
     double triangularKernel( double distance, double bandwidth, OutputValues outputType ) const;
 

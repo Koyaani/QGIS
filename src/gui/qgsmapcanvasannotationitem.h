@@ -97,7 +97,7 @@ class GUI_EXPORT QgsMapCanvasAnnotationItem: public QObject, public QgsMapCanvas
     /**
      * Returns matching cursor shape for a mouse move action.
      */
-    Qt::CursorShape cursorShapeForAction( MouseMoveAction moveAction ) const;
+    static Qt::CursorShape cursorShapeForAction( MouseMoveAction moveAction ) ;
 
   private slots:
 

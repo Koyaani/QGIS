@@ -138,7 +138,7 @@ bool QgsRasterPipe::replace( int idx, QgsRasterInterface *interface )
   return success;
 }
 
-Qgis::RasterPipeInterfaceRole QgsRasterPipe::interfaceRole( QgsRasterInterface *interface ) const
+Qgis::RasterPipeInterfaceRole QgsRasterPipe::interfaceRole( QgsRasterInterface *interface )
 {
   Qgis::RasterPipeInterfaceRole role = Qgis::RasterPipeInterfaceRole::Unknown;
   if ( dynamic_cast<QgsRasterDataProvider *>( interface ) )

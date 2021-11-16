@@ -149,7 +149,7 @@ void QgsMeshRendererScalarSettingsWidget::syncToLayer( )
   onEdgeStrokeWidthMethodChanged();
 }
 
-double QgsMeshRendererScalarSettingsWidget::spinBoxValue( const QgsDoubleSpinBox *spinBox ) const
+double QgsMeshRendererScalarSettingsWidget::spinBoxValue( const QgsDoubleSpinBox *spinBox )
 {
   if ( spinBox->value() == spinBox->clearValue() )
   {

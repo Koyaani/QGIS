@@ -432,7 +432,7 @@ class CORE_EXPORT QgsLayerTreeModel : public QAbstractItemModel
 #endif
 
     //! \note not available in Python bindings
-    LayerLegendTree *tryBuildLegendTree( const QList<QgsLayerTreeModelLegendNode *> &nodes ) SIP_SKIP;
+    static LayerLegendTree *tryBuildLegendTree( const QList<QgsLayerTreeModelLegendNode *> &nodes ) SIP_SKIP;
 
     /**
      * Overrides of map layers' styles: key = layer ID, value = style XML.

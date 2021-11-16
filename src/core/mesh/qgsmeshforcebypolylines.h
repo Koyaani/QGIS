@@ -92,7 +92,7 @@ class CORE_EXPORT QgsMeshEditForceByLine : public QgsMeshAdvancedEditing
 
     void interpolateZValueOnMesh( QgsPoint &point ) const;
     void interpolateZValueOnMesh( int faceIndex, QgsPoint &point ) const;
-    void interpolateZValue( QgsMeshVertex &point, const QgsPoint &otherPoint1, const QgsPoint &otherPoint2 );
+    static void interpolateZValue( QgsMeshVertex &point, const QgsPoint &otherPoint1, const QgsPoint &otherPoint2 );
 
 
     bool buildForcedElements();

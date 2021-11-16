@@ -29,7 +29,7 @@ QgsMapLayerStyleManager::QgsMapLayerStyleManager( QgsMapLayer *layer )
   reset();
 }
 
-QString QgsMapLayerStyleManager::defaultStyleName() const
+QString QgsMapLayerStyleManager::defaultStyleName()
 {
   return tr( "default" );
 }

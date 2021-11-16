@@ -1164,7 +1164,7 @@ QList<QgsLayerTreeModelLegendNode *> QgsLegendModel::layerLegendNodes( QgsLayerT
   return lst;
 }
 
-void QgsLegendModel::clearCachedData( QgsLayerTreeNode *node ) const
+void QgsLegendModel::clearCachedData( QgsLayerTreeNode *node )
 {
   node->removeCustomProperty( QStringLiteral( "cached_name" ) );
 }

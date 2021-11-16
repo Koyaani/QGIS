@@ -90,10 +90,10 @@ class APP_EXPORT QgsMeshCalculatorDialog: public QDialog, private Ui::QgsMeshCal
     double startTime() const;
     double endTime() const;
 
-    QString datasetGroupName( const QModelIndex &index ) const;
+    static QString datasetGroupName( const QModelIndex &index ) ;
 
     //! Combines geometries from selected vector layer to create mask filter geometry
-    QgsGeometry maskGeometry( QgsVectorLayer *layer ) const;
+    static QgsGeometry maskGeometry( QgsVectorLayer *layer ) ;
 
     //! Sets widget to match full layer extent
     void useFullLayerExtent();
@@ -111,7 +111,7 @@ class APP_EXPORT QgsMeshCalculatorDialog: public QDialog, private Ui::QgsMeshCal
     void repopulateTimeCombos();
 
     //! Quotes the dataset group name for calculator
-    QString quoteDatasetGroupEntry( const QString group );
+    static QString quoteDatasetGroupEntry( const QString group );
 
     //! Add file suffix if not present
     QString controlSuffix( const QString &fileName ) const;

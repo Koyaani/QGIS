@@ -898,7 +898,7 @@ class CORE_EXPORT QgsMeshDatasetGroupTreeItem
      *
      * \since QGIS 3.16
      */
-    void removeChild( QgsMeshDatasetGroupTreeItem *item SIP_TRANSFER );
+    static void removeChild( QgsMeshDatasetGroupTreeItem *item SIP_TRANSFER );
 
     /**
      * Returns a child

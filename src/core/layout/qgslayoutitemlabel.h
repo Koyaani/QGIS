@@ -273,7 +273,7 @@ class CORE_EXPORT QgsLayoutItemLabel: public QgsLayoutItem
     Qt::AlignmentFlag mVAlignment = Qt::AlignTop;
 
     //! Replaces replace '$CURRENT_DATE<(FORMAT)>' with the current date (e.g. $CURRENT_DATE(d 'June' yyyy)
-    void replaceDateText( QString &text ) const;
+    static void replaceDateText( QString &text ) ;
 
     //! Creates an encoded stylesheet url using the current font and label appearance settings
     QUrl createStylesheetUrl() const;

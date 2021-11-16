@@ -317,7 +317,7 @@ namespace QgsWmts
       bool loadParameter( const QString &key, const QString &value ) override;
       void save( const QgsWmtsParameter &parameter );
 
-      void log( const QString &msg ) const;
+      static void log( const QString &msg ) ;
 
       QList<QgsProjectVersion> mVersions;
       QMap<QgsWmtsParameter::Name, QgsWmtsParameter> mWmtsParameters;

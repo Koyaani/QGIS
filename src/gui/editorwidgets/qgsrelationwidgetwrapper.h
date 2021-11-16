@@ -59,7 +59,7 @@ class GUI_EXPORT QgsRelationWidgetWrapper : public QgsWidgetWrapper
      * \since QGIS 2.18
      * \deprecated since QGIS 3.20 label is handled directly in QgsAttributeForm.
      */
-    Q_DECL_DEPRECATED bool showLabel() const SIP_DEPRECATED;
+    static Q_DECL_DEPRECATED bool showLabel() SIP_DEPRECATED;
 
     /**
      * Defines if a title label should be shown for this widget.
@@ -68,7 +68,7 @@ class GUI_EXPORT QgsRelationWidgetWrapper : public QgsWidgetWrapper
      * \since QGIS 2.18
      * \deprecated since QGIS 3.20 label is handled directly in QgsAttributeForm.
      */
-    Q_DECL_DEPRECATED void setShowLabel( bool showLabel ) SIP_DEPRECATED;
+    static Q_DECL_DEPRECATED void setShowLabel( bool showLabel ) SIP_DEPRECATED;
 
     /**
      * Determines if the "link feature" button should be shown
@@ -174,7 +174,7 @@ class GUI_EXPORT QgsRelationWidgetWrapper : public QgsWidgetWrapper
      * \since QGIS 3.16
      * \deprecated since QGIS 3.20 label is handled directly in QgsAttributeForm.
      */
-    Q_DECL_DEPRECATED QString label() const SIP_DEPRECATED;
+    static Q_DECL_DEPRECATED QString label() SIP_DEPRECATED;
 
     /**
      * Sets \a label for this element
@@ -182,7 +182,7 @@ class GUI_EXPORT QgsRelationWidgetWrapper : public QgsWidgetWrapper
      * \since QGIS 3.16
      * \deprecated since QGIS 3.20 label is handled directly in QgsAttributeForm.
      */
-    Q_DECL_DEPRECATED void setLabel( const QString &label = QString() ) SIP_DEPRECATED;
+    static Q_DECL_DEPRECATED void setLabel( const QString &label = QString() ) SIP_DEPRECATED;
 
     /**
      * The relation for which this wrapper is created.

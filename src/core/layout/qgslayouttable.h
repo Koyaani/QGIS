@@ -730,7 +730,7 @@ class CORE_EXPORT QgsLayoutTable: public QgsLayoutMultiFrame
      * \param row row to check for
      * \returns TRUE if contents contains rows
      */
-    bool contentsContainsRow( const QgsLayoutTableContents &contents, const QgsLayoutTableRow &row ) const;
+    static bool contentsContainsRow( const QgsLayoutTableContents &contents, const QgsLayoutTableRow &row ) ;
 
     /**
      * Returns the text format to use for the cell at the specified \a row and \a column.

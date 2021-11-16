@@ -90,9 +90,9 @@ class QgsOgrDbSourceSelect: public QgsAbstractDbSourceSelect
     void cmbConnections_activated( int );
     void treeWidgetSelectionChanged( const QItemSelection &selected, const QItemSelection &deselected );
     //!Sets a new regular expression to the model
-    void setSearchExpression( const QString &regexp );
+    static void setSearchExpression( const QString &regexp );
 
-    void showHelp();
+    static void showHelp();
 
   protected slots:
     void treeviewClicked( const QModelIndex &index ) override;

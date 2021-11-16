@@ -170,7 +170,7 @@ QString QgsMeshCalculatorDialog::groupName() const
   return mOutputGroupNameLineEdit->text();
 }
 
-QgsGeometry QgsMeshCalculatorDialog::maskGeometry( QgsVectorLayer *layer ) const
+QgsGeometry QgsMeshCalculatorDialog::maskGeometry( QgsVectorLayer *layer )
 {
   QgsFeatureIterator it = layer->getFeatures();
   QVector<QgsGeometry> geometries;
@@ -374,7 +374,7 @@ void QgsMeshCalculatorDialog::onOutputFormatChange()
   }
 }
 
-QString QgsMeshCalculatorDialog::datasetGroupName( const QModelIndex &index ) const
+QString QgsMeshCalculatorDialog::datasetGroupName( const QModelIndex &index )
 {
   if ( !index.isValid() )
     return QString();

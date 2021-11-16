@@ -149,7 +149,7 @@ Returns the range of valid values for the color widget's component
 :return: maximum value allowed for color component, or -1 if widget has multiple components
 %End
 
-    int componentRange( ColorComponent component ) const;
+    static int componentRange( ColorComponent component );
 %Docstring
 Returns the range of valid values a color component
 

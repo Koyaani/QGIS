@@ -144,7 +144,7 @@ class GUI_EXPORT QgsMapUnitScaleDialog : public QDialog
 
   private slots:
 
-    void showHelp();
+    static void showHelp();
 
 
   private:

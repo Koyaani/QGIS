@@ -149,7 +149,7 @@ void QgsMesh3dAveragingMethod::averageVolumeValuesForFace(
   const QVector<double> &verticalLevelsForFace,
   const QVector<double> &volumeValues,
   QVector<double> &valuesFaces
-) const
+)
 {
   double totalAveragedHeight = 0;
   double nSumX = 0.0;

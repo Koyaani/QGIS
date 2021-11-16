@@ -185,7 +185,7 @@ Constructor for QgsLayoutViewTool, taking a layout ``view`` and
 tool ``name`` as parameters.
 %End
 
-    bool isClickAndDrag( QPoint startViewPoint, QPoint endViewPoint ) const;
+    static bool isClickAndDrag( QPoint startViewPoint, QPoint endViewPoint );
 %Docstring
 Returns ``True`` if a mouse press/release operation which started at
 ``startViewPoint`` and ended at ``endViewPoint`` should be considered

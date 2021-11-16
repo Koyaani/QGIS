@@ -37,7 +37,7 @@ class QgsPdalEptGenerationTask: public QgsTask
     bool runUntwine();
     void cleanTemp();
 
-    QString guessUntwineExecutableBinary() const;
+    static QString guessUntwineExecutableBinary() ;
     QString mUntwineExecutableBinary;
     QString mOutputDir;
     QString mFile;

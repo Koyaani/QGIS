@@ -50,7 +50,7 @@ class GUI_EXPORT QgsErrorDialog: public QDialog, private Ui::QgsErrorDialogBase
 
   private slots:
     void mDetailPushButton_clicked();
-    void mDetailCheckBox_stateChanged( int state );
+    static void mDetailCheckBox_stateChanged( int state );
 
   private:
     QgsError mError;

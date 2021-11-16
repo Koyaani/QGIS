@@ -120,7 +120,7 @@ class GUI_EXPORT QgsDatumTransformDialog : public QDialog, private Ui::QgsDatumT
       BoundsRole
     };
 
-    bool gridShiftTransformation( const QString &itemText ) const;
+    static bool gridShiftTransformation( const QString &itemText ) ;
 
     void setOKButtonEnabled();
 

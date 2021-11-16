@@ -231,7 +231,7 @@ void QgsTextBufferSettings::updateDataDefinedProperties( QgsRenderContext &conte
   }
 }
 
-QSet<QString> QgsTextBufferSettings::referencedFields( const QgsRenderContext & ) const
+QSet<QString> QgsTextBufferSettings::referencedFields( const QgsRenderContext & )
 {
   return QSet< QString >(); // nothing for now
 }

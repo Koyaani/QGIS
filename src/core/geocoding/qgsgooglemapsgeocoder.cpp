@@ -220,7 +220,7 @@ QUrl QgsGoogleMapsGeocoder::requestUrl( const QString &address, const QgsRectang
   return res;
 }
 
-QgsGeocoderResult QgsGoogleMapsGeocoder::jsonToResult( const QVariantMap &json ) const
+QgsGeocoderResult QgsGoogleMapsGeocoder::jsonToResult( const QVariantMap &json )
 {
   const QVariantMap geometry = json.value( QStringLiteral( "geometry" ) ).toMap();
   const QVariantMap location = geometry.value( QStringLiteral( "location" ) ).toMap();

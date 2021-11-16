@@ -96,7 +96,7 @@ class QgsMssqlNewConnection : public QDialog, private Ui::QgsMssqlNewConnectionB
     };
 
     QString mOriginalConnName; //store initial name to delete entry in case of rename
-    void showHelp();
+    static void showHelp();
 
     QVariantMap mSchemaSettings; //store the schema settings edited during this QDialog life time
     SchemaModel mSchemaModel;

@@ -209,7 +209,7 @@ class GUI_EXPORT QgsProjectionSelectionWidget : public QWidget
     int firstRecentCrsIndex() const;
     void updateTooltip();
 
-    QgsMapLayer *mapLayerFromMimeData( const QMimeData *data ) const;
+    static QgsMapLayer *mapLayerFromMimeData( const QMimeData *data ) ;
 
   private slots:
 

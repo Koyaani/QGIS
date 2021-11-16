@@ -74,7 +74,7 @@ class GUI_EXPORT QgsDiagramProperties : public QWidget, private Ui::QgsDiagramPr
   private slots:
 
     void updateProperty();
-    void showHelp();
+    static void showHelp();
 
     void createAuxiliaryField();
 
@@ -110,7 +110,7 @@ class GUI_EXPORT QgsDiagramProperties : public QWidget, private Ui::QgsDiagramPr
     QString mDiagramType;
     std::unique_ptr< QgsDataDefinedSizeLegend > mSizeLegend;
 
-    QString guessLegendText( const QString &expression );
+    static QString guessLegendText( const QString &expression );
     QgsMapCanvas *mMapCanvas = nullptr;
 
     QgsExpressionContext createExpressionContext() const override;

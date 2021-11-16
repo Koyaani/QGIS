@@ -1487,7 +1487,7 @@ OGRGeometryH QgsOgrProvider::ConvertGeometryIfNecessary( OGRGeometryH hGeom )
   return OGR_G_ForceTo( hGeom, layerGeomType, nullptr );
 }
 
-QString QgsOgrProvider::jsonStringValue( const QVariant &value ) const
+QString QgsOgrProvider::jsonStringValue( const QVariant &value )
 {
   QString stringValue = QString::fromUtf8( QJsonDocument::fromVariant( value ).toJson().constData() );
   if ( stringValue.isEmpty() )

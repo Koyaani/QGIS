@@ -35,7 +35,7 @@ class QgsTileScaleWidget : public QWidget, private Ui::QgsTileScaleWidget
     void layerChanged( QgsMapLayer *layer );
     void scaleChanged( double );
     void mSlider_valueChanged( int );
-    void scaleEnabled( bool );
+    static void scaleEnabled( bool );
     void locationChanged( Qt::DockWidgetArea area );
 
   private:

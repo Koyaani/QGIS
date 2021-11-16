@@ -108,7 +108,7 @@ class QgsPgSourceSelect : public QgsAbstractDbSourceSelect
     void setLayerType( const QgsPostgresLayerProperty &layerProperty );
     void treeWidgetSelectionChanged( const QItemSelection &selected, const QItemSelection &deselected );
     //!Sets a new regular expression to the model
-    void setSearchExpression( const QString &regexp );
+    static void setSearchExpression( const QString &regexp );
 
     void columnThreadFinished();
 
@@ -129,7 +129,7 @@ class QgsPgSourceSelect : public QgsAbstractDbSourceSelect
     void setConnectionListPosition();
     // Combine the schema, table and column data into a single string
     // useful for display to the user
-    QString fullDescription( const QString &schema, const QString &table, const QString &column, const QString &type );
+    static QString fullDescription( const QString &schema, const QString &table, const QString &column, const QString &type );
     // The column labels
     QStringList mColumnLabels;
     // Our thread for doing long running queries
@@ -149,7 +149,7 @@ class QgsPgSourceSelect : public QgsAbstractDbSourceSelect
 
     void finishList();
 
-    void showHelp();
+    static void showHelp();
 };
 
 #endif // QGSPGSOURCESELECT_H

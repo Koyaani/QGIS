@@ -88,9 +88,9 @@ class QgsWFSSourceSelect: public QgsAbstractDataSourceWidget, private Ui::QgsWFS
      *
      * \returns the authority id of the crs or an empty string in case of error
     */
-    QString getPreferredCrs( const QSet<QString> &crsSet ) const;
+    static QString getPreferredCrs( const QSet<QString> &crsSet ) ;
 
-    void showHelp();
+    static void showHelp();
 
   public slots:
 

@@ -124,7 +124,7 @@ Constructor for QgsMessageLogConsole.
 
   protected:
 
-    QString formatLogMessage( const QString &message, const QString &tag, Qgis::MessageLevel level = Qgis::MessageLevel::Info ) const;
+    static QString formatLogMessage( const QString &message, const QString &tag, Qgis::MessageLevel level = Qgis::MessageLevel::Info );
 %Docstring
 Formats a log message. Used by child classes.
 

@@ -49,10 +49,10 @@ class APP_EXPORT QgsMapToolDeleteRing : public QgsMapToolEdit
     void deleteRing( QgsFeatureId fId, int beforeVertexNr, QgsVectorLayer *vlayer );
 
     //! Returns the ring number in polygon
-    int ringNumInPolygon( const QgsGeometry &g, int vertexNr );
+    static int ringNumInPolygon( const QgsGeometry &g, int vertexNr );
 
     //! Returns the ring number in multipolygon and set parNum to index of the part
-    int ringNumInMultiPolygon( const QgsGeometry &g, int vertexNr, int &partNum );
+    static int ringNumInMultiPolygon( const QgsGeometry &g, int vertexNr, int &partNum );
 
     /**
      * Returns the geometry of the ring under the point p and sets fid to the feature id,

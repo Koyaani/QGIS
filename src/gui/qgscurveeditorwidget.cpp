@@ -340,7 +340,7 @@ void QgsCurveEditorWidget::updatePlot()
   mPlot->replot();
 }
 
-QwtPlotHistogram *QgsCurveEditorWidget::createPlotHistogram( const QBrush &brush, const QPen &pen ) const
+QwtPlotHistogram *QgsCurveEditorWidget::createPlotHistogram( const QBrush &brush, const QPen &pen )
 {
   QwtPlotHistogram *histogram = new QwtPlotHistogram( QString() );
   histogram->setBrush( brush );

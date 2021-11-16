@@ -46,7 +46,7 @@ class QgsGpsObject
 {
   public:
     virtual ~QgsGpsObject() = default;
-    QString xmlify( const QString &str );
+    static QString xmlify( const QString &str );
     virtual void writeXml( QTextStream &stream );
     QString name, cmt, desc, src, url, urlname;
 };

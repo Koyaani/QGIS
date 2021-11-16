@@ -70,7 +70,7 @@ class CORE_EXPORT QgsProjectBadLayerHandler
      *
      * \since QGIS 3.0
      */
-    DataType dataType( const QDomNode &layerNode );
+    static DataType dataType( const QDomNode &layerNode );
 
     /**
      * Returns the data source for the given layer
@@ -81,7 +81,7 @@ class CORE_EXPORT QgsProjectBadLayerHandler
      *
      * \since QGIS 3.0
      */
-    QString dataSource( const QDomNode &layerNode );
+    static QString dataSource( const QDomNode &layerNode );
 
     /**
      * Returns the physical storage type associated with the given layer
@@ -106,7 +106,7 @@ class CORE_EXPORT QgsProjectBadLayerHandler
      *
      * \since QGIS 3.0
      */
-    void setDataSource( QDomNode &layerNode, const QString &dataSource );
+    static void setDataSource( QDomNode &layerNode, const QString &dataSource );
 };
 
 #endif // QGSPROJECTBADLAYERHANDLER_H

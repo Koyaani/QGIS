@@ -45,7 +45,7 @@ class APP_EXPORT QgisAppStyleSheet: public QObject
     void buildStyleSheet( const QMap<QString, QVariant> &opts );
 
     //! Save changed default option keys/values to user settings
-    void saveToSettings( const QMap<QString, QVariant> &opts );
+    static void saveToSettings( const QMap<QString, QVariant> &opts );
 
     //! Gets reference font for initial qApp
     QFont defaultFont() { return mDefaultFont; }

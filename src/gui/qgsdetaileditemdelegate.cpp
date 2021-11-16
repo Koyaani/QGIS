@@ -261,7 +261,7 @@ void QgsDetailedItemDelegate::paintAsWidget( QPainter *thepPainter,
 
 void QgsDetailedItemDelegate::drawHighlight( const QStyleOptionViewItem &option,
     QPainter *thepPainter,
-    int height ) const
+    int height )
 {
   const QColor myColor1 = option.palette.highlight().color();
   QColor myColor2 = myColor1;
@@ -302,13 +302,13 @@ int QgsDetailedItemDelegate::height( const QStyleOptionViewItem &option,
 }
 
 
-QFont QgsDetailedItemDelegate::detailFont( const QStyleOptionViewItem &option ) const
+QFont QgsDetailedItemDelegate::detailFont( const QStyleOptionViewItem &option )
 {
   const QFont myFont = option.font;
   return myFont;
 }
 
-QFont QgsDetailedItemDelegate::categoryFont( const QStyleOptionViewItem &option ) const
+QFont QgsDetailedItemDelegate::categoryFont( const QStyleOptionViewItem &option )
 {
   QFont myFont = option.font;
   myFont.setBold( true );
@@ -326,7 +326,7 @@ QFont QgsDetailedItemDelegate::titleFont( const QStyleOptionViewItem &option ) c
 
 QStringList QgsDetailedItemDelegate::wordWrap( const QString &string,
     const QFontMetrics &metrics,
-    int width ) const
+    int width )
 {
   if ( string.isEmpty() )
     return QStringList();

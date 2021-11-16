@@ -60,7 +60,7 @@ class APP_EXPORT QgsBookmarks : public QgsDockWidget, private Ui::QgsBookmarksBa
     QgsBookmarks( QWidget *parent = nullptr );
     ~QgsBookmarks() override;
     QMap<QString, QModelIndex> getIndexMap();
-    void zoomToBookmarkIndex( const QModelIndex & );
+    static void zoomToBookmarkIndex( const QModelIndex & );
 
   public slots:
     void addClicked();

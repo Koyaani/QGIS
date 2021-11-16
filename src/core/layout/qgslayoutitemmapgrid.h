@@ -1271,7 +1271,7 @@ class CORE_EXPORT QgsLayoutItemMapGrid : public QgsLayoutItemMapItem
 
     static QList<QPolygonF> trimLinesToMap( const QPolygonF &line, const QgsRectangle &rect );
 
-    QPolygonF scalePolygon( const QPolygonF &polygon, double scale ) const;
+    static QPolygonF scalePolygon( const QPolygonF &polygon, double scale ) ;
 
     //! Draws grid if CRS is different to map CRS
     void drawGridCrsTransform( QgsRenderContext &context, double dotsPerMM, bool calculateLinesOnly = false ) const;
@@ -1296,7 +1296,7 @@ class CORE_EXPORT QgsLayoutItemMapGrid : public QgsLayoutItemMapItem
 
     bool shouldShowDivisionForSide( AnnotationCoordinate coordinate, BorderSide side ) const;
     bool shouldShowAnnotationForSide( AnnotationCoordinate coordinate, BorderSide side ) const;
-    bool shouldShowForDisplayMode( AnnotationCoordinate coordinate, DisplayMode mode ) const;
+    static bool shouldShowForDisplayMode( AnnotationCoordinate coordinate, DisplayMode mode ) ;
     void refreshDataDefinedProperties();
 
     //! Returns diagonal of map in CRS units

@@ -112,7 +112,7 @@ class QgsPostgresProvider final: public QgsVectorDataProvider
      * Returns the number of layers for the current data source
      * \note Should this be subLayerCount() instead?
      */
-    size_t layerCount() const;
+    static size_t layerCount() ;
 
     long long featureCount() const override;
 
@@ -333,7 +333,7 @@ class QgsPostgresProvider final: public QgsVectorDataProvider
      *       whereas multi-field keys always need the PktFidMap
      *       primary key type.
      */
-    QgsPostgresPrimaryKeyType pkType( const QgsField &fld ) const;
+    static QgsPostgresPrimaryKeyType pkType( const QgsField &fld ) ;
 
     /**
      * Search all the layers using the given table.

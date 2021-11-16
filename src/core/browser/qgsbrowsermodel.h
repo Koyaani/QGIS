@@ -104,7 +104,7 @@ class CORE_EXPORT QgsBrowserModel : public QAbstractItemModel
      * Returns the data item at the specified index, or NULLPTR if no item
      * exists at the index.
      */
-    QgsDataItem *dataItem( const QModelIndex &idx ) const;
+    static QgsDataItem *dataItem( const QModelIndex &idx ) ;
 
     //! Refresh item specified by path
     void refresh( const QString &path );

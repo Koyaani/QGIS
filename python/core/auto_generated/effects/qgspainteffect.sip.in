@@ -307,7 +307,7 @@ effects.
 .. seealso:: :py:func:`sourceAsImage`
 %End
 
-    void fixQPictureDpi( QPainter *painter ) const;
+    static void fixQPictureDpi( QPainter *painter );
 %Docstring
 Applies a workaround to a QPainter to avoid an issue with incorrect scaling
 when drawing QPictures. This may need to be called by derived classes prior

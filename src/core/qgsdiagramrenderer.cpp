@@ -532,7 +532,7 @@ QSet<QString> QgsDiagramRenderer::referencedFields( const QgsExpressionContext &
   return referenced;
 }
 
-void QgsDiagramRenderer::convertSizeToMapUnits( QSizeF &size, const QgsRenderContext &context ) const
+void QgsDiagramRenderer::convertSizeToMapUnits( QSizeF &size, const QgsRenderContext &context )
 {
   if ( !size.isValid() )
   {

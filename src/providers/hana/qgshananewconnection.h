@@ -56,7 +56,7 @@ class QgsHanaNewConnection : public QDialog, private Ui::QgsHanaNewConnectionBas
     void chkValidateCertificate_clicked();
     void readSettingsFromControls( QgsHanaSettings &settings );
     void updateControlsFromSettings( const QgsHanaSettings &settings );
-    void showHelp();
+    static void showHelp();
 
   private:
     QString mOriginalConnName;

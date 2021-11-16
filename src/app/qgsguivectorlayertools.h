@@ -76,7 +76,7 @@ class QgsGuiVectorLayerTools : public QgsVectorLayerTools
     bool saveEdits( QgsVectorLayer *layer ) const override;
 
   private:
-    void commitError( QgsVectorLayer *vlayer ) const;
+    static void commitError( QgsVectorLayer *vlayer ) ;
 
 };
 

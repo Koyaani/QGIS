@@ -905,7 +905,7 @@ class GUI_EXPORT QgsAdvancedDigitizingDockWidget : public QgsDockWidget, private
     CadConstraint *objectToConstraint( const QObject *obj ) const;
 
     //! Attempts to convert a user input value to double, either directly or via expression
-    double parseUserInput( const QString &inputValue, bool &ok ) const;
+    static double parseUserInput( const QString &inputValue, bool &ok ) ;
 
     /**
      * Updates a constraint value based on a text input.

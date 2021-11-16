@@ -35,7 +35,7 @@ class APP_EXPORT QgsDecorationTitleDialog : public QDialog, private Ui::QgsDecor
     void buttonBox_accepted();
     void buttonBox_rejected();
     void mInsertExpressionButton_clicked();
-    void showHelp();
+    static void showHelp();
     void apply();
 
   protected:

@@ -237,7 +237,7 @@ class _3D_EXPORT QgsAbstractMaterialSettings SIP_ABSTRACT
   private:
     QgsPropertyCollection mDataDefinedProperties;
     static QgsPropertiesDefinition sPropertyDefinitions;
-    void initPropertyDefinitions() const;
+    static void initPropertyDefinitions() ;
 };
 
 

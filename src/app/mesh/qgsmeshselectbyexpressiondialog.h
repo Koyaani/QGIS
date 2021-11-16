@@ -49,7 +49,7 @@ class APP_EXPORT QgsMeshSelectByExpressionDialog : public QDialog, private Ui::Q
     void zoomToSelected();
 
   private slots:
-    void showHelp() const;
+    static void showHelp() ;
     void saveRecent() const;
     void onElementTypeChanged() const;
 

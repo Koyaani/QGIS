@@ -159,7 +159,7 @@ namespace QgsWms
       void annotationsRendering( QPainter *painter, const QgsMapSettings &mapSettings ) const;
 
       // Set layer opacity
-      void setLayerOpacity( QgsMapLayer *layer, int opacity ) const;
+      static void setLayerOpacity( QgsMapLayer *layer, int opacity ) ;
 
       // Set layer filter and dimension
       void setLayerFilter( QgsMapLayer *layer, const QList<QgsWmsParametersFilter> &filters );
@@ -170,10 +170,10 @@ namespace QgsWms
       void setLayerAccessControlFilter( QgsMapLayer *layer ) const;
 
       // Set layer selection
-      void setLayerSelection( QgsMapLayer *layer, const QStringList &fids ) const;
+      static void setLayerSelection( QgsMapLayer *layer, const QStringList &fids ) ;
 
       // Combine map extent with layer extent
-      void updateExtent( const QgsMapLayer *layer, QgsMapSettings &mapSettings ) const;
+      static void updateExtent( const QgsMapLayer *layer, QgsMapSettings &mapSettings ) ;
 
       // Scale image with WIDTH/HEIGHT if necessary
       QImage *scaleImage( const QImage *image ) const;
@@ -261,7 +261,7 @@ namespace QgsWms
        * \param renderContext Context to use for feature rendering
        * \param attributes attributes for access control
        */
-      void writeVectorLayerAttribute( int attributeIndex, QgsVectorLayer *layer, const QgsFields &fields, QgsAttributes &featureAttributes, QDomDocument &doc, QDomElement &featureElem, QgsRenderContext &renderContext, QStringList *attributes = nullptr ) const;
+      static void writeVectorLayerAttribute( int attributeIndex, QgsVectorLayer *layer, const QgsFields &fields, QgsAttributes &featureAttributes, QDomDocument &doc, QDomElement &featureElem, QgsRenderContext &renderContext, QStringList *attributes = nullptr ) ;
 
       //! Appends feature info xml for the layer to the layer element of the dom document
       bool featureInfoFromRasterLayer( QgsRasterLayer *layer,
@@ -274,13 +274,13 @@ namespace QgsWms
       //! Record which symbols would be used if the map was in the current configuration of renderer. This is useful for content-based legend
       void runHitTest( const QgsMapSettings &mapSettings, HitTest &hitTest ) const;
       //! Record which symbols within one layer would be rendered with the given renderer context
-      void runHitTestLayer( QgsVectorLayer *vl, SymbolSet &usedSymbols, QgsRenderContext &context ) const;
+      static void runHitTestLayer( QgsVectorLayer *vl, SymbolSet &usedSymbols, QgsRenderContext &context ) ;
 
       /**
        * Tests if a filter sql string is allowed (safe)
        * \returns true in case of success, false if string seems unsafe
       */
-      bool testFilterStringSafety( const QString &filter ) const;
+      static bool testFilterStringSafety( const QString &filter ) ;
       //! Helper function for filter safety test. Groups stringlist to merge entries starting/ending with quotes
       static void groupStringList( QStringList &list, const QString &groupString );
 
@@ -288,10 +288,10 @@ namespace QgsWms
       void convertFeatureInfoToSia2045( QDomDocument &doc ) const;
 
       //! Converts a feature info xml document to HTML
-      QByteArray convertFeatureInfoToHtml( const QDomDocument &doc ) const;
+      static QByteArray convertFeatureInfoToHtml( const QDomDocument &doc ) ;
 
       //! Converts a feature info xml document to Text
-      QByteArray convertFeatureInfoToText( const QDomDocument &doc ) const;
+      static QByteArray convertFeatureInfoToText( const QDomDocument &doc ) ;
 
       //! Converts a feature info xml document to json
       QByteArray convertFeatureInfoToJson( const QList<QgsMapLayer *> &layers, const QDomDocument &doc ) const;
@@ -323,11 +323,11 @@ namespace QgsWms
 
       void removeTemporaryLayers();
 
-      void handlePrintErrors( const QgsLayout *layout ) const;
+      static void handlePrintErrors( const QgsLayout *layout ) ;
 
-      void setLayerStyle( QgsMapLayer *layer, const QString &style ) const;
+      static void setLayerStyle( QgsMapLayer *layer, const QString &style ) ;
 
-      void setLayerSld( QgsMapLayer *layer, const QDomElement &sld ) const;
+      static void setLayerSld( QgsMapLayer *layer, const QDomElement &sld ) ;
 
       QgsWmsParameters mWmsParameters;
 

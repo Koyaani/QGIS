@@ -183,7 +183,7 @@ class QgsDwgImporter : public DRW_Interface
 
     void progress( const QString &msg );
     QString decode( const std::string &s ) const;
-    void cleanText( QString &s );
+    static void cleanText( QString &s );
 
     void addEntity( OGRFeatureDefnH dfn, OGRFeatureH f, const DRW_Entity &data );
     QString colorString( int color, int color24, int transparency, const QString &layer ) const;
@@ -191,13 +191,13 @@ class QgsDwgImporter : public DRW_Interface
     QString linetypeString( const QString &linetype, const QString &layer ) const;
     void setString( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, const std::string &value ) const;
     void setString( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, const QString &value ) const;
-    void setString( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, const char *value ) const;
-    void setDouble( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, double value ) const;
-    void setInteger( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, int value ) const;
-    void setPoint( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, const DRW_Coord &value ) const;
+    static void setString( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, const char *value ) ;
+    static void setDouble( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, double value ) ;
+    static void setInteger( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, int value ) ;
+    static void setPoint( OGRFeatureDefnH dfn, OGRFeatureH f, const QString &field, const DRW_Coord &value ) ;
 
-    bool curveFromLWPolyline( const DRW_LWPolyline &data, QgsCompoundCurve &cc );
-    bool circularStringFromArc( const DRW_Arc &data, QgsCircularString &c );
+    static bool curveFromLWPolyline( const DRW_LWPolyline &data, QgsCompoundCurve &cc );
+    static bool circularStringFromArc( const DRW_Arc &data, QgsCircularString &c );
     bool lineFromSpline( const DRW_Spline &data, QgsLineString &l );
 
     bool expandInserts( QString &error );

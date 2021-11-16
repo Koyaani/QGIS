@@ -180,7 +180,7 @@ class QUICK_EXPORT QgsQuickMapSettings : public QObject
     double rotation() const;
 
     //! \copydoc QgsQuickMapSettings::rotation
-    void setRotation( double rotation );
+    static void setRotation( double rotation );
 
     //! \copydoc QgsQuickMapSettings::backgroundColor
     QColor backgroundColor() const;

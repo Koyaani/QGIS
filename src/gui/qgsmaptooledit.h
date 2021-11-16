@@ -42,7 +42,7 @@ class GUI_EXPORT QgsMapToolEdit: public QgsMapTool
      * Returns default Z value.
      * Used for setting Z coordinate to new vertex.
      */
-    double defaultZValue() const;
+    static double defaultZValue() ;
 
     /**
      * Returns default M value.
@@ -50,7 +50,7 @@ class GUI_EXPORT QgsMapToolEdit: public QgsMapTool
      *
      * \since QGIS 3.20
      */
-    double defaultMValue() const;
+    static double defaultMValue() ;
 
   private slots:
     //! Vector layers' editingStopped SIGNAL will eventually trigger a clean

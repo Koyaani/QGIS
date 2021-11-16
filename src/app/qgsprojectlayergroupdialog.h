@@ -83,7 +83,7 @@ class APP_EXPORT QgsProjectLayerGroupDialog: public QDialog, private Ui::QgsProj
   private slots:
     void onTreeViewSelectionChanged();
     void mButtonBox_accepted();
-    void showHelp();
+    static void showHelp();
 
   private:
     void changeProjectFile();

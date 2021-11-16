@@ -118,7 +118,7 @@ class QgsDb2Provider final: public QgsVectorDataProvider
 
   protected:
     //! Loads fields from input file to member attributeFields
-    QVariant::Type decodeSqlType( int typeId );
+    static QVariant::Type decodeSqlType( int typeId );
     void loadMetadata();
     void loadFields();
 

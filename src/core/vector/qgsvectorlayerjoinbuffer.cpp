@@ -452,7 +452,7 @@ QList<const QgsVectorLayerJoinInfo *> QgsVectorLayerJoinBuffer::joinsWhereFieldI
   return infos;
 }
 
-QgsFeature QgsVectorLayerJoinBuffer::joinedFeatureOf( const QgsVectorLayerJoinInfo *info, const QgsFeature &feature ) const
+QgsFeature QgsVectorLayerJoinBuffer::joinedFeatureOf( const QgsVectorLayerJoinInfo *info, const QgsFeature &feature )
 {
   QgsFeature joinedFeature;
 

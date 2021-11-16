@@ -43,7 +43,7 @@ QgsGdalProviderBase::QgsGdalProviderBase()
  * \param list a pointer the object that will hold the color table
  * \return TRUE of a color table was able to be read, FALSE otherwise
  */
-QList<QgsColorRampShader::ColorRampItem> QgsGdalProviderBase::colorTable( GDALDatasetH gdalDataset, int bandNumber )const
+QList<QgsColorRampShader::ColorRampItem> QgsGdalProviderBase::colorTable( GDALDatasetH gdalDataset, int bandNumber )
 {
   QList<QgsColorRampShader::ColorRampItem> ct;
 
@@ -147,7 +147,7 @@ QList<QgsColorRampShader::ColorRampItem> QgsGdalProviderBase::colorTable( GDALDa
   return ct;
 }
 
-Qgis::DataType QgsGdalProviderBase::dataTypeFromGdal( const GDALDataType gdalDataType ) const
+Qgis::DataType QgsGdalProviderBase::dataTypeFromGdal( const GDALDataType gdalDataType )
 {
   switch ( gdalDataType )
   {
@@ -180,7 +180,7 @@ Qgis::DataType QgsGdalProviderBase::dataTypeFromGdal( const GDALDataType gdalDat
   return Qgis::DataType::UnknownDataType;
 }
 
-int QgsGdalProviderBase::colorInterpretationFromGdal( const GDALColorInterp gdalColorInterpretation ) const
+int QgsGdalProviderBase::colorInterpretationFromGdal( const GDALColorInterp gdalColorInterpretation )
 {
   switch ( gdalColorInterpretation )
   {
@@ -228,7 +228,7 @@ void QgsGdalProviderBase::registerGdalDrivers()
   std::call_once( initialized, QgsApplication::registerGdalDriversFromSettings );
 }
 
-QgsRectangle QgsGdalProviderBase::extent( GDALDatasetH gdalDataset )const
+QgsRectangle QgsGdalProviderBase::extent( GDALDatasetH gdalDataset )
 {
   double myGeoTransform[6];
 

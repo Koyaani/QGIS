@@ -84,7 +84,7 @@ QgsMssqlFeatureIterator::~QgsMssqlFeatureIterator()
   close();
 }
 
-double QgsMssqlFeatureIterator::validLat( const double latitude ) const
+double QgsMssqlFeatureIterator::validLat( const double latitude )
 {
   if ( latitude < -90.0 )
     return -90.0;
@@ -93,7 +93,7 @@ double QgsMssqlFeatureIterator::validLat( const double latitude ) const
   return latitude;
 }
 
-double QgsMssqlFeatureIterator::validLon( const double longitude ) const
+double QgsMssqlFeatureIterator::validLon( const double longitude )
 {
   if ( longitude < -15069.0 )
     return -15069.0;

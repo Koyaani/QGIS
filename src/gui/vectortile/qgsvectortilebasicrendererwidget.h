@@ -62,7 +62,7 @@ class GUI_EXPORT QgsVectorTileBasicRendererWidget : public QgsMapLayerConfigWidg
     void removeStyle();
 
     void updateSymbolsFromWidget();
-    void cleanUpSymbolSelector( QgsPanelWidget *container );
+    static void cleanUpSymbolSelector( QgsPanelWidget *container );
 
   private:
     QgsVectorTileLayer *mVTLayer = nullptr;

@@ -49,7 +49,7 @@ class QgsVectorTileLayerProperties : public QgsOptionsDialogBase, private Ui::Qg
     void loadMetadata();
     void saveMetadataAs();
     void showHelp();
-    void urlClicked( const QUrl &url );
+    static void urlClicked( const QUrl &url );
 
   protected slots:
     void optionsStackedWidget_CurrentChanged( int index ) override SIP_SKIP ;

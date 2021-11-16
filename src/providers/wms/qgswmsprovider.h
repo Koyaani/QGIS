@@ -173,7 +173,7 @@ class QgsWmsProvider final: public QgsRasterDataProvider
     virtual QString getLegendGraphicUrl() const;
 
     //! Gets WMS version string
-    QString wmsVersion();
+    static QString wmsVersion();
 
     /**
      * Sub-layers handled by this provider, in order from bottom to top
@@ -332,7 +332,7 @@ class QgsWmsProvider final: public QgsRasterDataProvider
      *
      * \note it does not perform any escape
      */
-    QString toParamValue( const QgsRectangle &rect, bool changeXY );
+    static QString toParamValue( const QgsRectangle &rect, bool changeXY );
 
     /* \brief add SRS or CRS parameter */
     void setSRSQueryItem( QUrlQuery &url );
@@ -377,7 +377,7 @@ class QgsWmsProvider final: public QgsRasterDataProvider
     QString layerMetadata( QgsWmsLayerProperty &layer );
 
     //! remove query item and replace it with a new value
-    void setQueryItem( QUrlQuery &url, const QString &key, const QString &value );
+    static void setQueryItem( QUrlQuery &url, const QString &key, const QString &value );
 
     //! add image FORMAT parameter to url
     void setFormatQueryItem( QUrlQuery &url );
@@ -509,7 +509,7 @@ class QgsWmsImageDownloadHandler : public QObject
 
   protected slots:
     void cacheReplyFinished();
-    void cacheReplyProgress( qint64 bytesReceived, qint64 bytesTotal );
+    static void cacheReplyProgress( qint64 bytesReceived, qint64 bytesTotal );
     void canceled();
 
   protected:

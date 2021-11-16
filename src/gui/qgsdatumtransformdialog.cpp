@@ -242,7 +242,7 @@ QgsDatumTransformDialog::TransformInfo QgsDatumTransformDialog::selectedDatumTra
   return sdt;
 }
 
-bool QgsDatumTransformDialog::gridShiftTransformation( const QString &itemText ) const
+bool QgsDatumTransformDialog::gridShiftTransformation( const QString &itemText )
 {
   return !itemText.isEmpty() && !itemText.contains( QLatin1String( "towgs84" ), Qt::CaseInsensitive );
 }

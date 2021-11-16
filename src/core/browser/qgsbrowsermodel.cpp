@@ -692,7 +692,7 @@ bool QgsBrowserModel::dropMimeData( const QMimeData *data, Qt::DropAction action
   Q_NOWARN_DEPRECATED_POP
 }
 
-QgsDataItem *QgsBrowserModel::dataItem( const QModelIndex &idx ) const
+QgsDataItem *QgsBrowserModel::dataItem( const QModelIndex &idx )
 {
   void *v = idx.internalPointer();
   QgsDataItem *d = reinterpret_cast<QgsDataItem *>( v );

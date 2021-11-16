@@ -1308,7 +1308,7 @@ int QgsGmlStreamingParser::readEpsgFromAttribute( int &epsgNr, const XML_Char **
   return 2;
 }
 
-QString QgsGmlStreamingParser::readAttribute( const QString &attributeName, const XML_Char **attr ) const
+QString QgsGmlStreamingParser::readAttribute( const QString &attributeName, const XML_Char **attr )
 {
   int i = 0;
   while ( attr[i] )
@@ -1454,7 +1454,7 @@ int QgsGmlStreamingParser::getLineWKB( QgsWkbPtr &wkbPtr, const QList<QgsPointXY
   return 0;
 }
 
-int QgsGmlStreamingParser::getRingWKB( QgsWkbPtr &wkbPtr, const QList<QgsPointXY> &ringCoordinates ) const
+int QgsGmlStreamingParser::getRingWKB( QgsWkbPtr &wkbPtr, const QList<QgsPointXY> &ringCoordinates )
 {
   const int wkbSize = sizeof( int ) + ringCoordinates.size() * 2 * sizeof( double );
   wkbPtr = QgsWkbPtr( new unsigned char[wkbSize], wkbSize );

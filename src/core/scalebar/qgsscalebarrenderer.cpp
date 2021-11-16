@@ -296,7 +296,7 @@ bool QgsScaleBarRenderer::applyDefaultSettings( QgsScaleBarSettings & ) const
   return false;
 }
 
-QString QgsScaleBarRenderer::firstLabelString( const QgsScaleBarSettings &settings ) const
+QString QgsScaleBarRenderer::firstLabelString( const QgsScaleBarSettings &settings )
 {
   if ( settings.numberOfSegmentsLeft() > 0 )
   {
@@ -338,7 +338,7 @@ double QgsScaleBarRenderer::firstLabelXOffset( const QgsScaleBarSettings &settin
   return firstLabelWidth;
 }
 
-QList<double> QgsScaleBarRenderer::segmentPositions( const ScaleBarContext &scaleContext, const QgsScaleBarSettings &settings ) const
+QList<double> QgsScaleBarRenderer::segmentPositions( const ScaleBarContext &scaleContext, const QgsScaleBarSettings &settings )
 {
   QList<double> positions;
 
@@ -365,7 +365,7 @@ QList<double> QgsScaleBarRenderer::segmentPositions( const ScaleBarContext &scal
   return positions;
 }
 
-QList<double> QgsScaleBarRenderer::segmentPositions( QgsRenderContext &context, const QgsScaleBarRenderer::ScaleBarContext &scaleContext, const QgsScaleBarSettings &settings ) const
+QList<double> QgsScaleBarRenderer::segmentPositions( QgsRenderContext &context, const QgsScaleBarRenderer::ScaleBarContext &scaleContext, const QgsScaleBarSettings &settings )
 {
   QList<double> positions;
 
@@ -393,7 +393,7 @@ QList<double> QgsScaleBarRenderer::segmentPositions( QgsRenderContext &context, 
   return positions;
 }
 
-QList<double> QgsScaleBarRenderer::segmentWidths( const ScaleBarContext &scaleContext, const QgsScaleBarSettings &settings ) const
+QList<double> QgsScaleBarRenderer::segmentWidths( const ScaleBarContext &scaleContext, const QgsScaleBarSettings &settings )
 {
   QList<double> widths;
   widths.reserve( settings.numberOfSegmentsLeft() + settings.numberOfSegments() );

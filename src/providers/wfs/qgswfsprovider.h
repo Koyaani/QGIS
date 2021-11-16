@@ -204,9 +204,9 @@ class QgsWFSProvider final: public QgsVectorDataProvider
     //! Records provider error
     void handleException( const QDomDocument &serverResponse );
     //! Converts DescribeFeatureType schema geometry property type to WKBType
-    QgsWkbTypes::Type geomTypeFromPropertyType( const QString &attName, const QString &propType );
+    static QgsWkbTypes::Type geomTypeFromPropertyType( const QString &attName, const QString &propType );
     //! Convert the value to its appropriate XML representation
-    QString convertToXML( const QVariant &value );
+    static QString convertToXML( const QVariant &value );
 
     bool processSQL( const QString &sqlString, QString &errorMsg, QString &warningMsg );
 };

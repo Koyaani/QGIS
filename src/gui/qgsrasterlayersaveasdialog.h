@@ -131,7 +131,7 @@ class GUI_EXPORT QgsRasterLayerSaveAsDialog: public QDialog, private Ui::QgsRast
     void populatePyramidsLevels();
     void extentChanged();
     void crsChanged();
-    void showHelp();
+    static void showHelp();
 
   private:
     QgsRasterLayer *mRasterLayer = nullptr;

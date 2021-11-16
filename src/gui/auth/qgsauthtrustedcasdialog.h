@@ -92,7 +92,7 @@ class GUI_EXPORT QgsAuthTrustedCAsDialog : public QDialog, private Ui::QgsAuthTr
                             QTreeWidgetItem *parent = nullptr );
 
     QgsMessageBar *messageBar();
-    int messageTimeout();
+    static int messageTimeout();
 
     QList<QSslCertificate> mTrustedCAs;
     bool mDisabled = false;

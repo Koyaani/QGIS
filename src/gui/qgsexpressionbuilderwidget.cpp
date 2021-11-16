@@ -1094,7 +1094,7 @@ void QgsExpressionBuilderWidget::onExpressionParsed( bool state )
   }
 }
 
-QString QgsExpressionBuilderWidget::helpStylesheet() const
+QString QgsExpressionBuilderWidget::helpStylesheet()
 {
   //start with default QGIS report style
   QString style = QgsApplication::reportStyleSheet();

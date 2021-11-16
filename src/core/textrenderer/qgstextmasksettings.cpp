@@ -193,7 +193,7 @@ void QgsTextMaskSettings::updateDataDefinedProperties( QgsRenderContext &context
   }
 }
 
-QSet<QString> QgsTextMaskSettings::referencedFields( const QgsRenderContext & ) const
+QSet<QString> QgsTextMaskSettings::referencedFields( const QgsRenderContext & )
 {
   return QSet< QString >(); // nothing for now
 }

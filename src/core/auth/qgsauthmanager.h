@@ -275,7 +275,7 @@ class CORE_EXPORT QgsAuthManager : public QObject
      * Returns whether a string includes an authcfg ID token
      * \param txt String to check
      */
-    bool hasConfigId( const QString &txt ) const;
+    static bool hasConfigId( const QString &txt ) ;
 
     //! Returns the regular expression for authcfg=.{7} key/value token for authentication ids
     QString configIdRegex() const { return AUTH_CFG_REGEX;}
@@ -554,7 +554,7 @@ class CORE_EXPORT QgsAuthManager : public QObject
      * \return list of certificate authorities
      * \since QGIS 3.0
      */
-    const QList<QSslCertificate> systemRootCAs();
+    static const QList<QSslCertificate> systemRootCAs();
 
     /**
      * \brief extraFileCAs extra file-based certificate authorities
@@ -682,7 +682,7 @@ class CORE_EXPORT QgsAuthManager : public QObject
      * Password helper enabled getter
      * \note Available in Python bindings since QGIS 3.8.0
      */
-    bool passwordHelperEnabled() const;
+    static bool passwordHelperEnabled() ;
 
     /**
      * Password helper enabled setter
@@ -694,13 +694,13 @@ class CORE_EXPORT QgsAuthManager : public QObject
      * Password helper logging enabled getter
      * \note not available in Python bindings
      */
-    bool passwordHelperLoggingEnabled() const SIP_SKIP;
+    static bool passwordHelperLoggingEnabled() SIP_SKIP;
 
     /**
      * Password helper logging enabled setter
      * \note not available in Python bindings
      */
-    void setPasswordHelperLoggingEnabled( bool enabled ) SIP_SKIP;
+    static void setPasswordHelperLoggingEnabled( bool enabled ) SIP_SKIP;
 
     /**
      * Store the password manager into the wallet
@@ -767,7 +767,7 @@ class CORE_EXPORT QgsAuthManager : public QObject
     void clearCachedConfig( const QString &authcfg );
 
   private slots:
-    void writeToConsole( const QString &message, const QString &tag = QString(), QgsAuthManager::MessageLevel level = INFO );
+    static void writeToConsole( const QString &message, const QString &tag = QString(), QgsAuthManager::MessageLevel level = INFO );
 
     /**
      * This slot emits the authDatabaseEraseRequested signal, instead of attempting
@@ -803,7 +803,7 @@ class CORE_EXPORT QgsAuthManager : public QObject
     // Password Helper methods
 
     //! Returns the name for logging
-    QString passwordHelperName() const;
+    static QString passwordHelperName() ;
 
     //! Print a debug message in QGIS
     void passwordHelperLog( const QString &msg ) const;
@@ -848,7 +848,7 @@ class CORE_EXPORT QgsAuthManager : public QObject
 
     bool reencryptAuthenticationConfig( const QString &authcfg, const QString &prevpass, const QString &prevciv );
 
-    bool reencryptAllAuthenticationSettings( const QString &prevpass, const QString &prevciv );
+    static bool reencryptAllAuthenticationSettings( const QString &prevpass, const QString &prevciv );
 
     bool reencryptAllAuthenticationIdentities( const QString &prevpass, const QString &prevciv );
 

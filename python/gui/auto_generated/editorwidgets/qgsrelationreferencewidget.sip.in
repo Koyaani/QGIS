@@ -61,7 +61,7 @@ Sets the related feature using the foreign keys
 .. versionadded:: 3.10
 %End
 
- QVariant foreignKey() const /Deprecated/;
+    static QVariant foreignKey() /Deprecated/;
 %Docstring
 returns the related feature foreign key
 

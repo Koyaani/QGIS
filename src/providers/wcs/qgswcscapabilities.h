@@ -275,15 +275,15 @@ class QgsWcsCapabilities : public QObject
     //! Get list of all sub coverages
     QList<QgsWcsCoverageSummary> coverageSummaries( QgsWcsCoverageSummary *parent = nullptr );
 
-    void initCoverageSummary( QgsWcsCoverageSummary &coverageSummary );
+    static void initCoverageSummary( QgsWcsCoverageSummary &coverageSummary );
 
     void clear();
 
-    void showMessageBox( const QString &title, const QString &text );
+    static void showMessageBox( const QString &title, const QString &text );
 
-    QList<int> parseInts( const QString &text );
-    QList<double> parseDoubles( const QString &text );
-    QString crsUrnToAuthId( const QString &text );
+    static QList<int> parseInts( const QString &text );
+    static QList<double> parseDoubles( const QString &text );
+    static QString crsUrnToAuthId( const QString &text );
 
     /**
      * \brief Retrieve and parse the (cached) Capabilities document from the server
@@ -314,7 +314,7 @@ class QgsWcsCapabilities : public QObject
                                      QgsWcsCoverageSummary *parent = nullptr );
 
     //! Parse metadata element from the document
-    void parseMetadataLink( const QDomElement &element, QgsWcsMetadataLinkProperty &metadataLink );
+    static void parseMetadataLink( const QDomElement &element, QgsWcsMetadataLinkProperty &metadataLink );
 
 
     // ------------- 1.1 --------------------

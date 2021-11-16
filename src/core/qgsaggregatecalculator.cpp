@@ -898,7 +898,7 @@ QVariant QgsAggregateCalculator::concatenateStrings( QgsFeatureIterator &fit, in
   return results.join( delimiter );
 }
 
-QVariant QgsAggregateCalculator::defaultValue( QgsAggregateCalculator::Aggregate aggregate ) const
+QVariant QgsAggregateCalculator::defaultValue( QgsAggregateCalculator::Aggregate aggregate )
 {
   // value to return when NO features are aggregated:
   switch ( aggregate )

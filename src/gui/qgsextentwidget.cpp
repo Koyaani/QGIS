@@ -345,7 +345,7 @@ void QgsExtentWidget::setExtentToLayerExtent( const QString &layerId )
   setOutputExtentFromLayer( layer );
 }
 
-QgsMapLayer *QgsExtentWidget::mapLayerFromMimeData( const QMimeData *data ) const
+QgsMapLayer *QgsExtentWidget::mapLayerFromMimeData( const QMimeData *data )
 {
   const QgsMimeDataUtils::UriList uriList = QgsMimeDataUtils::decodeUriList( data );
   for ( const QgsMimeDataUtils::Uri &u : uriList )

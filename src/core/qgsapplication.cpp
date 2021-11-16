@@ -1939,7 +1939,7 @@ int QgsApplication::scaleIconSize( int standardSize, bool applyDevicePixelRatio 
   return scaledIconSize;
 }
 
-int QgsApplication::maxConcurrentConnectionsPerPool() const
+int QgsApplication::maxConcurrentConnectionsPerPool()
 {
   return CONN_POOL_MAX_CONCURRENT_CONNS;
 }
@@ -1949,7 +1949,7 @@ void QgsApplication::setTranslation( const QString &translation )
   *sTranslation() = translation;
 }
 
-QString QgsApplication::translation() const
+QString QgsApplication::translation()
 {
   return *sTranslation();
 }

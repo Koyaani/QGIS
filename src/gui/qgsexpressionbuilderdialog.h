@@ -125,7 +125,7 @@ class GUI_EXPORT QgsExpressionBuilderDialog : public QDialog, private Ui::QgsExp
     bool mAllowEvalErrors = false;
 
   private slots:
-    void showHelp();
+    static void showHelp();
     void syncOkButtonEnabledState();
 
 };

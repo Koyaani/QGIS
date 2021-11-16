@@ -74,7 +74,7 @@ class QgsProcessingExec
 
   private:
 
-    void showUsage( const QString &appName );
+    static void showUsage( const QString &appName );
     void loadPlugins();
     void listAlgorithms( bool useJson );
     void listPlugins( bool useJson, bool showLoaded );
@@ -89,14 +89,14 @@ class QgsProcessingExec
                  bool useJson,
                  const QString &projectPath = QString() );
 
-    void addVersionInformation( QVariantMap &json );
-    void addAlgorithmInformation( QVariantMap &json, const QgsProcessingAlgorithm *algorithm );
-    void addProviderInformation( QVariantMap &json, QgsProcessingProvider *provider );
+    static void addVersionInformation( QVariantMap &json );
+    static void addAlgorithmInformation( QVariantMap &json, const QgsProcessingAlgorithm *algorithm );
+    static void addProviderInformation( QVariantMap &json, QgsProcessingProvider *provider );
 
 
 #ifdef WITH_BINDINGS
     std::unique_ptr< QgsPythonUtils > mPythonUtils;
-    std::unique_ptr<QgsPythonUtils> loadPythonSupport();
+    static std::unique_ptr<QgsPythonUtils> loadPythonSupport();
 #endif
 };
 

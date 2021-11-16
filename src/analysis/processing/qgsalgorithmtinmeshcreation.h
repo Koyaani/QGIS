@@ -59,7 +59,7 @@ class QgsTinMeshCreationAlgorithm: public QgsProcessingAlgorithm
     QList<Layer> mVerticesLayer;
     QList<Layer> mBreakLinesLayer;
 
-    void addZValueDataset( const QString &fileName, const QgsMesh &mesh, const QString &driver );
+    static void addZValueDataset( const QString &fileName, const QgsMesh &mesh, const QString &driver );
 };
 
 ///@endcond PRIVATE

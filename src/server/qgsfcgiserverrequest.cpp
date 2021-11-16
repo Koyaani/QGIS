@@ -121,7 +121,7 @@ QgsFcgiServerRequest::QgsFcgiServerRequest()
   }
 }
 
-void QgsFcgiServerRequest::fillUrl( QUrl &url ) const
+void QgsFcgiServerRequest::fillUrl( QUrl &url )
 {
   // Check if host is defined
   if ( url.host().isEmpty() )

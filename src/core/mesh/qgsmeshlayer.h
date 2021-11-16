@@ -922,7 +922,7 @@ class CORE_EXPORT QgsMeshLayer : public QgsMapLayer
     bool hasSimplifiedMeshes() const;
 
     //! Changes scalar settings for classified scalar value (information about is in the metadata
-    void applyClassificationOnScalarSettings( const QgsMeshDatasetGroupMetadata &meta, QgsMeshRendererScalarSettings &scalarSettings ) const;
+    static void applyClassificationOnScalarSettings( const QgsMeshDatasetGroupMetadata &meta, QgsMeshRendererScalarSettings &scalarSettings ) ;
 
   private slots:
     void onDatasetGroupsAdded( const QList<int> &datasetGroupIndexes );

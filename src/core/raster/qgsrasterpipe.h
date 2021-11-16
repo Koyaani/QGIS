@@ -272,7 +272,7 @@ class CORE_EXPORT QgsRasterPipe
 #endif
 
     //! Gets known parent type_info of interface parent
-    Qgis::RasterPipeInterfaceRole interfaceRole( QgsRasterInterface *iface ) const;
+    static Qgis::RasterPipeInterfaceRole interfaceRole( QgsRasterInterface *iface ) ;
 
     // Interfaces in pipe, the first is always provider
     QVector<QgsRasterInterface *> mInterfaces;
@@ -295,7 +295,7 @@ class CORE_EXPORT QgsRasterPipe
      * \brief Try to connect interfaces in pipe and to the provider at beginning.
      * Returns TRUE if connected or false if connection failed
     */
-    bool connect( QVector<QgsRasterInterface *> interfaces );
+    static bool connect( QVector<QgsRasterInterface *> interfaces );
 
     Qgis::RasterResamplingStage mResamplingStage = Qgis::RasterResamplingStage::ResampleFilter;
 

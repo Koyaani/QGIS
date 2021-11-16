@@ -302,7 +302,7 @@ class GUI_EXPORT QgsColorRampButton : public QToolButton
      * Create a color ramp icon for display in the drop-down menu
      * \param colorramp Color ramp to create an icon from
      */
-    QPixmap createMenuIcon( QgsColorRamp *colorramp );
+    static QPixmap createMenuIcon( QgsColorRamp *colorramp );
 
   private slots:
 

@@ -45,7 +45,7 @@ class APP_EXPORT QgsMapToolAnnotation: public QgsMapTool
     virtual QgsAnnotation *createItem() const { return nullptr; }
 
     //! Creates an editor widget (caller takes ownership)
-    QDialog *createItemEditor( QgsMapCanvasAnnotationItem *item );
+    static QDialog *createItemEditor( QgsMapCanvasAnnotationItem *item );
 
   private:
     //! Returns the topmost annotation item at the position (or 0 if none)

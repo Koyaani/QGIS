@@ -57,8 +57,8 @@ class QgsWelcomePage : public QWidget
 
   private slots:
     void recentProjectItemActivated( const QModelIndex &index );
-    void templateProjectItemActivated( const QModelIndex &index );
-    void newsItemActivated( const QModelIndex &index );
+    static void templateProjectItemActivated( const QModelIndex &index );
+    static void newsItemActivated( const QModelIndex &index );
     void versionInfoReceived();
     void showContextMenuForProjects( QPoint point );
     void showContextMenuForTemplates( QPoint point );

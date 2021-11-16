@@ -183,7 +183,7 @@ class CORE_EXPORT QgsUserProfileManager : public QObject
      * Starts a new instance of QGIS for the given profile.
      * \param name The profile to start QGIS with.
      */
-    void loadUserProfile( const QString &name );
+    static void loadUserProfile( const QString &name );
 
   signals:
 

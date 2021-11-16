@@ -319,7 +319,7 @@ void QgsSvgCache::replaceParamsAndCacheSvg( QgsSvgCacheEntry *entry, bool blocki
   mTotalSize += entry->svgContent.size();
 }
 
-double QgsSvgCache::calcSizeScaleFactor( QgsSvgCacheEntry *entry, const QDomElement &docElem, QSizeF &viewboxSize ) const
+double QgsSvgCache::calcSizeScaleFactor( QgsSvgCacheEntry *entry, const QDomElement &docElem, QSizeF &viewboxSize )
 {
   QString viewBox;
 
@@ -808,7 +808,7 @@ void QgsSvgCache::containsElemParams( const QDomElement &elem, bool &hasFillPara
   }
 }
 
-QSize QgsSvgCache::sizeForImage( const QgsSvgCacheEntry &entry, QSizeF &viewBoxSize, QSizeF &scaledSize ) const
+QSize QgsSvgCache::sizeForImage( const QgsSvgCacheEntry &entry, QSizeF &viewBoxSize, QSizeF &scaledSize )
 {
   const bool isFixedAR = entry.fixedAspectRatio > 0;
 

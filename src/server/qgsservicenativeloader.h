@@ -84,7 +84,7 @@ class SERVER_EXPORT QgsServiceNativeLoader
     /**
      *  Unloads module hook.
      */
-    void unloadModuleEntry( QgsServiceNativeModuleEntry *entry );
+    static void unloadModuleEntry( QgsServiceNativeModuleEntry *entry );
 
     //! Associative storage for module handles
     ModuleTable mModules;

@@ -136,7 +136,7 @@ void QgsO2::setVerificationResponseContent()
   }
 }
 
-bool QgsO2::isLocalHost( const QUrl redirectUrl ) const
+bool QgsO2::isLocalHost( const QUrl redirectUrl )
 {
   const QString hostName = redirectUrl.host();
   if ( hostName == QLatin1String( "localhost" ) || hostName == QLatin1String( "127.0.0.1" ) || hostName == QLatin1String( "[::1]" ) )

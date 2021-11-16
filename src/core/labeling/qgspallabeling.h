@@ -1113,7 +1113,7 @@ class CORE_EXPORT QgsPalLayerSettings
      * Checks if a feature is larger than a minimum size (in mm)
      * \returns TRUE if above size, FALSE if below
     */
-    bool checkMinimumSizeMM( const QgsRenderContext &ct, const QgsGeometry &geom, double minSize ) const;
+    static bool checkMinimumSizeMM( const QgsRenderContext &ct, const QgsGeometry &geom, double minSize ) ;
 
     /**
      * Registers a feature as an obstacle only (no label rendered)

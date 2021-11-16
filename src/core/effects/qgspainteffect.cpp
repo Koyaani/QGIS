@@ -178,7 +178,7 @@ QRectF QgsPaintEffect::boundingRect( const QRectF &rect, const QgsRenderContext 
   return rect;
 }
 
-void QgsPaintEffect::fixQPictureDpi( QPainter *painter ) const
+void QgsPaintEffect::fixQPictureDpi( QPainter *painter )
 {
   // QPicture makes an assumption that we drawing to it with system DPI.
   // Then when being drawn, it scales the painter. The following call

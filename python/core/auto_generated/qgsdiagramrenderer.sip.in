@@ -761,7 +761,7 @@ Returns diagram settings for a feature (or ``False`` if the diagram for the feat
 Returns size of the diagram (in painter units) or an invalid size in case of error
 %End
 
-    void convertSizeToMapUnits( QSizeF &size, const QgsRenderContext &context ) const;
+    static void convertSizeToMapUnits( QSizeF &size, const QgsRenderContext &context );
 %Docstring
 Converts size from mm to map units
 %End

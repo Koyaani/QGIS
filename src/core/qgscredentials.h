@@ -118,7 +118,7 @@ class CORE_EXPORT QgsCredentials
     virtual bool requestMasterPassword( QString &password SIP_INOUT, bool stored = false ) = 0;
 
     //! register instance
-    void setInstance( QgsCredentials *instance );
+    static void setInstance( QgsCredentials *instance );
 
   private:
     Q_DISABLE_COPY( QgsCredentials )

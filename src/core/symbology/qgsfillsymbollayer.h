@@ -476,7 +476,7 @@ class CORE_EXPORT QgsGradientFillSymbolLayer : public QgsFillSymbolLayer
                         QPointF referencePoint1, QPointF referencePoint2, double angle );
 
     //! Rotates a reference point by a specified angle around the point (0.5, 0.5)
-    QPointF rotateReferencePoint( QPointF refPoint, double angle );
+    static QPointF rotateReferencePoint( QPointF refPoint, double angle );
 };
 
 /**
@@ -756,14 +756,14 @@ class CORE_EXPORT QgsShapeburstFillSymbolLayer : public QgsFillSymbolLayer
                                     double &maxDistance, bool &ignoreRings );
 
     /* distance transform of a 1d function using squared distance */
-    void distanceTransform1d( double *f, int n, int *v, double *z, double *d );
+    static void distanceTransform1d( double *f, int n, int *v, double *z, double *d );
     /* distance transform of 2d function using squared distance */
     void distanceTransform2d( double *im, int width, int height, QgsRenderContext &context );
     /* distance transform of a binary QImage */
     double *distanceTransform( QImage *im, QgsRenderContext &context );
 
     /* fills a QImage with values from an array of doubles containing squared distance transform values */
-    void dtArrayToQImage( double *array, QImage *im, QgsColorRamp *ramp, QgsRenderContext &context, bool useWholeShape = true, int maxPixelDistance = 0 );
+    static void dtArrayToQImage( double *array, QImage *im, QgsColorRamp *ramp, QgsRenderContext &context, bool useWholeShape = true, int maxPixelDistance = 0 );
 
 #ifdef SIP_RUN
     QgsShapeburstFillSymbolLayer( const QgsShapeburstFillSymbolLayer &other );

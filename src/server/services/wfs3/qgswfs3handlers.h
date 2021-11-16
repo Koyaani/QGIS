@@ -42,7 +42,7 @@ class QgsWfs3AbstractItemsHandler: public QgsServerOgcApiHandler
      * \param context the server api context
      * \throws QgsServerApiNotFoundException if the layer is NOT published
      */
-    void checkLayerIsAccessible( QgsVectorLayer *layer, const QgsServerApiContext &context ) const;
+    static void checkLayerIsAccessible( QgsVectorLayer *layer, const QgsServerApiContext &context ) ;
 
     /**
      * Creates a filtered QgsFeatureRequest containing only fields published for WFS and plugin filters applied.
@@ -59,7 +59,7 @@ class QgsWfs3AbstractItemsHandler: public QgsServerOgcApiHandler
      * \param context the server api context
      * \return QgsFields list with filters applied
      */
-    QgsFields publishedFields( const QgsVectorLayer *layer, const QgsServerApiContext &context ) const;
+    static QgsFields publishedFields( const QgsVectorLayer *layer, const QgsServerApiContext &context ) ;
 
 };
 

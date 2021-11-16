@@ -1715,7 +1715,7 @@ bool QgsCptCityBrowserModel::dropMimeData( const QMimeData *data, Qt::DropAction
 }
 #endif
 
-QgsCptCityDataItem *QgsCptCityBrowserModel::dataItem( const QModelIndex &idx ) const
+QgsCptCityDataItem *QgsCptCityBrowserModel::dataItem( const QModelIndex &idx )
 {
   void *v = idx.internalPointer();
   QgsCptCityDataItem *d = reinterpret_cast<QgsCptCityDataItem *>( v );

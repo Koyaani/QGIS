@@ -617,7 +617,7 @@ class CORE_EXPORT QgsNetworkAccessManager : public QNetworkAccessManager
      * \param req the request to preprocess
      * \since QGIS 3.22
      */
-    void preprocessRequest( QNetworkRequest *req ) const;
+    static void preprocessRequest( QNetworkRequest *req ) ;
 
   signals:
 

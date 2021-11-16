@@ -104,7 +104,7 @@ class rulesDialog : public QDialog, private Ui::rulesDialog
      */
     void updateRuleItems( const QString &layerName );
     //! Open the associated help
-    void showHelp();
+    static void showHelp();
 
 
 

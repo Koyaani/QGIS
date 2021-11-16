@@ -65,7 +65,7 @@ class GUI_EXPORT QgsProcessingDxfLayersPanelWidget : public QgsProcessingMultipl
 
   private:
     void setItemValue( QStandardItem *item, const QVariant &value );
-    QString titleForLayer( const QgsDxfExport::DxfLayer &layer );
+    static QString titleForLayer( const QgsDxfExport::DxfLayer &layer );
 
     QgsProject *mProject = nullptr;
     QgsProcessingContext mContext;

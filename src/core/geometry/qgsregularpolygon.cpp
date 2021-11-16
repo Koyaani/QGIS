@@ -304,17 +304,17 @@ double QgsRegularPolygon::length() const
   return mRadius * 2 * std::sin( M_PI / mNumberSides );
 }
 
-double QgsRegularPolygon::apothemToRadius( const double apothem, const unsigned int numSides ) const
+double QgsRegularPolygon::apothemToRadius( const double apothem, const unsigned int numSides )
 {
   return apothem / std::cos( M_PI / numSides );
 }
 
-double QgsRegularPolygon::interiorAngle( const unsigned int nbSides ) const
+double QgsRegularPolygon::interiorAngle( const unsigned int nbSides )
 {
   return ( nbSides - 2 ) * 180 / nbSides;
 }
 
-double QgsRegularPolygon::centralAngle( const unsigned int nbSides ) const
+double QgsRegularPolygon::centralAngle( const unsigned int nbSides )
 {
   return 360.0 / nbSides;
 }

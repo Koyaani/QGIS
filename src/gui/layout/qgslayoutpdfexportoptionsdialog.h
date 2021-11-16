@@ -109,7 +109,7 @@ class GUI_EXPORT QgsLayoutPdfExportOptionsDialog: public QDialog, private Ui::Qg
 
   private slots:
 
-    void showHelp();
+    static void showHelp();
     void showContextMenuForGeoPdfStructure( QPoint point, const QModelIndex &index );
 
   private:

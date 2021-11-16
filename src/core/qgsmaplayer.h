@@ -2024,7 +2024,7 @@ class CORE_EXPORT QgsMapLayer : public QObject
                                bool &resultFlag, StyleCategories categories = AllStyleCategories );
     QString loadNamedProperty( const QString &uri, QgsMapLayer::PropertyType type,
                                bool &resultFlag, StyleCategories categories = AllStyleCategories );
-    bool loadNamedPropertyFromDatabase( const QString &db, const QString &uri, QString &xml, QgsMapLayer::PropertyType type );
+    static bool loadNamedPropertyFromDatabase( const QString &db, const QString &uri, QString &xml, QgsMapLayer::PropertyType type );
 
     // const method because extents are mutable
     void updateExtent( const QgsRectangle &extent ) const;

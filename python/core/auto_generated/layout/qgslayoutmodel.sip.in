@@ -75,7 +75,7 @@ Constructor for a QgsLayoutModel attached to the specified ``layout``.
 
 
 
-    QgsLayoutItem *itemFromIndex( const QModelIndex &index ) const;
+    static QgsLayoutItem *itemFromIndex( const QModelIndex &index );
 %Docstring
 Returns the :py:class:`QgsLayoutItem` corresponding to a QModelIndex ``index``, if possible.
 

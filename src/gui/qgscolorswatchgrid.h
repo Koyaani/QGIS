@@ -174,7 +174,7 @@ class GUI_EXPORT QgsColorSwatchGrid : public QWidget
      * Generates a checkboard pattern for transparent color backgrounds
      * \returns checkboard pixmap
      */
-    QPixmap transparentBackground();
+    static QPixmap transparentBackground();
 };
 
 

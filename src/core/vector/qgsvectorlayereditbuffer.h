@@ -263,7 +263,7 @@ class CORE_EXPORT QgsVectorLayerEditBuffer : public QObject
     void handleAttributeDeleted( int index );
 
     //! Updates an index in an attribute map to a new value (for updates of changed attributes)
-    void updateAttributeMapIndex( QgsAttributeMap &attrs, int index, int offset ) const;
+    static void updateAttributeMapIndex( QgsAttributeMap &attrs, int index, int offset ) ;
 
     void updateLayerFields();
 

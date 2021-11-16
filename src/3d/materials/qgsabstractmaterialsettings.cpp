@@ -58,7 +58,7 @@ void QgsAbstractMaterialSettings::applyDataDefinedToGeometry( Qt3DRender::QGeome
   Q_UNUSED( dataDefinedBytes )
 }
 
-void QgsAbstractMaterialSettings::initPropertyDefinitions() const
+void QgsAbstractMaterialSettings::initPropertyDefinitions()
 {
   if ( !sPropertyDefinitions.isEmpty() )
     return;

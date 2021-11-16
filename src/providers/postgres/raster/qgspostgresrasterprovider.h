@@ -230,7 +230,7 @@ class QgsPostgresRasterProvider : public QgsRasterDataProvider
       int typeLen;
     };
 
-    QStringList parseUriKey( const QString &key );
+    static QStringList parseUriKey( const QString &key );
 
 };
 

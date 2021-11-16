@@ -168,7 +168,7 @@ Reassembles a provider data source URI from its component paths (e.g. file path,
 .. versionadded:: 3.12
 %End
 
- QWidget *createSelectionWidget( const QString &providerKey, QWidget *parent = 0, Qt::WindowFlags fl = Qt::WindowFlags(), QgsProviderRegistry::WidgetMode widgetMode = QgsProviderRegistry::WidgetMode::None ) /Deprecated/;
+    static QWidget *createSelectionWidget( const QString &providerKey, QWidget *parent = 0, Qt::WindowFlags fl = Qt::WindowFlags(), QgsProviderRegistry::WidgetMode widgetMode = QgsProviderRegistry::WidgetMode::None ) /Deprecated/;
 %Docstring
 Returns a new widget for selecting layers from a provider.
 Either the ``parent`` widget must be set or the caller becomes
@@ -616,7 +616,7 @@ Returns a string containing the available directory drivers
 Returns a string containing the available protocol drivers
 %End
 
- void registerGuis( QWidget *widget ) /Deprecated/;
+    static void registerGuis( QWidget *widget ) /Deprecated/;
 %Docstring
 
 .. deprecated:: QGIS 3.10

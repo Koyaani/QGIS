@@ -28,7 +28,7 @@ QgsNetworkDiskCache::QgsNetworkDiskCache( QObject *parent )
 {
 }
 
-QString QgsNetworkDiskCache::cacheDirectory() const
+QString QgsNetworkDiskCache::cacheDirectory()
 {
   const QMutexLocker lock( &sDiskCacheMutex );
   return sDiskCache.cacheDirectory();
@@ -40,7 +40,7 @@ void QgsNetworkDiskCache::setCacheDirectory( const QString &cacheDir )
   sDiskCache.setCacheDirectory( cacheDir );
 }
 
-qint64 QgsNetworkDiskCache::maximumCacheSize() const
+qint64 QgsNetworkDiskCache::maximumCacheSize()
 {
   const QMutexLocker lock( &sDiskCacheMutex );
   return sDiskCache.maximumCacheSize();
@@ -94,7 +94,7 @@ void QgsNetworkDiskCache::insert( QIODevice *device )
   sDiskCache.insert( device );
 }
 
-QNetworkCacheMetaData QgsNetworkDiskCache::fileMetaData( const QString &fileName ) const
+QNetworkCacheMetaData QgsNetworkDiskCache::fileMetaData( const QString &fileName )
 {
   const QMutexLocker lock( &sDiskCacheMutex );
   return sDiskCache.fileMetaData( fileName );

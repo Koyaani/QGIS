@@ -122,7 +122,7 @@ a size using width and height, while circles may describe a size by radius).
 
   protected:
 
-    QRectF updateRect( QPointF start, QPointF position, bool constrainSquare, bool fromCenter );
+    static QRectF updateRect( QPointF start, QPointF position, bool constrainSquare, bool fromCenter );
 %Docstring
 Calculates an updated bounding box rectangle from a original ``start`` position
 and new ``position``. If ``constrainSquare`` is ``True`` then the bounding box will be
