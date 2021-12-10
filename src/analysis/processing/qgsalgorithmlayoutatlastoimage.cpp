@@ -224,7 +224,7 @@ QVariantMap QgsLayoutAtlasToImageAlgorithm::processAlgorithm( const QVariantMap 
   if ( atlas->updateFeatures() )
   {
     feedback->pushInfo( QObject::tr( "Exporting %n atlas feature(s)", "", atlas->count() ) );
-    switch ( exporter.exportToImage( atlas, fileName, extension, settings, error, feedback ) )
+    switch ( QgsLayoutExporter::exportToImage( atlas, fileName, extension, settings, error, feedback ) )
     {
       case QgsLayoutExporter::Success:
       {

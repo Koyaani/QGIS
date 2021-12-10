@@ -226,7 +226,7 @@ QVariantMap QgsLayoutAtlasToPdfAlgorithm::exportAtlas( QgsLayoutAtlas *atlas, co
   if ( atlas->updateFeatures() )
   {
     feedback->pushInfo( QObject::tr( "Exporting %n atlas feature(s)", "", atlas->count() ) );
-    switch ( exporter.exportToPdf( atlas, dest, settings, error, feedback ) )
+    switch ( QgsLayoutExporter::exportToPdf( atlas, dest, settings, error, feedback ) )
     {
       case QgsLayoutExporter::Success:
       {
@@ -334,7 +334,7 @@ QVariantMap QgsLayoutAtlasToMultiplePdfAlgorithm::exportAtlas( QgsLayoutAtlas *a
       }
     }
 
-    result = exporter.exportToPdfs( atlas, dest, settings, error, feedback );
+    result = QgsLayoutExporter::exportToPdfs( atlas, dest, settings, error, feedback );
 
     switch ( result )
     {
