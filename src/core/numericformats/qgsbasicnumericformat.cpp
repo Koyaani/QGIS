@@ -126,10 +126,9 @@ QString QgsBasicNumericFormat::formatDouble( double value, const QgsNumericForma
     if ( res.at( trimPoint ) == decimal )
       trimPoint--;
 
-    const QString original = res;
     res.truncate( trimPoint + 1 );
     if ( mUseScientific )
-      res += original.mid( ePoint );
+      res += QStringView{res}.mid( ePoint );
   }
 
   return res;
