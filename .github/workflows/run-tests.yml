@@ -3,6 +3,7 @@ name: 🧪 QGIS tests
 on:
   push:
     branches:
+      - qenums-clazy-check
       - master
       - release-**
       - queued_ltr_backports
