@@ -13,13 +13,13 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}
 
   ${CMAKE_SOURCE_DIR}/src/app/3d
   ${CMAKE_BINARY_DIR}/src/app
-  ${QWT_INCLUDE_DIR}
 )
 
 include_directories(SYSTEM
   ${QT_INCLUDE_DIR}
   ${GDAL_INCLUDE_DIR}
   ${QT5_3DEXTRA_INCLUDE_DIR}
+  ${QWT_INCLUDE_DIR}
 )
 
 add_executable(qgis_3d_sandbox
