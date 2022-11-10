@@ -58,7 +58,7 @@ QValidator::State QgsDMSAndDDValidator::validate( QString &input, int &pos ) con
       const thread_local QRegularExpression rx4( QRegularExpression::anchoredPattern( QStringLiteral( "-?\\d{1,3}\\s60" ) ) );
       if ( rx4.match( input ).hasMatch() )
       {
-        const int in = input.left( input.indexOf( ' ' ) ).toInt();
+        const int in = QStringView{input}.left( input.indexOf( ' ' ) ).toInt();
         const int grad = input.startsWith( '-' ) ? in - 1 : in + 1;
         if ( grad <= 180 )
           input = QString::number( grad );
@@ -80,8 +80,7 @@ QValidator::State QgsDMSAndDDValidator::validate( QString &input, int &pos ) con
         return Intermediate;
 
       const int pos = input.lastIndexOf( ' ' );
-      const QString valStr = input.mid( pos + 1, input.size() - 1 );
-      const int val = valStr.toInt();
+      const int val = QStringView{input}.mid( pos + 1, input.size() - 1 ).toInt();
       if ( val <= 60 )
         return Acceptable;
       else
